@@ -42,7 +42,10 @@ public class Building : ScriptableObject
         if (resouces > level)
         {
             level += 1;
-            resouces = 0;
+            if (level == prefabs.Count)
+            {
+                level = 0;
+            }
         }
     }
 

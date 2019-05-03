@@ -1,0 +1,639 @@
+﻿#include "il2cpp-config.h"
+
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+
+
+
+// 0x00000001 UnityEngine.XR.ARFoundation.LightEstimationData UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs::get_lightEstimation()
+extern void ARCameraFrameEventArgs_get_lightEstimation_m8D1DB092EE6D53B13D23A8361404B6EF9F1FE6B2_AdjustorThunk ();
+// 0x00000002 System.Nullable`1<System.Single> UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs::get_time()
+extern void ARCameraFrameEventArgs_get_time_m6E2EB6A850D3CCD5DD0882F0C51773016F6F4D50_AdjustorThunk ();
+// 0x00000003 System.Int32 UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs::GetHashCode()
+extern void ARCameraFrameEventArgs_GetHashCode_m4450D5E975F378A6B75B94199CDAB81AE2AD3BB2_AdjustorThunk ();
+// 0x00000004 System.Boolean UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs::Equals(System.Object)
+extern void ARCameraFrameEventArgs_Equals_mB64DACBAEB96235FEC08ED43617744DD37576E6B_AdjustorThunk ();
+// 0x00000005 System.String UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs::ToString()
+extern void ARCameraFrameEventArgs_ToString_mDF4038AD013A1FFAF03364EC3D9C67BC68CBF023_AdjustorThunk ();
+// 0x00000006 System.Boolean UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs::Equals(UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs)
+extern void ARCameraFrameEventArgs_Equals_m81FA280408DC5B48EB4E0334006B48D8F4D70DFF_AdjustorThunk ();
+// 0x00000007 System.Boolean UnityEngine.XR.ARFoundation.ARPlane::get_destroyOnRemoval()
+extern void ARPlane_get_destroyOnRemoval_mF7B7DC8B8F7955523DFCBCEC0DF98DA6DCB933E6 ();
+// 0x00000008 System.Void UnityEngine.XR.ARFoundation.ARPlane::set_destroyOnRemoval(System.Boolean)
+extern void ARPlane_set_destroyOnRemoval_mF5FE134720C0F403D3F0C5299D231751D6BE9A0E ();
+// 0x00000009 System.Single UnityEngine.XR.ARFoundation.ARPlane::get_vertexChangedThreshold()
+extern void ARPlane_get_vertexChangedThreshold_m026918CF0A7C09471FCE5E5BC26348B0DA5A3CEF ();
+// 0x0000000A System.Void UnityEngine.XR.ARFoundation.ARPlane::set_vertexChangedThreshold(System.Single)
+extern void ARPlane_set_vertexChangedThreshold_m1FD64AD19DA07FCD9EE7597D45AA75DFDB95B598 ();
+// 0x0000000B UnityEngine.Experimental.XR.BoundedPlane UnityEngine.XR.ARFoundation.ARPlane::get_boundedPlane()
+extern void ARPlane_get_boundedPlane_m0C4B8ED64CA89F66738740F2663248A3D9ACECA5 ();
+// 0x0000000C System.Void UnityEngine.XR.ARFoundation.ARPlane::set_boundedPlane(UnityEngine.Experimental.XR.BoundedPlane)
+extern void ARPlane_set_boundedPlane_m0387384D4D13DDAF437E88D246859A11F8F1C4FB ();
+// 0x0000000D UnityEngine.Vector3 UnityEngine.XR.ARFoundation.ARPlane::get_normal()
+extern void ARPlane_get_normal_mA454AC0BDC53BB29B23252CA933C2488B1D65E05 ();
+// 0x0000000E UnityEngine.Experimental.XR.TrackingState UnityEngine.XR.ARFoundation.ARPlane::get_trackingState()
+extern void ARPlane_get_trackingState_m96EB20D924748F28AFC14087E94A18B6C3AC3ECD ();
+// 0x0000000F System.Int32 UnityEngine.XR.ARFoundation.ARPlane::get_lastUpdatedFrame()
+extern void ARPlane_get_lastUpdatedFrame_mA9C9EA1C111A9930B7CB410B3D33BAE6CA6E46E1 ();
+// 0x00000010 System.Void UnityEngine.XR.ARFoundation.ARPlane::set_lastUpdatedFrame(System.Int32)
+extern void ARPlane_set_lastUpdatedFrame_mA21B75A6032D96C1C674731786C60EB8B5A8427F ();
+// 0x00000011 System.Void UnityEngine.XR.ARFoundation.ARPlane::add_updated(System.Action`1<UnityEngine.XR.ARFoundation.ARPlane>)
+extern void ARPlane_add_updated_m61741B843F096513138BA8E1AE89C690F08DF6AB ();
+// 0x00000012 System.Void UnityEngine.XR.ARFoundation.ARPlane::remove_updated(System.Action`1<UnityEngine.XR.ARFoundation.ARPlane>)
+extern void ARPlane_remove_updated_mA44D4DC3051F39B541460A2C45969E109418C45A ();
+// 0x00000013 System.Void UnityEngine.XR.ARFoundation.ARPlane::add_removed(System.Action`1<UnityEngine.XR.ARFoundation.ARPlane>)
+extern void ARPlane_add_removed_m2F8B598A346B87801031609B08A4A4A82E2C46A6 ();
+// 0x00000014 System.Void UnityEngine.XR.ARFoundation.ARPlane::remove_removed(System.Action`1<UnityEngine.XR.ARFoundation.ARPlane>)
+extern void ARPlane_remove_removed_mB646E574ACDA5DBDF52EF77431F8CBE47A90FEBF ();
+// 0x00000015 System.Void UnityEngine.XR.ARFoundation.ARPlane::add_boundaryChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs>)
+extern void ARPlane_add_boundaryChanged_m31038A6B5341283A7758E8641C37ABA65F3C631A ();
+// 0x00000016 System.Void UnityEngine.XR.ARFoundation.ARPlane::remove_boundaryChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs>)
+extern void ARPlane_remove_boundaryChanged_mB542BE608F9202C2B621D5092FD6EA843D6F3765 ();
+// 0x00000017 System.Boolean UnityEngine.XR.ARFoundation.ARPlane::TryGetBoundary(System.Collections.Generic.List`1<UnityEngine.Vector3>,UnityEngine.Space)
+extern void ARPlane_TryGetBoundary_mF2625CB17E6169DB8AFB4F528E968EC930BB1B40 ();
+// 0x00000018 System.Boolean UnityEngine.XR.ARFoundation.ARPlane::PositionsAreApproximatelyEqual(System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Single)
+extern void ARPlane_PositionsAreApproximatelyEqual_m1E6C968E448C5797CB52E93B8162608E826153F6 ();
+// 0x00000019 System.Void UnityEngine.XR.ARFoundation.ARPlane::OnValidate()
+extern void ARPlane_OnValidate_m1587B3765AB469BBC22FFA46CC6336898B46570C ();
+// 0x0000001A System.Void UnityEngine.XR.ARFoundation.ARPlane::CheckBoundaryChanged()
+extern void ARPlane_CheckBoundaryChanged_mD671967A5A23BACA9F605A46A23B6A5667B885DC ();
+// 0x0000001B System.Void UnityEngine.XR.ARFoundation.ARPlane::OnRemove()
+extern void ARPlane_OnRemove_m62203057DA9A4D9F384BC72594447F457B59AFA3 ();
+// 0x0000001C System.Void UnityEngine.XR.ARFoundation.ARPlane::.ctor()
+extern void ARPlane__ctor_mA8E31A0EE87E471458371D2CD35FF18F16788806 ();
+// 0x0000001D System.Void UnityEngine.XR.ARFoundation.ARPlane::.cctor()
+extern void ARPlane__cctor_mCCC5233A0423DA5D7460E02E45EB4710ACA06C62 ();
+// 0x0000001E UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARPlaneAddedEventArgs::get_plane()
+extern void ARPlaneAddedEventArgs_get_plane_m5DEDEA1D6CAB76B293E3BEC5FCEE268921D671BE_AdjustorThunk ();
+// 0x0000001F System.Void UnityEngine.XR.ARFoundation.ARPlaneAddedEventArgs::set_plane(UnityEngine.XR.ARFoundation.ARPlane)
+extern void ARPlaneAddedEventArgs_set_plane_mE06045CDAD9D2D967784A16DCE17F44864A030CF_AdjustorThunk ();
+// 0x00000020 System.Void UnityEngine.XR.ARFoundation.ARPlaneAddedEventArgs::.ctor(UnityEngine.XR.ARFoundation.ARPlane)
+extern void ARPlaneAddedEventArgs__ctor_mDB8087B1ECC30C575ED6AF77E3D77CE28807A0BD_AdjustorThunk ();
+// 0x00000021 System.Int32 UnityEngine.XR.ARFoundation.ARPlaneAddedEventArgs::GetHashCode()
+extern void ARPlaneAddedEventArgs_GetHashCode_mAE31731396942823652A9385ED164F0654A6E784_AdjustorThunk ();
+// 0x00000022 System.Boolean UnityEngine.XR.ARFoundation.ARPlaneAddedEventArgs::Equals(System.Object)
+extern void ARPlaneAddedEventArgs_Equals_mD58DF95C4487777492441706E3767397D9FA88BE_AdjustorThunk ();
+// 0x00000023 System.String UnityEngine.XR.ARFoundation.ARPlaneAddedEventArgs::ToString()
+extern void ARPlaneAddedEventArgs_ToString_mE76E564CAFAC1105CB3A5EB9C4C68DC2FDE73C03_AdjustorThunk ();
+// 0x00000024 System.Boolean UnityEngine.XR.ARFoundation.ARPlaneAddedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARPlaneAddedEventArgs)
+extern void ARPlaneAddedEventArgs_Equals_m7B1EBD45D224333CCFDFF09F87024ADD4D805DD4_AdjustorThunk ();
+// 0x00000025 UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARPlaneUpdatedEventArgs::get_plane()
+extern void ARPlaneUpdatedEventArgs_get_plane_m075D436AB8312DD98029EBDC027EB101F31BD0EE_AdjustorThunk ();
+// 0x00000026 System.Void UnityEngine.XR.ARFoundation.ARPlaneUpdatedEventArgs::set_plane(UnityEngine.XR.ARFoundation.ARPlane)
+extern void ARPlaneUpdatedEventArgs_set_plane_mEB2C47485D37FD70030B4AED14A226A6441EF7D7_AdjustorThunk ();
+// 0x00000027 System.Void UnityEngine.XR.ARFoundation.ARPlaneUpdatedEventArgs::.ctor(UnityEngine.XR.ARFoundation.ARPlane)
+extern void ARPlaneUpdatedEventArgs__ctor_m644FBE05675B5EC20602F51E0C663A7409E04630_AdjustorThunk ();
+// 0x00000028 System.Int32 UnityEngine.XR.ARFoundation.ARPlaneUpdatedEventArgs::GetHashCode()
+extern void ARPlaneUpdatedEventArgs_GetHashCode_m36A3DC2DEB55E0B39C2F01571EA1140A76977CD5_AdjustorThunk ();
+// 0x00000029 System.Boolean UnityEngine.XR.ARFoundation.ARPlaneUpdatedEventArgs::Equals(System.Object)
+extern void ARPlaneUpdatedEventArgs_Equals_m2762ADB99BDD62000AA98835D3A2CCD7C6D2A5F3_AdjustorThunk ();
+// 0x0000002A System.String UnityEngine.XR.ARFoundation.ARPlaneUpdatedEventArgs::ToString()
+extern void ARPlaneUpdatedEventArgs_ToString_mE732B8C3EFF746B8DE227B1EDFED1B4B72C4665F_AdjustorThunk ();
+// 0x0000002B System.Boolean UnityEngine.XR.ARFoundation.ARPlaneUpdatedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARPlaneUpdatedEventArgs)
+extern void ARPlaneUpdatedEventArgs_Equals_mAC987E5B6F2A93F3212C3F76829AB8A7EF1AF475_AdjustorThunk ();
+// 0x0000002C UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARPlaneRemovedEventArgs::get_plane()
+extern void ARPlaneRemovedEventArgs_get_plane_m05FA40786C2DC4F7C75B9CB505F50BFF0AC446E4_AdjustorThunk ();
+// 0x0000002D System.Void UnityEngine.XR.ARFoundation.ARPlaneRemovedEventArgs::set_plane(UnityEngine.XR.ARFoundation.ARPlane)
+extern void ARPlaneRemovedEventArgs_set_plane_m05DE7571A665A0F0AAE99B3D0D0973020F08899D_AdjustorThunk ();
+// 0x0000002E System.Void UnityEngine.XR.ARFoundation.ARPlaneRemovedEventArgs::.ctor(UnityEngine.XR.ARFoundation.ARPlane)
+extern void ARPlaneRemovedEventArgs__ctor_m4D1E0B54C93B15C327D7F08241C1DB3F7A956611_AdjustorThunk ();
+// 0x0000002F System.Int32 UnityEngine.XR.ARFoundation.ARPlaneRemovedEventArgs::GetHashCode()
+extern void ARPlaneRemovedEventArgs_GetHashCode_m96484E8B2E94B4CD55738E36192F804989046CC4_AdjustorThunk ();
+// 0x00000030 System.Boolean UnityEngine.XR.ARFoundation.ARPlaneRemovedEventArgs::Equals(System.Object)
+extern void ARPlaneRemovedEventArgs_Equals_mB55C48B8AAC613ACA558C31546C52582787CC27B_AdjustorThunk ();
+// 0x00000031 System.String UnityEngine.XR.ARFoundation.ARPlaneRemovedEventArgs::ToString()
+extern void ARPlaneRemovedEventArgs_ToString_m09146750559759309FBF56C77AEA305C452792F2_AdjustorThunk ();
+// 0x00000032 System.Boolean UnityEngine.XR.ARFoundation.ARPlaneRemovedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARPlaneRemovedEventArgs)
+extern void ARPlaneRemovedEventArgs_Equals_m77DFD4B1CF07A418FA9073C183E18CDBA2404561_AdjustorThunk ();
+// 0x00000033 UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::get_plane()
+extern void ARPlaneBoundaryChangedEventArgs_get_plane_mE14F32BD989ADD2F0FBDBAB9AB293CDAB4CCB03B_AdjustorThunk ();
+// 0x00000034 System.Void UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::set_plane(UnityEngine.XR.ARFoundation.ARPlane)
+extern void ARPlaneBoundaryChangedEventArgs_set_plane_mCF1436693BFFF6A657E7416DEA8B38F0C5C2DA72_AdjustorThunk ();
+// 0x00000035 UnityEngine.Vector3 UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::get_center()
+extern void ARPlaneBoundaryChangedEventArgs_get_center_m331B8F3B7D4AE7071F2966B3CD4242AE2F913091_AdjustorThunk ();
+// 0x00000036 System.Void UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::set_center(UnityEngine.Vector3)
+extern void ARPlaneBoundaryChangedEventArgs_set_center_mAEF76B1C7EB420B4D57AAB67B4A01637B0070276_AdjustorThunk ();
+// 0x00000037 UnityEngine.Vector3 UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::get_normal()
+extern void ARPlaneBoundaryChangedEventArgs_get_normal_m30F2619AC5B7362BD462EC1751E329F9E6EC3BCC_AdjustorThunk ();
+// 0x00000038 System.Void UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::set_normal(UnityEngine.Vector3)
+extern void ARPlaneBoundaryChangedEventArgs_set_normal_m0ADBBDA9D5EE0195664D7C26245028C32AA6D252_AdjustorThunk ();
+// 0x00000039 System.Collections.Generic.List`1<UnityEngine.Vector3> UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::get_convexBoundary()
+extern void ARPlaneBoundaryChangedEventArgs_get_convexBoundary_mDAE06731741EDB0A4C87E3AD338B2AD037E26043_AdjustorThunk ();
+// 0x0000003A System.Void UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::set_convexBoundary(System.Collections.Generic.List`1<UnityEngine.Vector3>)
+extern void ARPlaneBoundaryChangedEventArgs_set_convexBoundary_m044784BE04E6F067FA02F349299505575114C046_AdjustorThunk ();
+// 0x0000003B System.Void UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::.ctor(UnityEngine.XR.ARFoundation.ARPlane,UnityEngine.Vector3,UnityEngine.Vector3,System.Collections.Generic.List`1<UnityEngine.Vector3>)
+extern void ARPlaneBoundaryChangedEventArgs__ctor_m9E32E4163F91F411C534FF8E121151C16706E4B5_AdjustorThunk ();
+// 0x0000003C System.Int32 UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::GetHashCode()
+extern void ARPlaneBoundaryChangedEventArgs_GetHashCode_m8466D36882D236E53F90A19EE72433C201DECA53_AdjustorThunk ();
+// 0x0000003D System.Boolean UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::Equals(System.Object)
+extern void ARPlaneBoundaryChangedEventArgs_Equals_mBC1B1E4A7C15838F515A7C89A407C449B838160C_AdjustorThunk ();
+// 0x0000003E System.String UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::ToString()
+extern void ARPlaneBoundaryChangedEventArgs_ToString_mAD91B6E277751C1DDF8BC67991D7BD6119F3AC97_AdjustorThunk ();
+// 0x0000003F System.Boolean UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs)
+extern void ARPlaneBoundaryChangedEventArgs_Equals_m6B6B6F31A0D459C4AFFDCD71109988F5B13937FA_AdjustorThunk ();
+// 0x00000040 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARPlaneManager::get_planePrefab()
+extern void ARPlaneManager_get_planePrefab_m420C466CEE70BB4900C7C8BB699FF4CB288DB1C9 ();
+// 0x00000041 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::set_planePrefab(UnityEngine.GameObject)
+extern void ARPlaneManager_set_planePrefab_m7C4AF249D0D0546DE2E98E9E96B51824ED109633 ();
+// 0x00000042 UnityEngine.XR.ARExtensions.PlaneDetectionFlags UnityEngine.XR.ARFoundation.ARPlaneManager::get_detectionFlags()
+extern void ARPlaneManager_get_detectionFlags_m289004C948B38317B99018860AF4B0D6B8117F2B ();
+// 0x00000043 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::set_detectionFlags(UnityEngine.XR.ARExtensions.PlaneDetectionFlags)
+extern void ARPlaneManager_set_detectionFlags_m81746D4E773097ED39813F5025037020645F7EA9 ();
+// 0x00000044 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::add_planeAdded(System.Action`1<UnityEngine.XR.ARFoundation.ARPlaneAddedEventArgs>)
+extern void ARPlaneManager_add_planeAdded_m3EF5ECC18087DDBFD6A3E1CC504C1AED694BF5D7 ();
+// 0x00000045 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::remove_planeAdded(System.Action`1<UnityEngine.XR.ARFoundation.ARPlaneAddedEventArgs>)
+extern void ARPlaneManager_remove_planeAdded_mD6B8BD63AEF782E86C1BF33418045B6252DD5B8C ();
+// 0x00000046 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::add_planeUpdated(System.Action`1<UnityEngine.XR.ARFoundation.ARPlaneUpdatedEventArgs>)
+extern void ARPlaneManager_add_planeUpdated_m39F68878CDC675BA63C5FCAFE98DB17EE6F18E7B ();
+// 0x00000047 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::remove_planeUpdated(System.Action`1<UnityEngine.XR.ARFoundation.ARPlaneUpdatedEventArgs>)
+extern void ARPlaneManager_remove_planeUpdated_m194D0514334174A64FA64B9AF75996A1CB2E074A ();
+// 0x00000048 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::add_planeRemoved(System.Action`1<UnityEngine.XR.ARFoundation.ARPlaneRemovedEventArgs>)
+extern void ARPlaneManager_add_planeRemoved_m78F6692A7C743235D50AE0B96125649204840F71 ();
+// 0x00000049 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::remove_planeRemoved(System.Action`1<UnityEngine.XR.ARFoundation.ARPlaneRemovedEventArgs>)
+extern void ARPlaneManager_remove_planeRemoved_m2AE8CAE97FDEDA35DFE0467CD2EBAEF7C8120240 ();
+// 0x0000004A System.Int32 UnityEngine.XR.ARFoundation.ARPlaneManager::get_planeCount()
+extern void ARPlaneManager_get_planeCount_m10D3C890D87E38002D867C7922731C450DDFA2FD ();
+// 0x0000004B System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::GetAllPlanes(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>)
+extern void ARPlaneManager_GetAllPlanes_mBB214CCB7992080E6880901861E93F57EEBAA7F0 ();
+// 0x0000004C UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARPlaneManager::TryGetPlane(UnityEngine.Experimental.XR.TrackableId)
+extern void ARPlaneManager_TryGetPlane_mF34389B1DE7C8DDC376A84AFAF4FFB17DF101EE8 ();
+// 0x0000004D System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::Awake()
+extern void ARPlaneManager_Awake_m8F88AC379B08B017949B496C14153FAB79470894 ();
+// 0x0000004E System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnEnable()
+extern void ARPlaneManager_OnEnable_mF520A212E1B46C2857BC5BBA66BBABF466CAA037 ();
+// 0x0000004F System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnDisable()
+extern void ARPlaneManager_OnDisable_m58470A19752693CF679604999B51B0271508BF08 ();
+// 0x00000050 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnSessionDestroyed()
+extern void ARPlaneManager_OnSessionDestroyed_m8819591817B121BCD809834D5DE85F7444EFD070 ();
+// 0x00000051 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::SyncPlanes()
+extern void ARPlaneManager_SyncPlanes_m64D8A6F11787BD69A409C4A2FCC5CDB6C2D09BFF ();
+// 0x00000052 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARPlaneManager::CreateGameObject()
+extern void ARPlaneManager_CreateGameObject_mCC33765E4274AB9EAEDE855A3D7F7BA090F0D4EF ();
+// 0x00000053 UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARPlaneManager::AddPlane(UnityEngine.Experimental.XR.BoundedPlane)
+extern void ARPlaneManager_AddPlane_m4C5A8FDE1D142D307D2B29BC27DACC26514A3A56 ();
+// 0x00000054 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnPlaneAdded(UnityEngine.Experimental.XR.PlaneAddedEventArgs)
+extern void ARPlaneManager_OnPlaneAdded_m939A3F20DB392673B43C81F741144D73DD81102E ();
+// 0x00000055 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnPlaneUpdated(UnityEngine.Experimental.XR.PlaneUpdatedEventArgs)
+extern void ARPlaneManager_OnPlaneUpdated_mB76BD2B464625F88E3500F4A05083D553EE0342D ();
+// 0x00000056 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnPlaneRemoved(UnityEngine.Experimental.XR.PlaneRemovedEventArgs)
+extern void ARPlaneManager_OnPlaneRemoved_m529573A5E1CE79403A7AA83A1E7BF2F09AEE6DF1 ();
+// 0x00000057 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::RemovePlane(UnityEngine.XR.ARFoundation.ARPlane)
+extern void ARPlaneManager_RemovePlane_mC9D1C69AD33963F6CB0F3200721D8A9630676ADA ();
+// 0x00000058 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::.ctor()
+extern void ARPlaneManager__ctor_mF62949940F016552159EA286F8374B809BAE4900 ();
+// 0x00000059 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::.cctor()
+extern void ARPlaneManager__cctor_m6EBCBC598D6369E17AD0BF4A093C955DC6F41C83 ();
+// 0x0000005A System.Void UnityEngine.XR.ARFoundation.ARRaycastHit::.ctor(UnityEngine.Experimental.XR.XRRaycastHit,System.Single,UnityEngine.Transform)
+extern void ARRaycastHit__ctor_m36C28CE418B93F61908C1FECD8B0283449DB9EF3_AdjustorThunk ();
+// 0x0000005B System.Single UnityEngine.XR.ARFoundation.ARRaycastHit::get_distance()
+extern void ARRaycastHit_get_distance_m3918702A847D86F5C4FC8208A07F5BC335DE6B9C_AdjustorThunk ();
+// 0x0000005C System.Void UnityEngine.XR.ARFoundation.ARRaycastHit::set_distance(System.Single)
+extern void ARRaycastHit_set_distance_mE038262EE5D09F95A2108B0BD19B311E1757103D_AdjustorThunk ();
+// 0x0000005D UnityEngine.Pose UnityEngine.XR.ARFoundation.ARRaycastHit::get_pose()
+extern void ARRaycastHit_get_pose_m5CCFFED6C4A101EA42083A8661956A2B4B4C4A0D_AdjustorThunk ();
+// 0x0000005E UnityEngine.Experimental.XR.TrackableId UnityEngine.XR.ARFoundation.ARRaycastHit::get_trackableId()
+extern void ARRaycastHit_get_trackableId_m41E80B5EFDEAF7E8203374D1E6635BB3F442F873_AdjustorThunk ();
+// 0x0000005F UnityEngine.Pose UnityEngine.XR.ARFoundation.ARRaycastHit::get_sessionRelativePose()
+extern void ARRaycastHit_get_sessionRelativePose_m0BFDEFFEE9453DE6A3EBF1F478D04C6CCD1E93AE_AdjustorThunk ();
+// 0x00000060 System.Int32 UnityEngine.XR.ARFoundation.ARRaycastHit::GetHashCode()
+extern void ARRaycastHit_GetHashCode_m0240F19A06BEF49F5DDE5EA221164508742702A4_AdjustorThunk ();
+// 0x00000061 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastHit::Equals(System.Object)
+extern void ARRaycastHit_Equals_m994914BA6F0839DD534ED1030EE09C5FF4100F48_AdjustorThunk ();
+// 0x00000062 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastHit::Equals(UnityEngine.XR.ARFoundation.ARRaycastHit)
+extern void ARRaycastHit_Equals_m6496FE99219BAB0805B98C5FA5805C84BAA1F504_AdjustorThunk ();
+// 0x00000063 UnityEngine.Camera UnityEngine.XR.ARFoundation.ARSessionOrigin::get_camera()
+extern void ARSessionOrigin_get_camera_m6809A44CAB9A1E35394FB329780A6C5B56B8CEBB ();
+// 0x00000064 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::set_camera(UnityEngine.Camera)
+extern void ARSessionOrigin_set_camera_m19D7E918F9FE3482B177CFDFB689FB889E4B536E ();
+// 0x00000065 UnityEngine.Transform UnityEngine.XR.ARFoundation.ARSessionOrigin::get_trackablesParent()
+extern void ARSessionOrigin_get_trackablesParent_m37049D7E75CF694834A140C2EACB15D2D1098505 ();
+// 0x00000066 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::set_trackablesParent(UnityEngine.Transform)
+extern void ARSessionOrigin_set_trackablesParent_m9C4186D865EAD4CD8D88B67934E58BCF425A7F65 ();
+// 0x00000067 UnityEngine.Transform UnityEngine.XR.ARFoundation.ARSessionOrigin::get_contentOffsetTransform()
+extern void ARSessionOrigin_get_contentOffsetTransform_m656172F5E167D7DC3C1217098B39A7368E03CA89 ();
+// 0x00000068 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::MakeContentAppearAt(UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Quaternion)
+extern void ARSessionOrigin_MakeContentAppearAt_m84B74A8ADD38B9EA039F05AC96FE063A4CC9BDD6 ();
+// 0x00000069 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::MakeContentAppearAt(UnityEngine.Transform,UnityEngine.Vector3)
+extern void ARSessionOrigin_MakeContentAppearAt_m15440480EE8B1D74A7D4FF48EAEE8449A914FAA0 ();
+// 0x0000006A System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::MakeContentAppearAt(UnityEngine.Transform,UnityEngine.Quaternion)
+extern void ARSessionOrigin_MakeContentAppearAt_mADE575DBCCF2FAE695FB672E2B7088AE616355FB ();
+// 0x0000006B System.Boolean UnityEngine.XR.ARFoundation.ARSessionOrigin::Raycast(UnityEngine.Vector3,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>,UnityEngine.Experimental.XR.TrackableType)
+extern void ARSessionOrigin_Raycast_mF979A725569665D23318620A26E74D7980A8B859 ();
+// 0x0000006C System.Boolean UnityEngine.XR.ARFoundation.ARSessionOrigin::Raycast(UnityEngine.Ray,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>,UnityEngine.Experimental.XR.TrackableType,System.Single)
+extern void ARSessionOrigin_Raycast_m80BFA6943A64B018D33C9410CA1340ED48339BA7 ();
+// 0x0000006D System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::TransformRaycastResults(UnityEngine.Transform,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>,UnityEngine.Vector3)
+extern void ARSessionOrigin_TransformRaycastResults_m7BCF033934992B61A21B8F62F3EDB47DBD101B4F ();
+// 0x0000006E System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::Awake()
+extern void ARSessionOrigin_Awake_m0C90EC9A9763815BCD6FFC0E14E6AE3CBCC077A3 ();
+// 0x0000006F UnityEngine.Pose UnityEngine.XR.ARFoundation.ARSessionOrigin::GetCameraOriginPose()
+extern void ARSessionOrigin_GetCameraOriginPose_m75D111317C0E96F4B80715ECAB89CB4062A915AD ();
+// 0x00000070 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::Update()
+extern void ARSessionOrigin_Update_mC7294B302C0A57A53A7741A3D0636F23C14FCE66 ();
+// 0x00000071 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::.ctor()
+extern void ARSessionOrigin__ctor_m83B2AA52F8C14D48BEBA6E756E214F91141FBC1B ();
+// 0x00000072 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::.cctor()
+extern void ARSessionOrigin__cctor_m68603A0509751161E5641C6620D469FB3471C553 ();
+// 0x00000073 UnityEngine.Experimental.XR.XRCameraSubsystem UnityEngine.XR.ARFoundation.ARSubsystemManager::get_cameraSubsystem()
+extern void ARSubsystemManager_get_cameraSubsystem_m4D2E3C8CA66D41581D15BD876E7C2F318A995494 ();
+// 0x00000074 UnityEngine.Experimental.XR.XRDepthSubsystem UnityEngine.XR.ARFoundation.ARSubsystemManager::get_depthSubsystem()
+extern void ARSubsystemManager_get_depthSubsystem_mD0DF8618D2373F7AF033B5180306F6C0C7D9215F ();
+// 0x00000075 UnityEngine.Experimental.XR.XRPlaneSubsystem UnityEngine.XR.ARFoundation.ARSubsystemManager::get_planeSubsystem()
+extern void ARSubsystemManager_get_planeSubsystem_m1E20B3E332E7C8A5F940FA9A9F2C9660F110D7DC ();
+// 0x00000076 UnityEngine.Experimental.XR.XRRaycastSubsystem UnityEngine.XR.ARFoundation.ARSubsystemManager::get_raycastSubsystem()
+extern void ARSubsystemManager_get_raycastSubsystem_m910694A66BEC2952AA16F73769E8C5B161CD53D1 ();
+// 0x00000077 System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::add_cameraFrameReceived(System.Action`1<UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs>)
+extern void ARSubsystemManager_add_cameraFrameReceived_mC5420AAC1E488E6C2B33C30C2936C05A07D6173B ();
+// 0x00000078 System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::remove_cameraFrameReceived(System.Action`1<UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs>)
+extern void ARSubsystemManager_remove_cameraFrameReceived_m5407919D112A547D758CD53498740D0BB6390414 ();
+// 0x00000079 System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::add_sessionDestroyed(System.Action)
+extern void ARSubsystemManager_add_sessionDestroyed_mF3CED0C6CC743A82A4696A7F018764D4B6A512F9 ();
+// 0x0000007A System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::remove_sessionDestroyed(System.Action)
+extern void ARSubsystemManager_remove_sessionDestroyed_m922FAC75230FC62573931F3C017EECBB6241B86A ();
+// 0x0000007B System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::add_planeAdded(System.Action`1<UnityEngine.Experimental.XR.PlaneAddedEventArgs>)
+extern void ARSubsystemManager_add_planeAdded_mB2B982559F7391280D601F5CD78B77A6E625A128 ();
+// 0x0000007C System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::remove_planeAdded(System.Action`1<UnityEngine.Experimental.XR.PlaneAddedEventArgs>)
+extern void ARSubsystemManager_remove_planeAdded_m10226198EB1549375D0BBC950F17F9DF154147D1 ();
+// 0x0000007D System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::add_planeUpdated(System.Action`1<UnityEngine.Experimental.XR.PlaneUpdatedEventArgs>)
+extern void ARSubsystemManager_add_planeUpdated_mAD4376658EF72C03A9453D901DE33BB6BE0A117E ();
+// 0x0000007E System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::remove_planeUpdated(System.Action`1<UnityEngine.Experimental.XR.PlaneUpdatedEventArgs>)
+extern void ARSubsystemManager_remove_planeUpdated_m00D2F1EA424813341852F437E3D5FD5F6718D4FC ();
+// 0x0000007F System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::add_planeRemoved(System.Action`1<UnityEngine.Experimental.XR.PlaneRemovedEventArgs>)
+extern void ARSubsystemManager_add_planeRemoved_m48EB4215574A3774A93B799DD605EFB34DCED921 ();
+// 0x00000080 System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::remove_planeRemoved(System.Action`1<UnityEngine.Experimental.XR.PlaneRemovedEventArgs>)
+extern void ARSubsystemManager_remove_planeRemoved_m527C5CA2A48E66E1F3F1EB9D2320C424830DFFA7 ();
+// 0x00000081 System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::set_planeDetectionFlags(UnityEngine.XR.ARExtensions.PlaneDetectionFlags)
+extern void ARSubsystemManager_set_planeDetectionFlags_m520C6EE16456872538F3F092B5177C086AFE9583 ();
+// 0x00000082 System.Boolean UnityEngine.XR.ARFoundation.ARSubsystemManager::get_lightEstimationRequested()
+extern void ARSubsystemManager_get_lightEstimationRequested_m2435AFFE94B01129C5C53435A2057F1CAD51A984 ();
+// 0x00000083 System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::SetRunning(UnityEngine.Experimental.ISubsystem,System.Boolean)
+extern void ARSubsystemManager_SetRunning_m2690B3EFC38C7FA544DDF2B847062024FD7B0769 ();
+// 0x00000084 System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::UpdatePlaneDetection()
+extern void ARSubsystemManager_UpdatePlaneDetection_m0C1F3E2C2A4C1405020BCAE926C81525C0F03CCD ();
+// 0x00000085 System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::UpdateCameraSubsystem()
+extern void ARSubsystemManager_UpdateCameraSubsystem_m09E86D7A5BF1EAFD9656E326F2F0BC669BD21BBB ();
+// 0x00000086 System.Boolean UnityEngine.XR.ARFoundation.ARSubsystemManager::get_cameraSubsystemRequested()
+extern void ARSubsystemManager_get_cameraSubsystemRequested_m47F8F5A2C798E94B6C6C10908510543C8DA7A247 ();
+// 0x00000087 System.Boolean UnityEngine.XR.ARFoundation.ARSubsystemManager::get_planeDetectionRequested()
+extern void ARSubsystemManager_get_planeDetectionRequested_m217632B7A7C853E1F19AE0D2AE18D62004F54EB3 ();
+// 0x00000088 System.Void UnityEngine.XR.ARFoundation.ARSubsystemManager::.cctor()
+extern void ARSubsystemManager__cctor_m5DD05E2AEA4861B9EB9DA6F8A582836971062E66 ();
+// 0x00000089 System.Nullable`1<System.Single> UnityEngine.XR.ARFoundation.LightEstimationData::get_averageBrightness()
+extern void LightEstimationData_get_averageBrightness_m3FCD4E3348113B65242CD0BDC6849F46170EC1CE_AdjustorThunk ();
+// 0x0000008A System.Nullable`1<System.Single> UnityEngine.XR.ARFoundation.LightEstimationData::get_averageColorTemperature()
+extern void LightEstimationData_get_averageColorTemperature_m6FEA162BEF0CA52EA15A7B7E5A0B40EA462F9C8C_AdjustorThunk ();
+// 0x0000008B System.Nullable`1<UnityEngine.Color> UnityEngine.XR.ARFoundation.LightEstimationData::get_colorCorrection()
+extern void LightEstimationData_get_colorCorrection_m8B75AF9F5BE50714AB76451DE1E15E837C598B6E_AdjustorThunk ();
+// 0x0000008C System.Int32 UnityEngine.XR.ARFoundation.LightEstimationData::GetHashCode()
+extern void LightEstimationData_GetHashCode_mDE23192F55C3FCAB18B88B870F1F53CE716ABC3C_AdjustorThunk ();
+// 0x0000008D System.Boolean UnityEngine.XR.ARFoundation.LightEstimationData::Equals(System.Object)
+extern void LightEstimationData_Equals_mAF4D7A9902B7A2655DE780CEA2874011C5442050_AdjustorThunk ();
+// 0x0000008E System.String UnityEngine.XR.ARFoundation.LightEstimationData::ToString()
+extern void LightEstimationData_ToString_mD59EE662316E63CD89FA44C45BF2573FCEDE9A1B_AdjustorThunk ();
+// 0x0000008F System.Boolean UnityEngine.XR.ARFoundation.LightEstimationData::Equals(UnityEngine.XR.ARFoundation.LightEstimationData)
+extern void LightEstimationData_Equals_m364D4C4F844DA0F0D2134A120C44E4E469EBE08D_AdjustorThunk ();
+// 0x00000090 UnityEngine.Vector3 UnityEngine.XR.ARFoundation.PoseExtensions::InverseTransformPosition(UnityEngine.Pose,UnityEngine.Vector3)
+extern void PoseExtensions_InverseTransformPosition_mCDC0B4E47294498D315D25A11F55A3DCB1D56B30 ();
+// 0x00000091 UnityEngine.Vector3 UnityEngine.XR.ARFoundation.PoseExtensions::InverseTransformDirection(UnityEngine.Pose,UnityEngine.Vector3)
+extern void PoseExtensions_InverseTransformDirection_m30D10D1F00928AC1DC560E31DC9536E3CA77B87C ();
+// 0x00000092 System.Void UnityEngine.XR.ARFoundation.PoseExtensions::InverseTransformPositions(UnityEngine.Pose,System.Collections.Generic.List`1<UnityEngine.Vector3>)
+extern void PoseExtensions_InverseTransformPositions_mD3C1280E37E1E2C0BBC15345398422A4278CD7D3 ();
+// 0x00000093 UnityEngine.Ray UnityEngine.XR.ARFoundation.TransformExtensions::InverseTransformRay(UnityEngine.Transform,UnityEngine.Ray)
+extern void TransformExtensions_InverseTransformRay_mD6C666D44E1BF8407A2AA50118A7C90890935503 ();
+// 0x00000094 UnityEngine.Pose UnityEngine.XR.ARFoundation.TransformExtensions::TransformPose(UnityEngine.Transform,UnityEngine.Pose)
+extern void TransformExtensions_TransformPose_m677CE84C622BD23C3DDB2953DDB820E1934B0144 ();
+// 0x00000095 System.Void UnityEngine.XR.ARFoundation.TransformExtensions::TransformPointList(UnityEngine.Transform,System.Collections.Generic.List`1<UnityEngine.Vector3>)
+extern void TransformExtensions_TransformPointList_m8CF86B093B04499DDA56E9C05EBE5DEA80865F55 ();
+static Il2CppMethodPointer s_methodPointers[149] = 
+{
+	ARCameraFrameEventArgs_get_lightEstimation_m8D1DB092EE6D53B13D23A8361404B6EF9F1FE6B2_AdjustorThunk,
+	ARCameraFrameEventArgs_get_time_m6E2EB6A850D3CCD5DD0882F0C51773016F6F4D50_AdjustorThunk,
+	ARCameraFrameEventArgs_GetHashCode_m4450D5E975F378A6B75B94199CDAB81AE2AD3BB2_AdjustorThunk,
+	ARCameraFrameEventArgs_Equals_mB64DACBAEB96235FEC08ED43617744DD37576E6B_AdjustorThunk,
+	ARCameraFrameEventArgs_ToString_mDF4038AD013A1FFAF03364EC3D9C67BC68CBF023_AdjustorThunk,
+	ARCameraFrameEventArgs_Equals_m81FA280408DC5B48EB4E0334006B48D8F4D70DFF_AdjustorThunk,
+	ARPlane_get_destroyOnRemoval_mF7B7DC8B8F7955523DFCBCEC0DF98DA6DCB933E6,
+	ARPlane_set_destroyOnRemoval_mF5FE134720C0F403D3F0C5299D231751D6BE9A0E,
+	ARPlane_get_vertexChangedThreshold_m026918CF0A7C09471FCE5E5BC26348B0DA5A3CEF,
+	ARPlane_set_vertexChangedThreshold_m1FD64AD19DA07FCD9EE7597D45AA75DFDB95B598,
+	ARPlane_get_boundedPlane_m0C4B8ED64CA89F66738740F2663248A3D9ACECA5,
+	ARPlane_set_boundedPlane_m0387384D4D13DDAF437E88D246859A11F8F1C4FB,
+	ARPlane_get_normal_mA454AC0BDC53BB29B23252CA933C2488B1D65E05,
+	ARPlane_get_trackingState_m96EB20D924748F28AFC14087E94A18B6C3AC3ECD,
+	ARPlane_get_lastUpdatedFrame_mA9C9EA1C111A9930B7CB410B3D33BAE6CA6E46E1,
+	ARPlane_set_lastUpdatedFrame_mA21B75A6032D96C1C674731786C60EB8B5A8427F,
+	ARPlane_add_updated_m61741B843F096513138BA8E1AE89C690F08DF6AB,
+	ARPlane_remove_updated_mA44D4DC3051F39B541460A2C45969E109418C45A,
+	ARPlane_add_removed_m2F8B598A346B87801031609B08A4A4A82E2C46A6,
+	ARPlane_remove_removed_mB646E574ACDA5DBDF52EF77431F8CBE47A90FEBF,
+	ARPlane_add_boundaryChanged_m31038A6B5341283A7758E8641C37ABA65F3C631A,
+	ARPlane_remove_boundaryChanged_mB542BE608F9202C2B621D5092FD6EA843D6F3765,
+	ARPlane_TryGetBoundary_mF2625CB17E6169DB8AFB4F528E968EC930BB1B40,
+	ARPlane_PositionsAreApproximatelyEqual_m1E6C968E448C5797CB52E93B8162608E826153F6,
+	ARPlane_OnValidate_m1587B3765AB469BBC22FFA46CC6336898B46570C,
+	ARPlane_CheckBoundaryChanged_mD671967A5A23BACA9F605A46A23B6A5667B885DC,
+	ARPlane_OnRemove_m62203057DA9A4D9F384BC72594447F457B59AFA3,
+	ARPlane__ctor_mA8E31A0EE87E471458371D2CD35FF18F16788806,
+	ARPlane__cctor_mCCC5233A0423DA5D7460E02E45EB4710ACA06C62,
+	ARPlaneAddedEventArgs_get_plane_m5DEDEA1D6CAB76B293E3BEC5FCEE268921D671BE_AdjustorThunk,
+	ARPlaneAddedEventArgs_set_plane_mE06045CDAD9D2D967784A16DCE17F44864A030CF_AdjustorThunk,
+	ARPlaneAddedEventArgs__ctor_mDB8087B1ECC30C575ED6AF77E3D77CE28807A0BD_AdjustorThunk,
+	ARPlaneAddedEventArgs_GetHashCode_mAE31731396942823652A9385ED164F0654A6E784_AdjustorThunk,
+	ARPlaneAddedEventArgs_Equals_mD58DF95C4487777492441706E3767397D9FA88BE_AdjustorThunk,
+	ARPlaneAddedEventArgs_ToString_mE76E564CAFAC1105CB3A5EB9C4C68DC2FDE73C03_AdjustorThunk,
+	ARPlaneAddedEventArgs_Equals_m7B1EBD45D224333CCFDFF09F87024ADD4D805DD4_AdjustorThunk,
+	ARPlaneUpdatedEventArgs_get_plane_m075D436AB8312DD98029EBDC027EB101F31BD0EE_AdjustorThunk,
+	ARPlaneUpdatedEventArgs_set_plane_mEB2C47485D37FD70030B4AED14A226A6441EF7D7_AdjustorThunk,
+	ARPlaneUpdatedEventArgs__ctor_m644FBE05675B5EC20602F51E0C663A7409E04630_AdjustorThunk,
+	ARPlaneUpdatedEventArgs_GetHashCode_m36A3DC2DEB55E0B39C2F01571EA1140A76977CD5_AdjustorThunk,
+	ARPlaneUpdatedEventArgs_Equals_m2762ADB99BDD62000AA98835D3A2CCD7C6D2A5F3_AdjustorThunk,
+	ARPlaneUpdatedEventArgs_ToString_mE732B8C3EFF746B8DE227B1EDFED1B4B72C4665F_AdjustorThunk,
+	ARPlaneUpdatedEventArgs_Equals_mAC987E5B6F2A93F3212C3F76829AB8A7EF1AF475_AdjustorThunk,
+	ARPlaneRemovedEventArgs_get_plane_m05FA40786C2DC4F7C75B9CB505F50BFF0AC446E4_AdjustorThunk,
+	ARPlaneRemovedEventArgs_set_plane_m05DE7571A665A0F0AAE99B3D0D0973020F08899D_AdjustorThunk,
+	ARPlaneRemovedEventArgs__ctor_m4D1E0B54C93B15C327D7F08241C1DB3F7A956611_AdjustorThunk,
+	ARPlaneRemovedEventArgs_GetHashCode_m96484E8B2E94B4CD55738E36192F804989046CC4_AdjustorThunk,
+	ARPlaneRemovedEventArgs_Equals_mB55C48B8AAC613ACA558C31546C52582787CC27B_AdjustorThunk,
+	ARPlaneRemovedEventArgs_ToString_m09146750559759309FBF56C77AEA305C452792F2_AdjustorThunk,
+	ARPlaneRemovedEventArgs_Equals_m77DFD4B1CF07A418FA9073C183E18CDBA2404561_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs_get_plane_mE14F32BD989ADD2F0FBDBAB9AB293CDAB4CCB03B_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs_set_plane_mCF1436693BFFF6A657E7416DEA8B38F0C5C2DA72_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs_get_center_m331B8F3B7D4AE7071F2966B3CD4242AE2F913091_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs_set_center_mAEF76B1C7EB420B4D57AAB67B4A01637B0070276_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs_get_normal_m30F2619AC5B7362BD462EC1751E329F9E6EC3BCC_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs_set_normal_m0ADBBDA9D5EE0195664D7C26245028C32AA6D252_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs_get_convexBoundary_mDAE06731741EDB0A4C87E3AD338B2AD037E26043_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs_set_convexBoundary_m044784BE04E6F067FA02F349299505575114C046_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs__ctor_m9E32E4163F91F411C534FF8E121151C16706E4B5_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs_GetHashCode_m8466D36882D236E53F90A19EE72433C201DECA53_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs_Equals_mBC1B1E4A7C15838F515A7C89A407C449B838160C_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs_ToString_mAD91B6E277751C1DDF8BC67991D7BD6119F3AC97_AdjustorThunk,
+	ARPlaneBoundaryChangedEventArgs_Equals_m6B6B6F31A0D459C4AFFDCD71109988F5B13937FA_AdjustorThunk,
+	ARPlaneManager_get_planePrefab_m420C466CEE70BB4900C7C8BB699FF4CB288DB1C9,
+	ARPlaneManager_set_planePrefab_m7C4AF249D0D0546DE2E98E9E96B51824ED109633,
+	ARPlaneManager_get_detectionFlags_m289004C948B38317B99018860AF4B0D6B8117F2B,
+	ARPlaneManager_set_detectionFlags_m81746D4E773097ED39813F5025037020645F7EA9,
+	ARPlaneManager_add_planeAdded_m3EF5ECC18087DDBFD6A3E1CC504C1AED694BF5D7,
+	ARPlaneManager_remove_planeAdded_mD6B8BD63AEF782E86C1BF33418045B6252DD5B8C,
+	ARPlaneManager_add_planeUpdated_m39F68878CDC675BA63C5FCAFE98DB17EE6F18E7B,
+	ARPlaneManager_remove_planeUpdated_m194D0514334174A64FA64B9AF75996A1CB2E074A,
+	ARPlaneManager_add_planeRemoved_m78F6692A7C743235D50AE0B96125649204840F71,
+	ARPlaneManager_remove_planeRemoved_m2AE8CAE97FDEDA35DFE0467CD2EBAEF7C8120240,
+	ARPlaneManager_get_planeCount_m10D3C890D87E38002D867C7922731C450DDFA2FD,
+	ARPlaneManager_GetAllPlanes_mBB214CCB7992080E6880901861E93F57EEBAA7F0,
+	ARPlaneManager_TryGetPlane_mF34389B1DE7C8DDC376A84AFAF4FFB17DF101EE8,
+	ARPlaneManager_Awake_m8F88AC379B08B017949B496C14153FAB79470894,
+	ARPlaneManager_OnEnable_mF520A212E1B46C2857BC5BBA66BBABF466CAA037,
+	ARPlaneManager_OnDisable_m58470A19752693CF679604999B51B0271508BF08,
+	ARPlaneManager_OnSessionDestroyed_m8819591817B121BCD809834D5DE85F7444EFD070,
+	ARPlaneManager_SyncPlanes_m64D8A6F11787BD69A409C4A2FCC5CDB6C2D09BFF,
+	ARPlaneManager_CreateGameObject_mCC33765E4274AB9EAEDE855A3D7F7BA090F0D4EF,
+	ARPlaneManager_AddPlane_m4C5A8FDE1D142D307D2B29BC27DACC26514A3A56,
+	ARPlaneManager_OnPlaneAdded_m939A3F20DB392673B43C81F741144D73DD81102E,
+	ARPlaneManager_OnPlaneUpdated_mB76BD2B464625F88E3500F4A05083D553EE0342D,
+	ARPlaneManager_OnPlaneRemoved_m529573A5E1CE79403A7AA83A1E7BF2F09AEE6DF1,
+	ARPlaneManager_RemovePlane_mC9D1C69AD33963F6CB0F3200721D8A9630676ADA,
+	ARPlaneManager__ctor_mF62949940F016552159EA286F8374B809BAE4900,
+	ARPlaneManager__cctor_m6EBCBC598D6369E17AD0BF4A093C955DC6F41C83,
+	ARRaycastHit__ctor_m36C28CE418B93F61908C1FECD8B0283449DB9EF3_AdjustorThunk,
+	ARRaycastHit_get_distance_m3918702A847D86F5C4FC8208A07F5BC335DE6B9C_AdjustorThunk,
+	ARRaycastHit_set_distance_mE038262EE5D09F95A2108B0BD19B311E1757103D_AdjustorThunk,
+	ARRaycastHit_get_pose_m5CCFFED6C4A101EA42083A8661956A2B4B4C4A0D_AdjustorThunk,
+	ARRaycastHit_get_trackableId_m41E80B5EFDEAF7E8203374D1E6635BB3F442F873_AdjustorThunk,
+	ARRaycastHit_get_sessionRelativePose_m0BFDEFFEE9453DE6A3EBF1F478D04C6CCD1E93AE_AdjustorThunk,
+	ARRaycastHit_GetHashCode_m0240F19A06BEF49F5DDE5EA221164508742702A4_AdjustorThunk,
+	ARRaycastHit_Equals_m994914BA6F0839DD534ED1030EE09C5FF4100F48_AdjustorThunk,
+	ARRaycastHit_Equals_m6496FE99219BAB0805B98C5FA5805C84BAA1F504_AdjustorThunk,
+	ARSessionOrigin_get_camera_m6809A44CAB9A1E35394FB329780A6C5B56B8CEBB,
+	ARSessionOrigin_set_camera_m19D7E918F9FE3482B177CFDFB689FB889E4B536E,
+	ARSessionOrigin_get_trackablesParent_m37049D7E75CF694834A140C2EACB15D2D1098505,
+	ARSessionOrigin_set_trackablesParent_m9C4186D865EAD4CD8D88B67934E58BCF425A7F65,
+	ARSessionOrigin_get_contentOffsetTransform_m656172F5E167D7DC3C1217098B39A7368E03CA89,
+	ARSessionOrigin_MakeContentAppearAt_m84B74A8ADD38B9EA039F05AC96FE063A4CC9BDD6,
+	ARSessionOrigin_MakeContentAppearAt_m15440480EE8B1D74A7D4FF48EAEE8449A914FAA0,
+	ARSessionOrigin_MakeContentAppearAt_mADE575DBCCF2FAE695FB672E2B7088AE616355FB,
+	ARSessionOrigin_Raycast_mF979A725569665D23318620A26E74D7980A8B859,
+	ARSessionOrigin_Raycast_m80BFA6943A64B018D33C9410CA1340ED48339BA7,
+	ARSessionOrigin_TransformRaycastResults_m7BCF033934992B61A21B8F62F3EDB47DBD101B4F,
+	ARSessionOrigin_Awake_m0C90EC9A9763815BCD6FFC0E14E6AE3CBCC077A3,
+	ARSessionOrigin_GetCameraOriginPose_m75D111317C0E96F4B80715ECAB89CB4062A915AD,
+	ARSessionOrigin_Update_mC7294B302C0A57A53A7741A3D0636F23C14FCE66,
+	ARSessionOrigin__ctor_m83B2AA52F8C14D48BEBA6E756E214F91141FBC1B,
+	ARSessionOrigin__cctor_m68603A0509751161E5641C6620D469FB3471C553,
+	ARSubsystemManager_get_cameraSubsystem_m4D2E3C8CA66D41581D15BD876E7C2F318A995494,
+	ARSubsystemManager_get_depthSubsystem_mD0DF8618D2373F7AF033B5180306F6C0C7D9215F,
+	ARSubsystemManager_get_planeSubsystem_m1E20B3E332E7C8A5F940FA9A9F2C9660F110D7DC,
+	ARSubsystemManager_get_raycastSubsystem_m910694A66BEC2952AA16F73769E8C5B161CD53D1,
+	ARSubsystemManager_add_cameraFrameReceived_mC5420AAC1E488E6C2B33C30C2936C05A07D6173B,
+	ARSubsystemManager_remove_cameraFrameReceived_m5407919D112A547D758CD53498740D0BB6390414,
+	ARSubsystemManager_add_sessionDestroyed_mF3CED0C6CC743A82A4696A7F018764D4B6A512F9,
+	ARSubsystemManager_remove_sessionDestroyed_m922FAC75230FC62573931F3C017EECBB6241B86A,
+	ARSubsystemManager_add_planeAdded_mB2B982559F7391280D601F5CD78B77A6E625A128,
+	ARSubsystemManager_remove_planeAdded_m10226198EB1549375D0BBC950F17F9DF154147D1,
+	ARSubsystemManager_add_planeUpdated_mAD4376658EF72C03A9453D901DE33BB6BE0A117E,
+	ARSubsystemManager_remove_planeUpdated_m00D2F1EA424813341852F437E3D5FD5F6718D4FC,
+	ARSubsystemManager_add_planeRemoved_m48EB4215574A3774A93B799DD605EFB34DCED921,
+	ARSubsystemManager_remove_planeRemoved_m527C5CA2A48E66E1F3F1EB9D2320C424830DFFA7,
+	ARSubsystemManager_set_planeDetectionFlags_m520C6EE16456872538F3F092B5177C086AFE9583,
+	ARSubsystemManager_get_lightEstimationRequested_m2435AFFE94B01129C5C53435A2057F1CAD51A984,
+	ARSubsystemManager_SetRunning_m2690B3EFC38C7FA544DDF2B847062024FD7B0769,
+	ARSubsystemManager_UpdatePlaneDetection_m0C1F3E2C2A4C1405020BCAE926C81525C0F03CCD,
+	ARSubsystemManager_UpdateCameraSubsystem_m09E86D7A5BF1EAFD9656E326F2F0BC669BD21BBB,
+	ARSubsystemManager_get_cameraSubsystemRequested_m47F8F5A2C798E94B6C6C10908510543C8DA7A247,
+	ARSubsystemManager_get_planeDetectionRequested_m217632B7A7C853E1F19AE0D2AE18D62004F54EB3,
+	ARSubsystemManager__cctor_m5DD05E2AEA4861B9EB9DA6F8A582836971062E66,
+	LightEstimationData_get_averageBrightness_m3FCD4E3348113B65242CD0BDC6849F46170EC1CE_AdjustorThunk,
+	LightEstimationData_get_averageColorTemperature_m6FEA162BEF0CA52EA15A7B7E5A0B40EA462F9C8C_AdjustorThunk,
+	LightEstimationData_get_colorCorrection_m8B75AF9F5BE50714AB76451DE1E15E837C598B6E_AdjustorThunk,
+	LightEstimationData_GetHashCode_mDE23192F55C3FCAB18B88B870F1F53CE716ABC3C_AdjustorThunk,
+	LightEstimationData_Equals_mAF4D7A9902B7A2655DE780CEA2874011C5442050_AdjustorThunk,
+	LightEstimationData_ToString_mD59EE662316E63CD89FA44C45BF2573FCEDE9A1B_AdjustorThunk,
+	LightEstimationData_Equals_m364D4C4F844DA0F0D2134A120C44E4E469EBE08D_AdjustorThunk,
+	PoseExtensions_InverseTransformPosition_mCDC0B4E47294498D315D25A11F55A3DCB1D56B30,
+	PoseExtensions_InverseTransformDirection_m30D10D1F00928AC1DC560E31DC9536E3CA77B87C,
+	PoseExtensions_InverseTransformPositions_mD3C1280E37E1E2C0BBC15345398422A4278CD7D3,
+	TransformExtensions_InverseTransformRay_mD6C666D44E1BF8407A2AA50118A7C90890935503,
+	TransformExtensions_TransformPose_m677CE84C622BD23C3DDB2953DDB820E1934B0144,
+	TransformExtensions_TransformPointList_m8CF86B093B04499DDA56E9C05EBE5DEA80865F55,
+};
+static const int32_t s_InvokerIndices[149] = 
+{
+	1495,
+	1496,
+	18,
+	32,
+	14,
+	1497,
+	17,
+	44,
+	683,
+	308,
+	1354,
+	1355,
+	1114,
+	18,
+	18,
+	9,
+	4,
+	4,
+	4,
+	4,
+	4,
+	4,
+	160,
+	1498,
+	13,
+	13,
+	13,
+	13,
+	8,
+	14,
+	4,
+	4,
+	18,
+	32,
+	14,
+	1499,
+	14,
+	4,
+	4,
+	18,
+	32,
+	14,
+	1500,
+	14,
+	4,
+	4,
+	18,
+	32,
+	14,
+	1501,
+	14,
+	4,
+	1114,
+	1115,
+	1114,
+	1115,
+	14,
+	4,
+	1502,
+	18,
+	32,
+	14,
+	1503,
+	14,
+	4,
+	18,
+	9,
+	4,
+	4,
+	4,
+	4,
+	4,
+	4,
+	18,
+	4,
+	1504,
+	13,
+	13,
+	13,
+	13,
+	13,
+	14,
+	1505,
+	1506,
+	1507,
+	1508,
+	4,
+	13,
+	8,
+	1509,
+	683,
+	308,
+	1351,
+	1348,
+	1351,
+	18,
+	32,
+	1510,
+	14,
+	4,
+	14,
+	4,
+	14,
+	1511,
+	1512,
+	1513,
+	1356,
+	1514,
+	1515,
+	13,
+	1351,
+	13,
+	13,
+	8,
+	19,
+	19,
+	19,
+	19,
+	30,
+	30,
+	30,
+	30,
+	30,
+	30,
+	30,
+	30,
+	30,
+	30,
+	162,
+	77,
+	578,
+	8,
+	8,
+	77,
+	77,
+	8,
+	1496,
+	1496,
+	1516,
+	18,
+	32,
+	14,
+	1517,
+	1518,
+	1518,
+	1519,
+	1520,
+	1521,
+	156,
+};
+extern const Il2CppCodeGenModule g_Unity_XR_ARFoundationCodeGenModule;
+const Il2CppCodeGenModule g_Unity_XR_ARFoundationCodeGenModule = 
+{
+	"Unity.XR.ARFoundation.dll",
+	149,
+	s_methodPointers,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+};

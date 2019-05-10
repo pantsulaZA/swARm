@@ -818,10 +818,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GameObject_GetComponentsInternal();
 		Register_UnityEngine_GameObject_GetComponentsInternal();
 
-		//System.Boolean UnityEngine.GameObject::CompareTag(System.String)
-		void Register_UnityEngine_GameObject_CompareTag();
-		Register_UnityEngine_GameObject_CompareTag();
-
 		//System.Boolean UnityEngine.GameObject::get_activeInHierarchy()
 		void Register_UnityEngine_GameObject_get_activeInHierarchy();
 		Register_UnityEngine_GameObject_get_activeInHierarchy();
@@ -1105,10 +1101,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Int32 UnityEngine.Input::get_touchCount()
 		void Register_UnityEngine_Input_get_touchCount();
 		Register_UnityEngine_Input_get_touchCount();
-
-		//System.Single UnityEngine.Input::GetAxis(System.String)
-		void Register_UnityEngine_Input_GetAxis();
-		Register_UnityEngine_Input_GetAxis();
 
 		//System.Single UnityEngine.Input::GetAxisRaw(System.String)
 		void Register_UnityEngine_Input_GetAxisRaw();
@@ -1565,10 +1557,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Quaternion::Internal_FromEulerRad_Injected(UnityEngine.Vector3&,UnityEngine.Quaternion&)
 		void Register_UnityEngine_Quaternion_Internal_FromEulerRad_Injected();
 		Register_UnityEngine_Quaternion_Internal_FromEulerRad_Injected();
-
-		//System.Void UnityEngine.Quaternion::Internal_ToEulerRad_Injected(UnityEngine.Quaternion&,UnityEngine.Vector3&)
-		void Register_UnityEngine_Quaternion_Internal_ToEulerRad_Injected();
-		Register_UnityEngine_Quaternion_Internal_ToEulerRad_Injected();
 
 		//System.Void UnityEngine.Quaternion::Inverse_Injected(UnityEngine.Quaternion&,UnityEngine.Quaternion&)
 		void Register_UnityEngine_Quaternion_Inverse_Injected();
@@ -2341,10 +2329,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Transform::InverseTransformPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
 		void Register_UnityEngine_Transform_InverseTransformPoint_Injected();
 		Register_UnityEngine_Transform_InverseTransformPoint_Injected();
-
-		//System.Void UnityEngine.Transform::RotateAroundInternal_Injected(UnityEngine.Vector3&,System.Single)
-		void Register_UnityEngine_Transform_RotateAroundInternal_Injected();
-		Register_UnityEngine_Transform_RotateAroundInternal_Injected();
 
 		//System.Void UnityEngine.Transform::SetAsFirstSibling()
 		void Register_UnityEngine_Transform_SetAsFirstSibling();

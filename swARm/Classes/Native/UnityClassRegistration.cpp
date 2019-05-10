@@ -167,7 +167,7 @@ class VisualEffect;
 class WindZone; 
 namespace UI { class CanvasRenderer; } template <> void RegisterUnityClass<UI::CanvasRenderer>(const char*);
 class Collider; template <> void RegisterUnityClass<Collider>(const char*);
-class BoxCollider; 
+class BoxCollider; template <> void RegisterUnityClass<BoxCollider>(const char*);
 class CapsuleCollider; 
 class CharacterController; 
 class MeshCollider; template <> void RegisterUnityClass<MeshCollider>(const char*);
@@ -313,7 +313,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 85 non stripped classes
+	//Total: 86 non stripped classes
 	//0. Camera
 	RegisterUnityClass<Camera>("Core");
 	//1. Behaviour
@@ -390,30 +390,30 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<Rigidbody>("Physics");
 	//37. Collider
 	RegisterUnityClass<Collider>("Physics");
-	//38. Animator
-	RegisterUnityClass<Animator>("Animation");
-	//39. AnimatorOverrideController
-	RegisterUnityClass<AnimatorOverrideController>("Animation");
-	//40. RuntimeAnimatorController
-	RegisterUnityClass<RuntimeAnimatorController>("Animation");
-	//41. Animation
-	RegisterUnityClass<Animation>("Animation");
-	//42. NavMeshAgent
+	//38. NavMeshAgent
 	RegisterUnityClass<NavMeshAgent>("AI");
-	//43. NavMeshData
+	//39. NavMeshData
 	RegisterUnityClass<NavMeshData>("AI");
-	//44. AudioClip
-	RegisterUnityClass<AudioClip>("Audio");
-	//45. SampleClip
-	RegisterUnityClass<SampleClip>("Audio");
-	//46. Rigidbody2D
-	RegisterUnityClass<Rigidbody2D>("Physics2D");
-	//47. Collider2D
-	RegisterUnityClass<Collider2D>("Physics2D");
-	//48. Terrain
+	//40. Animator
+	RegisterUnityClass<Animator>("Animation");
+	//41. AnimatorOverrideController
+	RegisterUnityClass<AnimatorOverrideController>("Animation");
+	//42. RuntimeAnimatorController
+	RegisterUnityClass<RuntimeAnimatorController>("Animation");
+	//43. Animation
+	RegisterUnityClass<Animation>("Animation");
+	//44. Terrain
 	RegisterUnityClass<Terrain>("Terrain");
-	//49. TerrainData
+	//45. TerrainData
 	RegisterUnityClass<TerrainData>("Terrain");
+	//46. AudioClip
+	RegisterUnityClass<AudioClip>("Audio");
+	//47. SampleClip
+	RegisterUnityClass<SampleClip>("Audio");
+	//48. Rigidbody2D
+	RegisterUnityClass<Rigidbody2D>("Physics2D");
+	//49. Collider2D
+	RegisterUnityClass<Collider2D>("Physics2D");
 	//50. TextRendering::Font
 	RegisterUnityClass<TextRendering::Font>("TextRendering");
 	//51. UI::Canvas
@@ -482,7 +482,9 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<RenderSettings>("Core");
 	//83. LightProbes
 	RegisterUnityClass<LightProbes>("Core");
-	//84. NavMeshSettings
+	//84. BoxCollider
+	RegisterUnityClass<BoxCollider>("Physics");
+	//85. NavMeshSettings
 	RegisterUnityClass<NavMeshSettings>("AI");
 
 }

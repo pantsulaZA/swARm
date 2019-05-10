@@ -49,6 +49,7 @@
 		<type fullname="UnityEngine.RenderSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.LightProbes" preserve="nothing"/>
 		<type fullname="UnityEngine.MeshCollider" preserve="nothing"/>
+		<type fullname="UnityEngine.BoxCollider" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="Building" preserve="nothing"/>
@@ -57,7 +58,7 @@
 		<type fullname="GameController" preserve="nothing"/>
 		<type fullname="Gatherer" preserve="nothing"/>
 		<type fullname="House" preserve="nothing"/>
-		<type fullname="Plantable" preserve="nothing"/>
+		<type fullname="SelectableObject" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="NavMeshComponents">
 		<type fullname="UnityEngine.AI.NavMeshSurface" preserve="nothing"/>
@@ -65,8 +66,10 @@
 	<assembly fullname="UnityEditor.Graphs">
 		<type fullname="UnityEditor.Graphs.AnimationBlendTree.Graph" preserve="nothing"/>
 		<type fullname="UnityEditor.Graphs.AnimationBlendTree.GraphGUI" preserve="nothing"/>
+		<type fullname="UnityEditor.Graphs.AnimationStateMachine.AnyStateNode" preserve="nothing"/>
 		<type fullname="UnityEditor.Graphs.AnimationStateMachine.Graph" preserve="nothing"/>
 		<type fullname="UnityEditor.Graphs.AnimationStateMachine.GraphGUI" preserve="nothing"/>
+		<type fullname="UnityEditor.Graphs.AnimationStateMachine.StateNode" preserve="nothing"/>
 		<type fullname="UnityEditor.Graphs.AnimatorControllerTool" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEditor.TestRunner">

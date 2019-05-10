@@ -15,15 +15,20 @@ public class CameraController : MonoBehaviour
     private PanGestureRecognizer panner;
     private TapGestureRecognizer tapper;
     private ScaleGestureRecognizer zoomer;
+    private RotateGestureRecognizer rotator;
     private Vector3 cameraOffset;
+    private float maxCameraHeight = 50f;
+    private float minCameraHeight = 10f;
 
     void Start()
     {
         SetupGesture();
     }
 
-    void Update() {
-        if (tempFocus != null) {
+    void Update()
+    {
+        if (tempFocus != null)
+        {
             target.transform.position = tempFocus.position;
         }
     }
@@ -41,6 +46,10 @@ public class CameraController : MonoBehaviour
         zoomer = new ScaleGestureRecognizer();
         zoomer.StateUpdated += Zoom;
         FingersScript.Instance.AddGesture(zoomer);
+        
+        rotator = new RotateGestureRecognizer();
+        rotator.StateUpdated += Rotate;
+        FingersScript.Instance.AddGesture(rotator);
     }
 
     private void PanGestureCallback(GestureRecognizer gesture)
@@ -49,13 +58,15 @@ public class CameraController : MonoBehaviour
         {
             if (tempFocus != null)
             {
-                target.Rotate(new Vector3(x: 0, y: panner.DeltaX * rotateSpeed * Time.deltaTime, z: 0));
+                target.Rotate(new Vector3(x: 0, y: panner.DeltaX * rotateSpeed * Time.deltaTime * transform.position.y, z: 0));
                 transform.Translate(-Vector3.forward * panner.DeltaY * zoomSpeed * Time.deltaTime);
 
             }
             else
             {
-                target.Translate(-panner.DeltaX * panSpeed * Time.deltaTime / transform.position.y, 0, -panner.DeltaY * panSpeed * Time.deltaTime / transform.position.y);
+                target.Translate(-panner.DeltaX * panSpeed * Time.deltaTime * transform.position.y / maxCameraHeight / 5,
+                 0, 
+                 -panner.DeltaY * panSpeed * Time.deltaTime * transform.position.y / maxCameraHeight / 5);
             }
         }
     }
@@ -63,7 +74,7 @@ public class CameraController : MonoBehaviour
     {
         if (gesture.State == GestureRecognizerState.Ended)
         {
-        Debug.Log("Tapping");
+            Debug.Log("Tapping");
             Vector3 pos = new Vector3(x: tapper.StartFocusX, y: tapper.StartFocusY, z: 0);
             Debug.Log(pos);
             var ray = Camera.main.ScreenPointToRay(pos);
@@ -78,7 +89,8 @@ public class CameraController : MonoBehaviour
                 else
                 {
                     tempFocus = null;
-                    if (hit.transform.GetComponent<Plantable>() != null) {
+                    if (hit.transform.GetComponent<Plantable>() != null)
+                    {
                         gameController.PlantTree(hit.transform.position);
                         Debug.Log(hit.point);
                     }
@@ -89,13 +101,25 @@ public class CameraController : MonoBehaviour
 
     private void Zoom(GestureRecognizer gesture)
     {
-         if (gesture.State == GestureRecognizerState.Executing)
+        if (gesture.State == GestureRecognizerState.Executing)
         {
-        Debug.Log("Zooming");
-        transform.Translate(-Vector3.forward * zoomer.ScaleMultiplier);
+            Vector3 newPosition = transform.position;
+            float cameraDistance = Mathf.Clamp(newPosition.y * zoomer.ScaleMultiplier, minCameraHeight, maxCameraHeight);
+            newPosition.z =  -cameraDistance;
+            newPosition.y = cameraDistance;
+
+            Debug.Log("Zoom : " + newPosition);
+            transform.position = newPosition;
 
         }
-       
+
     }
-     
+
+private void Rotate(GestureRecognizer gesture)
+    {
+        if (gesture.State == GestureRecognizerState.Executing)
+        {  
+            target.Rotate(new Vector3(x: 0, y: rotator.RotationDegreesDelta * rotateSpeed * Time.deltaTime, z: 0));     
+        }
+    }
 }

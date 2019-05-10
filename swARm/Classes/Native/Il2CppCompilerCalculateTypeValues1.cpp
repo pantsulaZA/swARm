@@ -19249,8 +19249,14 @@ public:
 	TapGestureRecognizer_tDE73DDB8BEF143870B1F149C84F0401646C3BAFC * ___tapper_11;
 	// DigitalRubyShared.ScaleGestureRecognizer CameraController::zoomer
 	ScaleGestureRecognizer_t5B1254CE0126D9EF62E3F5723741B72AF5831B5E * ___zoomer_12;
+	// DigitalRubyShared.RotateGestureRecognizer CameraController::rotator
+	RotateGestureRecognizer_tD9BA9E36615F8B9913E357BC0A4AA62EBB4EE6A0 * ___rotator_13;
 	// UnityEngine.Vector3 CameraController::cameraOffset
-	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___cameraOffset_13;
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___cameraOffset_14;
+	// System.Single CameraController::maxCameraHeight
+	float ___maxCameraHeight_15;
+	// System.Single CameraController::minCameraHeight
+	float ___minCameraHeight_16;
 
 public:
 	inline static int32_t get_offset_of_target_4() { return static_cast<int32_t>(offsetof(CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB, ___target_4)); }
@@ -19331,12 +19337,37 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___zoomer_12), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_cameraOffset_13() { return static_cast<int32_t>(offsetof(CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB, ___cameraOffset_13)); }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_cameraOffset_13() const { return ___cameraOffset_13; }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_cameraOffset_13() { return &___cameraOffset_13; }
-	inline void set_cameraOffset_13(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
+	inline static int32_t get_offset_of_rotator_13() { return static_cast<int32_t>(offsetof(CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB, ___rotator_13)); }
+	inline RotateGestureRecognizer_tD9BA9E36615F8B9913E357BC0A4AA62EBB4EE6A0 * get_rotator_13() const { return ___rotator_13; }
+	inline RotateGestureRecognizer_tD9BA9E36615F8B9913E357BC0A4AA62EBB4EE6A0 ** get_address_of_rotator_13() { return &___rotator_13; }
+	inline void set_rotator_13(RotateGestureRecognizer_tD9BA9E36615F8B9913E357BC0A4AA62EBB4EE6A0 * value)
 	{
-		___cameraOffset_13 = value;
+		___rotator_13 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___rotator_13), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_cameraOffset_14() { return static_cast<int32_t>(offsetof(CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB, ___cameraOffset_14)); }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_cameraOffset_14() const { return ___cameraOffset_14; }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_cameraOffset_14() { return &___cameraOffset_14; }
+	inline void set_cameraOffset_14(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
+	{
+		___cameraOffset_14 = value;
+	}
+
+	inline static int32_t get_offset_of_maxCameraHeight_15() { return static_cast<int32_t>(offsetof(CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB, ___maxCameraHeight_15)); }
+	inline float get_maxCameraHeight_15() const { return ___maxCameraHeight_15; }
+	inline float* get_address_of_maxCameraHeight_15() { return &___maxCameraHeight_15; }
+	inline void set_maxCameraHeight_15(float value)
+	{
+		___maxCameraHeight_15 = value;
+	}
+
+	inline static int32_t get_offset_of_minCameraHeight_16() { return static_cast<int32_t>(offsetof(CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB, ___minCameraHeight_16)); }
+	inline float get_minCameraHeight_16() const { return ___minCameraHeight_16; }
+	inline float* get_address_of_minCameraHeight_16() { return &___minCameraHeight_16; }
+	inline void set_minCameraHeight_16(float value)
+	{
+		___minCameraHeight_16 = value;
 	}
 };
 
@@ -29021,7 +29052,7 @@ extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2664;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize2664 = { sizeof (U3CModuleU3E_t6CDDDF959E7E18A6744E43B613F41CDAC780256A), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2665;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize2665 = { sizeof (CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB), -1, 0, 0 };
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2665[10] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2665[13] = 
 {
 	CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB::get_offset_of_target_4(),
 	CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB::get_offset_of_tempFocus_5(),
@@ -29032,7 +29063,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2665[10] =
 	CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB::get_offset_of_panner_10(),
 	CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB::get_offset_of_tapper_11(),
 	CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB::get_offset_of_zoomer_12(),
-	CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB::get_offset_of_cameraOffset_13(),
+	CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB::get_offset_of_rotator_13(),
+	CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB::get_offset_of_cameraOffset_14(),
+	CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB::get_offset_of_maxCameraHeight_15(),
+	CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB::get_offset_of_minCameraHeight_16(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2666;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize2666 = { sizeof (GameController_t8BB0D3CE8992C95BED5FB508588730F0A74009A3), -1, 0, 0 };

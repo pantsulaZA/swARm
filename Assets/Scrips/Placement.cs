@@ -48,7 +48,7 @@ public class Placement : MonoBehaviour
                     GameObject newObject = Instantiate(objectsToPlace.ToArray()[index], placementPose.position, placementPose.rotation);
                     if (gatherer != null)
                     {
-                        gatherer.resource = newObject.transform;
+                        gatherer.destination = newObject;
                     }
                     break;
                 case 1:

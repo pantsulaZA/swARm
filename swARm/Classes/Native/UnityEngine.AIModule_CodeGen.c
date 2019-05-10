@@ -132,65 +132,61 @@ extern void NavMeshBuildSettings_set_tileSize_m3C8F374924A2FC259065FC7362F3B9C37
 extern void NavMeshAgent_SetDestination_mDCFFAB501EFCC89E17EA13F49A917D340AEF0BC8 ();
 // 0x00000038 System.Boolean UnityEngine.AI.NavMeshAgent::INTERNAL_CALL_SetDestination(UnityEngine.AI.NavMeshAgent,UnityEngine.Vector3U26)
 extern void NavMeshAgent_INTERNAL_CALL_SetDestination_m8203F687284EFAEE6732BB3191C92A22384DB3F5 ();
-// 0x00000039 UnityEngine.Vector3 UnityEngine.AI.NavMeshAgent::get_velocity()
-extern void NavMeshAgent_get_velocity_m1CF6CC11732234E2E3EC3B778B79C5492A990186 ();
-// 0x0000003A System.Void UnityEngine.AI.NavMeshAgent::INTERNAL_get_velocity(UnityEngine.Vector3U26)
-extern void NavMeshAgent_INTERNAL_get_velocity_m65D71DE88C74D2B72ECAC71A6736020241880A53 ();
-// 0x0000003B System.Single UnityEngine.AI.NavMeshAgent::get_remainingDistance()
+// 0x00000039 System.Single UnityEngine.AI.NavMeshAgent::get_remainingDistance()
 extern void NavMeshAgent_get_remainingDistance_m47A559FB06896E86E44A8DD7C756722E0E6EA9DB ();
-// 0x0000003C System.Void UnityEngine.AI.NavMeshData::.ctor()
+// 0x0000003A System.Void UnityEngine.AI.NavMeshData::.ctor()
 extern void NavMeshData__ctor_mCA0F1B5D5B877D72F655DC60844A27DD810E128A ();
-// 0x0000003D System.Void UnityEngine.AI.NavMeshData::.ctor(System.Int32)
+// 0x0000003B System.Void UnityEngine.AI.NavMeshData::.ctor(System.Int32)
 extern void NavMeshData__ctor_mFFCE3983B9C075BF2CFAFD20CCB1F1F9EE860010 ();
-// 0x0000003E System.Void UnityEngine.AI.NavMeshData::Internal_Create(UnityEngine.AI.NavMeshData,System.Int32)
+// 0x0000003C System.Void UnityEngine.AI.NavMeshData::Internal_Create(UnityEngine.AI.NavMeshData,System.Int32)
 extern void NavMeshData_Internal_Create_m5EB9327216B5DAF47D57F469F798E4583F302CF3 ();
-// 0x0000003F UnityEngine.Bounds UnityEngine.AI.NavMeshData::get_sourceBounds()
+// 0x0000003D UnityEngine.Bounds UnityEngine.AI.NavMeshData::get_sourceBounds()
 extern void NavMeshData_get_sourceBounds_m86948FB14F32F3B86E7607B3B1708234F558EEC8 ();
-// 0x00000040 System.Void UnityEngine.AI.NavMeshData::INTERNAL_get_sourceBounds(UnityEngine.BoundsU26)
+// 0x0000003E System.Void UnityEngine.AI.NavMeshData::INTERNAL_get_sourceBounds(UnityEngine.BoundsU26)
 extern void NavMeshData_INTERNAL_get_sourceBounds_mF0B29638F29352BDE7707C717176F24D12791775 ();
-// 0x00000041 System.Void UnityEngine.AI.NavMeshData::set_position(UnityEngine.Vector3)
+// 0x0000003F System.Void UnityEngine.AI.NavMeshData::set_position(UnityEngine.Vector3)
 extern void NavMeshData_set_position_m70F95E20AE46E773E19D73A3FEFBFCABD1CF061A ();
-// 0x00000042 System.Void UnityEngine.AI.NavMeshData::INTERNAL_set_position(UnityEngine.Vector3U26)
+// 0x00000040 System.Void UnityEngine.AI.NavMeshData::INTERNAL_set_position(UnityEngine.Vector3U26)
 extern void NavMeshData_INTERNAL_set_position_m88E72C24CD03FC7D3F9EF75574CC7570839955A1 ();
-// 0x00000043 System.Void UnityEngine.AI.NavMeshData::set_rotation(UnityEngine.Quaternion)
+// 0x00000041 System.Void UnityEngine.AI.NavMeshData::set_rotation(UnityEngine.Quaternion)
 extern void NavMeshData_set_rotation_mF90B0D2ED475B0DD536BA43B4C00AACAEEA7449F ();
-// 0x00000044 System.Void UnityEngine.AI.NavMeshData::INTERNAL_set_rotation(UnityEngine.QuaternionU26)
+// 0x00000042 System.Void UnityEngine.AI.NavMeshData::INTERNAL_set_rotation(UnityEngine.QuaternionU26)
 extern void NavMeshData_INTERNAL_set_rotation_m76F1553998969A5472F14C90B08082260B185908 ();
-// 0x00000045 System.Boolean UnityEngine.AI.NavMeshDataInstance::get_valid()
+// 0x00000043 System.Boolean UnityEngine.AI.NavMeshDataInstance::get_valid()
 extern void NavMeshDataInstance_get_valid_m4334E80C0A66334F366EBF69DCB634E86DDFA05B_AdjustorThunk ();
-// 0x00000046 System.Int32 UnityEngine.AI.NavMeshDataInstance::get_id()
+// 0x00000044 System.Int32 UnityEngine.AI.NavMeshDataInstance::get_id()
 extern void NavMeshDataInstance_get_id_mEA3B300C16CC2B995641461BE9E69BEEF60BC2EF_AdjustorThunk ();
-// 0x00000047 System.Void UnityEngine.AI.NavMeshDataInstance::set_id(System.Int32)
+// 0x00000045 System.Void UnityEngine.AI.NavMeshDataInstance::set_id(System.Int32)
 extern void NavMeshDataInstance_set_id_mACF5FCAB5F05DAF0F2C64C3670141DB2598B7DE9_AdjustorThunk ();
-// 0x00000048 System.Void UnityEngine.AI.NavMeshDataInstance::Remove()
+// 0x00000046 System.Void UnityEngine.AI.NavMeshDataInstance::Remove()
 extern void NavMeshDataInstance_Remove_m6B51624B186D5F570D115A6205BBF58CBA60A837_AdjustorThunk ();
-// 0x00000049 System.Void UnityEngine.AI.NavMeshDataInstance::set_owner(UnityEngine.Object)
+// 0x00000047 System.Void UnityEngine.AI.NavMeshDataInstance::set_owner(UnityEngine.Object)
 extern void NavMeshDataInstance_set_owner_m80A0BFBF4A375008A5F9CD126A520F7DF66333FD_AdjustorThunk ();
-// 0x0000004A System.Void UnityEngine.AI.NavMeshLinkData::set_startPosition(UnityEngine.Vector3)
+// 0x00000048 System.Void UnityEngine.AI.NavMeshLinkData::set_startPosition(UnityEngine.Vector3)
 extern void NavMeshLinkData_set_startPosition_mB28631278DA2678D228FD7C917012068ADFF05F5_AdjustorThunk ();
-// 0x0000004B System.Void UnityEngine.AI.NavMeshLinkData::set_endPosition(UnityEngine.Vector3)
+// 0x00000049 System.Void UnityEngine.AI.NavMeshLinkData::set_endPosition(UnityEngine.Vector3)
 extern void NavMeshLinkData_set_endPosition_m2D2051E1F6166CA3C803B5B93ADAE0DAE7F6C5F9_AdjustorThunk ();
-// 0x0000004C System.Void UnityEngine.AI.NavMeshLinkData::set_costModifier(System.Single)
+// 0x0000004A System.Void UnityEngine.AI.NavMeshLinkData::set_costModifier(System.Single)
 extern void NavMeshLinkData_set_costModifier_m1552A1199CE5EFBA60C60AE601A3E43E4361ED9B_AdjustorThunk ();
-// 0x0000004D System.Void UnityEngine.AI.NavMeshLinkData::set_bidirectional(System.Boolean)
+// 0x0000004B System.Void UnityEngine.AI.NavMeshLinkData::set_bidirectional(System.Boolean)
 extern void NavMeshLinkData_set_bidirectional_m1AC3CAD1CEFE47FE7B36E4403F7036B819199289_AdjustorThunk ();
-// 0x0000004E System.Void UnityEngine.AI.NavMeshLinkData::set_width(System.Single)
+// 0x0000004C System.Void UnityEngine.AI.NavMeshLinkData::set_width(System.Single)
 extern void NavMeshLinkData_set_width_m8473F9DE6D05FD86BA04DF84AA593788B645870D_AdjustorThunk ();
-// 0x0000004F System.Void UnityEngine.AI.NavMeshLinkData::set_area(System.Int32)
+// 0x0000004D System.Void UnityEngine.AI.NavMeshLinkData::set_area(System.Int32)
 extern void NavMeshLinkData_set_area_m9833F712659EA6D789487F1C78DE0B00599FCE67_AdjustorThunk ();
-// 0x00000050 System.Void UnityEngine.AI.NavMeshLinkData::set_agentTypeID(System.Int32)
+// 0x0000004E System.Void UnityEngine.AI.NavMeshLinkData::set_agentTypeID(System.Int32)
 extern void NavMeshLinkData_set_agentTypeID_m9D7FC516E796D8F5B84D88CBFF2865D54123A9E7_AdjustorThunk ();
-// 0x00000051 System.Boolean UnityEngine.AI.NavMeshLinkInstance::get_valid()
+// 0x0000004F System.Boolean UnityEngine.AI.NavMeshLinkInstance::get_valid()
 extern void NavMeshLinkInstance_get_valid_mE143382F0205F0BD104CAA0214666C7A307D2608_AdjustorThunk ();
-// 0x00000052 System.Int32 UnityEngine.AI.NavMeshLinkInstance::get_id()
+// 0x00000050 System.Int32 UnityEngine.AI.NavMeshLinkInstance::get_id()
 extern void NavMeshLinkInstance_get_id_m8B494FAE3B97FED8177D20816D541EB271BC9363_AdjustorThunk ();
-// 0x00000053 System.Void UnityEngine.AI.NavMeshLinkInstance::set_id(System.Int32)
+// 0x00000051 System.Void UnityEngine.AI.NavMeshLinkInstance::set_id(System.Int32)
 extern void NavMeshLinkInstance_set_id_m48D09FEDF41895E1EA92FE794811113565F4281C_AdjustorThunk ();
-// 0x00000054 System.Void UnityEngine.AI.NavMeshLinkInstance::Remove()
+// 0x00000052 System.Void UnityEngine.AI.NavMeshLinkInstance::Remove()
 extern void NavMeshLinkInstance_Remove_mF440F826BECB512A1BEBB8648E64ACFA7B3D0830_AdjustorThunk ();
-// 0x00000055 System.Void UnityEngine.AI.NavMeshLinkInstance::set_owner(UnityEngine.Object)
+// 0x00000053 System.Void UnityEngine.AI.NavMeshLinkInstance::set_owner(UnityEngine.Object)
 extern void NavMeshLinkInstance_set_owner_m2DF837AD84594C78E22CDC6636CF51B599E722D6_AdjustorThunk ();
-static Il2CppMethodPointer s_methodPointers[85] = 
+static Il2CppMethodPointer s_methodPointers[83] = 
 {
 	NavMeshBuilder_CollectSources_m11DFC2DE0CD5165927B83ADA915E026D2A2BADAE,
 	NavMeshBuilder_CollectSources_m73C0100A28595C935428590A4A469D80C44D4C67,
@@ -248,8 +244,6 @@ static Il2CppMethodPointer s_methodPointers[85] =
 	NavMeshBuildSettings_set_tileSize_m3C8F374924A2FC259065FC7362F3B9C376B795E6_AdjustorThunk,
 	NavMeshAgent_SetDestination_mDCFFAB501EFCC89E17EA13F49A917D340AEF0BC8,
 	NavMeshAgent_INTERNAL_CALL_SetDestination_m8203F687284EFAEE6732BB3191C92A22384DB3F5,
-	NavMeshAgent_get_velocity_m1CF6CC11732234E2E3EC3B778B79C5492A990186,
-	NavMeshAgent_INTERNAL_get_velocity_m65D71DE88C74D2B72ECAC71A6736020241880A53,
 	NavMeshAgent_get_remainingDistance_m47A559FB06896E86E44A8DD7C756722E0E6EA9DB,
 	NavMeshData__ctor_mCA0F1B5D5B877D72F655DC60844A27DD810E128A,
 	NavMeshData__ctor_mFFCE3983B9C075BF2CFAFD20CCB1F1F9EE860010,
@@ -278,36 +272,36 @@ static Il2CppMethodPointer s_methodPointers[85] =
 	NavMeshLinkInstance_Remove_mF440F826BECB512A1BEBB8648E64ACFA7B3D0830_AdjustorThunk,
 	NavMeshLinkInstance_set_owner_m2DF837AD84594C78E22CDC6636CF51B599E722D6_AdjustorThunk,
 };
-static const int32_t s_InvokerIndices[85] = 
+static const int32_t s_InvokerIndices[83] = 
 {
+	1361,
+	1362,
+	1363,
 	1364,
 	1365,
+	1365,
+	1366,
 	1366,
 	1367,
 	1368,
-	1368,
 	1369,
-	1369,
+	8,
 	1370,
 	1371,
-	1372,
-	8,
-	1373,
-	1374,
 	74,
 	74,
 	81,
 	81,
 	119,
-	1375,
+	1372,
 	1010,
 	162,
-	1376,
-	1377,
+	1373,
+	1374,
 	495,
 	162,
-	1378,
-	1172,
+	1375,
+	1173,
 	144,
 	13,
 	16,
@@ -334,19 +328,17 @@ static const int32_t s_InvokerIndices[85] =
 	308,
 	44,
 	9,
-	1126,
+	1127,
 	214,
-	1114,
-	46,
 	683,
 	13,
 	9,
 	337,
-	1144,
+	1145,
 	46,
 	1115,
 	46,
-	1276,
+	1273,
 	46,
 	17,
 	18,
@@ -370,7 +362,7 @@ extern const Il2CppCodeGenModule g_UnityEngine_AIModuleCodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_AIModuleCodeGenModule = 
 {
 	"UnityEngine.AIModule.dll",
-	85,
+	83,
 	s_methodPointers,
 	s_InvokerIndices,
 	0,

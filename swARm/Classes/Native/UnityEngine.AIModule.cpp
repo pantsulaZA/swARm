@@ -2206,8 +2206,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NavMesh_INTERNAL_CALL_AddLinkInternal
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NavMesh_INTERNAL_CALL_GetSettingsByID_m69FFFA57EF4E7279EDEB0B60224B816E56773E81 (int32_t ___agentTypeID0, NavMeshBuildSettings_t4D69F66C6FCD8689FAFE1E99B5ED82E61624339F * ___value1, const RuntimeMethod* method);
 // System.Boolean UnityEngine.AI.NavMeshAgent::INTERNAL_CALL_SetDestination(UnityEngine.AI.NavMeshAgent,UnityEngine.Vector3&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NavMeshAgent_INTERNAL_CALL_SetDestination_m8203F687284EFAEE6732BB3191C92A22384DB3F5 (NavMeshAgent_tD93BAD8854B394AA1D372193F21154E94CA84BEB * ___self0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___target1, const RuntimeMethod* method);
-// System.Void UnityEngine.AI.NavMeshAgent::INTERNAL_get_velocity(UnityEngine.Vector3&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NavMeshAgent_INTERNAL_get_velocity_m65D71DE88C74D2B72ECAC71A6736020241880A53 (NavMeshAgent_tD93BAD8854B394AA1D372193F21154E94CA84BEB * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.AI.NavMeshBuildMarkup::set_overrideArea(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NavMeshBuildMarkup_set_overrideArea_mFA7BD1329F9BCBE74AF766F0618EEB3C2EF6E9C2 (NavMeshBuildMarkup_t4ECFE4171086631B6A2DE5BE6E8DC50443387114 * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.AI.NavMeshBuildMarkup::set_area(System.Int32)
@@ -2801,35 +2799,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NavMeshAgent_INTERNAL_CALL_SetDestinatio
 	_il2cpp_icall_func = (NavMeshAgent_INTERNAL_CALL_SetDestination_m8203F687284EFAEE6732BB3191C92A22384DB3F5_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AI.NavMeshAgent::INTERNAL_CALL_SetDestination(UnityEngine.AI.NavMeshAgent,UnityEngine.Vector3&)");
 	bool retVal = _il2cpp_icall_func(___self0, ___target1);
 	return retVal;
-}
-// UnityEngine.Vector3 UnityEngine.AI.NavMeshAgent::get_velocity()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  NavMeshAgent_get_velocity_m1CF6CC11732234E2E3EC3B778B79C5492A990186 (NavMeshAgent_tD93BAD8854B394AA1D372193F21154E94CA84BEB * __this, const RuntimeMethod* method)
-{
-	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  V_1;
-	memset((&V_1), 0, sizeof(V_1));
-	{
-		NavMeshAgent_INTERNAL_get_velocity_m65D71DE88C74D2B72ECAC71A6736020241880A53(__this, (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&V_0), /*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_0 = V_0;
-		V_1 = L_0;
-		goto IL_0010;
-	}
-
-IL_0010:
-	{
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_1 = V_1;
-		return L_1;
-	}
-}
-// System.Void UnityEngine.AI.NavMeshAgent::INTERNAL_get_velocity(UnityEngine.Vector3U26)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NavMeshAgent_INTERNAL_get_velocity_m65D71DE88C74D2B72ECAC71A6736020241880A53 (NavMeshAgent_tD93BAD8854B394AA1D372193F21154E94CA84BEB * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___value0, const RuntimeMethod* method)
-{
-	typedef void (*NavMeshAgent_INTERNAL_get_velocity_m65D71DE88C74D2B72ECAC71A6736020241880A53_ftn) (NavMeshAgent_tD93BAD8854B394AA1D372193F21154E94CA84BEB *, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *);
-	static NavMeshAgent_INTERNAL_get_velocity_m65D71DE88C74D2B72ECAC71A6736020241880A53_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (NavMeshAgent_INTERNAL_get_velocity_m65D71DE88C74D2B72ECAC71A6736020241880A53_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AI.NavMeshAgent::INTERNAL_get_velocity(UnityEngine.Vector3&)");
-	_il2cpp_icall_func(__this, ___value0);
 }
 // System.Single UnityEngine.AI.NavMeshAgent::get_remainingDistance()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float NavMeshAgent_get_remainingDistance_m47A559FB06896E86E44A8DD7C756722E0E6EA9DB (NavMeshAgent_tD93BAD8854B394AA1D372193F21154E94CA84BEB * __this, const RuntimeMethod* method)

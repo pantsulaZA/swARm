@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 595d75ecd8e7245a087c6eebbf7fd643, type: 3}
   m_Name: House
-  m_EditorClassIdentifier: Assembly-CSharp::Building
-  resouces: 241
-  level: 241
+  m_EditorClassIdentifier: 
+  resouces: 24
+  level: 3
   prefabs:
   - {fileID: 1315104023788104, guid: 122b0584add6e9641b3a798f66fa32a4, type: 3}
   - {fileID: 1259184724290830, guid: ac0b22805df58234496f0937058a3812, type: 3}

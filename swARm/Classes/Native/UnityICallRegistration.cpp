@@ -70,10 +70,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_AI_NavMeshAgent_get_remainingDistance();
 		Register_UnityEngine_AI_NavMeshAgent_get_remainingDistance();
 
-		//System.Void UnityEngine.AI.NavMeshAgent::INTERNAL_get_velocity(UnityEngine.Vector3&)
-		void Register_UnityEngine_AI_NavMeshAgent_INTERNAL_get_velocity();
-		Register_UnityEngine_AI_NavMeshAgent_INTERNAL_get_velocity();
-
 	//End Registrations for type : UnityEngine.AI.NavMeshAgent
 
 	//Start Registrations for type : UnityEngine.AI.NavMeshBuilder
@@ -508,6 +504,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.CanvasRenderer
 
+	//Start Registrations for type : UnityEngine.Collider
+
+		//UnityEngine.Rigidbody UnityEngine.Collider::get_attachedRigidbody()
+		void Register_UnityEngine_Collider_get_attachedRigidbody();
+		Register_UnityEngine_Collider_get_attachedRigidbody();
+
+	//End Registrations for type : UnityEngine.Collider
+
 	//Start Registrations for type : UnityEngine.Collider2D
 
 		//UnityEngine.Rigidbody2D UnityEngine.Collider2D::get_attachedRigidbody()
@@ -814,6 +818,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GameObject_GetComponentsInternal();
 		Register_UnityEngine_GameObject_GetComponentsInternal();
 
+		//System.Boolean UnityEngine.GameObject::CompareTag(System.String)
+		void Register_UnityEngine_GameObject_CompareTag();
+		Register_UnityEngine_GameObject_CompareTag();
+
 		//System.Boolean UnityEngine.GameObject::get_activeInHierarchy()
 		void Register_UnityEngine_GameObject_get_activeInHierarchy();
 		Register_UnityEngine_GameObject_get_activeInHierarchy();
@@ -1097,6 +1105,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Int32 UnityEngine.Input::get_touchCount()
 		void Register_UnityEngine_Input_get_touchCount();
 		Register_UnityEngine_Input_get_touchCount();
+
+		//System.Single UnityEngine.Input::GetAxis(System.String)
+		void Register_UnityEngine_Input_GetAxis();
+		Register_UnityEngine_Input_GetAxis();
 
 		//System.Single UnityEngine.Input::GetAxisRaw(System.String)
 		void Register_UnityEngine_Input_GetAxisRaw();
@@ -1550,21 +1562,17 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Quaternion
 
-		//System.Void UnityEngine.Quaternion::AngleAxis_Injected(System.Single,UnityEngine.Vector3&,UnityEngine.Quaternion&)
-		void Register_UnityEngine_Quaternion_AngleAxis_Injected();
-		Register_UnityEngine_Quaternion_AngleAxis_Injected();
-
 		//System.Void UnityEngine.Quaternion::Internal_FromEulerRad_Injected(UnityEngine.Vector3&,UnityEngine.Quaternion&)
 		void Register_UnityEngine_Quaternion_Internal_FromEulerRad_Injected();
 		Register_UnityEngine_Quaternion_Internal_FromEulerRad_Injected();
 
+		//System.Void UnityEngine.Quaternion::Internal_ToEulerRad_Injected(UnityEngine.Quaternion&,UnityEngine.Vector3&)
+		void Register_UnityEngine_Quaternion_Internal_ToEulerRad_Injected();
+		Register_UnityEngine_Quaternion_Internal_ToEulerRad_Injected();
+
 		//System.Void UnityEngine.Quaternion::Inverse_Injected(UnityEngine.Quaternion&,UnityEngine.Quaternion&)
 		void Register_UnityEngine_Quaternion_Inverse_Injected();
 		Register_UnityEngine_Quaternion_Inverse_Injected();
-
-		//System.Void UnityEngine.Quaternion::Lerp_Injected(UnityEngine.Quaternion&,UnityEngine.Quaternion&,System.Single,UnityEngine.Quaternion&)
-		void Register_UnityEngine_Quaternion_Lerp_Injected();
-		Register_UnityEngine_Quaternion_Lerp_Injected();
 
 		//System.Void UnityEngine.Quaternion::LookRotation_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.Quaternion&)
 		void Register_UnityEngine_Quaternion_LookRotation_Injected();
@@ -1581,6 +1589,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Single UnityEngine.Random::Range(System.Single,System.Single)
 		void Register_UnityEngine_Random_Range();
 		Register_UnityEngine_Random_Range();
+
+		//System.Single UnityEngine.Random::get_value()
+		void Register_UnityEngine_Random_get_value();
+		Register_UnityEngine_Random_get_value();
 
 		//System.Void UnityEngine.Random::GetRandomUnitCircle(UnityEngine.Vector2&)
 		void Register_UnityEngine_Random_GetRandomUnitCircle();
@@ -2321,10 +2333,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Int32 UnityEngine.Transform::get_childCount()
 		void Register_UnityEngine_Transform_get_childCount();
 		Register_UnityEngine_Transform_get_childCount();
-
-		//System.Void UnityEngine.Transform::Internal_LookAt_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
-		void Register_UnityEngine_Transform_Internal_LookAt_Injected();
-		Register_UnityEngine_Transform_Internal_LookAt_Injected();
 
 		//System.Void UnityEngine.Transform::InverseTransformDirection_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
 		void Register_UnityEngine_Transform_InverseTransformDirection_Injected();

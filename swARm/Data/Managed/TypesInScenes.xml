@@ -51,16 +51,16 @@
 		<type fullname="UnityEngine.MeshCollider" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="Building" preserve="nothing"/>
 		<type fullname="CameraController" preserve="nothing"/>
 		<type fullname="DigitalRubyShared.FingersScript" preserve="nothing"/>
+		<type fullname="GameController" preserve="nothing"/>
 		<type fullname="Gatherer" preserve="nothing"/>
 		<type fullname="House" preserve="nothing"/>
+		<type fullname="Plantable" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="NavMeshComponents">
 		<type fullname="UnityEngine.AI.NavMeshSurface" preserve="nothing"/>
-	</assembly>
-	<assembly fullname="Unity.PackageManagerUI.Editor">
-		<type fullname="UnityEditor.PackageManager.UI.PackageManagerWindow" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEditor.Graphs">
 		<type fullname="UnityEditor.Graphs.AnimationBlendTree.Graph" preserve="nothing"/>

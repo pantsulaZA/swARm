@@ -5,14 +5,15 @@ using UnityEngine.AI;
 
 public class Gatherer : MonoBehaviour
 {
-    public Transform resource;
-    public House storage;
+    public List<GameObject> resources = new List<GameObject>();
+    public GameObject destination;
+    public House building;
     private NavMeshAgent agent;
     private Animator animator;
     private float chopTime = 5.0f;
     private float currentTimeChopped = 0.0f;
-    private GathererState currentState = GathererState.Idle;
-    private int wood = 0;
+    [SerializeField] private GathererState currentState = GathererState.Idle;
+    [SerializeField] private int wood = 0;
 
     enum GathererState { Chopping, Idle, Walking, Unloading }
 
@@ -20,7 +21,6 @@ public class Gatherer : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(resource.position);
         animator = GetComponent<Animator>();
     }
 
@@ -30,31 +30,48 @@ public class Gatherer : MonoBehaviour
         switch (currentState)
         {
             case GathererState.Idle:
-                if (agent.velocity.magnitude > 0.2)
+                if (wood == 0 && resources.Count > 0)
                 {
-                    currentState = GathererState.Walking;
-                } 
+                    destination = null;
+                    foreach (var tree in resources)
+                    {
+                        if ((destination == null) ||
+                        (Vector3.Distance(transform.position, tree.transform.position) < Vector3.Distance(transform.position, destination.transform.position)))
+                        {
+                            destination = tree;
+                            agent.SetDestination(destination.transform.position);
+                            currentState = GathererState.Walking;
+                        }
+                    }
+                }
                 break;
             case GathererState.Walking:
-                if (agent.remainingDistance < 2)
+                if (wood < 1 && agent.remainingDistance < 3)
                 {
-                    if (wood < 1) {
-                        currentState = GathererState.Chopping;
-                    } else {
-                        storage.AddResouce(amount: wood);
-                        wood = 0;
-                        agent.SetDestination(resource.position);
-                    }
+                    currentState = GathererState.Chopping;
+                }
+                else if (wood > 0 && agent.remainingDistance < 3)
+                {
+                    building.AddResouce(amount: wood);
+                    wood = 0;
+                    currentState = GathererState.Idle;
                 }
                 break;
             case GathererState.Chopping:
                 if (currentTimeChopped > chopTime)
                 {
-                    // currentState = GathererState.Walking;
                     wood += 1;
                     currentTimeChopped = 0;
-                    agent.SetDestination(storage.transform.position);
+                    agent.SetDestination(building.transform.position);
                     currentState = GathererState.Walking;
+                    if (destination != null)
+                    {
+                        resources.Remove(destination);
+                        Destroy(destination);
+                    }
+                }
+                else if (destination == null) {
+                    currentState = GathererState.Idle;
                 }
                 else
                 {

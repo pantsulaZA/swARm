@@ -7,7 +7,7 @@ public class Gatherer : MonoBehaviour
 {
     public List<GameObject> resources = new List<GameObject>();
     public GameObject destination;
-    public House building;
+    public House house;
     private NavMeshAgent agent;
     private Animator animator;
     private float chopTime = 5.0f;
@@ -20,8 +20,8 @@ public class Gatherer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
+        agent = this.gameObject.GetComponent<NavMeshAgent>();
+        animator = this.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -52,7 +52,7 @@ public class Gatherer : MonoBehaviour
                 }
                 else if (wood > 0 && agent.remainingDistance < 3)
                 {
-                    building.AddResouce(amount: wood);
+                    house.AddResouce(amount: wood);
                     wood = 0;
                     currentState = GathererState.Idle;
                 }
@@ -62,13 +62,14 @@ public class Gatherer : MonoBehaviour
                 {
                     wood += 1;
                     currentTimeChopped = 0;
-                    agent.SetDestination(building.transform.position);
+                    agent.SetDestination(house.transform.position);
                     currentState = GathererState.Walking;
                     if (destination != null)
                     {
                         resources.Remove(destination);
                         Destroy(destination);
                     }
+                    destination = house.gameObject;
                 }
                 else if (destination == null) {
                     currentState = GathererState.Idle;

@@ -8,8 +8,9 @@ public class CameraController : MonoBehaviour
 {
     public Transform target;
     public Transform tempFocus;
-    public float panSpeed = 1.0f;
-    public float rotateSpeed = 1.0f;
+    public float panSpeed = 10f;
+    public float rotateSpeed = 10f;
+    public float zoomSpeed = 10f;
     public GameController gameController;
     private PanGestureRecognizer panner;
     private TapGestureRecognizer tapper;
@@ -49,6 +50,8 @@ public class CameraController : MonoBehaviour
             if (tempFocus != null)
             {
                 target.Rotate(new Vector3(x: 0, y: panner.DeltaX * rotateSpeed * Time.deltaTime, z: 0));
+                transform.Translate(-Vector3.forward * panner.DeltaY * zoomSpeed * Time.deltaTime);
+
             }
             else
             {
@@ -86,6 +89,13 @@ public class CameraController : MonoBehaviour
 
     private void Zoom(GestureRecognizer gesture)
     {
+         if (gesture.State == GestureRecognizerState.Executing)
+        {
+        Debug.Log("Zooming");
+        transform.Translate(-Vector3.forward * zoomer.ScaleMultiplier);
+
+        }
+       
     }
      
 }

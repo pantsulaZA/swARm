@@ -53,6 +53,7 @@ public class GameController : MonoBehaviour
             Vector3 newPosition = new Vector3(x, 0, z);
             var newPerson = Instantiate(original: personPrefab, position: newPosition, rotation: Quaternion.identity).GetComponent<Gatherer>();
             newPerson.resources = trees;
+            newPerson.house = house;
             people.Add(newPerson);
         }
     }

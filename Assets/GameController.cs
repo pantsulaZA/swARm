@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private Vector2 size;
-    [SerializeField] private int treeCount = 0;
+    [SerializeField] private int treeDensity = 0;
     private List<GameObject> trees = new List<GameObject>();
     [SerializeField] private GameObject treePrefab;
     public int population = 0;
@@ -15,12 +15,13 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-         PlantTrees();
-         SpawnPopulation();
-         house.Reset();
+        PlantTrees();
+        SpawnPopulation();
+        house.Reset();
     }
 
-    void Update() {
+    void Update()
+    {
         foreach (Gatherer person in people)
         {
             person.resources = trees;
@@ -29,12 +30,21 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void PlantTrees()
     {
-          for (int tree = 0; tree < treeCount; tree++)
+        for (int tree = 0; tree < treeDensity*size.x*size.y; tree++)
         {
-            float x = Random.value * size.x - size.x/2;
-            float z = Random.value * size.y - size.y/2;
-            Vector3 newPosition = new Vector3(x, 0, z);
-            PlantTree(newPosition);
+            float x = Random.value * size.x - size.x / 2;
+            float z = Random.value * size.y - size.y / 2;
+            Vector3 newPosition = new Vector3(x, 12, z);
+            var ray = new Ray(newPosition, Vector3.down);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                var selection = hit.transform.GetComponent<Plantable>();
+                if (selection != null)
+                {
+                    PlantTree(newPosition);
+                }
+            }
         }
     }
 
@@ -48,13 +58,22 @@ public class GameController : MonoBehaviour
     {
         for (int person = 0; person < population; person++)
         {
-            float x = Random.value * 5;
-            float z = Random.value * 5;
-            Vector3 newPosition = new Vector3(x, 0, z);
-            var newPerson = Instantiate(original: personPrefab, position: newPosition, rotation: Quaternion.identity).GetComponent<Gatherer>();
-            newPerson.resources = trees;
-            newPerson.house = house;
-            people.Add(newPerson);
+            float x = Random.value * 20 - 10;
+            float z = Random.value * 20 - 10;
+            Vector3 newPosition = new Vector3(x, 12, z);
+            var ray = new Ray(newPosition, Vector3.down);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                var selection = hit.transform.GetComponent<Plantable>();
+                if (selection != null)
+                {
+                    var newPerson = Instantiate(original: personPrefab, position: hit.point, rotation: Quaternion.identity).GetComponent<Gatherer>();
+                    newPerson.resources = trees;
+                    newPerson.house = house;
+                    people.Add(newPerson);
+                }
+            }
         }
     }
 }

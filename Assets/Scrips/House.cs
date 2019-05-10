@@ -28,5 +28,6 @@ public class House : MonoBehaviour
         Destroy(currentPrefab);
         currentPrefab = Instantiate(building.GetPrefab(), position: transform.position, rotation: transform.rotation);
         currentPrefab.transform.localScale = new Vector3(x: 10, y: 10, z: 10);
+        currentPrefab.transform.SetParent(transform);
     }
 }

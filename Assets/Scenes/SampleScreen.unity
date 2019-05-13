@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 940440526}
   - component: {fileID: 940440525}
   - component: {fileID: 940440524}
+  - component: {fileID: 940440528}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -347,6 +348,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &940440528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940440523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec6ea8e473fb437a9b026dc8625ea78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &945417161
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 500, y: 500}
-  treeCount: 10000
+  treeDensity: 1
   treePrefab: {fileID: 191266, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
   population: 10
   personPrefab: {fileID: 8329255418117645375, guid: 1e2dbbf8e6fa7401f83946d701fac5e0,
@@ -624,6 +637,7 @@ MonoBehaviour:
   tempFocus: {fileID: 0}
   panSpeed: 10
   rotateSpeed: 10
+  zoomSpeed: 10
   gameController: {fileID: 945417162}
 --- !u!114 &1934114865
 MonoBehaviour:

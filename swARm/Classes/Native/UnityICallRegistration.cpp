@@ -174,10 +174,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_get_isPlaying();
 		Register_UnityEngine_Application_get_isPlaying();
 
-		//System.String UnityEngine.Application::get_persistentDataPath()
-		void Register_UnityEngine_Application_get_persistentDataPath();
-		Register_UnityEngine_Application_get_persistentDataPath();
-
 		//UnityEngine.RuntimePlatform UnityEngine.Application::get_platform()
 		void Register_UnityEngine_Application_get_platform();
 		Register_UnityEngine_Application_get_platform();
@@ -209,10 +205,6 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.Behaviour
 
 	//Start Registrations for type : UnityEngine.Camera
-
-		//System.Boolean UnityEngine.Camera::get_stereoEnabled()
-		void Register_UnityEngine_Camera_get_stereoEnabled();
-		Register_UnityEngine_Camera_get_stereoEnabled();
 
 		//System.Int32 UnityEngine.Camera::GetAllCamerasCount()
 		void Register_UnityEngine_Camera_GetAllCamerasCount();
@@ -258,10 +250,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Camera_ScreenToWorldPoint_Injected();
 		Register_UnityEngine_Camera_ScreenToWorldPoint_Injected();
 
-		//System.Void UnityEngine.Camera::ViewportToScreenPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
-		void Register_UnityEngine_Camera_ViewportToScreenPoint_Injected();
-		Register_UnityEngine_Camera_ViewportToScreenPoint_Injected();
-
 		//System.Void UnityEngine.Camera::ViewportToWorldPoint_Injected(UnityEngine.Vector3&,UnityEngine.Camera/MonoOrStereoscopicEye,UnityEngine.Vector3&)
 		void Register_UnityEngine_Camera_ViewportToWorldPoint_Injected();
 		Register_UnityEngine_Camera_ViewportToWorldPoint_Injected();
@@ -281,14 +269,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Camera::get_rect_Injected(UnityEngine.Rect&)
 		void Register_UnityEngine_Camera_get_rect_Injected();
 		Register_UnityEngine_Camera_get_rect_Injected();
-
-		//System.Void UnityEngine.Camera::set_projectionMatrix_Injected(UnityEngine.Matrix4x4&)
-		void Register_UnityEngine_Camera_set_projectionMatrix_Injected();
-		Register_UnityEngine_Camera_set_projectionMatrix_Injected();
-
-		//UnityEngine.Camera UnityEngine.Camera::get_current()
-		void Register_UnityEngine_Camera_get_current();
-		Register_UnityEngine_Camera_get_current();
 
 		//UnityEngine.Camera UnityEngine.Camera::get_main()
 		void Register_UnityEngine_Camera_get_main();
@@ -692,22 +672,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Experimental.Audio.AudioSampleProvider
 
-	//Start Registrations for type : UnityEngine.Experimental.IntegratedSubsystem
-
-		//System.Void UnityEngine.Experimental.IntegratedSubsystem::SetHandle(UnityEngine.Experimental.IntegratedSubsystem)
-		void Register_UnityEngine_Experimental_IntegratedSubsystem_SetHandle();
-		Register_UnityEngine_Experimental_IntegratedSubsystem_SetHandle();
-
-		//System.Void UnityEngine.Experimental.IntegratedSubsystem::Start()
-		void Register_UnityEngine_Experimental_IntegratedSubsystem_Start();
-		Register_UnityEngine_Experimental_IntegratedSubsystem_Start();
-
-		//System.Void UnityEngine.Experimental.IntegratedSubsystem::Stop()
-		void Register_UnityEngine_Experimental_IntegratedSubsystem_Stop();
-		Register_UnityEngine_Experimental_IntegratedSubsystem_Stop();
-
-	//End Registrations for type : UnityEngine.Experimental.IntegratedSubsystem
-
 	//Start Registrations for type : UnityEngine.Experimental.Rendering.BuiltinRuntimeReflectionSystem
 
 		//System.Boolean UnityEngine.Experimental.Rendering.BuiltinRuntimeReflectionSystem::BuiltinUpdate()
@@ -743,54 +707,6 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Experimental_Rendering_ScriptableRuntimeReflectionSystemSettings_ScriptingDirtyReflectionSystemInstance();
 
 	//End Registrations for type : UnityEngine.Experimental.Rendering.ScriptableRuntimeReflectionSystemSettings
-
-	//Start Registrations for type : UnityEngine.Experimental.SubsystemManager
-
-		//System.Void UnityEngine.Experimental.SubsystemManager::ReportSingleSubsystemAnalytics(System.String)
-		void Register_UnityEngine_Experimental_SubsystemManager_ReportSingleSubsystemAnalytics();
-		Register_UnityEngine_Experimental_SubsystemManager_ReportSingleSubsystemAnalytics();
-
-		//System.Void UnityEngine.Experimental.SubsystemManager::StaticConstructScriptingClassMap()
-		void Register_UnityEngine_Experimental_SubsystemManager_StaticConstructScriptingClassMap();
-		Register_UnityEngine_Experimental_SubsystemManager_StaticConstructScriptingClassMap();
-
-	//End Registrations for type : UnityEngine.Experimental.SubsystemManager
-
-	//Start Registrations for type : UnityEngine.Experimental.XR.BoundedPlane
-
-		//System.Boolean UnityEngine.Experimental.XR.BoundedPlane::Internal_GetBoundaryAsList_Injected(System.UInt32,UnityEngine.Experimental.XR.TrackableId&,System.Collections.Generic.List`1<UnityEngine.Vector3>)
-		void Register_UnityEngine_Experimental_XR_BoundedPlane_Internal_GetBoundaryAsList_Injected();
-		Register_UnityEngine_Experimental_XR_BoundedPlane_Internal_GetBoundaryAsList_Injected();
-
-	//End Registrations for type : UnityEngine.Experimental.XR.BoundedPlane
-
-	//Start Registrations for type : UnityEngine.Experimental.XR.XRCameraSubsystem
-
-		//UnityEngine.Camera UnityEngine.Experimental.XR.XRCameraSubsystem::get_Camera()
-		void Register_UnityEngine_Experimental_XR_XRCameraSubsystem_get_Camera();
-		Register_UnityEngine_Experimental_XR_XRCameraSubsystem_get_Camera();
-
-	//End Registrations for type : UnityEngine.Experimental.XR.XRCameraSubsystem
-
-	//Start Registrations for type : UnityEngine.Experimental.XR.XRPlaneSubsystem
-
-		//System.Void UnityEngine.Experimental.XR.XRPlaneSubsystem::GetAllPlanesAsList(System.Collections.Generic.List`1<UnityEngine.Experimental.XR.BoundedPlane>)
-		void Register_UnityEngine_Experimental_XR_XRPlaneSubsystem_GetAllPlanesAsList();
-		Register_UnityEngine_Experimental_XR_XRPlaneSubsystem_GetAllPlanesAsList();
-
-	//End Registrations for type : UnityEngine.Experimental.XR.XRPlaneSubsystem
-
-	//Start Registrations for type : UnityEngine.Experimental.XR.XRRaycastSubsystem
-
-		//System.Boolean UnityEngine.Experimental.XR.XRRaycastSubsystem::Internal_ScreenRaycastAsList(System.Single,System.Single,UnityEngine.Experimental.XR.TrackableType,System.Collections.Generic.List`1<UnityEngine.Experimental.XR.XRRaycastHit>)
-		void Register_UnityEngine_Experimental_XR_XRRaycastSubsystem_Internal_ScreenRaycastAsList();
-		Register_UnityEngine_Experimental_XR_XRRaycastSubsystem_Internal_ScreenRaycastAsList();
-
-		//System.Void UnityEngine.Experimental.XR.XRRaycastSubsystem::Internal_RaycastAsList_Injected(UnityEngine.Ray&,System.Single,System.IntPtr,System.IntPtr,UnityEngine.Experimental.XR.TrackableType,System.Collections.Generic.List`1<UnityEngine.Experimental.XR.XRRaycastHit>)
-		void Register_UnityEngine_Experimental_XR_XRRaycastSubsystem_Internal_RaycastAsList_Injected();
-		Register_UnityEngine_Experimental_XR_XRRaycastSubsystem_Internal_RaycastAsList_Injected();
-
-	//End Registrations for type : UnityEngine.Experimental.XR.XRRaycastSubsystem
 
 	//Start Registrations for type : UnityEngine.Font
 
@@ -1160,18 +1076,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.iOS.NotificationHelper
 
-	//Start Registrations for type : UnityEngine.Light
-
-		//System.Void UnityEngine.Light::set_colorTemperature(System.Single)
-		void Register_UnityEngine_Light_set_colorTemperature();
-		Register_UnityEngine_Light_set_colorTemperature();
-
-		//System.Void UnityEngine.Light::set_intensity(System.Single)
-		void Register_UnityEngine_Light_set_intensity();
-		Register_UnityEngine_Light_set_intensity();
-
-	//End Registrations for type : UnityEngine.Light
-
 	//Start Registrations for type : UnityEngine.Material
 
 		//System.Boolean UnityEngine.Material::HasProperty(System.Int32)
@@ -1211,18 +1115,6 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Material_GetTextureImpl();
 
 	//End Registrations for type : UnityEngine.Material
-
-	//Start Registrations for type : UnityEngine.Mathf
-
-		//System.Single UnityEngine.Mathf::GammaToLinearSpace(System.Single)
-		void Register_UnityEngine_Mathf_GammaToLinearSpace();
-		Register_UnityEngine_Mathf_GammaToLinearSpace();
-
-		//System.Single UnityEngine.Mathf::LinearToGammaSpace(System.Single)
-		void Register_UnityEngine_Mathf_LinearToGammaSpace();
-		Register_UnityEngine_Mathf_LinearToGammaSpace();
-
-	//End Registrations for type : UnityEngine.Mathf
 
 	//Start Registrations for type : UnityEngine.Matrix4x4
 
@@ -1414,17 +1306,9 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Object_Internal_CloneSingle();
 		Register_UnityEngine_Object_Internal_CloneSingle();
 
-		//UnityEngine.Object UnityEngine.Object::Internal_CloneSingleWithParent(UnityEngine.Object,UnityEngine.Transform,System.Boolean)
-		void Register_UnityEngine_Object_Internal_CloneSingleWithParent();
-		Register_UnityEngine_Object_Internal_CloneSingleWithParent();
-
 		//UnityEngine.Object UnityEngine.Object::Internal_InstantiateSingle_Injected(UnityEngine.Object,UnityEngine.Vector3&,UnityEngine.Quaternion&)
 		void Register_UnityEngine_Object_Internal_InstantiateSingle_Injected();
 		Register_UnityEngine_Object_Internal_InstantiateSingle_Injected();
-
-		//UnityEngine.Object[] UnityEngine.Object::FindObjectsOfType(System.Type)
-		void Register_UnityEngine_Object_FindObjectsOfType();
-		Register_UnityEngine_Object_FindObjectsOfType();
 
 	//End Registrations for type : UnityEngine.Object
 
@@ -1561,10 +1445,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Quaternion::Inverse_Injected(UnityEngine.Quaternion&,UnityEngine.Quaternion&)
 		void Register_UnityEngine_Quaternion_Inverse_Injected();
 		Register_UnityEngine_Quaternion_Inverse_Injected();
-
-		//System.Void UnityEngine.Quaternion::LookRotation_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.Quaternion&)
-		void Register_UnityEngine_Quaternion_LookRotation_Injected();
-		Register_UnityEngine_Quaternion_LookRotation_Injected();
 
 	//End Registrations for type : UnityEngine.Quaternion
 
@@ -2238,10 +2118,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Time
 
-		//System.Int32 UnityEngine.Time::get_frameCount()
-		void Register_UnityEngine_Time_get_frameCount();
-		Register_UnityEngine_Time_get_frameCount();
-
 		//System.Single UnityEngine.Time::get_deltaTime()
 		void Register_UnityEngine_Time_get_deltaTime();
 		Register_UnityEngine_Time_get_deltaTime();
@@ -2322,10 +2198,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Transform_get_childCount();
 		Register_UnityEngine_Transform_get_childCount();
 
-		//System.Void UnityEngine.Transform::InverseTransformDirection_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
-		void Register_UnityEngine_Transform_InverseTransformDirection_Injected();
-		Register_UnityEngine_Transform_InverseTransformDirection_Injected();
-
 		//System.Void UnityEngine.Transform::InverseTransformPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
 		void Register_UnityEngine_Transform_InverseTransformPoint_Injected();
 		Register_UnityEngine_Transform_InverseTransformPoint_Injected();
@@ -2337,10 +2209,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform,System.Boolean)
 		void Register_UnityEngine_Transform_SetParent();
 		Register_UnityEngine_Transform_SetParent();
-
-		//System.Void UnityEngine.Transform::SetPositionAndRotation_Injected(UnityEngine.Vector3&,UnityEngine.Quaternion&)
-		void Register_UnityEngine_Transform_SetPositionAndRotation_Injected();
-		Register_UnityEngine_Transform_SetPositionAndRotation_Injected();
 
 		//System.Void UnityEngine.Transform::TransformDirection_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
 		void Register_UnityEngine_Transform_TransformDirection_Injected();
@@ -2459,41 +2327,5 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_UnityLogWriter_WriteStringToUnityLogImpl();
 
 	//End Registrations for type : UnityEngine.UnityLogWriter
-
-	//Start Registrations for type : UnityEngine.XR.InputTracking
-
-		//System.Void UnityEngine.XR.InputTracking::GetNodeStates_Internal(System.Collections.Generic.List`1<UnityEngine.XR.XRNodeState>)
-		void Register_UnityEngine_XR_InputTracking_GetNodeStates_Internal();
-		Register_UnityEngine_XR_InputTracking_GetNodeStates_Internal();
-
-	//End Registrations for type : UnityEngine.XR.InputTracking
-
-	//Start Registrations for type : UnityEngine.XR.Tango.TangoInputTracking
-
-		//System.Boolean UnityEngine.XR.Tango.TangoInputTracking::Internal_TryGetPoseAtTime(UnityEngine.XR.Tango.PoseData&)
-		void Register_UnityEngine_XR_Tango_TangoInputTracking_Internal_TryGetPoseAtTime();
-		Register_UnityEngine_XR_Tango_TangoInputTracking_Internal_TryGetPoseAtTime();
-
-	//End Registrations for type : UnityEngine.XR.Tango.TangoInputTracking
-
-	//Start Registrations for type : UnityEngine.XR.XRDevice
-
-		//System.Void UnityEngine.XR.XRDevice::DisableAutoXRCameraTracking(UnityEngine.Camera,System.Boolean)
-		void Register_UnityEngine_XR_XRDevice_DisableAutoXRCameraTracking();
-		Register_UnityEngine_XR_XRDevice_DisableAutoXRCameraTracking();
-
-	//End Registrations for type : UnityEngine.XR.XRDevice
-
-	//Start Registrations for type : UnityEngineInternal.Input.NativeInputSystem
-
-		//System.Boolean UnityEngineInternal.Input.NativeInputSystem::ShouldUpdateFallback(UnityEngineInternal.Input.NativeInputUpdateType)
-		void Register_UnityEngineInternal_Input_NativeInputSystem_ShouldUpdateFallback();
-		Register_UnityEngineInternal_Input_NativeInputSystem_ShouldUpdateFallback();
-
-		//System.Void UnityEngineInternal.Input.NativeInputSystem::set_hasDeviceDiscoveredCallback(System.Boolean)
-		void Register_UnityEngineInternal_Input_NativeInputSystem_set_hasDeviceDiscoveredCallback();
-		Register_UnityEngineInternal_Input_NativeInputSystem_set_hasDeviceDiscoveredCallback();
-
-	//End Registrations for type : UnityEngineInternal.Input.NativeInputSystem
 
 }

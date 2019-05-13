@@ -20,6 +20,7 @@
 		<type fullname="UnityEngine.AudioBehaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.Component" preserve="nothing"/>
 		<type fullname="UnityEngine.GameObject" preserve="nothing"/>
+		<type fullname="UnityEngine.Rigidbody" preserve="nothing"/>
 		<type fullname="UnityEngine.Mesh" preserve="nothing"/>
 		<type fullname="UnityEngine.Transform" preserve="nothing"/>
 		<type fullname="UnityEngine.Sprite" preserve="nothing"/>
@@ -58,18 +59,20 @@
 		<type fullname="GameController" preserve="nothing"/>
 		<type fullname="Gatherer" preserve="nothing"/>
 		<type fullname="House" preserve="nothing"/>
+		<type fullname="Plantable" preserve="nothing"/>
 		<type fullname="SelectableObject" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="NavMeshComponents">
 		<type fullname="UnityEngine.AI.NavMeshSurface" preserve="nothing"/>
 	</assembly>
+	<assembly fullname="Unity.PackageManagerUI.Editor">
+		<type fullname="UnityEditor.PackageManager.UI.PackageManagerWindow" preserve="nothing"/>
+	</assembly>
 	<assembly fullname="UnityEditor.Graphs">
 		<type fullname="UnityEditor.Graphs.AnimationBlendTree.Graph" preserve="nothing"/>
 		<type fullname="UnityEditor.Graphs.AnimationBlendTree.GraphGUI" preserve="nothing"/>
-		<type fullname="UnityEditor.Graphs.AnimationStateMachine.AnyStateNode" preserve="nothing"/>
 		<type fullname="UnityEditor.Graphs.AnimationStateMachine.Graph" preserve="nothing"/>
 		<type fullname="UnityEditor.Graphs.AnimationStateMachine.GraphGUI" preserve="nothing"/>
-		<type fullname="UnityEditor.Graphs.AnimationStateMachine.StateNode" preserve="nothing"/>
 		<type fullname="UnityEditor.Graphs.AnimatorControllerTool" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEditor.TestRunner">

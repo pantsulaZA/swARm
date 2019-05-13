@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void PlantTrees()
     {
-        for (int tree = 0; tree < treeDensity*size.x*size.y; tree++)
+        for (int tree = 0; tree < treeDensity*size.x*size.y/100; tree++)
         {
             float x = Random.value * size.x - size.x / 2;
             float z = Random.value * size.y - size.y / 2;

@@ -91,7 +91,7 @@ public class CameraController : MonoBehaviour
                     tempFocus = null;
                     if (hit.transform.GetComponent<Plantable>() != null)
                     {
-                        gameController.PlantTree(hit.transform.position);
+                        gameController.PlantTree(hit.point);
                         Debug.Log(hit.point);
                     }
                 }
@@ -104,10 +104,11 @@ public class CameraController : MonoBehaviour
         if (gesture.State == GestureRecognizerState.Executing)
         {
             Vector3 newPosition = transform.position;
-            float scale = -zoomer.ScaleMultiplier;
-            float cameraDistance = Mathf.Clamp(newPosition.y * scale, minCameraHeight, maxCameraHeight);
-            newPosition.z =  -cameraDistance;
-            newPosition.y = cameraDistance;
+            float scale = zoomer.ScaleMultiplier;
+            float cameraDistanceY = Mathf.Clamp(newPosition.y * scale, minCameraHeight, maxCameraHeight);
+            float cameraDistanceZ = Mathf.Clamp(-newPosition.z * scale, minCameraHeight, maxCameraHeight);
+            newPosition.z =  -cameraDistanceZ;
+            newPosition.y = cameraDistanceY;
 
             Debug.Log("Zoom : " + newPosition);
             transform.position = newPosition;

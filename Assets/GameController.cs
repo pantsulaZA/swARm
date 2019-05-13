@@ -17,9 +17,16 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(ConstructWorld());
+    }
+
+    IEnumerator ConstructWorld() {
         GenerateIsland();
+        yield return new WaitForSeconds(2);
         PlantTrees();
+        yield return new WaitForSeconds(2);
         SpawnPopulation();
+        yield return new WaitForSeconds(2);
         house.Reset();
     }
 
@@ -40,11 +47,12 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void PlantTrees()
     {
+        Debug.Log("Planting trees");
         for (int tree = 0; tree < treeDensity*size.x*size.y/100; tree++)
         {
             float x = UnityEngine.Random.value * size.x;
             float z = UnityEngine.Random.value * size.y;
-            Vector3 newPosition = new Vector3(x, 12, z);
+            Vector3 newPosition = new Vector3(x, 50, z);
             var ray = new Ray(newPosition, Vector3.down);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
@@ -68,8 +76,8 @@ public class GameController : MonoBehaviour
     {
         for (int person = 0; person < population; person++)
         {
-            float x = UnityEngine.Random.value * 20;
-            float z = UnityEngine.Random.value * 20;
+            float x = UnityEngine.Random.value * size.x;
+            float z = UnityEngine.Random.value * size.y;
             Vector3 newPosition = new Vector3(x, 12, z);
             var ray = new Ray(newPosition, Vector3.down);
             RaycastHit hit;

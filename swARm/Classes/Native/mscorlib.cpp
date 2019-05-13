@@ -37523,15 +37523,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RuntimeClassHandle_Equals_mF4D5D0C73A07B
 	}
 	{
 		RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5  L_1 = (*(RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5 *)__this);
-		RuntimeObject * L_2 = Box(RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5_il2cpp_TypeInfo_var, &L_1);
-		NullCheck(L_2);
-		Type_t * L_3 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_2, /*hidden argument*/NULL);
-		RuntimeObject * L_4 = ___obj0;
-		NullCheck(L_4);
-		Type_t * L_5 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_4, /*hidden argument*/NULL);
+		RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5  L_2 = L_1;
+		RuntimeObject * L_3 = Box(RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5_il2cpp_TypeInfo_var, &L_2);
+		NullCheck(L_3);
+		Type_t * L_4 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_3, /*hidden argument*/NULL);
+		RuntimeObject * L_5 = ___obj0;
+		NullCheck(L_5);
+		Type_t * L_6 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_5, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
-		bool L_6 = Type_op_Inequality_m615014191FB05FD50F63A24EB9A6CCA785E7CEC9(L_3, L_5, /*hidden argument*/NULL);
-		if (!L_6)
+		bool L_7 = Type_op_Inequality_m615014191FB05FD50F63A24EB9A6CCA785E7CEC9(L_4, L_6, /*hidden argument*/NULL);
+		if (!L_7)
 		{
 			goto IL_0022;
 		}
@@ -37544,11 +37545,11 @@ IL_0020:
 
 IL_0022:
 	{
-		MonoClass_t70E8387B50321F8F4934A7012C88827A4C921301 * L_7 = __this->get_value_0();
-		RuntimeObject * L_8 = ___obj0;
-		V_0 = ((*(RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5 *)((RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5 *)UnBox(L_8, RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5_il2cpp_TypeInfo_var))));
-		MonoClass_t70E8387B50321F8F4934A7012C88827A4C921301 * L_9 = RuntimeClassHandle_get_Value_m91CB542A1C636340DA02947DBA6B997E42C538E1((RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5 *)(&V_0), /*hidden argument*/NULL);
-		return (bool)((((intptr_t)L_7) == ((intptr_t)L_9))? 1 : 0);
+		MonoClass_t70E8387B50321F8F4934A7012C88827A4C921301 * L_8 = __this->get_value_0();
+		RuntimeObject * L_9 = ___obj0;
+		V_0 = ((*(RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5 *)((RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5 *)UnBox(L_9, RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5_il2cpp_TypeInfo_var))));
+		MonoClass_t70E8387B50321F8F4934A7012C88827A4C921301 * L_10 = RuntimeClassHandle_get_Value_m91CB542A1C636340DA02947DBA6B997E42C538E1((RuntimeClassHandle_tC1F6E462273EB268F47536E8348486778C45A6D5 *)(&V_0), /*hidden argument*/NULL);
+		return (bool)((((intptr_t)L_8) == ((intptr_t)L_10))? 1 : 0);
 	}
 }
 IL2CPP_EXTERN_C  bool RuntimeClassHandle_Equals_mF4D5D0C73A07B9919EE4C30574E13B5AF09A6C79_AdjustorThunk (RuntimeObject * __this, RuntimeObject * ___obj0, const RuntimeMethod* method)
@@ -37653,15 +37654,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RuntimeEventHandle_Equals_mA029AD5F18193
 	}
 	{
 		RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9  L_1 = (*(RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9 *)__this);
-		RuntimeObject * L_2 = Box(RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9_il2cpp_TypeInfo_var, &L_1);
-		NullCheck(L_2);
-		Type_t * L_3 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_2, /*hidden argument*/NULL);
-		RuntimeObject * L_4 = ___obj0;
-		NullCheck(L_4);
-		Type_t * L_5 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_4, /*hidden argument*/NULL);
+		RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9  L_2 = L_1;
+		RuntimeObject * L_3 = Box(RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9_il2cpp_TypeInfo_var, &L_2);
+		NullCheck(L_3);
+		Type_t * L_4 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_3, /*hidden argument*/NULL);
+		RuntimeObject * L_5 = ___obj0;
+		NullCheck(L_5);
+		Type_t * L_6 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_5, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
-		bool L_6 = Type_op_Inequality_m615014191FB05FD50F63A24EB9A6CCA785E7CEC9(L_3, L_5, /*hidden argument*/NULL);
-		if (!L_6)
+		bool L_7 = Type_op_Inequality_m615014191FB05FD50F63A24EB9A6CCA785E7CEC9(L_4, L_6, /*hidden argument*/NULL);
+		if (!L_7)
 		{
 			goto IL_0022;
 		}
@@ -37674,12 +37676,12 @@ IL_0020:
 
 IL_0022:
 	{
-		intptr_t L_7 = __this->get_value_0();
-		RuntimeObject * L_8 = ___obj0;
-		V_0 = ((*(RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9 *)((RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9 *)UnBox(L_8, RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9_il2cpp_TypeInfo_var))));
-		intptr_t L_9 = RuntimeEventHandle_get_Value_m579B27775CC84269432CB559FF50327E5EAFF89D((RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9 *)(&V_0), /*hidden argument*/NULL);
-		bool L_10 = IntPtr_op_Equality_mEE8D9FD2DFE312BBAA8B4ED3BF7976B3142A5934((intptr_t)L_7, (intptr_t)L_9, /*hidden argument*/NULL);
-		return L_10;
+		intptr_t L_8 = __this->get_value_0();
+		RuntimeObject * L_9 = ___obj0;
+		V_0 = ((*(RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9 *)((RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9 *)UnBox(L_9, RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9_il2cpp_TypeInfo_var))));
+		intptr_t L_10 = RuntimeEventHandle_get_Value_m579B27775CC84269432CB559FF50327E5EAFF89D((RuntimeEventHandle_tE5D1932AECB9CB753494050E033F25584E3693A9 *)(&V_0), /*hidden argument*/NULL);
+		bool L_11 = IntPtr_op_Equality_mEE8D9FD2DFE312BBAA8B4ED3BF7976B3142A5934((intptr_t)L_8, (intptr_t)L_10, /*hidden argument*/NULL);
+		return L_11;
 	}
 }
 IL2CPP_EXTERN_C  bool RuntimeEventHandle_Equals_mA029AD5F181933CA5FEDFB6E695C1D34476DCA4D_AdjustorThunk (RuntimeObject * __this, RuntimeObject * ___obj0, const RuntimeMethod* method)
@@ -38302,15 +38304,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RuntimePropertyHandle_Equals_m4EA5009AB4
 	}
 	{
 		RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB  L_1 = (*(RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB *)__this);
-		RuntimeObject * L_2 = Box(RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB_il2cpp_TypeInfo_var, &L_1);
-		NullCheck(L_2);
-		Type_t * L_3 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_2, /*hidden argument*/NULL);
-		RuntimeObject * L_4 = ___obj0;
-		NullCheck(L_4);
-		Type_t * L_5 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_4, /*hidden argument*/NULL);
+		RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB  L_2 = L_1;
+		RuntimeObject * L_3 = Box(RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB_il2cpp_TypeInfo_var, &L_2);
+		NullCheck(L_3);
+		Type_t * L_4 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_3, /*hidden argument*/NULL);
+		RuntimeObject * L_5 = ___obj0;
+		NullCheck(L_5);
+		Type_t * L_6 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_5, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
-		bool L_6 = Type_op_Inequality_m615014191FB05FD50F63A24EB9A6CCA785E7CEC9(L_3, L_5, /*hidden argument*/NULL);
-		if (!L_6)
+		bool L_7 = Type_op_Inequality_m615014191FB05FD50F63A24EB9A6CCA785E7CEC9(L_4, L_6, /*hidden argument*/NULL);
+		if (!L_7)
 		{
 			goto IL_0022;
 		}
@@ -38323,12 +38326,12 @@ IL_0020:
 
 IL_0022:
 	{
-		intptr_t L_7 = __this->get_value_0();
-		RuntimeObject * L_8 = ___obj0;
-		V_0 = ((*(RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB *)((RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB *)UnBox(L_8, RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB_il2cpp_TypeInfo_var))));
-		intptr_t L_9 = RuntimePropertyHandle_get_Value_m7E3310961322C33208B6990B897516AE849FD7C2((RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB *)(&V_0), /*hidden argument*/NULL);
-		bool L_10 = IntPtr_op_Equality_mEE8D9FD2DFE312BBAA8B4ED3BF7976B3142A5934((intptr_t)L_7, (intptr_t)L_9, /*hidden argument*/NULL);
-		return L_10;
+		intptr_t L_8 = __this->get_value_0();
+		RuntimeObject * L_9 = ___obj0;
+		V_0 = ((*(RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB *)((RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB *)UnBox(L_9, RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB_il2cpp_TypeInfo_var))));
+		intptr_t L_10 = RuntimePropertyHandle_get_Value_m7E3310961322C33208B6990B897516AE849FD7C2((RuntimePropertyHandle_tFFD677B19D1E7D3E4B66A0C086E051AC52C34DCB *)(&V_0), /*hidden argument*/NULL);
+		bool L_11 = IntPtr_op_Equality_mEE8D9FD2DFE312BBAA8B4ED3BF7976B3142A5934((intptr_t)L_8, (intptr_t)L_10, /*hidden argument*/NULL);
+		return L_11;
 	}
 }
 IL2CPP_EXTERN_C  bool RuntimePropertyHandle_Equals_m4EA5009AB4FB98956D61CCCE271E12321E238788_AdjustorThunk (RuntimeObject * __this, RuntimeObject * ___obj0, const RuntimeMethod* method)

@@ -17225,9 +17225,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CancellationToken_ThrowOperationCanceled
 	}
 	{
 		String_t* L_0 = Environment_GetResourceString_m2C75C2AF268F01E2BF34AD1C2E1352CF4BA51AD9(_stringLiteral49F5CC194E751BEEEC38ECE70DA1908E9A004E89, /*hidden argument*/NULL);
-		OperationCanceledException_tD28B1AE59ACCE4D46333BFE398395B8D75D76A90 * L_1 = (OperationCanceledException_tD28B1AE59ACCE4D46333BFE398395B8D75D76A90 *)il2cpp_codegen_object_new(OperationCanceledException_tD28B1AE59ACCE4D46333BFE398395B8D75D76A90_il2cpp_TypeInfo_var);
-		OperationCanceledException__ctor_mFA31130275508696794961415B1C9F0AC2308DB0(L_1, L_0, (*(CancellationToken_t9E956952F7F20908F2AE72EDF36D97E6C7DB63AB *)__this), /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, NULL, CancellationToken_ThrowOperationCanceledException_mE47E67891F02F14C9245FC65B5674D6E95E38F07_RuntimeMethod_var);
+		CancellationToken_t9E956952F7F20908F2AE72EDF36D97E6C7DB63AB  L_1 = (*(CancellationToken_t9E956952F7F20908F2AE72EDF36D97E6C7DB63AB *)__this);
+		OperationCanceledException_tD28B1AE59ACCE4D46333BFE398395B8D75D76A90 * L_2 = (OperationCanceledException_tD28B1AE59ACCE4D46333BFE398395B8D75D76A90 *)il2cpp_codegen_object_new(OperationCanceledException_tD28B1AE59ACCE4D46333BFE398395B8D75D76A90_il2cpp_TypeInfo_var);
+		OperationCanceledException__ctor_mFA31130275508696794961415B1C9F0AC2308DB0(L_2, L_0, L_1, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, NULL, CancellationToken_ThrowOperationCanceledException_mE47E67891F02F14C9245FC65B5674D6E95E38F07_RuntimeMethod_var);
 	}
 }
 IL2CPP_EXTERN_C  void CancellationToken_ThrowOperationCanceledException_mE47E67891F02F14C9245FC65B5674D6E95E38F07_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
@@ -29952,6 +29953,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Task_get_IsWaitNotificationEnabled_m2FCD
 	}
 }
 // System.Void System.Threading.Tasks.Task::NotifyDebuggerOfWaitCompletion()
+IL2CPP_DISABLE_OPTIMIZATIONS
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void Task_NotifyDebuggerOfWaitCompletion_m29E07DF85245752783EB926AF0698526AE9954F3 (Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 * __this, const RuntimeMethod* method)
 {
 	{
@@ -29959,6 +29961,7 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void Task_NotifyDebuggerOfWa
 		return;
 	}
 }
+IL2CPP_ENABLE_OPTIMIZATIONS
 // System.Boolean System.Threading.Tasks.Task::MarkStarted()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Task_MarkStarted_mA6657A4058C324CA5277F16D30C25741C4220030 (Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 * __this, const RuntimeMethod* method)
 {
@@ -32882,6 +32885,7 @@ IL_0032:
 	}
 }
 // System.Void System.Threading.Tasks.Task::InnerInvokeWithArg(System.Threading.Tasks.Task)
+IL2CPP_DISABLE_OPTIMIZATIONS
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void Task_InnerInvokeWithArg_m8313756145BF2BCE95AA05D0B896E4780788DD86 (Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 * __this, Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 * ___childTask0, const RuntimeMethod* method)
 {
 	{
@@ -32889,6 +32893,7 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void Task_InnerInvokeWithArg
 		return;
 	}
 }
+IL2CPP_ENABLE_OPTIMIZATIONS
 // System.Void System.Threading.Tasks.Task::HandleException(System.Exception)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Task_HandleException_m6B4C1844450535E0938234A9A696060C28A5F74C (Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 * __this, Exception_t * ___unhandledException0, const RuntimeMethod* method)
 {
@@ -33278,6 +33283,7 @@ IL_002d:
 	}
 }
 // System.Boolean System.Threading.Tasks.Task::InternalWait(System.Int32,System.Threading.CancellationToken)
+IL2CPP_DISABLE_OPTIMIZATIONS
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Task_InternalWait_m7F1436A365C066C8D9BDEB6740118206B0EFAD45 (Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 * __this, int32_t ___millisecondsTimeout0, CancellationToken_t9E956952F7F20908F2AE72EDF36D97E6C7DB63AB  ___cancellationToken1, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33345,6 +33351,7 @@ IL_0039:
 		return L_9;
 	}
 }
+IL2CPP_ENABLE_OPTIMIZATIONS
 // System.Boolean System.Threading.Tasks.Task::SpinThenBlockingWait(System.Int32,System.Threading.CancellationToken)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Task_SpinThenBlockingWait_mBAB3ADF8D2F624A0DC70F6BE0D7C2B0E291E635F (Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 * __this, int32_t ___millisecondsTimeout0, CancellationToken_t9E956952F7F20908F2AE72EDF36D97E6C7DB63AB  ___cancellationToken1, const RuntimeMethod* method)
 {

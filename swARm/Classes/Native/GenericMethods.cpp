@@ -26197,14 +26197,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetClass_TisRuntimeOb
 	bool V_0 = false;
 	{
 		RuntimeObject ** L_0 = ___currentValue0;
-		if ((*(RuntimeObject **)L_0))
+		RuntimeObject * L_1 = (*(RuntimeObject **)L_0);
+		if (L_1)
 		{
 			goto IL_001c;
 		}
 	}
 	{
-		RuntimeObject * L_1 = ___newValue1;
-		if (!L_1)
+		RuntimeObject * L_2 = ___newValue1;
+		if (!L_2)
 		{
 			goto IL_0043;
 		}
@@ -26212,18 +26213,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetClass_TisRuntimeOb
 
 IL_001c:
 	{
-		RuntimeObject ** L_2 = ___currentValue0;
-		if (!(*(RuntimeObject **)L_2))
+		RuntimeObject ** L_3 = ___currentValue0;
+		RuntimeObject * L_4 = (*(RuntimeObject **)L_3);
+		if (!L_4)
 		{
 			goto IL_004a;
 		}
 	}
 	{
-		RuntimeObject ** L_3 = ___currentValue0;
-		RuntimeObject * L_4 = ___newValue1;
-		NullCheck((RuntimeObject *)(*L_3));
-		bool L_5 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(0 /* System.Boolean System.Object::Equals(System.Object) */, (RuntimeObject *)(*L_3), (RuntimeObject *)L_4);
-		if (!L_5)
+		RuntimeObject ** L_5 = ___currentValue0;
+		RuntimeObject * L_6 = ___newValue1;
+		NullCheck((RuntimeObject *)(*L_5));
+		bool L_7 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(0 /* System.Boolean System.Object::Equals(System.Object) */, (RuntimeObject *)(*L_5), (RuntimeObject *)L_6);
+		if (!L_7)
 		{
 			goto IL_004a;
 		}
@@ -26237,18 +26239,18 @@ IL_0043:
 
 IL_004a:
 	{
-		RuntimeObject ** L_6 = ___currentValue0;
-		RuntimeObject * L_7 = ___newValue1;
-		*(RuntimeObject **)L_6 = L_7;
-		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject **)L_6, (void*)L_7);
+		RuntimeObject ** L_8 = ___currentValue0;
+		RuntimeObject * L_9 = ___newValue1;
+		*(RuntimeObject **)L_8 = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject **)L_8, (void*)L_9);
 		V_0 = (bool)1;
 		goto IL_0058;
 	}
 
 IL_0058:
 	{
-		bool L_8 = V_0;
-		return L_8;
+		bool L_10 = V_0;
+		return L_10;
 	}
 }
 // System.Boolean UnityEngine.UI.SetPropertyUtility::SetStruct<System.Boolean>(TU26,T)
@@ -26258,10 +26260,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisBoolean_
 	{
 		EqualityComparer_1_t4BC4DA1CF8E14DAF2B2BBD7734D235D4977B91D8 * L_0 = ((  EqualityComparer_1_t4BC4DA1CF8E14DAF2B2BBD7734D235D4977B91D8 * (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
 		bool* L_1 = ___currentValue0;
-		bool L_2 = ___newValue1;
+		bool L_2 = (*(bool*)L_1);
+		bool L_3 = ___newValue1;
 		NullCheck((EqualityComparer_1_t4BC4DA1CF8E14DAF2B2BBD7734D235D4977B91D8 *)L_0);
-		bool L_3 = VirtFuncInvoker2< bool, bool, bool >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<System.Boolean>::Equals(!0,!0) */, (EqualityComparer_1_t4BC4DA1CF8E14DAF2B2BBD7734D235D4977B91D8 *)L_0, (bool)(*(bool*)L_1), (bool)L_2);
-		if (!L_3)
+		bool L_4 = VirtFuncInvoker2< bool, bool, bool >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<System.Boolean>::Equals(!0,!0) */, (EqualityComparer_1_t4BC4DA1CF8E14DAF2B2BBD7734D235D4977B91D8 *)L_0, (bool)L_2, (bool)L_3);
+		if (!L_4)
 		{
 			goto IL_001e;
 		}
@@ -26273,17 +26276,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisBoolean_
 
 IL_001e:
 	{
-		bool* L_4 = ___currentValue0;
-		bool L_5 = ___newValue1;
-		*(bool*)L_4 = L_5;
+		bool* L_5 = ___currentValue0;
+		bool L_6 = ___newValue1;
+		*(bool*)L_5 = L_6;
 		V_0 = (bool)1;
 		goto IL_002c;
 	}
 
 IL_002c:
 	{
-		bool L_6 = V_0;
-		return L_6;
+		bool L_7 = V_0;
+		return L_7;
 	}
 }
 // System.Boolean UnityEngine.UI.SetPropertyUtility::SetStruct<System.Char>(TU26,T)
@@ -26293,10 +26296,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisChar_tBF
 	{
 		EqualityComparer_1_tBE2E709137078E491F7B38EA3C218A7A347DD68F * L_0 = ((  EqualityComparer_1_tBE2E709137078E491F7B38EA3C218A7A347DD68F * (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
 		Il2CppChar* L_1 = ___currentValue0;
-		Il2CppChar L_2 = ___newValue1;
+		Il2CppChar L_2 = (*(Il2CppChar*)L_1);
+		Il2CppChar L_3 = ___newValue1;
 		NullCheck((EqualityComparer_1_tBE2E709137078E491F7B38EA3C218A7A347DD68F *)L_0);
-		bool L_3 = VirtFuncInvoker2< bool, Il2CppChar, Il2CppChar >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<System.Char>::Equals(!0,!0) */, (EqualityComparer_1_tBE2E709137078E491F7B38EA3C218A7A347DD68F *)L_0, (Il2CppChar)(*(Il2CppChar*)L_1), (Il2CppChar)L_2);
-		if (!L_3)
+		bool L_4 = VirtFuncInvoker2< bool, Il2CppChar, Il2CppChar >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<System.Char>::Equals(!0,!0) */, (EqualityComparer_1_tBE2E709137078E491F7B38EA3C218A7A347DD68F *)L_0, (Il2CppChar)L_2, (Il2CppChar)L_3);
+		if (!L_4)
 		{
 			goto IL_001e;
 		}
@@ -26308,17 +26312,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisChar_tBF
 
 IL_001e:
 	{
-		Il2CppChar* L_4 = ___currentValue0;
-		Il2CppChar L_5 = ___newValue1;
-		*(Il2CppChar*)L_4 = L_5;
+		Il2CppChar* L_5 = ___currentValue0;
+		Il2CppChar L_6 = ___newValue1;
+		*(Il2CppChar*)L_5 = L_6;
 		V_0 = (bool)1;
 		goto IL_002c;
 	}
 
 IL_002c:
 	{
-		bool L_6 = V_0;
-		return L_6;
+		bool L_7 = V_0;
+		return L_7;
 	}
 }
 // System.Boolean UnityEngine.UI.SetPropertyUtility::SetStruct<System.Int32>(TU26,T)
@@ -26328,10 +26332,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisInt32_t5
 	{
 		EqualityComparer_1_tB4B7A6BE74484499A34574C8A7FE8E72455B8CF3 * L_0 = ((  EqualityComparer_1_tB4B7A6BE74484499A34574C8A7FE8E72455B8CF3 * (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
 		int32_t* L_1 = ___currentValue0;
-		int32_t L_2 = ___newValue1;
+		int32_t L_2 = (*(int32_t*)L_1);
+		int32_t L_3 = ___newValue1;
 		NullCheck((EqualityComparer_1_tB4B7A6BE74484499A34574C8A7FE8E72455B8CF3 *)L_0);
-		bool L_3 = VirtFuncInvoker2< bool, int32_t, int32_t >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<System.Int32>::Equals(!0,!0) */, (EqualityComparer_1_tB4B7A6BE74484499A34574C8A7FE8E72455B8CF3 *)L_0, (int32_t)(*(int32_t*)L_1), (int32_t)L_2);
-		if (!L_3)
+		bool L_4 = VirtFuncInvoker2< bool, int32_t, int32_t >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<System.Int32>::Equals(!0,!0) */, (EqualityComparer_1_tB4B7A6BE74484499A34574C8A7FE8E72455B8CF3 *)L_0, (int32_t)L_2, (int32_t)L_3);
+		if (!L_4)
 		{
 			goto IL_001e;
 		}
@@ -26343,17 +26348,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisInt32_t5
 
 IL_001e:
 	{
-		int32_t* L_4 = ___currentValue0;
-		int32_t L_5 = ___newValue1;
-		*(int32_t*)L_4 = L_5;
+		int32_t* L_5 = ___currentValue0;
+		int32_t L_6 = ___newValue1;
+		*(int32_t*)L_5 = L_6;
 		V_0 = (bool)1;
 		goto IL_002c;
 	}
 
 IL_002c:
 	{
-		bool L_6 = V_0;
-		return L_6;
+		bool L_7 = V_0;
+		return L_7;
 	}
 }
 // System.Boolean UnityEngine.UI.SetPropertyUtility::SetStruct<System.Int32Enum>(TU26,T)
@@ -26363,10 +26368,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisInt32Enu
 	{
 		EqualityComparer_1_t1C2A0392A1283327989CBB7C784638BDDB3805BB * L_0 = ((  EqualityComparer_1_t1C2A0392A1283327989CBB7C784638BDDB3805BB * (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
 		int32_t* L_1 = ___currentValue0;
-		int32_t L_2 = ___newValue1;
+		int32_t L_2 = (*(int32_t*)L_1);
+		int32_t L_3 = ___newValue1;
 		NullCheck((EqualityComparer_1_t1C2A0392A1283327989CBB7C784638BDDB3805BB *)L_0);
-		bool L_3 = VirtFuncInvoker2< bool, int32_t, int32_t >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<System.Int32Enum>::Equals(!0,!0) */, (EqualityComparer_1_t1C2A0392A1283327989CBB7C784638BDDB3805BB *)L_0, (int32_t)(*(int32_t*)L_1), (int32_t)L_2);
-		if (!L_3)
+		bool L_4 = VirtFuncInvoker2< bool, int32_t, int32_t >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<System.Int32Enum>::Equals(!0,!0) */, (EqualityComparer_1_t1C2A0392A1283327989CBB7C784638BDDB3805BB *)L_0, (int32_t)L_2, (int32_t)L_3);
+		if (!L_4)
 		{
 			goto IL_001e;
 		}
@@ -26378,17 +26384,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisInt32Enu
 
 IL_001e:
 	{
-		int32_t* L_4 = ___currentValue0;
-		int32_t L_5 = ___newValue1;
-		*(int32_t*)L_4 = L_5;
+		int32_t* L_5 = ___currentValue0;
+		int32_t L_6 = ___newValue1;
+		*(int32_t*)L_5 = L_6;
 		V_0 = (bool)1;
 		goto IL_002c;
 	}
 
 IL_002c:
 	{
-		bool L_6 = V_0;
-		return L_6;
+		bool L_7 = V_0;
+		return L_7;
 	}
 }
 // System.Boolean UnityEngine.UI.SetPropertyUtility::SetStruct<System.Single>(TU26,T)
@@ -26398,10 +26404,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisSingle_t
 	{
 		EqualityComparer_1_t8178EEF96EC6C78CF54DB604583390D6DF0EFFD0 * L_0 = ((  EqualityComparer_1_t8178EEF96EC6C78CF54DB604583390D6DF0EFFD0 * (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
 		float* L_1 = ___currentValue0;
-		float L_2 = ___newValue1;
+		float L_2 = (*(float*)L_1);
+		float L_3 = ___newValue1;
 		NullCheck((EqualityComparer_1_t8178EEF96EC6C78CF54DB604583390D6DF0EFFD0 *)L_0);
-		bool L_3 = VirtFuncInvoker2< bool, float, float >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<System.Single>::Equals(!0,!0) */, (EqualityComparer_1_t8178EEF96EC6C78CF54DB604583390D6DF0EFFD0 *)L_0, (float)(*(float*)L_1), (float)L_2);
-		if (!L_3)
+		bool L_4 = VirtFuncInvoker2< bool, float, float >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<System.Single>::Equals(!0,!0) */, (EqualityComparer_1_t8178EEF96EC6C78CF54DB604583390D6DF0EFFD0 *)L_0, (float)L_2, (float)L_3);
+		if (!L_4)
 		{
 			goto IL_001e;
 		}
@@ -26413,17 +26420,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisSingle_t
 
 IL_001e:
 	{
-		float* L_4 = ___currentValue0;
-		float L_5 = ___newValue1;
-		*(float*)L_4 = L_5;
+		float* L_5 = ___currentValue0;
+		float L_6 = ___newValue1;
+		*(float*)L_5 = L_6;
 		V_0 = (bool)1;
 		goto IL_002c;
 	}
 
 IL_002c:
 	{
-		bool L_6 = V_0;
-		return L_6;
+		bool L_7 = V_0;
+		return L_7;
 	}
 }
 // System.Boolean UnityEngine.UI.SetPropertyUtility::SetStruct<UnityEngine.UI.ColorBlock>(TU26,T)
@@ -26433,10 +26440,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisColorBlo
 	{
 		EqualityComparer_1_t453E91867D00556A18859D15438A53BF618735B8 * L_0 = ((  EqualityComparer_1_t453E91867D00556A18859D15438A53BF618735B8 * (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
 		ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA * L_1 = ___currentValue0;
-		ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA  L_2 = ___newValue1;
+		ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA  L_2 = (*(ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA *)L_1);
+		ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA  L_3 = ___newValue1;
 		NullCheck((EqualityComparer_1_t453E91867D00556A18859D15438A53BF618735B8 *)L_0);
-		bool L_3 = VirtFuncInvoker2< bool, ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA , ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA  >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<UnityEngine.UI.ColorBlock>::Equals(!0,!0) */, (EqualityComparer_1_t453E91867D00556A18859D15438A53BF618735B8 *)L_0, (ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA )(*(ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA *)L_1), (ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA )L_2);
-		if (!L_3)
+		bool L_4 = VirtFuncInvoker2< bool, ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA , ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA  >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<UnityEngine.UI.ColorBlock>::Equals(!0,!0) */, (EqualityComparer_1_t453E91867D00556A18859D15438A53BF618735B8 *)L_0, (ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA )L_2, (ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA )L_3);
+		if (!L_4)
 		{
 			goto IL_001e;
 		}
@@ -26448,17 +26456,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisColorBlo
 
 IL_001e:
 	{
-		ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA * L_4 = ___currentValue0;
-		ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA  L_5 = ___newValue1;
-		*(ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA *)L_4 = L_5;
+		ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA * L_5 = ___currentValue0;
+		ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA  L_6 = ___newValue1;
+		*(ColorBlock_t93B54DF6E8D65D24CEA9726CA745E48C53E3B1EA *)L_5 = L_6;
 		V_0 = (bool)1;
 		goto IL_002c;
 	}
 
 IL_002c:
 	{
-		bool L_6 = V_0;
-		return L_6;
+		bool L_7 = V_0;
+		return L_7;
 	}
 }
 // System.Boolean UnityEngine.UI.SetPropertyUtility::SetStruct<UnityEngine.UI.Navigation>(TU26,T)
@@ -26468,10 +26476,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisNavigati
 	{
 		EqualityComparer_1_tD38609B11526E41C1F90EDDFF1374A78903B5919 * L_0 = ((  EqualityComparer_1_tD38609B11526E41C1F90EDDFF1374A78903B5919 * (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
 		Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 * L_1 = ___currentValue0;
-		Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07  L_2 = ___newValue1;
+		Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07  L_2 = (*(Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 *)L_1);
+		Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07  L_3 = ___newValue1;
 		NullCheck((EqualityComparer_1_tD38609B11526E41C1F90EDDFF1374A78903B5919 *)L_0);
-		bool L_3 = VirtFuncInvoker2< bool, Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 , Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07  >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<UnityEngine.UI.Navigation>::Equals(!0,!0) */, (EqualityComparer_1_tD38609B11526E41C1F90EDDFF1374A78903B5919 *)L_0, (Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 )(*(Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 *)L_1), (Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 )L_2);
-		if (!L_3)
+		bool L_4 = VirtFuncInvoker2< bool, Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 , Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07  >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<UnityEngine.UI.Navigation>::Equals(!0,!0) */, (EqualityComparer_1_tD38609B11526E41C1F90EDDFF1374A78903B5919 *)L_0, (Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 )L_2, (Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 )L_3);
+		if (!L_4)
 		{
 			goto IL_001e;
 		}
@@ -26483,18 +26492,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisNavigati
 
 IL_001e:
 	{
-		Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 * L_4 = ___currentValue0;
-		Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07  L_5 = ___newValue1;
-		*(Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 *)L_4 = L_5;
-		Il2CppCodeGenWriteBarrier((void**)&(((Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 *)L_4)->___m_SelectOnUp_1), (void*)NULL);
+		Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 * L_5 = ___currentValue0;
+		Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07  L_6 = ___newValue1;
+		*(Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 *)L_5 = L_6;
+		Il2CppCodeGenWriteBarrier((void**)&(((Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 *)L_5)->___m_SelectOnUp_1), (void*)NULL);
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&(((Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 *)L_4)->___m_SelectOnDown_2), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&(((Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 *)L_5)->___m_SelectOnDown_2), (void*)NULL);
 		#endif
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&(((Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 *)L_4)->___m_SelectOnLeft_3), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&(((Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 *)L_5)->___m_SelectOnLeft_3), (void*)NULL);
 		#endif
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&(((Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 *)L_4)->___m_SelectOnRight_4), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&(((Navigation_t761250C05C09773B75F5E0D52DDCBBFE60288A07 *)L_5)->___m_SelectOnRight_4), (void*)NULL);
 		#endif
 		V_0 = (bool)1;
 		goto IL_002c;
@@ -26502,8 +26511,8 @@ IL_001e:
 
 IL_002c:
 	{
-		bool L_6 = V_0;
-		return L_6;
+		bool L_7 = V_0;
+		return L_7;
 	}
 }
 // System.Boolean UnityEngine.UI.SetPropertyUtility::SetStruct<UnityEngine.UI.SpriteState>(TU26,T)
@@ -26513,10 +26522,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisSpriteSt
 	{
 		EqualityComparer_1_t8BDB0EAEF431FC474DD94C0218FCDC4241AF434F * L_0 = ((  EqualityComparer_1_t8BDB0EAEF431FC474DD94C0218FCDC4241AF434F * (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
 		SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A * L_1 = ___currentValue0;
-		SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A  L_2 = ___newValue1;
+		SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A  L_2 = (*(SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A *)L_1);
+		SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A  L_3 = ___newValue1;
 		NullCheck((EqualityComparer_1_t8BDB0EAEF431FC474DD94C0218FCDC4241AF434F *)L_0);
-		bool L_3 = VirtFuncInvoker2< bool, SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A , SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A  >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<UnityEngine.UI.SpriteState>::Equals(!0,!0) */, (EqualityComparer_1_t8BDB0EAEF431FC474DD94C0218FCDC4241AF434F *)L_0, (SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A )(*(SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A *)L_1), (SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A )L_2);
-		if (!L_3)
+		bool L_4 = VirtFuncInvoker2< bool, SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A , SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A  >::Invoke(8 /* System.Boolean System.Collections.Generic.EqualityComparer`1<UnityEngine.UI.SpriteState>::Equals(!0,!0) */, (EqualityComparer_1_t8BDB0EAEF431FC474DD94C0218FCDC4241AF434F *)L_0, (SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A )L_2, (SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A )L_3);
+		if (!L_4)
 		{
 			goto IL_001e;
 		}
@@ -26528,18 +26538,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetStruct_TisSpriteSt
 
 IL_001e:
 	{
-		SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A * L_4 = ___currentValue0;
-		SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A  L_5 = ___newValue1;
-		*(SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A *)L_4 = L_5;
-		Il2CppCodeGenWriteBarrier((void**)&(((SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A *)L_4)->___m_HighlightedSprite_0), (void*)NULL);
+		SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A * L_5 = ___currentValue0;
+		SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A  L_6 = ___newValue1;
+		*(SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A *)L_5 = L_6;
+		Il2CppCodeGenWriteBarrier((void**)&(((SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A *)L_5)->___m_HighlightedSprite_0), (void*)NULL);
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&(((SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A *)L_4)->___m_PressedSprite_1), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&(((SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A *)L_5)->___m_PressedSprite_1), (void*)NULL);
 		#endif
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&(((SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A *)L_4)->___m_SelectedSprite_2), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&(((SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A *)L_5)->___m_SelectedSprite_2), (void*)NULL);
 		#endif
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&(((SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A *)L_4)->___m_DisabledSprite_3), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&(((SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A *)L_5)->___m_DisabledSprite_3), (void*)NULL);
 		#endif
 		V_0 = (bool)1;
 		goto IL_002c;
@@ -26547,8 +26557,8 @@ IL_001e:
 
 IL_002c:
 	{
-		bool L_6 = V_0;
-		return L_6;
+		bool L_7 = V_0;
+		return L_7;
 	}
 }
 // System.Collections.Generic.IEnumerable`1<TSource> System.Linq.Enumerable::Where<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)

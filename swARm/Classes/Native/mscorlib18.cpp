@@ -11883,11 +11883,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TypedReference_GetHashCode_m6A586AC49
 
 IL_0014:
 	{
+		TypedReference_t118BC3B643F75F52DB9C99D5E051299F886EB2A8  L_2 = (*(TypedReference_t118BC3B643F75F52DB9C99D5E051299F886EB2A8 *)__this);
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
-		Type_t * L_2 = Type_GetTypeFromHandle_m9DC58ADF0512987012A8A016FB64B068F3B1AFF6((*(TypedReference_t118BC3B643F75F52DB9C99D5E051299F886EB2A8 *)__this).get_type_0(), /*hidden argument*/NULL);
-		NullCheck(L_2);
-		int32_t L_3 = VirtFuncInvoker0< int32_t >::Invoke(2 /* System.Int32 System.Object::GetHashCode() */, L_2);
-		return L_3;
+		Type_t * L_3 = Type_GetTypeFromHandle_m9DC58ADF0512987012A8A016FB64B068F3B1AFF6(L_2.get_type_0(), /*hidden argument*/NULL);
+		NullCheck(L_3);
+		int32_t L_4 = VirtFuncInvoker0< int32_t >::Invoke(2 /* System.Int32 System.Object::GetHashCode() */, L_3);
+		return L_4;
 	}
 }
 IL2CPP_EXTERN_C  int32_t TypedReference_GetHashCode_m6A586AC495B0AB6D55E7EAE301C82BB2752A4289_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
@@ -15328,15 +15329,16 @@ IL_0005:
 	}
 	{
 		ValueTuple_tC6981F8FD1D7836C91BF332F5F894A8AEEF569D6  L_2 = (*(ValueTuple_tC6981F8FD1D7836C91BF332F5F894A8AEEF569D6 *)__this);
-		RuntimeObject * L_3 = Box(ValueTuple_tC6981F8FD1D7836C91BF332F5F894A8AEEF569D6_il2cpp_TypeInfo_var, &L_2);
-		NullCheck(L_3);
-		Type_t * L_4 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_3, /*hidden argument*/NULL);
+		ValueTuple_tC6981F8FD1D7836C91BF332F5F894A8AEEF569D6  L_3 = L_2;
+		RuntimeObject * L_4 = Box(ValueTuple_tC6981F8FD1D7836C91BF332F5F894A8AEEF569D6_il2cpp_TypeInfo_var, &L_3);
 		NullCheck(L_4);
-		String_t* L_5 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_4);
-		String_t* L_6 = SR_Format_mCDBB594267CC224AB2A69540BBA598151F0642C7(_stringLiteralABFC501D210FA3194339D5355419BE3336C98217, L_5, /*hidden argument*/NULL);
-		ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1 * L_7 = (ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1 *)il2cpp_codegen_object_new(ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1_il2cpp_TypeInfo_var);
-		ArgumentException__ctor_m26DC3463C6F3C98BF33EA39598DD2B32F0249CA8(L_7, L_6, _stringLiteralD0941E68DA8F38151FF86A61FC59F7C5CF9FCAA2, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, NULL, ValueTuple_System_IComparable_CompareTo_m6E4FCA0C1525C685EB58B41763A4A4D8F2CE5EF5_RuntimeMethod_var);
+		Type_t * L_5 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_4, /*hidden argument*/NULL);
+		NullCheck(L_5);
+		String_t* L_6 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_5);
+		String_t* L_7 = SR_Format_mCDBB594267CC224AB2A69540BBA598151F0642C7(_stringLiteralABFC501D210FA3194339D5355419BE3336C98217, L_6, /*hidden argument*/NULL);
+		ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1 * L_8 = (ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1 *)il2cpp_codegen_object_new(ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1_il2cpp_TypeInfo_var);
+		ArgumentException__ctor_m26DC3463C6F3C98BF33EA39598DD2B32F0249CA8(L_8, L_7, _stringLiteralD0941E68DA8F38151FF86A61FC59F7C5CF9FCAA2, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_8, NULL, ValueTuple_System_IComparable_CompareTo_m6E4FCA0C1525C685EB58B41763A4A4D8F2CE5EF5_RuntimeMethod_var);
 	}
 
 IL_0037:
@@ -15391,15 +15393,16 @@ IL_0005:
 	}
 	{
 		ValueTuple_tC6981F8FD1D7836C91BF332F5F894A8AEEF569D6  L_2 = (*(ValueTuple_tC6981F8FD1D7836C91BF332F5F894A8AEEF569D6 *)__this);
-		RuntimeObject * L_3 = Box(ValueTuple_tC6981F8FD1D7836C91BF332F5F894A8AEEF569D6_il2cpp_TypeInfo_var, &L_2);
-		NullCheck(L_3);
-		Type_t * L_4 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_3, /*hidden argument*/NULL);
+		ValueTuple_tC6981F8FD1D7836C91BF332F5F894A8AEEF569D6  L_3 = L_2;
+		RuntimeObject * L_4 = Box(ValueTuple_tC6981F8FD1D7836C91BF332F5F894A8AEEF569D6_il2cpp_TypeInfo_var, &L_3);
 		NullCheck(L_4);
-		String_t* L_5 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_4);
-		String_t* L_6 = SR_Format_mCDBB594267CC224AB2A69540BBA598151F0642C7(_stringLiteralABFC501D210FA3194339D5355419BE3336C98217, L_5, /*hidden argument*/NULL);
-		ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1 * L_7 = (ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1 *)il2cpp_codegen_object_new(ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1_il2cpp_TypeInfo_var);
-		ArgumentException__ctor_m26DC3463C6F3C98BF33EA39598DD2B32F0249CA8(L_7, L_6, _stringLiteralD0941E68DA8F38151FF86A61FC59F7C5CF9FCAA2, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, NULL, ValueTuple_System_Collections_IStructuralComparable_CompareTo_mC5A3E5494E6AE2CEBA28F16A2324F69E8E7E1061_RuntimeMethod_var);
+		Type_t * L_5 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_4, /*hidden argument*/NULL);
+		NullCheck(L_5);
+		String_t* L_6 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_5);
+		String_t* L_7 = SR_Format_mCDBB594267CC224AB2A69540BBA598151F0642C7(_stringLiteralABFC501D210FA3194339D5355419BE3336C98217, L_6, /*hidden argument*/NULL);
+		ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1 * L_8 = (ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1 *)il2cpp_codegen_object_new(ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1_il2cpp_TypeInfo_var);
+		ArgumentException__ctor_m26DC3463C6F3C98BF33EA39598DD2B32F0249CA8(L_8, L_7, _stringLiteralD0941E68DA8F38151FF86A61FC59F7C5CF9FCAA2, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_8, NULL, ValueTuple_System_Collections_IStructuralComparable_CompareTo_mC5A3E5494E6AE2CEBA28F16A2324F69E8E7E1061_RuntimeMethod_var);
 	}
 
 IL_0037:

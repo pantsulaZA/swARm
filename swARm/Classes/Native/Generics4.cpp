@@ -232,7 +232,7 @@ struct HashSet_1_t725419BA457D845928B505ACE877FF46BC71E897;
 // System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>
 struct IEnumerable_1_tFF8052908705FD011022D40F9658E5A55319B241;
 // System.Collections.Generic.IEnumerable`1<System.Int32>
-struct IEnumerable_1_t83E667E7934AC9AE24BFBB0281123214BC7E000C;
+struct IEnumerable_1_tC8E2D23A5937714ABB338DF7C65563ABED65CF05;
 // System.Collections.Generic.IEnumerable`1<System.Object>
 struct IEnumerable_1_t2F75FCBEC68AFE08982DA43985F9D04056E2BE73;
 // System.Collections.Generic.IEnumerator`1<DigitalRubyShared.GestureTouch>
@@ -24251,7 +24251,7 @@ IL_00ac:
 		int32_t L_31 = V_3;
 		NullCheck(L_30);
 		((L_30)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_31)))->set_hashCode_0((-1));
-		bool L_32 = ((  bool (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 7)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 7));
+		bool L_32 = true;
 		if (!L_32)
 		{
 			goto IL_00dc;
@@ -26001,7 +26001,7 @@ IL_00ac:
 		int32_t L_31 = V_3;
 		NullCheck(L_30);
 		((L_30)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_31)))->set_hashCode_0((-1));
-		bool L_32 = ((  bool (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 7)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 7));
+		bool L_32 = false;
 		if (!L_32)
 		{
 			goto IL_00dc;
@@ -27749,7 +27749,7 @@ IL_00ac:
 		int32_t L_31 = V_3;
 		NullCheck(L_30);
 		((L_30)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_31)))->set_hashCode_0((-1));
-		bool L_32 = ((  bool (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 7)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 7));
+		bool L_32 = true;
 		if (!L_32)
 		{
 			goto IL_00dc;

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(MeshFilter))]
 public class Island : MonoBehaviour
@@ -15,14 +16,17 @@ public class Island : MonoBehaviour
     void Start()
     {
         mesh = new Mesh();
-        GetComponent<MeshFilter>().mesh = mesh;
+        MeshFilter mf = GetComponent<MeshFilter>();
+        mf.mesh = mesh;
         GenerateIsland();
         UpdateMesh();
+        GetComponent<MeshCollider>().sharedMesh = mf.sharedMesh;
+        GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 
     private void GenerateIsland()
     {
-        float noiseScale = 0.2f;
+        float noiseScale = 0.5f;
         vertices = new Vector3[(xSize + 1) * (zSize + 1)];
         for (int i = 0, z = 0; z < zSize + 1; z++)
         {

@@ -20545,7 +20545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_Clear_m4E4996C8891B0686ED2880778
 		}
 	}
 	{
-		bool L_1 = ((  bool (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 1)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 1));
+		bool L_1 = false;
 		if (!L_1)
 		{
 			goto IL_0068;
@@ -20925,7 +20925,7 @@ IL_000e:
 		NullCheck(L_1);
 		int32_t L_3 = L_2;
 		VelocityHistory_t114C7F6388D0989FCBD595D21338DDC477B92CB7  L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
-		bool L_5 = ((  bool (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 1)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 1));
+		bool L_5 = false;
 		G_B3_0 = L_4;
 		if (!L_5)
 		{
@@ -21175,7 +21175,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_Clear_mA64205B88DC41766CD394B2CA
 		}
 	}
 	{
-		bool L_1 = ((  bool (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 1)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 1));
+		bool L_1 = true;
 		if (!L_1)
 		{
 			goto IL_0068;
@@ -21552,7 +21552,7 @@ IL_000e:
 		NullCheck(L_1);
 		int32_t L_3 = L_2;
 		RuntimeObject * L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
-		bool L_5 = ((  bool (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 1)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 1));
+		bool L_5 = true;
 		G_B3_0 = L_4;
 		if (!L_5)
 		{
@@ -22302,7 +22302,7 @@ IL_000e:
 		NullCheck(L_2);
 		int32_t L_6 = L_5;
 		RuntimeObject * L_7 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
-		bool L_8 = ((  bool (*) (const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 4)->methodPointer)(/*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 4));
+		bool L_8 = true;
 		G_B3_0 = L_7;
 		if (!L_8)
 		{

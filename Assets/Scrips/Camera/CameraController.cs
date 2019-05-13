@@ -58,7 +58,7 @@ public class CameraController : MonoBehaviour
         {
             if (tempFocus != null)
             {
-                target.Rotate(new Vector3(x: 0, y: panner.DeltaX * rotateSpeed * Time.deltaTime * transform.position.y, z: 0));
+                target.Rotate(new Vector3(x: 0, y: panner.DeltaX * rotateSpeed * Time.deltaTime, z: 0));
                 transform.Translate(-Vector3.forward * panner.DeltaY * zoomSpeed * Time.deltaTime);
 
             }

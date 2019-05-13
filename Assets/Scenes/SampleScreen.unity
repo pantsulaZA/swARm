@@ -249,7 +249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642632219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 10, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -267,7 +267,6 @@ GameObject:
   - component: {fileID: 940440526}
   - component: {fileID: 940440525}
   - component: {fileID: 940440524}
-  - component: {fileID: 940440528}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -306,7 +305,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 075f57b49f4024d619a7c63e8e008b4e, type: 2}
+  - {fileID: 2100000, guid: 1f6d2c43490dc41f5aa41855980c3f8d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -348,18 +347,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &940440528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940440523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec6ea8e473fb437a9b026dc8625ea78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &945417161
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,8 +376,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd48f519525a42549b41f5a2429bab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 500, y: 500}
-  treeDensity: 1
+  size: {x: 100, y: 100}
+  island: {fileID: 8653974486754803840, guid: f8accd93a8be84c0fa8ade072bcd5542, type: 3}
+  treeDensity: 10
   treePrefab: {fileID: 191266, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
   population: 10
   personPrefab: {fileID: 8329255418117645375, guid: 1e2dbbf8e6fa7401f83946d701fac5e0,
@@ -681,7 +669,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056684531}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1934114863}

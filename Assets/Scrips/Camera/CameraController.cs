@@ -46,7 +46,7 @@ public class CameraController : MonoBehaviour
         zoomer = new ScaleGestureRecognizer();
         zoomer.StateUpdated += Zoom;
         FingersScript.Instance.AddGesture(zoomer);
-        
+
         rotator = new RotateGestureRecognizer();
         rotator.StateUpdated += Rotate;
         FingersScript.Instance.AddGesture(rotator);
@@ -64,9 +64,23 @@ public class CameraController : MonoBehaviour
             }
             else
             {
-                target.Translate(-panner.DeltaX * panSpeed * Time.deltaTime * transform.position.y / maxCameraHeight / 5,
-                 0, 
+                Vector3 newPosition = new Vector3(-panner.DeltaX * panSpeed * Time.deltaTime * transform.position.y / maxCameraHeight / 5,
+                 50,
                  -panner.DeltaY * panSpeed * Time.deltaTime * transform.position.y / maxCameraHeight / 5);
+                Debug.Log("New position before : " + newPosition);
+                var ray = new Ray(newPosition, Vector3.down);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    var selection = hit.transform.GetComponent<Plantable>();
+                    if (selection != null)
+                    {
+                        Debug.Log("Camera hit " + hit.point);
+                        newPosition.y = hit.point.y;
+                    }
+                }
+                Debug.Log("New position after : " + newPosition);
+                target.Translate(newPosition);
             }
         }
     }
@@ -107,7 +121,7 @@ public class CameraController : MonoBehaviour
             float scale = zoomer.ScaleMultiplier;
             float cameraDistanceY = Mathf.Clamp(newPosition.y * scale, minCameraHeight, maxCameraHeight);
             float cameraDistanceZ = Mathf.Clamp(-newPosition.z * scale, minCameraHeight, maxCameraHeight);
-            newPosition.z =  -cameraDistanceZ;
+            newPosition.z = -cameraDistanceZ;
             newPosition.y = cameraDistanceY;
 
             Debug.Log("Zoom : " + newPosition);
@@ -117,11 +131,11 @@ public class CameraController : MonoBehaviour
 
     }
 
-private void Rotate(GestureRecognizer gesture)
+    private void Rotate(GestureRecognizer gesture)
     {
         if (gesture.State == GestureRecognizerState.Executing)
-        {  
-            target.Rotate(new Vector3(x: 0, y: rotator.RotationDegreesDelta * rotateSpeed * Time.deltaTime, z: 0));     
+        {
+            target.Rotate(new Vector3(x: 0, y: rotator.RotationDegreesDelta * rotateSpeed * Time.deltaTime, z: 0));
         }
     }
 }

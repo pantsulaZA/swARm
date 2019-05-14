@@ -78,7 +78,7 @@ public class GameController : MonoBehaviour
         {
             float x = UnityEngine.Random.value * size.x;
             float z = UnityEngine.Random.value * size.y;
-            Vector3 newPosition = new Vector3(x, 12, z);
+            Vector3 newPosition = new Vector3(x, 50, z);
             var ray = new Ray(newPosition, Vector3.down);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))

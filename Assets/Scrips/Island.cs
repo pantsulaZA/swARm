@@ -20,7 +20,7 @@ public class Island : MonoBehaviour
         mf.mesh = mesh;
         GenerateIsland();
         UpdateMesh();
-        GetComponent<MeshCollider>().sharedMesh = mf.sharedMesh;
+        GetComponent<MeshCollider>().sharedMesh = mf.mesh;
         GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 

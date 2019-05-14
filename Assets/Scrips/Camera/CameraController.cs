@@ -31,6 +31,22 @@ public class CameraController : MonoBehaviour
         {
             target.transform.position = tempFocus.position;
         }
+        else
+        {
+            Vector3 rayPos = target.position;
+            rayPos.y = 50;
+            var ray = new Ray(rayPos, Vector3.down);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                var selection = hit.transform.GetComponent<CameraFollow>();
+                if (selection != null)
+                {
+                    // Debug.Log("Camera hit " + hit.point);
+                    target.position = hit.point;
+                }
+            }
+        }
     }
 
     private void SetupGesture()
@@ -65,21 +81,8 @@ public class CameraController : MonoBehaviour
             else
             {
                 Vector3 newPosition = new Vector3(-panner.DeltaX * panSpeed * Time.deltaTime * transform.position.y / maxCameraHeight / 5,
-                 50,
+                 0,
                  -panner.DeltaY * panSpeed * Time.deltaTime * transform.position.y / maxCameraHeight / 5);
-                Debug.Log("New position before : " + newPosition);
-                var ray = new Ray(newPosition, Vector3.down);
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
-                {
-                    var selection = hit.transform.GetComponent<CameraFollow>();
-                    if (selection != null)
-                    {
-                        Debug.Log("Camera hit " + hit.point);
-                        newPosition.y = hit.point.y;
-                    }
-                }
-                Debug.Log("New position after : " + newPosition);
                 target.Translate(newPosition);
             }
         }

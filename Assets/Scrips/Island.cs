@@ -9,6 +9,11 @@ public class Island : MonoBehaviour
 {
     public int xSize = 20;
     public int zSize = 20;
+    public float samplingScale = 20f;
+    public int octaves = 3;
+    public float persistence = 0.5f; // 0-1
+    public float lacunarity = 2; // >1
+
     private Mesh mesh;
     private Vector3[] vertices;
     private int[] triangles;
@@ -26,15 +31,13 @@ public class Island : MonoBehaviour
 
     private void GenerateIsland()
     {
-        float noiseScale = 0.05f;
-        float heigthScale = 12f;
         vertices = new Vector3[(xSize + 1) * (zSize + 1)];
+        float[,] noiseMap = Noise.Generate(xSize + 1, zSize + 1, samplingScale, octaves, persistence, lacunarity);
         for (int i = 0, z = 0; z < zSize + 1; z++)
         {
             for (int x = 0; x < xSize + 1; x++)
             {
-                float y = Mathf.PerlinNoise(x * noiseScale, z * noiseScale) * heigthScale ;
-                vertices[i] = new Vector3(x, y, z);
+                vertices[i] = new Vector3(x, noiseMap[x, z] * 12 - 5, z);
                 i++;
             }
         }

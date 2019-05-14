@@ -26,16 +26,14 @@ public class Island : MonoBehaviour
 
     private void GenerateIsland()
     {
-        float noiseScale = 0.5f;
+        float noiseScale = 0.05f;
+        float heigthScale = 12f;
         vertices = new Vector3[(xSize + 1) * (zSize + 1)];
         for (int i = 0, z = 0; z < zSize + 1; z++)
         {
             for (int x = 0; x < xSize + 1; x++)
             {
-                float heightScalex = (x < xSize/2) ? x : xSize - x;
-                float heightScalez = (z < zSize/2) ? z : zSize - z;
-                float heightScale = Mathf.Min(heightScalex, heightScalez) / 3;
-                float y = Mathf.PerlinNoise(x * noiseScale, z * noiseScale) * 2f + heightScale;
+                float y = Mathf.PerlinNoise(x * noiseScale, z * noiseScale) * heigthScale ;
                 vertices[i] = new Vector3(x, y, z);
                 i++;
             }

@@ -72,7 +72,7 @@ public class CameraController : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    var selection = hit.transform.GetComponent<Plantable>();
+                    var selection = hit.transform.GetComponent<CameraFollow>();
                     if (selection != null)
                     {
                         Debug.Log("Camera hit " + hit.point);

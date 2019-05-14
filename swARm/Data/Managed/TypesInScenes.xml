@@ -54,6 +54,7 @@
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="Building" preserve="nothing"/>
 		<type fullname="CameraController" preserve="nothing"/>
+		<type fullname="CameraFollow" preserve="nothing"/>
 		<type fullname="DigitalRubyShared.FingersScript" preserve="nothing"/>
 		<type fullname="GameController" preserve="nothing"/>
 		<type fullname="Gatherer" preserve="nothing"/>

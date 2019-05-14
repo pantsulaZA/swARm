@@ -41112,19 +41112,6 @@ static void U3CConstructWorldU3Ed__10_tDE60E280BC17F4289F8278E4456A857355065335_
 		DebuggerHiddenAttribute__ctor_mAA6F6E292901D40E4B4C876530F1349332CCD1B5(tmp, NULL);
 	}
 }
-static void Island_t0411841B6D455ED148AD32BF08D062C304288390_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (Island_t0411841B6D455ED148AD32BF08D062C304288390_CustomAttributesCacheGenerator_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		RequireComponent_t07725D895B775D6ED768EF52D4EE326539BA65E1 * tmp = (RequireComponent_t07725D895B775D6ED768EF52D4EE326539BA65E1 *)cache->attributes[0];
-		RequireComponent__ctor_m27819B55F8BD1517378CEFECA00FB183A13D9397(tmp, il2cpp_codegen_type_get_object(MeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0_0_0_0_var), NULL);
-	}
-}
 static void Building_tA0D0C6ACCE3208723314C4D5CFBC8311C494D6D5_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
 {
 	{
@@ -41151,6 +41138,19 @@ static void Building_tA0D0C6ACCE3208723314C4D5CFBC8311C494D6D5_CustomAttributesC
 	{
 		SerializeField_t2C7845E4134D47F2D89267492CB6B955DC4787A5 * tmp = (SerializeField_t2C7845E4134D47F2D89267492CB6B955DC4787A5 *)cache->attributes[0];
 		SerializeField__ctor_mEE7F6BB7A9643562D8CEF189848925B74F87DA27(tmp, NULL);
+	}
+}
+static void Island_t0411841B6D455ED148AD32BF08D062C304288390_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Island_t0411841B6D455ED148AD32BF08D062C304288390_CustomAttributesCacheGenerator_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RequireComponent_t07725D895B775D6ED768EF52D4EE326539BA65E1 * tmp = (RequireComponent_t07725D895B775D6ED768EF52D4EE326539BA65E1 *)cache->attributes[0];
+		RequireComponent__ctor_m27819B55F8BD1517378CEFECA00FB183A13D9397(tmp, il2cpp_codegen_type_get_object(MeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0_0_0_0_var), NULL);
 	}
 }
 static void LocalNavMeshBuilder_t5EAA703A2C62CE2E4BBA1FF394A037CA8BDBCB95_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
@@ -45867,8 +45867,8 @@ const CustomAttributesCacheGenerator g_AttributeGenerators[3608] =
 	InputField_t533609195B110760BCFF00B746C87D81969CB005_CustomAttributesCacheGenerator_InputField_t533609195B110760BCFF00B746C87D81969CB005____onValueChange_PropertyInfo,
 	Selectable_tAA9065030FE0468018DEC880302F95FEA9C0133A_CustomAttributesCacheGenerator_Selectable_tAA9065030FE0468018DEC880302F95FEA9C0133A____allSelectables_PropertyInfo,
 	g_UnityEngine_UI_Assembly_CustomAttributesCacheGenerator,
-	Island_t0411841B6D455ED148AD32BF08D062C304288390_CustomAttributesCacheGenerator,
 	Building_tA0D0C6ACCE3208723314C4D5CFBC8311C494D6D5_CustomAttributesCacheGenerator,
+	Island_t0411841B6D455ED148AD32BF08D062C304288390_CustomAttributesCacheGenerator,
 	LocalNavMeshBuilder_t5EAA703A2C62CE2E4BBA1FF394A037CA8BDBCB95_CustomAttributesCacheGenerator,
 	NavMeshSourceTag_tC5FA70D1EF6950E82239CAD9DF49C95B70DAD963_CustomAttributesCacheGenerator,
 	GestureLogger_t764A2F7A62227C619D34A50506647FB1566EF26F_CustomAttributesCacheGenerator,

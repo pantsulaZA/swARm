@@ -1206,6 +1206,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_MeshFilter_set_mesh();
 		Register_UnityEngine_MeshFilter_set_mesh();
 
+		//UnityEngine.Mesh UnityEngine.MeshFilter::get_mesh()
+		void Register_UnityEngine_MeshFilter_get_mesh();
+		Register_UnityEngine_MeshFilter_get_mesh();
+
 		//UnityEngine.Mesh UnityEngine.MeshFilter::get_sharedMesh()
 		void Register_UnityEngine_MeshFilter_get_sharedMesh();
 		Register_UnityEngine_MeshFilter_get_sharedMesh();

@@ -3,10 +3,19 @@ using System.Collections;
 
 public static class Noise
 {
-    public static float[,] Generate(int mapWidth, int mapHeight, float scale, int octaves, float persistence, float lacunarity)
+    public static float[,] Generate(int mapWidth, int mapHeight, int seed, float scale, int octaves, float persistence, float lacunarity, Vector2 offset)
     {
-
         float[,] noiseMap = new float[mapWidth, mapHeight];
+
+        System.Random prng = new System.Random(seed);
+        Vector2[] octiveOffsets = new Vector2[octaves];
+
+        for (int i = 0; i < octaves; i++)
+        {
+            float offsetX = prng.Next(-100000, 100000) + offset.x;
+            float offsetY = prng.Next(-100000, 100000) + offset.y;
+            octiveOffsets[i] = new Vector2(offsetX, offsetY);
+        }
         if (scale <= 0)
         {
             scale = 0.0001f;
@@ -23,12 +32,12 @@ public static class Noise
                 float frequency = 1f;
                 float noiseHeight = 0f;
 
-                for (int o = 0; o < octaves; o++)
+                for (int i = 0; i < octaves; i++)
                 {
-                    float sampleX = x / scale * frequency;
-                    float sampleY = y / scale * frequency;
+                    float sampleX = x / scale * frequency + octiveOffsets[i].x;
+                    float sampleY = y / scale * frequency + octiveOffsets[i].y;
 
-                    float perlinValue = Mathf.PerlinNoise(sampleX, sampleY);
+                    float perlinValue = Mathf.PerlinNoise(sampleX, sampleY) * 2 - 1;
 
                     noiseHeight += perlinValue * amplitude;
 
@@ -46,7 +55,6 @@ public static class Noise
                 }
 
                 noiseMap[x, y] = noiseHeight;
-                Debug.Log("New height : " + noiseHeight);
             }
         }
 

@@ -120,15 +120,8 @@ public class CameraController : MonoBehaviour
     {
         if (gesture.State == GestureRecognizerState.Executing)
         {
-            Vector3 newPosition = transform.position;
-            float scale = zoomer.ScaleMultiplier;
-            float cameraDistanceY = Mathf.Clamp(newPosition.y * scale, minCameraHeight, maxCameraHeight);
-            float cameraDistanceZ = Mathf.Clamp(-newPosition.z * scale, minCameraHeight, maxCameraHeight);
-            newPosition.z = -cameraDistanceZ;
-            newPosition.y = cameraDistanceY;
+              transform.Translate(-Vector3.forward * zoomer.ScaleMultiplier * zoomSpeed * Time.deltaTime);
 
-            Debug.Log("Zoom : " + newPosition);
-            transform.position = newPosition;
 
         }
 

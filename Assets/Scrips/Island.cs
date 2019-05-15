@@ -7,12 +7,15 @@ using UnityEngine.AI;
 [RequireComponent(typeof(MeshFilter))]
 public class Island : MonoBehaviour
 {
-    public int xSize = 20;
-    public int zSize = 20;
-    public float samplingScale = 20f;
-    public int octaves = 3;
-    public float persistence = 0.5f; // 0-1
-    public float lacunarity = 2; // >1
+    public int height;
+    public int xSize;
+    public int zSize;
+    public float samplingScale;
+    public int octaves;
+    public float persistence; // 0-1
+    public float lacunarity; // >1
+    public int seed;
+    public Vector2 offset;
 
     private Mesh mesh;
     private Vector3[] vertices;
@@ -32,12 +35,13 @@ public class Island : MonoBehaviour
     private void GenerateIsland()
     {
         vertices = new Vector3[(xSize + 1) * (zSize + 1)];
-        float[,] noiseMap = Noise.Generate(xSize + 1, zSize + 1, samplingScale, octaves, persistence, lacunarity);
+        float[,] noiseMap = Noise.Generate(xSize + 1, zSize + 1, seed, samplingScale, octaves, persistence, lacunarity, offset);
+        
         for (int i = 0, z = 0; z < zSize + 1; z++)
         {
             for (int x = 0; x < xSize + 1; x++)
             {
-                vertices[i] = new Vector3(x, noiseMap[x, z] * 12 - 5, z);
+                vertices[i] = new Vector3(x, noiseMap[x, z] * height, z);
                 i++;
             }
         }

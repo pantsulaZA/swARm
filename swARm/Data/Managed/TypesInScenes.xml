@@ -66,6 +66,9 @@
 	<assembly fullname="NavMeshComponents">
 		<type fullname="UnityEngine.AI.NavMeshSurface" preserve="nothing"/>
 	</assembly>
+	<assembly fullname="NavMeshComponentsEditor">
+		<type fullname="UnityEditor.AI.NavMeshAssetManager" preserve="nothing"/>
+	</assembly>
 	<assembly fullname="UnityEditor.Graphs">
 		<type fullname="UnityEditor.Graphs.AnimationBlendTree.Graph" preserve="nothing"/>
 		<type fullname="UnityEditor.Graphs.AnimationBlendTree.GraphGUI" preserve="nothing"/>

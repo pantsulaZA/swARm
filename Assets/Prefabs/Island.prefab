@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4072000416525323905}
   - component: {fileID: 8928507548369560766}
   - component: {fileID: 6774564286316325367}
+  - component: {fileID: 2776129815651404497}
   m_Layer: 0
   m_Name: Island
   m_TagString: Untagged
@@ -49,12 +50,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cedcd43ea6d3d4d1f8f1ed01c16bfea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  height: 10
   xSize: 100
   zSize: 100
   samplingScale: 20
   octaves: 3
   persistence: 0.5
   lacunarity: 2
+  seed: 0
+  offset: {x: 0, y: 0}
 --- !u!33 &8653974486754803842
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -80,7 +84,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 075f57b49f4024d619a7c63e8e008b4e, type: 2}
+  - {fileID: 2100000, guid: 21611e879bf4940848e5b3d77bfae405, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -167,3 +171,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5f78bc42d0b480d8eef957a6f9f26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2776129815651404497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653974486754803840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6373f8f7cf14e3ca86e96e4a735a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textureRenderer: {fileID: 8653974486754803843}

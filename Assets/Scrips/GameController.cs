@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     private List<Gatherer> people = new List<Gatherer>();
     [SerializeField] private GameObject personPrefab;
     [SerializeField] private House house;
+    [SerializeField] private MapGenerator islandNoise;
 
     void Start()
     {
@@ -21,7 +22,9 @@ public class GameController : MonoBehaviour
     }
 
     IEnumerator ConstructWorld() {
-        GenerateIsland();
+        float[,] noiseMap = islandNoise.GenerateMap();
+        Debug.Log(noiseMap);
+        GenerateIsland(noiseMap);
         yield return new WaitForSeconds(2);
         PlantTrees();
         yield return new WaitForSeconds(2);
@@ -30,9 +33,11 @@ public class GameController : MonoBehaviour
         house.Reset();
     }
 
-    private void GenerateIsland()
+    private void GenerateIsland(float[,] noiseMap)
     {
-        Instantiate(island, position: new Vector3(0, -5, 0), rotation: Quaternion.identity);
+        GameObject o = Instantiate(island, position: new Vector3(0, -5, 0), rotation: Quaternion.identity);
+        Island i = o.GetComponent<Island>();
+        i.GenerateIsland(noiseMap);
     }
 
     void Update()
@@ -47,7 +52,6 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void PlantTrees()
     {
-        Debug.Log("Planting trees");
         for (int tree = 0; tree < treeDensity*size.x*size.y/100; tree++)
         {
             float x = UnityEngine.Random.value * size.x;

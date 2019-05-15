@@ -18,28 +18,38 @@ public class Island : MonoBehaviour
     public Vector2 offset;
 
     private Mesh mesh;
+    private MeshFilter mf;
     private Vector3[] vertices;
     private int[] triangles;
 
     void Start()
     {
         mesh = new Mesh();
-        MeshFilter mf = GetComponent<MeshFilter>();
+        mf = GetComponent<MeshFilter>();
         mf.mesh = mesh;
-        GenerateIsland();
+        GenerateIsland(null);
+
+    }
+
+    public void GenerateIsland(float[,] noiseMap)
+    {
+        GenerateMesh(noiseMap);
         UpdateMesh();
         GetComponent<MeshCollider>().sharedMesh = mf.mesh;
         GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 
-    private void GenerateIsland()
+    private void GenerateMesh(float[,] noiseMap)
     {
         vertices = new Vector3[(xSize + 1) * (zSize + 1)];
-        float[,] noiseMap = Noise.Generate(xSize + 1, zSize + 1, seed, samplingScale, octaves, persistence, lacunarity, offset);
-        
-        for (int i = 0, z = 0; z < zSize + 1; z++)
+        if (noiseMap == null)
         {
-            for (int x = 0; x < xSize + 1; x++)
+            noiseMap = Noise.Generate(xSize + 1, zSize + 1, seed, samplingScale, octaves, persistence, lacunarity, offset);
+        }
+
+        for (int i = 0, z = 0; z < zSize; z++)
+        {
+            for (int x = 0; x < xSize ; x++)
             {
                 vertices[i] = new Vector3(x, noiseMap[x, z] * height, z);
                 i++;

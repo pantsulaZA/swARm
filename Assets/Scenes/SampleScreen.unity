@@ -659,23 +659,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1909822110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268eda596ba8241a3adb11f623be1f3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 59d84a3ea59284339b0d9e49f8f2ddde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawMode: 1
   width: 100
   height: 100
-  samplingScale: 28
-  octaves: 3
-  persistence: 0.4
-  lacunarity: 4
+  samplingScale: 28.35
+  octaves: 11
+  persistence: 0.047
+  lacunarity: 12.42
+  seed: 26
+  offset: {x: -1.93, y: -2.71}
   autoUpdate: 1
   regions:
-  - name: water
+  - name: Water
+    height: 0.2
+    color: {r: 0.05446779, g: 0.45101202, b: 0.6792453, a: 0}
+  - name: Beach
     height: 0.4
-    Color: {r: 0.118725546, g: 0.29838756, b: 0.8679245, a: 0}
-  - name: grass
+    color: {r: 0.7630601, g: 0.7830189, b: 0.2770114, a: 0}
+  - name: Grass
+    height: 0.6
+    color: {r: 0.29192165, g: 0.78431374, b: 0.27843136, a: 0}
+  - name: Rock
+    height: 0.8
+    color: {r: 0.37738714, g: 0.38679248, b: 0.14413494, a: 0}
+  - name: Snow
     height: 1
-    Color: {r: 0.0445032, g: 0.5283019, b: 0.032395884, a: 0}
+    color: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &1909822112
 MonoBehaviour:
   m_ObjectHideFlags: 0

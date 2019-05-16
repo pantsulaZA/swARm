@@ -52,6 +52,10 @@
       <string>arkit</string>
       <string>arkit</string>
       <string>arkit</string>
+      <string>arkit</string>
+      <string>arkit</string>
+      <string>arkit</string>
+      <string>arkit</string>
     </array>
     <key>UIRequiresFullScreen</key>
     <true />
@@ -71,7 +75,7 @@
     <key>Unity_LoadingActivityIndicatorStyle</key>
     <integer>-1</integer>
     <key>UnityCloudProjectID</key>
-    <string></string>
+    <string>ff9cd767-0dac-459e-8502-3c7c5fef6bd4</string>
     <key>UnityCrashSubmissionURL</key>
     <string>https://a:b@perf-events.cloud.unity3d.com/symbolicate</string>
   </dict>

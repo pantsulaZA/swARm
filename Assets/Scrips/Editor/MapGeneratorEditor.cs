@@ -12,7 +12,6 @@ public class MapGeneratorEditor : Editor
         if(DrawDefaultInspector()) {
             if (mapGen.autoUpdate) {
                 mapGen.GenerateMap();
-                Debug.Log("Editor updated");
             }
         }
 

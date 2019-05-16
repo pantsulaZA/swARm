@@ -11552,10 +11552,10 @@ inline Plantable_t8BBAF5933E8A7D249B8F941B8A4BB771B78B555C * Component_GetCompon
 }
 // System.Void GameController::PlantTree(UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_PlantTree_m1B37ECDF9487EC10F431AB00B953249A7A9E9024 (GameController_t8BB0D3CE8992C95BED5FB508588730F0A74009A3 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___newPosition0, const RuntimeMethod* method);
-// UnityEngine.Vector3 UnityEngine.Transform::get_localPosition()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, const RuntimeMethod* method);
 // System.Single DigitalRubyShared.ScaleGestureRecognizer::get_ScaleMultiplier()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ScaleGestureRecognizer_get_ScaleMultiplier_m31E9425A4E62692ADB6A9212ACDE5C476FE9C72D (ScaleGestureRecognizer_t5B1254CE0126D9EF62E3F5723741B72AF5831B5E * __this, const RuntimeMethod* method);
+// UnityEngine.Vector3 UnityEngine.Transform::get_localPosition()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, const RuntimeMethod* method);
 // System.Single DigitalRubyShared.RotateGestureRecognizer::get_RotationDegreesDelta()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float RotateGestureRecognizer_get_RotationDegreesDelta_m7DC983A6170C06E8E5314EB1910244A294A98579 (RotateGestureRecognizer_tD9BA9E36615F8B9913E357BC0A4AA62EBB4EE6A0 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.MonoBehaviour::.ctor()
@@ -13683,73 +13683,77 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraController_Zoom_m72884FBE0FB1DCB80
 		il2cpp_codegen_initialize_method (CameraController_Zoom_m72884FBE0FB1DCB80B3CB186B3BAE5C6D7C31AD4_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  V_0;
-	memset((&V_0), 0, sizeof(V_0));
+	float V_0 = 0.0f;
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  V_1;
+	memset((&V_1), 0, sizeof(V_1));
 	{
 		GestureRecognizer_tF9A610A042AD51CD88A97CC66A23AB8C938308AE * L_0 = ___gesture0;
 		NullCheck(L_0);
 		int32_t L_1 = GestureRecognizer_get_State_m47B7DD332816CAA727D009C7CDDD29BD8C5E14A3(L_0, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_1) == ((uint32_t)4))))
 		{
-			goto IL_008c;
+			goto IL_007e;
 		}
 	}
 	{
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_2 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
+		ScaleGestureRecognizer_t5B1254CE0126D9EF62E3F5723741B72AF5831B5E * L_2 = __this->get_zoomer_12();
 		NullCheck(L_2);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_3 = Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8(L_2, /*hidden argument*/NULL);
-		float L_4 = L_3.get_y_3();
-		float L_5 = __this->get_minCameraHeight_16();
-		if ((!(((float)L_4) > ((float)L_5))))
+		float L_3 = ScaleGestureRecognizer_get_ScaleMultiplier_m31E9425A4E62692ADB6A9212ACDE5C476FE9C72D(L_2, /*hidden argument*/NULL);
+		V_0 = ((float)il2cpp_codegen_subtract((float)(1.0f), (float)L_3));
+		IL2CPP_RUNTIME_CLASS_INIT(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_4 = Vector3_get_forward_m3E2E192B3302130098738C308FA1EE1439449D0D(/*hidden argument*/NULL);
+		float L_5 = V_0;
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_6 = Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E(L_4, L_5, /*hidden argument*/NULL);
+		float L_7 = __this->get_zoomSpeed_8();
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_8 = Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E(L_6, L_7, /*hidden argument*/NULL);
+		V_1 = L_8;
+		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_9 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
+		NullCheck(L_9);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_10 = Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8(L_9, /*hidden argument*/NULL);
+		float L_11 = L_10.get_y_3();
+		float L_12 = __this->get_minCameraHeight_16();
+		if ((!(((float)L_11) > ((float)L_12))))
 		{
-			goto IL_003c;
+			goto IL_0052;
 		}
 	}
 	{
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_6 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		NullCheck(L_6);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_7 = Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8(L_6, /*hidden argument*/NULL);
-		float L_8 = L_7.get_y_3();
-		float L_9 = __this->get_maxCameraHeight_15();
+		float L_13 = V_0;
+		if ((((float)L_13) < ((float)(0.0f))))
+		{
+			goto IL_0072;
+		}
 	}
 
-IL_003c:
+IL_0052:
 	{
-		IL2CPP_RUNTIME_CLASS_INIT(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_10 = Vector3_get_forward_m3E2E192B3302130098738C308FA1EE1439449D0D(/*hidden argument*/NULL);
-		ScaleGestureRecognizer_t5B1254CE0126D9EF62E3F5723741B72AF5831B5E * L_11 = __this->get_zoomer_12();
-		NullCheck(L_11);
-		float L_12 = ScaleGestureRecognizer_get_ScaleMultiplier_m31E9425A4E62692ADB6A9212ACDE5C476FE9C72D(L_11, /*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_13 = Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E(L_10, L_12, /*hidden argument*/NULL);
-		float L_14 = __this->get_zoomSpeed_8();
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_15 = Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E(L_13, L_14, /*hidden argument*/NULL);
-		V_0 = L_15;
-		ScaleGestureRecognizer_t5B1254CE0126D9EF62E3F5723741B72AF5831B5E * L_16 = __this->get_zoomer_12();
-		NullCheck(L_16);
-		float L_17 = ScaleGestureRecognizer_get_ScaleMultiplier_m31E9425A4E62692ADB6A9212ACDE5C476FE9C72D(L_16, /*hidden argument*/NULL);
-		if ((!(((float)L_17) > ((float)(1.0f)))))
+		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_14 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
+		NullCheck(L_14);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_15 = Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8(L_14, /*hidden argument*/NULL);
+		float L_16 = L_15.get_y_3();
+		float L_17 = __this->get_minCameraHeight_16();
+		if ((!(((float)L_16) > ((float)L_17))))
 		{
-			goto IL_007b;
+			goto IL_007e;
 		}
 	}
 	{
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_18 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_19 = Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E(L_18, (1.0f), /*hidden argument*/NULL);
-		V_0 = L_19;
+		float L_18 = V_0;
+		if ((!(((float)L_18) > ((float)(0.0f)))))
+		{
+			goto IL_007e;
+		}
 	}
 
-IL_007b:
+IL_0072:
 	{
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_20 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_21 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_22 = Vector3_op_UnaryNegation_m2AFBBF22801F9BCA5A4EBE642A29F433FE1339C2(L_21, /*hidden argument*/NULL);
-		NullCheck(L_20);
-		Transform_Translate_m0F354939D5084DDFF6B9902E62D3DCA7A3B53EA3(L_20, L_22, /*hidden argument*/NULL);
+		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_19 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_20 = V_1;
+		NullCheck(L_19);
+		Transform_Translate_m0F354939D5084DDFF6B9902E62D3DCA7A3B53EA3(L_19, L_20, /*hidden argument*/NULL);
 	}
 
-IL_008c:
+IL_007e:
 	{
 		return;
 	}

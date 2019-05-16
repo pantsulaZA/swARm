@@ -120,13 +120,15 @@ public class CameraController : MonoBehaviour
     {
         if (gesture.State == GestureRecognizerState.Executing)
         {
-            if (transform.localPosition.y > minCameraHeight && transform.localPosition.y < maxCameraHeight) {}
-            Vector3 newPosition = Vector3.forward * zoomer.ScaleMultiplier * zoomSpeed;
-            if (zoomer.ScaleMultiplier > 1)
+            float zoom = (1 - zoomer.ScaleMultiplier);
+            Vector3 newPosition = Vector3.forward * zoom * zoomSpeed;
+            
+            if ((transform.localPosition.y >= minCameraHeight && zoom < 0) ||
+            (transform.localPosition.y >= minCameraHeight && zoom > 0))
             {
-                newPosition *= 1;
+                transform.Translate(newPosition);
             }
-            transform.Translate(-newPosition);
+
         }
     }
 

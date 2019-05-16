@@ -13712,7 +13712,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraController_Zoom_m72884FBE0FB1DCB80
 		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_10 = Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8(L_9, /*hidden argument*/NULL);
 		float L_11 = L_10.get_y_3();
 		float L_12 = __this->get_minCameraHeight_16();
-		if ((!(((float)L_11) > ((float)L_12))))
+		if ((!(((float)L_11) >= ((float)L_12))))
 		{
 			goto IL_0052;
 		}
@@ -13732,7 +13732,7 @@ IL_0052:
 		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_15 = Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8(L_14, /*hidden argument*/NULL);
 		float L_16 = L_15.get_y_3();
 		float L_17 = __this->get_minCameraHeight_16();
-		if ((!(((float)L_16) > ((float)L_17))))
+		if ((!(((float)L_16) >= ((float)L_17))))
 		{
 			goto IL_007e;
 		}

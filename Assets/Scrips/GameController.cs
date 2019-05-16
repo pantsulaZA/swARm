@@ -55,8 +55,8 @@ public class GameController : MonoBehaviour
     {
         for (int tree = 0; tree < treeDensity*size.x*size.y/100; tree++)
         {
-            float x = UnityEngine.Random.value * size.x;
-            float z = UnityEngine.Random.value * size.y;
+            float x = UnityEngine.Random.value * size.x - size.x/2;
+            float z = UnityEngine.Random.value * size.y - size.y/2;
             Vector3 newPosition = new Vector3(x, 50, z);
             var ray = new Ray(newPosition, Vector3.down);
             RaycastHit hit;

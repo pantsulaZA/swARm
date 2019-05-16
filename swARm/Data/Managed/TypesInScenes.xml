@@ -37,6 +37,7 @@
 		<type fullname="UnityEngine.Behaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.Texture" preserve="nothing"/>
 		<type fullname="UnityEngine.Camera" preserve="nothing"/>
+		<type fullname="UnityEngine.AI.NavMeshData" preserve="nothing"/>
 		<type fullname="UnityEngine.AI.NavMeshAgent" preserve="nothing"/>
 		<type fullname="UnityEngine.MeshRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.Animation" preserve="nothing"/>
@@ -60,14 +61,13 @@
 		<type fullname="Gatherer" preserve="nothing"/>
 		<type fullname="House" preserve="nothing"/>
 		<type fullname="Island" preserve="nothing"/>
+		<type fullname="MapDisplay" preserve="nothing"/>
+		<type fullname="MapGenerator" preserve="nothing"/>
 		<type fullname="Plantable" preserve="nothing"/>
 		<type fullname="SelectableObject" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="NavMeshComponents">
 		<type fullname="UnityEngine.AI.NavMeshSurface" preserve="nothing"/>
-	</assembly>
-	<assembly fullname="NavMeshComponentsEditor">
-		<type fullname="UnityEditor.AI.NavMeshAssetManager" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEditor.Graphs">
 		<type fullname="UnityEditor.Graphs.AnimationBlendTree.Graph" preserve="nothing"/>

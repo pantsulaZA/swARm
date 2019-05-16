@@ -142,6 +142,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_AnimationCurve_Internal_Create();
 		Register_UnityEngine_AnimationCurve_Internal_Create();
 
+		//System.Single UnityEngine.AnimationCurve::Evaluate(System.Single)
+		void Register_UnityEngine_AnimationCurve_Evaluate();
+		Register_UnityEngine_AnimationCurve_Evaluate();
+
 		//System.Void UnityEngine.AnimationCurve::Internal_Destroy(System.IntPtr)
 		void Register_UnityEngine_AnimationCurve_Internal_Destroy();
 		Register_UnityEngine_AnimationCurve_Internal_Destroy();
@@ -1110,6 +1114,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Material_SetFloatImpl();
 		Register_UnityEngine_Material_SetFloatImpl();
 
+		//System.Void UnityEngine.Material::SetTextureImpl(System.Int32,UnityEngine.Texture)
+		void Register_UnityEngine_Material_SetTextureImpl();
+		Register_UnityEngine_Material_SetTextureImpl();
+
 		//UnityEngine.Texture UnityEngine.Material::GetTextureImpl(System.Int32)
 		void Register_UnityEngine_Material_GetTextureImpl();
 		Register_UnityEngine_Material_GetTextureImpl();
@@ -1205,6 +1213,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.MeshFilter::set_mesh(UnityEngine.Mesh)
 		void Register_UnityEngine_MeshFilter_set_mesh();
 		Register_UnityEngine_MeshFilter_set_mesh();
+
+		//System.Void UnityEngine.MeshFilter::set_sharedMesh(UnityEngine.Mesh)
+		void Register_UnityEngine_MeshFilter_set_sharedMesh();
+		Register_UnityEngine_MeshFilter_set_sharedMesh();
 
 		//UnityEngine.Mesh UnityEngine.MeshFilter::get_mesh()
 		void Register_UnityEngine_MeshFilter_get_mesh();
@@ -1337,6 +1349,10 @@ void RegisterAllStrippedInternalCalls()
 		//UnityEngine.Object UnityEngine.Object::Internal_InstantiateSingle_Injected(UnityEngine.Object,UnityEngine.Vector3&,UnityEngine.Quaternion&)
 		void Register_UnityEngine_Object_Internal_InstantiateSingle_Injected();
 		Register_UnityEngine_Object_Internal_InstantiateSingle_Injected();
+
+		//UnityEngine.Object[] UnityEngine.Object::FindObjectsOfType(System.Type)
+		void Register_UnityEngine_Object_FindObjectsOfType();
+		Register_UnityEngine_Object_FindObjectsOfType();
 
 	//End Registrations for type : UnityEngine.Object
 
@@ -1613,6 +1629,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Int32 UnityEngine.Renderer::get_sortingOrder()
 		void Register_UnityEngine_Renderer_get_sortingOrder();
 		Register_UnityEngine_Renderer_get_sortingOrder();
+
+		//UnityEngine.Material UnityEngine.Renderer::GetSharedMaterial()
+		void Register_UnityEngine_Renderer_GetSharedMaterial();
+		Register_UnityEngine_Renderer_GetSharedMaterial();
 
 	//End Registrations for type : UnityEngine.Renderer
 
@@ -2070,6 +2090,14 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Texture_get_texelSize_Injected();
 		Register_UnityEngine_Texture_get_texelSize_Injected();
 
+		//System.Void UnityEngine.Texture::set_filterMode(UnityEngine.FilterMode)
+		void Register_UnityEngine_Texture_set_filterMode();
+		Register_UnityEngine_Texture_set_filterMode();
+
+		//System.Void UnityEngine.Texture::set_wrapMode(UnityEngine.TextureWrapMode)
+		void Register_UnityEngine_Texture_set_wrapMode();
+		Register_UnityEngine_Texture_set_wrapMode();
+
 		//UnityEngine.TextureWrapMode UnityEngine.Texture::get_wrapMode()
 		void Register_UnityEngine_Texture_get_wrapMode();
 		Register_UnityEngine_Texture_get_wrapMode();
@@ -2090,9 +2118,17 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Texture2D_GetRawTextureData();
 		Register_UnityEngine_Texture2D_GetRawTextureData();
 
+		//System.Void UnityEngine.Texture2D::ApplyImpl(System.Boolean,System.Boolean)
+		void Register_UnityEngine_Texture2D_ApplyImpl();
+		Register_UnityEngine_Texture2D_ApplyImpl();
+
 		//System.Void UnityEngine.Texture2D::GetPixelBilinearImpl_Injected(System.Int32,System.Single,System.Single,UnityEngine.Color&)
 		void Register_UnityEngine_Texture2D_GetPixelBilinearImpl_Injected();
 		Register_UnityEngine_Texture2D_GetPixelBilinearImpl_Injected();
+
+		//System.Void UnityEngine.Texture2D::SetPixelsImpl(System.Int32,System.Int32,System.Int32,System.Int32,UnityEngine.Color[],System.Int32,System.Int32)
+		void Register_UnityEngine_Texture2D_SetPixelsImpl();
+		Register_UnityEngine_Texture2D_SetPixelsImpl();
 
 		//UnityEngine.Texture2D UnityEngine.Texture2D::get_whiteTexture()
 		void Register_UnityEngine_Texture2D_get_whiteTexture();

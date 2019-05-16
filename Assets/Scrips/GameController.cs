@@ -24,7 +24,8 @@ public class GameController : MonoBehaviour
     IEnumerator ConstructWorld() {
         float[,] noiseMap = islandNoise.GenerateMap();
         Debug.Log(noiseMap);
-        GenerateIsland(noiseMap);
+       // GenerateIsland(noiseMap);
+        
         yield return new WaitForSeconds(2);
         PlantTrees();
         yield return new WaitForSeconds(2);

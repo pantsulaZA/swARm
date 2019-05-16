@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MapDisplay : MonoBehaviour
 {
@@ -18,5 +19,8 @@ public class MapDisplay : MonoBehaviour
     public void DrawMesh(MeshData meshData, Texture2D texture) {
         meshFilter.sharedMesh = meshData.CreateMesh();
         meshRenderer.sharedMaterial.mainTexture = texture;
+        
+        meshFilter.GetComponent<MeshCollider>().sharedMesh = meshFilter.sharedMesh;
+        meshFilter.GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 }

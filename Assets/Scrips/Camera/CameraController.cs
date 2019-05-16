@@ -120,11 +120,14 @@ public class CameraController : MonoBehaviour
     {
         if (gesture.State == GestureRecognizerState.Executing)
         {
-              transform.Translate(-Vector3.forward * zoomer.ScaleMultiplier * zoomSpeed * Time.deltaTime);
-
-
+            if (transform.localPosition.y > minCameraHeight && transform.localPosition.y < maxCameraHeight) {}
+            Vector3 newPosition = Vector3.forward * zoomer.ScaleMultiplier * zoomSpeed;
+            if (zoomer.ScaleMultiplier > 1)
+            {
+                newPosition *= 1;
+            }
+            transform.Translate(-newPosition);
         }
-
     }
 
     private void Rotate(GestureRecognizer gesture)

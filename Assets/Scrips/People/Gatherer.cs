@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Gatherer : MonoBehaviour
+public class Gatherer: MonoBehaviour
 {
+    private int hunger;
+    public bool IsHungry() {
+        return hunger < 100;
+    }
     public List<GameObject> resources = new List<GameObject>();
     public GameObject destination;
     public House house;
@@ -12,7 +16,7 @@ public class Gatherer : MonoBehaviour
     private Animator animator;
     private float chopTime = 5.0f;
     private float currentTimeChopped = 0.0f;
-    [SerializeField] private GathererState currentState = GathererState.Idle;
+    [SerializeField] private PersonStateMachine fsm;
     [SerializeField] private int wood = 0;
 
     enum GathererState { Chopping, Idle, Walking, Unloading }

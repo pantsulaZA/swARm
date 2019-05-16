@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class GameController : MonoBehaviour
 {
     [SerializeField] private Vector2 size;
-    [SerializeField] private GameObject island;
     [SerializeField] private int treeDensity = 0;
     private List<GameObject> trees = new List<GameObject>();
     [SerializeField] private GameObject treePrefab;
@@ -22,23 +22,13 @@ public class GameController : MonoBehaviour
     }
 
     IEnumerator ConstructWorld() {
-        float[,] noiseMap = islandNoise.GenerateMap();
-        Debug.Log(noiseMap);
-       // GenerateIsland(noiseMap);
-        
-        yield return new WaitForSeconds(2);
+        float[,] noiseMap = islandNoise.GenerateMap();  
+        yield return new WaitForSeconds(1);
         PlantTrees();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         SpawnPopulation();
         yield return new WaitForSeconds(2);
         house.Reset();
-    }
-
-    private void GenerateIsland(float[,] noiseMap)
-    {
-        GameObject o = Instantiate(island, position: new Vector3(0, -5, 0), rotation: Quaternion.identity);
-        Island i = o.GetComponent<Island>();
-        i.GenerateIsland(noiseMap);
     }
 
     void Update()
@@ -50,14 +40,13 @@ public class GameController : MonoBehaviour
     }
 
     
-    // Update is called once per frame
     void PlantTrees()
     {
         for (int tree = 0; tree < treeDensity*size.x*size.y/100; tree++)
         {
             float x = UnityEngine.Random.value * size.x - size.x/2;
             float z = UnityEngine.Random.value * size.y - size.y/2;
-            Vector3 newPosition = new Vector3(x, 50, z);
+            Vector3 newPosition = new Vector3(x, 30, z);
             var ray = new Ray(newPosition, Vector3.down);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
@@ -81,9 +70,10 @@ public class GameController : MonoBehaviour
     {
         for (int person = 0; person < population; person++)
         {
-            float x = UnityEngine.Random.value * size.x;
-            float z = UnityEngine.Random.value * size.y;
+            float x = UnityEngine.Random.value * 10 - 5;
+            float z = UnityEngine.Random.value * 10 - 5;
             Vector3 newPosition = new Vector3(x, 50, z);
+            Debug.Log("New person at " + newPosition);
             var ray = new Ray(newPosition, Vector3.down);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))

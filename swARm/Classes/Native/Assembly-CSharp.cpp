@@ -652,6 +652,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral29EC34A60D352E76943B9DBBE62F848D96D197E0
 IL2CPP_EXTERN_C String_t* _stringLiteral2A0F264CCC140E329FE12587EA8B509A6C99C1E8;
 IL2CPP_EXTERN_C String_t* _stringLiteral30A307496C135995462377DA3EBF1DCB25F0B1F6;
 IL2CPP_EXTERN_C String_t* _stringLiteral33FB1B58BEC6B3A395D6C6660D87BAD9956B1256;
+IL2CPP_EXTERN_C String_t* _stringLiteral3728F0DC2104E292C3702B5F0178D375081AA45D;
 IL2CPP_EXTERN_C String_t* _stringLiteral37BD71692BE798CFA96FD9279AC3095D27D2E9F9;
 IL2CPP_EXTERN_C String_t* _stringLiteral42AF10F8821FC00AB424A82E11F9A7EEF049B91C;
 IL2CPP_EXTERN_C String_t* _stringLiteral48842D0B8FC7D20CBC2C208BFC566E8C1E94781E;
@@ -28562,67 +28563,71 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_PlantTrees_mDE5CC048805B3
 	memset((&V_4), 0, sizeof(V_4));
 	{
 		V_0 = 0;
-		goto IL_0069;
+		goto IL_0090;
 	}
 
-IL_0004:
+IL_0007:
 	{
 		float L_0 = Random_get_value_mC998749E08291DD42CF31C026FAC4F14F746831C(/*hidden argument*/NULL);
 		Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * L_1 = __this->get_address_of_size_4();
 		float L_2 = L_1->get_x_0();
-		V_1 = ((float)il2cpp_codegen_multiply((float)L_0, (float)L_2));
-		float L_3 = Random_get_value_mC998749E08291DD42CF31C026FAC4F14F746831C(/*hidden argument*/NULL);
-		Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * L_4 = __this->get_address_of_size_4();
-		float L_5 = L_4->get_y_1();
-		V_2 = ((float)il2cpp_codegen_multiply((float)L_3, (float)L_5));
-		float L_6 = V_1;
-		float L_7 = V_2;
-		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&V_3), L_6, (50.0f), L_7, /*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_8 = V_3;
+		Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * L_3 = __this->get_address_of_size_4();
+		float L_4 = L_3->get_x_0();
+		V_1 = ((float)il2cpp_codegen_subtract((float)((float)il2cpp_codegen_multiply((float)L_0, (float)L_2)), (float)((float)((float)L_4/(float)(2.0f)))));
+		float L_5 = Random_get_value_mC998749E08291DD42CF31C026FAC4F14F746831C(/*hidden argument*/NULL);
+		Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * L_6 = __this->get_address_of_size_4();
+		float L_7 = L_6->get_y_1();
+		Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * L_8 = __this->get_address_of_size_4();
+		float L_9 = L_8->get_y_1();
+		V_2 = ((float)il2cpp_codegen_subtract((float)((float)il2cpp_codegen_multiply((float)L_5, (float)L_7)), (float)((float)((float)L_9/(float)(2.0f)))));
+		float L_10 = V_1;
+		float L_11 = V_2;
+		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&V_3), L_10, (50.0f), L_11, /*hidden argument*/NULL);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_12 = V_3;
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_9 = Vector3_get_down_m3F76A48E5B7C82B35EE047375538AFD91A305F55(/*hidden argument*/NULL);
-		Ray_tE2163D4CB3E6B267E29F8ABE41684490E4A614B2  L_10;
-		memset((&L_10), 0, sizeof(L_10));
-		Ray__ctor_m695D219349B8AA4C82F96C55A27D384C07736F6B((&L_10), L_8, L_9, /*hidden argument*/NULL);
-		bool L_11 = Physics_Raycast_mCE618579F667A62D15CB74CEF76147136EB2D495(L_10, (RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 *)(&V_4), /*hidden argument*/NULL);
-		if (!L_11)
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_13 = Vector3_get_down_m3F76A48E5B7C82B35EE047375538AFD91A305F55(/*hidden argument*/NULL);
+		Ray_tE2163D4CB3E6B267E29F8ABE41684490E4A614B2  L_14;
+		memset((&L_14), 0, sizeof(L_14));
+		Ray__ctor_m695D219349B8AA4C82F96C55A27D384C07736F6B((&L_14), L_12, L_13, /*hidden argument*/NULL);
+		bool L_15 = Physics_Raycast_mCE618579F667A62D15CB74CEF76147136EB2D495(L_14, (RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 *)(&V_4), /*hidden argument*/NULL);
+		if (!L_15)
 		{
-			goto IL_0065;
+			goto IL_008c;
 		}
 	}
 	{
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_12 = RaycastHit_get_transform_m3C0BEE7439CA37F82FD5216143B92BF32F995279((RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 *)(&V_4), /*hidden argument*/NULL);
-		NullCheck(L_12);
-		Plantable_t8BBAF5933E8A7D249B8F941B8A4BB771B78B555C * L_13 = Component_GetComponent_TisPlantable_t8BBAF5933E8A7D249B8F941B8A4BB771B78B555C_mB8C0E056679C0F429B8D4EE3B4CC8180337DA5F3(L_12, /*hidden argument*/Component_GetComponent_TisPlantable_t8BBAF5933E8A7D249B8F941B8A4BB771B78B555C_mB8C0E056679C0F429B8D4EE3B4CC8180337DA5F3_RuntimeMethod_var);
+		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_16 = RaycastHit_get_transform_m3C0BEE7439CA37F82FD5216143B92BF32F995279((RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 *)(&V_4), /*hidden argument*/NULL);
+		NullCheck(L_16);
+		Plantable_t8BBAF5933E8A7D249B8F941B8A4BB771B78B555C * L_17 = Component_GetComponent_TisPlantable_t8BBAF5933E8A7D249B8F941B8A4BB771B78B555C_mB8C0E056679C0F429B8D4EE3B4CC8180337DA5F3(L_16, /*hidden argument*/Component_GetComponent_TisPlantable_t8BBAF5933E8A7D249B8F941B8A4BB771B78B555C_mB8C0E056679C0F429B8D4EE3B4CC8180337DA5F3_RuntimeMethod_var);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
-		bool L_14 = Object_op_Inequality_m31EF58E217E8F4BDD3E409DEF79E1AEE95874FC1(L_13, (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 *)NULL, /*hidden argument*/NULL);
-		if (!L_14)
+		bool L_18 = Object_op_Inequality_m31EF58E217E8F4BDD3E409DEF79E1AEE95874FC1(L_17, (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 *)NULL, /*hidden argument*/NULL);
+		if (!L_18)
 		{
-			goto IL_0065;
+			goto IL_008c;
 		}
 	}
 	{
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_15 = V_3;
-		GameController_PlantTree_m1B37ECDF9487EC10F431AB00B953249A7A9E9024(__this, L_15, /*hidden argument*/NULL);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_19 = V_3;
+		GameController_PlantTree_m1B37ECDF9487EC10F431AB00B953249A7A9E9024(__this, L_19, /*hidden argument*/NULL);
 	}
 
-IL_0065:
+IL_008c:
 	{
-		int32_t L_16 = V_0;
-		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_16, (int32_t)1));
+		int32_t L_20 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_20, (int32_t)1));
 	}
 
-IL_0069:
+IL_0090:
 	{
-		int32_t L_17 = V_0;
-		int32_t L_18 = __this->get_treeDensity_6();
-		Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * L_19 = __this->get_address_of_size_4();
-		float L_20 = L_19->get_x_0();
-		Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * L_21 = __this->get_address_of_size_4();
-		float L_22 = L_21->get_y_1();
-		if ((((float)(((float)((float)L_17)))) < ((float)((float)((float)((float)il2cpp_codegen_multiply((float)((float)il2cpp_codegen_multiply((float)(((float)((float)L_18))), (float)L_20)), (float)L_22))/(float)(100.0f))))))
+		int32_t L_21 = V_0;
+		int32_t L_22 = __this->get_treeDensity_6();
+		Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * L_23 = __this->get_address_of_size_4();
+		float L_24 = L_23->get_x_0();
+		Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * L_25 = __this->get_address_of_size_4();
+		float L_26 = L_25->get_y_1();
+		if ((((float)(((float)((float)L_21)))) < ((float)((float)((float)((float)il2cpp_codegen_multiply((float)((float)il2cpp_codegen_multiply((float)(((float)((float)L_22))), (float)L_24)), (float)L_26))/(float)(100.0f))))))
 		{
-			goto IL_0004;
+			goto IL_0007;
 		}
 	}
 	{
@@ -28676,22 +28681,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_SpawnPopulation_mE235D6C0
 	Gatherer_t953B344810B7FC5C26C4365F0E4CE940BA8BF83A * V_5 = NULL;
 	{
 		V_0 = 0;
-		goto IL_00aa;
+		goto IL_00bf;
 	}
 
 IL_0007:
 	{
 		float L_0 = Random_get_value_mC998749E08291DD42CF31C026FAC4F14F746831C(/*hidden argument*/NULL);
-		Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * L_1 = __this->get_address_of_size_4();
-		float L_2 = L_1->get_x_0();
-		V_1 = ((float)il2cpp_codegen_multiply((float)L_0, (float)L_2));
-		float L_3 = Random_get_value_mC998749E08291DD42CF31C026FAC4F14F746831C(/*hidden argument*/NULL);
-		Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * L_4 = __this->get_address_of_size_4();
-		float L_5 = L_4->get_y_1();
-		V_2 = ((float)il2cpp_codegen_multiply((float)L_3, (float)L_5));
-		float L_6 = V_1;
-		float L_7 = V_2;
-		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&V_3), L_6, (50.0f), L_7, /*hidden argument*/NULL);
+		V_1 = ((float)il2cpp_codegen_subtract((float)((float)il2cpp_codegen_multiply((float)L_0, (float)(10.0f))), (float)(5.0f)));
+		float L_1 = Random_get_value_mC998749E08291DD42CF31C026FAC4F14F746831C(/*hidden argument*/NULL);
+		V_2 = ((float)il2cpp_codegen_subtract((float)((float)il2cpp_codegen_multiply((float)L_1, (float)(10.0f))), (float)(5.0f)));
+		float L_2 = V_1;
+		float L_3 = V_2;
+		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&V_3), L_2, (50.0f), L_3, /*hidden argument*/NULL);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_4 = V_3;
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_5 = L_4;
+		RuntimeObject * L_6 = Box(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var, &L_5);
+		String_t* L_7 = String_Concat_mBB19C73816BDD1C3519F248E1ADC8E11A6FDB495(_stringLiteral3728F0DC2104E292C3702B5F0178D375081AA45D, L_6, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var);
+		Debug_Log_m4B7C70BAFD477C6BDB59C88A0934F0B018D03708(L_7, /*hidden argument*/NULL);
 		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_8 = V_3;
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var);
 		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_9 = Vector3_get_down_m3F76A48E5B7C82B35EE047375538AFD91A305F55(/*hidden argument*/NULL);
@@ -28701,7 +28708,7 @@ IL_0007:
 		bool L_11 = Physics_Raycast_mCE618579F667A62D15CB74CEF76147136EB2D495(L_10, (RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 *)(&V_4), /*hidden argument*/NULL);
 		if (!L_11)
 		{
-			goto IL_00a6;
+			goto IL_00bb;
 		}
 	}
 	{
@@ -28712,7 +28719,7 @@ IL_0007:
 		bool L_14 = Object_op_Inequality_m31EF58E217E8F4BDD3E409DEF79E1AEE95874FC1(L_13, (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 *)NULL, /*hidden argument*/NULL);
 		if (!L_14)
 		{
-			goto IL_00a6;
+			goto IL_00bb;
 		}
 	}
 	{
@@ -28739,13 +28746,13 @@ IL_0007:
 		List_1_Add_m0821FAF46178F0FDAFFD7C380D23E515156037F7(L_24, L_25, /*hidden argument*/List_1_Add_m0821FAF46178F0FDAFFD7C380D23E515156037F7_RuntimeMethod_var);
 	}
 
-IL_00a6:
+IL_00bb:
 	{
 		int32_t L_26 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_26, (int32_t)1));
 	}
 
-IL_00aa:
+IL_00bf:
 	{
 		int32_t L_27 = V_0;
 		int32_t L_28 = __this->get_population_9();

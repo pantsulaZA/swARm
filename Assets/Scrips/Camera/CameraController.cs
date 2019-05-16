@@ -122,12 +122,12 @@ public class CameraController : MonoBehaviour
         {
             float zoom = (1 - zoomer.ScaleMultiplier);
             Vector3 newPosition = -Vector3.forward * zoom * zoomSpeed;
-            
-            // if ((transform.localPosition.y >= minCameraHeight && zoom > 0) ||
-            // (transform.localPosition.y >= minCameraHeight && zoom < 0))
-            // {
-                transform.Translate(newPosition);
-            // }
+            if ((Vector3.Distance(transform.position, target.position) < minCameraHeight && zoom < 1) ||
+            (Vector3.Distance(transform.position, target.position) > minCameraHeight && zoom > 1))
+            {
+                return;
+            }
+            transform.Translate(newPosition);
         }
     }
 

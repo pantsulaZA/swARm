@@ -10,8 +10,8 @@ public class IdleState: BaseState {
     }
 
     override public Type Tick() {
-        if (person.resources.Count == 0) {
-            return typeof(GatheringState)
+        if (!person.IsInvertoryFull()) {
+            return typeof(GatherState);
         }
         
         return typeof(IdleState);

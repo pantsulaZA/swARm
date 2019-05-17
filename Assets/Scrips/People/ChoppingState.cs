@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class GatherState : BaseState
+public class ChoppingState : BaseState
 {
     private Gatherer person;
 
-    public GatherState(Gatherer person) : base(person.gameObject) {
+    public ChoppingState(Gatherer person) : base(person.gameObject) {
         this.person = person;
     }
 
     override public Type Tick() {
-        if (person.IsAtDestination()) {
+        if (person.IsInvertoryFull()) {
             return typeof(ChoppingState);
         }
         

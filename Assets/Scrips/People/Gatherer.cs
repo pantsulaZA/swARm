@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,8 +10,28 @@ public class Gatherer: MonoBehaviour
     public bool IsHungry() {
         return hunger < 100;
     }
+
+    internal void SetAnimation(string v)
+    {
+        animator.SetBool("isChopping", false);
+        animator.SetBool("isChopping", false);
+        animator.SetBool("isUnloading", false);
+        animator.SetBool(v, true);
+    }
+
     public List<GameObject> resources = new List<GameObject>();
     public GameObject destination;
+
+    public bool IsAtDestination()
+    {
+        return agent.remainingDistance < 1;
+    }
+
+    public bool IsInvertoryFull()
+    {
+        return resources.Count > 0;
+    }
+
     public House house;
     private NavMeshAgent agent;
     private Animator animator;
@@ -36,24 +57,9 @@ public class Gatherer: MonoBehaviour
             case GathererState.Idle:
                 if (wood == 0 && resources.Count > 0)
                 {
-                    destination = null;
-                    foreach (var tree in resources)
-                    {
-                        if ((destination == null) ||
-                        (Vector3.Distance(transform.position, tree.transform.position) < Vector3.Distance(transform.position, destination.transform.position)))
-                        {
-                            destination = tree;
-                            agent.SetDestination(destination.transform.position);
-                            currentState = GathererState.Walking;
-                        }
-                    }
                 }
                 break;
             case GathererState.Walking:
-                if (wood < 1 && agent.remainingDistance < 3)
-                {
-                    currentState = GathererState.Chopping;
-                }
                 else if (wood > 0 && agent.remainingDistance < 3)
                 {
                     house.AddResouce(amount: wood);
@@ -85,9 +91,19 @@ public class Gatherer: MonoBehaviour
                 break;
 
         }
-        animator.SetBool("isWalking", currentState == GathererState.Walking);
-        animator.SetBool("isChopping", currentState == GathererState.Chopping);
-        animator.SetBool("isUnloading", currentState == GathererState.Unloading);
+    }
+
+    public void GotoNearestResource() {
+                     destination = null;
+                    foreach (var tree in resources)
+                    {
+                        if ((destination == null) ||
+                        (Vector3.Distance(transform.position, tree.transform.position) < Vector3.Distance(transform.position, destination.transform.position)))
+                        {
+                            destination = tree;
+                            agent.SetDestination(destination.transform.position);
+                        }
+                    }
 
     }
 }

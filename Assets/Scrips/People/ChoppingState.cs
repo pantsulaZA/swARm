@@ -9,11 +9,14 @@ public class ChoppingState : BaseState
 
     public ChoppingState(Gatherer person) : base(person.gameObject) {
         this.person = person;
+        person.SetAnimation("IsChopping");
     }
 
     override public Type Tick() {
-        if (person.IsInvertoryFull()) {
-            return typeof(ChoppingState);
+        if (person.DoneChopping()) {
+            person.Pickup(1);
+            person.GoHome();
+            return typeof(WalkingState);
         }
         
         return typeof(ChoppingState);

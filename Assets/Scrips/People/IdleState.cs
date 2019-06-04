@@ -7,11 +7,13 @@ public class IdleState: BaseState {
 
     public IdleState(Gatherer person) : base(person.gameObject) {
         this.person = person;
+        person.SetAnimation("isWalking");
     }
 
     override public Type Tick() {
         if (!person.IsInvertoryFull()) {
-            return typeof(GatherState);
+            person.GotoNearestResource();
+            return typeof(WalkingState);
         }
         
         return typeof(IdleState);

@@ -13,7 +13,6 @@ public class GameController : MonoBehaviour
     public int population = 0;
     private List<Gatherer> people = new List<Gatherer>();
     [SerializeField] private GameObject personPrefab;
-    [SerializeField] private House house;
     [SerializeField] private MapGenerator islandNoise;
 
     void Start()
@@ -23,12 +22,11 @@ public class GameController : MonoBehaviour
 
     IEnumerator ConstructWorld() {
         float[,] noiseMap = islandNoise.GenerateMap();  
-        yield return new WaitForSeconds(1);
+        // yield return new WaitForSeconds(1);
         PlantTrees();
-        yield return new WaitForSeconds(3);
+        // yield return new WaitForSeconds(3);
         SpawnPopulation();
         yield return new WaitForSeconds(2);
-        house.Reset();
     }
 
     void Update()
@@ -54,7 +52,7 @@ public class GameController : MonoBehaviour
                 var selection = hit.transform.GetComponent<Plantable>();
                 if (selection != null)
                 {
-                    PlantTree(newPosition);
+                    PlantTree(hit.point);
                 }
             }
         }
@@ -62,7 +60,7 @@ public class GameController : MonoBehaviour
 
     public void PlantTree(Vector3 newPosition)
     {
-        Debug.Log("Planting tree" + newPosition);
+        // Debug.Log("Planting tree" + newPosition);
         trees.Add(Instantiate(original: treePrefab, position: newPosition, rotation: Quaternion.identity));
     }
 
@@ -83,7 +81,6 @@ public class GameController : MonoBehaviour
                 {
                     var newPerson = Instantiate(original: personPrefab, position: hit.point, rotation: Quaternion.identity).GetComponent<Gatherer>();
                     newPerson.resources = trees;
-                    newPerson.house = house;
                     people.Add(newPerson);
                 }
             }

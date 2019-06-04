@@ -807,6 +807,7 @@ GameObject:
   - component: {fileID: 8329255418117645504}
   - component: {fileID: 3687645977058590751}
   - component: {fileID: 6007315232795586207}
+  - component: {fileID: -586044345737867318}
   m_Layer: 9
   m_Name: Person
   m_TagString: Untagged
@@ -889,8 +890,10 @@ MonoBehaviour:
   resources: []
   destination: {fileID: 0}
   house: {fileID: 0}
-  currentState: 1
-  wood: 0
+  fsm: {fileID: 0}
+  housePrefab: {fileID: 2392562945769311400, guid: 2dc4d5f2663934f299c133b0f14d6890,
+    type: 3}
+  inventory: []
 --- !u!195 &8329255418117645504
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -938,6 +941,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-586044345737867318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8329255418117645375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7223e34cf3edc4a278039ce622811dda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8329255418121623144
 GameObject:
   m_ObjectHideFlags: 0

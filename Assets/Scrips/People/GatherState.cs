@@ -9,6 +9,7 @@ public class GatherState : BaseState
 
     public GatherState(Gatherer person) : base(person.gameObject) {
         this.person = person;
+        person.SetAnimation("IsWalking");
     }
 
     override public Type Tick() {

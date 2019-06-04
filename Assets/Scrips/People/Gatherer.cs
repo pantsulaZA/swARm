@@ -4,19 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Gatherer: MonoBehaviour
+public class Gatherer : MonoBehaviour
 {
-    private int hunger;
-    public bool IsHungry() {
-        return hunger < 100;
-    }
-
     internal void SetAnimation(string v)
     {
-        animator.SetBool("isChopping", false);
-        animator.SetBool("isChopping", false);
-        animator.SetBool("isUnloading", false);
-        animator.SetBool(v, true);
+        animator?.SetBool("isChopping", false);
+        animator?.SetBool("isChopping", false);
+        animator?.SetBool("isUnloading", false);
+        animator?.SetBool(v, true);
     }
 
     public List<GameObject> resources = new List<GameObject>();
@@ -24,12 +19,12 @@ public class Gatherer: MonoBehaviour
 
     public bool IsAtDestination()
     {
-        return agent.remainingDistance < 1;
+        return agent.remainingDistance < 2;
     }
 
     public bool IsInvertoryFull()
     {
-        return resources.Count > 0;
+        return inventory > 0;
     }
 
     public House house;
@@ -38,72 +33,89 @@ public class Gatherer: MonoBehaviour
     private float chopTime = 5.0f;
     private float currentTimeChopped = 0.0f;
     [SerializeField] private PersonStateMachine fsm;
-    [SerializeField] private int wood = 0;
+    [SerializeField] private GameObject housePrefab;
+    [SerializeField] private int inventory = 0;
 
     enum GathererState { Chopping, Idle, Walking, Unloading }
 
-    // Start is called before the first frame update
+    void Awake()
+    {
+        SetupStateMachine();
+    }
+
     void Start()
     {
         agent = this.gameObject.GetComponent<NavMeshAgent>();
         animator = this.gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        switch (currentState)
-        {
-            case GathererState.Idle:
-                if (wood == 0 && resources.Count > 0)
-                {
-                }
-                break;
-            case GathererState.Walking:
-                else if (wood > 0 && agent.remainingDistance < 3)
-                {
-                    house.AddResouce(amount: wood);
-                    wood = 0;
-                    currentState = GathererState.Idle;
-                }
-                break;
-            case GathererState.Chopping:
-                if (currentTimeChopped > chopTime)
-                {
-                    wood += 1;
-                    currentTimeChopped = 0;
-                    agent.SetDestination(house.transform.position);
-                    currentState = GathererState.Walking;
-                    if (destination != null)
-                    {
-                        resources.Remove(destination);
-                        Destroy(destination);
-                    }
-                    destination = house.gameObject;
-                }
-                else if (destination == null) {
-                    currentState = GathererState.Idle;
-                }
-                else
-                {
-                    currentTimeChopped += Time.deltaTime;
-                }
-                break;
+    void Update() {
+        currentTimeChopped += Time.deltaTime;
+    }
 
+    public void StartChopping() {
+        currentTimeChopped = 0;
+    }
+
+    public bool DoneChopping() {
+        if (currentTimeChopped > chopTime) {
+            resources.Remove(destination);
+            Destroy(destination);
+            return true;
+        } else {
+            return false;
         }
     }
 
-    public void GotoNearestResource() {
-                     destination = null;
-                    foreach (var tree in resources)
-                    {
-                        if ((destination == null) ||
-                        (Vector3.Distance(transform.position, tree.transform.position) < Vector3.Distance(transform.position, destination.transform.position)))
-                        {
-                            destination = tree;
-                            agent.SetDestination(destination.transform.position);
-                        }
-                    }
+    public void Pickup(int amount) {
+        inventory += amount;
+    }
 
+    public void Drop() {
+        house.AddResouce(inventory);
+        inventory = 0;
+    }
+
+    void SetupStateMachine()
+    {
+        var states = new Dictionary<Type, BaseState>()
+        {
+            { typeof(IdleState), new IdleState(this) },
+            { typeof(WalkingState), new WalkingState(this) },
+            { typeof(ChoppingState), new ChoppingState(this) }
+        };
+
+        GetComponent<PersonStateMachine>().SetStates(states, new IdleState(this));
+    }
+
+    public void GotoNearestResource()
+    {
+        destination = null;
+        foreach (var tree in resources)
+        {
+            if ((destination == null) ||
+            (Vector3.Distance(transform.position, tree.transform.position) < Vector3.Distance(transform.position, destination.transform.position)))
+            {
+                destination = tree;
+                agent.SetDestination(destination.transform.position);
+            }
+        }
+    }
+
+    public void GoHome()
+    {
+            Debug.Log("going home : " + house?.gameObject);
+        if (house == null)
+        {
+            house = Instantiate(original: housePrefab, position: transform.position, rotation: Quaternion.identity).GetComponent<House>();
+            Debug.Log("Building home : " + house.gameObject);
+
+        }
+        else
+        {
+            Debug.Log("Going home");
+            destination = house.gameObject;
+            agent.SetDestination(destination.transform.position);
+        }
     }
 }

@@ -5,9 +5,9 @@ using System;
 
 public class GatherState : BaseState
 {
-    private Gatherer person;
+    private Person person;
 
-    public GatherState(Gatherer person) : base(person.gameObject) {
+    public GatherState(Person person) : base(person.gameObject) {
         this.person = person;
         person.SetAnimation("IsWalking");
     }

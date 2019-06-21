@@ -5,9 +5,9 @@ using System;
 
 public class WalkingState : BaseState
 {
-    private Gatherer person;
+    private Person person;
 
-    public WalkingState(Gatherer person) : base(person.gameObject) {
+    public WalkingState(Person person) : base(person.gameObject) {
         this.person = person;
         person.SetAnimation("IsWalking");
     }
@@ -16,9 +16,10 @@ public class WalkingState : BaseState
         if (person.IsAtDestination()) {
             if (person.IsInvertoryFull()) {
                 person.Drop();
+                person.GotoNearestResource();
                 return typeof(IdleState);
             } else {
-                person.StartChopping();
+                person.StartAction(5);
                 return typeof(ChoppingState);
             }
         }

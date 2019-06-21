@@ -53,24 +53,20 @@
 		<type fullname="UnityEngine.BoxCollider" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
-		<type fullname="Building" preserve="nothing"/>
 		<type fullname="CameraController" preserve="nothing"/>
 		<type fullname="CameraFollow" preserve="nothing"/>
 		<type fullname="DigitalRubyShared.FingersScript" preserve="nothing"/>
 		<type fullname="GameController" preserve="nothing"/>
-		<type fullname="Gatherer" preserve="nothing"/>
 		<type fullname="House" preserve="nothing"/>
-		<type fullname="Island" preserve="nothing"/>
 		<type fullname="MapDisplay" preserve="nothing"/>
 		<type fullname="MapGenerator" preserve="nothing"/>
+		<type fullname="Person" preserve="nothing"/>
+		<type fullname="PersonStateMachine" preserve="nothing"/>
 		<type fullname="Plantable" preserve="nothing"/>
 		<type fullname="SelectableObject" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="NavMeshComponents">
 		<type fullname="UnityEngine.AI.NavMeshSurface" preserve="nothing"/>
-	</assembly>
-	<assembly fullname="NavMeshComponentsEditor">
-		<type fullname="UnityEditor.AI.NavMeshAssetManager" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEditor.Graphs">
 		<type fullname="UnityEditor.Graphs.AnimationBlendTree.Graph" preserve="nothing"/>

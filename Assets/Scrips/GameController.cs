@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     private List<GameObject> trees = new List<GameObject>();
     [SerializeField] private GameObject treePrefab;
     public int population = 0;
-    private List<Gatherer> people = new List<Gatherer>();
+    private List<Person> people = new List<Person>();
     [SerializeField] private GameObject personPrefab;
     [SerializeField] private MapGenerator islandNoise;
 
@@ -20,8 +20,9 @@ public class GameController : MonoBehaviour
         StartCoroutine(ConstructWorld());
     }
 
-    IEnumerator ConstructWorld() {
-        float[,] noiseMap = islandNoise.GenerateMap();  
+    IEnumerator ConstructWorld()
+    {
+        float[,] noiseMap = islandNoise.GenerateMap();
         // yield return new WaitForSeconds(1);
         PlantTrees();
         // yield return new WaitForSeconds(3);
@@ -31,19 +32,19 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        foreach (Gatherer person in people)
+        foreach (Person person in people)
         {
             person.resources = trees;
         }
     }
 
-    
+
     void PlantTrees()
     {
-        for (int tree = 0; tree < treeDensity*size.x*size.y/100; tree++)
+        for (int tree = 0; tree < treeDensity * size.x * size.y / 100; tree++)
         {
-            float x = UnityEngine.Random.value * size.x - size.x/2;
-            float z = UnityEngine.Random.value * size.y - size.y/2;
+            float x = UnityEngine.Random.value * size.x - size.x / 2;
+            float z = UnityEngine.Random.value * size.y - size.y / 2;
             Vector3 newPosition = new Vector3(x, 30, z);
             var ray = new Ray(newPosition, Vector3.down);
             RaycastHit hit;
@@ -79,11 +80,17 @@ public class GameController : MonoBehaviour
                 var selection = hit.transform.GetComponent<Plantable>();
                 if (selection != null)
                 {
-                    var newPerson = Instantiate(original: personPrefab, position: hit.point, rotation: Quaternion.identity).GetComponent<Gatherer>();
-                    newPerson.resources = trees;
-                    people.Add(newPerson);
+                    createPerson(hit.point);
                 }
             }
         }
+    }
+
+    internal Person createPerson(Vector3 position)
+    {
+        var newPerson = Instantiate(original: personPrefab, position: position, rotation: Quaternion.identity).GetComponent<Person>();
+        newPerson.resources = trees;
+        people.Add(newPerson);
+        return newPerson;
     }
 }

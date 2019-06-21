@@ -6,13 +6,11 @@ using UnityEngine.AI;
 public class House : MonoBehaviour
 {
     private GameObject currentPrefab;
-    [SerializeField]
-    private int resouces = 0;
-    [SerializeField]
-    private int level = 0;
-    [SerializeField]
-    private List<GameObject> prefabs = new List<GameObject>();
-    [SerializeField] Gatherer personPrefab;
+    private GameController gameController;
+    [SerializeField] private int resouces = 0;
+    [SerializeField] private int level = 0;
+    [SerializeField] private List<GameObject> prefabs = new List<GameObject>();
+    [SerializeField] Person personPrefab;
 
     public void Reset() {
         resouces = 0;
@@ -25,10 +23,12 @@ public class House : MonoBehaviour
         if (resouces > level * level * 3)
         {
             level += 1;
-            Instantiate(personPrefab);
+            var newPerson = gameController.createPerson(transform.position);
+            newPerson.house = this;
             if (level == prefabs.Count)
             {
                 level = 0;
+                newPerson.house = null;
             }
             UpdatePrefab();
         }
@@ -42,6 +42,7 @@ public class House : MonoBehaviour
 
     void Start()
     {
+        gameController = FindObjectOfType<GameController>();
         UpdatePrefab();
     }
 

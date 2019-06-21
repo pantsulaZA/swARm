@@ -5,15 +5,15 @@ using System;
 
 public class ChoppingState : BaseState
 {
-    private Gatherer person;
+    private Person person;
 
-    public ChoppingState(Gatherer person) : base(person.gameObject) {
+    public ChoppingState(Person person) : base(person.gameObject) {
         this.person = person;
         person.SetAnimation("IsChopping");
     }
 
     override public Type Tick() {
-        if (person.DoneChopping()) {
+        if (person.isActionDone()) {
             person.Pickup(1);
             person.GoHome();
             return typeof(WalkingState);

@@ -923,7 +923,6 @@ IL2CPP_EXTERN_C const RuntimeType* WalkingState_t26FA5FC5C864E6F588AD21E0477B590
 IL2CPP_EXTERN_C const uint32_t BuildingState_Tick_m943D99D63FDDA81F862B1568EB7182A267813125_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t BuildingState__ctor_mC48EDAD7CE3AF6E856543DD1C19A449393D31A59_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t CallbackMainThreadDelegate_BeginInvoke_m8B9CA318BA4426E6BA4E2D40F831F0DB148E4421_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t CameraController_PanGestureCallback_m0781679B829D0237E2B0C61010D1A71C924966FC_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t CameraController_ScreenTapped_mB33AC40E46972497AC56CC3A1ACF8505DADBC19D_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t CameraController_SetupGesture_m8365F6AB4834444827CC46BEB63D0E08E7461B07_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t CameraController_Update_m63BEE9F8EAB23C1D75FA27F7446068BA984B1A6A_MetadataUsageId;
@@ -997,7 +996,7 @@ IL2CPP_EXTERN_C const uint32_t GameController_PlantTrees_mDE5CC048805B3B84097AB0
 IL2CPP_EXTERN_C const uint32_t GameController_SpawnPopulation_mE235D6C0733CBBE285E38ABE561FF048DDDDDB8D_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t GameController_Update_m7D73FA9AB337123D2EB1CB806C756731D1B9B6F3_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t GameController__ctor_m839A9CFB9635B009C1DA139BEAD0E38467E57464_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t GameController_createPerson_mD60EAC6F7F913D26D7740BD21A6091EA0CDF49B9_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t GameController_createPerson_mA35CEA9A6F9385A6EA572AA046CE41519EC7CDCB_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t GatherState_Tick_mC16C51490E8223D0B69B0037F0B830D348E6564D_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t GatherState__ctor_m2F59FB51085CCAE09650AFD83F7CC45B05AF2546_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t GestureLogger_Log_mCBF4C95FC6CF234B61EB3D6B7A7B84A512126618_MetadataUsageId;
@@ -11857,24 +11856,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TapGestureRecognizer__ctor_mE23A029971A7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleGestureRecognizer__ctor_mA80BE72D3D940D31860240166906345A5FDD4E47 (ScaleGestureRecognizer_t5B1254CE0126D9EF62E3F5723741B72AF5831B5E * __this, const RuntimeMethod* method);
 // System.Void DigitalRubyShared.RotateGestureRecognizer::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RotateGestureRecognizer__ctor_m7517536B9CA2A949BA02EA8B105742CD72F780BB (RotateGestureRecognizer_tD9BA9E36615F8B9913E357BC0A4AA62EBB4EE6A0 * __this, const RuntimeMethod* method);
+// System.Void DigitalRubyShared.GestureRecognizer::AllowSimultaneousExecution(DigitalRubyShared.GestureRecognizer)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GestureRecognizer_AllowSimultaneousExecution_mF28B94548CB69A2A41A0ECD5962817C79B9EF424 (GestureRecognizer_tF9A610A042AD51CD88A97CC66A23AB8C938308AE * __this, GestureRecognizer_tF9A610A042AD51CD88A97CC66A23AB8C938308AE * ___other0, const RuntimeMethod* method);
 // DigitalRubyShared.GestureRecognizerState DigitalRubyShared.GestureRecognizer::get_State()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GestureRecognizer_get_State_m47B7DD332816CAA727D009C7CDDD29BD8C5E14A3 (GestureRecognizer_tF9A610A042AD51CD88A97CC66A23AB8C938308AE * __this, const RuntimeMethod* method);
 // System.Single DigitalRubyShared.GestureRecognizer::get_DeltaX()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float GestureRecognizer_get_DeltaX_m2CD9BCC0C365CE41D851AECFE9A4915B839E8387 (GestureRecognizer_tF9A610A042AD51CD88A97CC66A23AB8C938308AE * __this, const RuntimeMethod* method);
 // System.Single UnityEngine.Time::get_deltaTime()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_deltaTime_m16F98FC9BA931581236008C288E3B25CBCB7C81E (const RuntimeMethod* method);
-// System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1 (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * __this, float p0, float p1, float p2, const RuntimeMethod* method);
-// System.Void UnityEngine.Transform::Rotate(UnityEngine.Vector3)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_Rotate_m610B6793DCC2F987290D328942E649B5B7DE0F9A (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, const RuntimeMethod* method);
-// UnityEngine.Vector3 UnityEngine.Vector3::get_forward()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_get_forward_m3E2E192B3302130098738C308FA1EE1439449D0D (const RuntimeMethod* method);
-// UnityEngine.Vector3 UnityEngine.Vector3::op_UnaryNegation(UnityEngine.Vector3)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_op_UnaryNegation_m2AFBBF22801F9BCA5A4EBE642A29F433FE1339C2 (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, const RuntimeMethod* method);
 // System.Single DigitalRubyShared.GestureRecognizer::get_DeltaY()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float GestureRecognizer_get_DeltaY_mB2000F59EC56D07B6C904E848C9598371A8EFA9A (GestureRecognizer_tF9A610A042AD51CD88A97CC66A23AB8C938308AE * __this, const RuntimeMethod* method);
-// UnityEngine.Vector3 UnityEngine.Vector3::op_Multiply(UnityEngine.Vector3,System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, float p1, const RuntimeMethod* method);
+// System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1 (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * __this, float p0, float p1, float p2, const RuntimeMethod* method);
 // System.Void UnityEngine.Transform::Translate(UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_Translate_m0F354939D5084DDFF6B9902E62D3DCA7A3B53EA3 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, const RuntimeMethod* method);
 // System.Void UnityEngine.Debug::Log(System.Object)
@@ -11903,10 +11896,18 @@ inline Plantable_t8BBAF5933E8A7D249B8F941B8A4BB771B78B555C * Component_GetCompon
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_PlantTree_m1B37ECDF9487EC10F431AB00B953249A7A9E9024 (GameController_t8BB0D3CE8992C95BED5FB508588730F0A74009A3 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___newPosition0, const RuntimeMethod* method);
 // System.Single DigitalRubyShared.ScaleGestureRecognizer::get_ScaleMultiplier()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ScaleGestureRecognizer_get_ScaleMultiplier_m31E9425A4E62692ADB6A9212ACDE5C476FE9C72D (ScaleGestureRecognizer_t5B1254CE0126D9EF62E3F5723741B72AF5831B5E * __this, const RuntimeMethod* method);
+// UnityEngine.Vector3 UnityEngine.Vector3::get_forward()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_get_forward_m3E2E192B3302130098738C308FA1EE1439449D0D (const RuntimeMethod* method);
+// UnityEngine.Vector3 UnityEngine.Vector3::op_UnaryNegation(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_op_UnaryNegation_m2AFBBF22801F9BCA5A4EBE642A29F433FE1339C2 (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, const RuntimeMethod* method);
+// UnityEngine.Vector3 UnityEngine.Vector3::op_Multiply(UnityEngine.Vector3,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, float p1, const RuntimeMethod* method);
 // System.Single UnityEngine.Vector3::Distance(UnityEngine.Vector3,UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Vector3_Distance_mE316E10B9B319A5C2A29F86E028740FD528149E7 (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p1, const RuntimeMethod* method);
 // System.Single DigitalRubyShared.RotateGestureRecognizer::get_RotationDegreesDelta()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float RotateGestureRecognizer_get_RotationDegreesDelta_m7DC983A6170C06E8E5314EB1910244A294A98579 (RotateGestureRecognizer_tD9BA9E36615F8B9913E357BC0A4AA62EBB4EE6A0 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.Transform::Rotate(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_Rotate_m610B6793DCC2F987290D328942E649B5B7DE0F9A (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, const RuntimeMethod* method);
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97 (MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429 * __this, const RuntimeMethod* method);
 // System.Void Person::Pickup(System.Int32)
@@ -12093,8 +12094,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DemoScript_CreateScaleGesture_mE30ADC28A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DemoScript_CreateRotateGesture_m0594F9970D8768B7806962D59AB4C1DAC1A1D30B (DemoScript_t53773BB4CF88BBAC407329CB37A69D9B973F5894 * __this, const RuntimeMethod* method);
 // System.Void DigitalRubyShared.DemoScript::CreateLongPressGesture()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DemoScript_CreateLongPressGesture_m18E4016BE13DA9554DB89A35BFAC9489606622B8 (DemoScript_t53773BB4CF88BBAC407329CB37A69D9B973F5894 * __this, const RuntimeMethod* method);
-// System.Void DigitalRubyShared.GestureRecognizer::AllowSimultaneousExecution(DigitalRubyShared.GestureRecognizer)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GestureRecognizer_AllowSimultaneousExecution_mF28B94548CB69A2A41A0ECD5962817C79B9EF424 (GestureRecognizer_tF9A610A042AD51CD88A97CC66A23AB8C938308AE * __this, GestureRecognizer_tF9A610A042AD51CD88A97CC66A23AB8C938308AE * ___other0, const RuntimeMethod* method);
 // System.Void System.Func`2<UnityEngine.GameObject,System.Nullable`1<System.Boolean>>::.ctor(System.Object,System.IntPtr)
 inline void Func_2__ctor_m294DFE50BD717B0B91970C3E5E0164222BBE0F42 (Func_2_tEA113FEC3DE38724B9EECD94C435552A377064A4 * __this, RuntimeObject * p0, intptr_t p1, const RuntimeMethod* method)
 {
@@ -13273,8 +13272,8 @@ inline GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * Object_Instantiate
 }
 // System.String System.String::Concat(System.Object,System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_mBB19C73816BDD1C3519F248E1ADC8E11A6FDB495 (RuntimeObject * p0, RuntimeObject * p1, const RuntimeMethod* method);
-// System.Void GameController::createPerson(UnityEngine.Vector3)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_createPerson_mD60EAC6F7F913D26D7740BD21A6091EA0CDF49B9 (GameController_t8BB0D3CE8992C95BED5FB508588730F0A74009A3 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___position0, const RuntimeMethod* method);
+// Person GameController::createPerson(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Person_t09BE8BCBE0ABA67A53A792A918EA0A4FA74EE0E6 * GameController_createPerson_mA35CEA9A6F9385A6EA572AA046CE41519EC7CDCB (GameController_t8BB0D3CE8992C95BED5FB508588730F0A74009A3 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___position0, const RuntimeMethod* method);
 // !!0 UnityEngine.GameObject::GetComponent<Person>()
 inline Person_t09BE8BCBE0ABA67A53A792A918EA0A4FA74EE0E6 * GameObject_GetComponent_TisPerson_t09BE8BCBE0ABA67A53A792A918EA0A4FA74EE0E6_m0E55EF22229942965C3193FD424C35C4395AE813 (GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * __this, const RuntimeMethod* method)
 {
@@ -13863,22 +13862,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraController_SetupGesture_m8365F6AB4
 		GestureRecognizerStateUpdatedDelegate__ctor_m5F97A130CC6C152218D0FA2089EF55893520FF35(L_17, __this, (intptr_t)((intptr_t)CameraController_Rotate_m13DDAE72C1A318E0426DEAAAD4FAA3ADFD062028_RuntimeMethod_var), /*hidden argument*/NULL);
 		NullCheck(L_16);
 		GestureRecognizer_add_StateUpdated_mB65CA9E927D967DEB7057BE825CF32E3EA284EF4(L_16, L_17, /*hidden argument*/NULL);
-		FingersScript_tD18A3B42EF7FA3E81F6A657FEC1BAE30D14C8DDF * L_18 = FingersScript_get_Instance_mF33044E7D615F376A929E1E351D1060C05BE73F5(/*hidden argument*/NULL);
-		RotateGestureRecognizer_tD9BA9E36615F8B9913E357BC0A4AA62EBB4EE6A0 * L_19 = __this->get_rotator_13();
+		RotateGestureRecognizer_tD9BA9E36615F8B9913E357BC0A4AA62EBB4EE6A0 * L_18 = __this->get_rotator_13();
+		ScaleGestureRecognizer_t5B1254CE0126D9EF62E3F5723741B72AF5831B5E * L_19 = __this->get_zoomer_12();
 		NullCheck(L_18);
-		FingersScript_AddGesture_mFB11DEF382EC5FCAD78FE5C91B6C6F264DE5A50B(L_18, L_19, /*hidden argument*/NULL);
+		GestureRecognizer_AllowSimultaneousExecution_mF28B94548CB69A2A41A0ECD5962817C79B9EF424(L_18, L_19, /*hidden argument*/NULL);
+		FingersScript_tD18A3B42EF7FA3E81F6A657FEC1BAE30D14C8DDF * L_20 = FingersScript_get_Instance_mF33044E7D615F376A929E1E351D1060C05BE73F5(/*hidden argument*/NULL);
+		RotateGestureRecognizer_tD9BA9E36615F8B9913E357BC0A4AA62EBB4EE6A0 * L_21 = __this->get_rotator_13();
+		NullCheck(L_20);
+		FingersScript_AddGesture_mFB11DEF382EC5FCAD78FE5C91B6C6F264DE5A50B(L_20, L_21, /*hidden argument*/NULL);
 		return;
 	}
 }
 // System.Void CameraController::PanGestureCallback(DigitalRubyShared.GestureRecognizer)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraController_PanGestureCallback_m0781679B829D0237E2B0C61010D1A71C924966FC (CameraController_tC58777A506A1D4F1F1794E5D666E619C1DA073BB * __this, GestureRecognizer_tF9A610A042AD51CD88A97CC66A23AB8C938308AE * ___gesture0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (CameraController_PanGestureCallback_m0781679B829D0237E2B0C61010D1A71C924966FC_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
 	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
@@ -13887,77 +13884,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraController_PanGestureCallback_m078
 		int32_t L_1 = GestureRecognizer_get_State_m47B7DD332816CAA727D009C7CDDD29BD8C5E14A3(L_0, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_1) == ((uint32_t)4))))
 		{
-			goto IL_0112;
+			goto IL_0097;
 		}
 	}
 	{
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_2 = __this->get_tempFocus_5();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
-		bool L_3 = Object_op_Inequality_m31EF58E217E8F4BDD3E409DEF79E1AEE95874FC1(L_2, (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 *)NULL, /*hidden argument*/NULL);
-		if (!L_3)
-		{
-			goto IL_008c;
-		}
-	}
-	{
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_4 = __this->get_target_4();
-		PanGestureRecognizer_t9ECCCD257DB2394658802169F5F1C96A3D0C2A82 * L_5 = __this->get_panner_10();
-		NullCheck(L_5);
-		float L_6 = GestureRecognizer_get_DeltaX_m2CD9BCC0C365CE41D851AECFE9A4915B839E8387(L_5, /*hidden argument*/NULL);
-		float L_7 = __this->get_rotateSpeed_7();
-		float L_8 = Time_get_deltaTime_m16F98FC9BA931581236008C288E3B25CBCB7C81E(/*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_9;
-		memset((&L_9), 0, sizeof(L_9));
-		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((&L_9), (0.0f), ((float)il2cpp_codegen_multiply((float)((float)il2cpp_codegen_multiply((float)L_6, (float)L_7)), (float)L_8)), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_4);
-		Transform_Rotate_m610B6793DCC2F987290D328942E649B5B7DE0F9A(L_4, L_9, /*hidden argument*/NULL);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_10 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_11 = Vector3_get_forward_m3E2E192B3302130098738C308FA1EE1439449D0D(/*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_12 = Vector3_op_UnaryNegation_m2AFBBF22801F9BCA5A4EBE642A29F433FE1339C2(L_11, /*hidden argument*/NULL);
-		PanGestureRecognizer_t9ECCCD257DB2394658802169F5F1C96A3D0C2A82 * L_13 = __this->get_panner_10();
-		NullCheck(L_13);
-		float L_14 = GestureRecognizer_get_DeltaY_mB2000F59EC56D07B6C904E848C9598371A8EFA9A(L_13, /*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_15 = Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E(L_12, L_14, /*hidden argument*/NULL);
-		float L_16 = __this->get_zoomSpeed_8();
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_17 = Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E(L_15, L_16, /*hidden argument*/NULL);
-		float L_18 = Time_get_deltaTime_m16F98FC9BA931581236008C288E3B25CBCB7C81E(/*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_19 = Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E(L_17, L_18, /*hidden argument*/NULL);
+		PanGestureRecognizer_t9ECCCD257DB2394658802169F5F1C96A3D0C2A82 * L_2 = __this->get_panner_10();
+		NullCheck(L_2);
+		float L_3 = GestureRecognizer_get_DeltaX_m2CD9BCC0C365CE41D851AECFE9A4915B839E8387(L_2, /*hidden argument*/NULL);
+		float L_4 = __this->get_panSpeed_6();
+		float L_5 = Time_get_deltaTime_m16F98FC9BA931581236008C288E3B25CBCB7C81E(/*hidden argument*/NULL);
+		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_6 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_7 = Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294(L_6, /*hidden argument*/NULL);
+		float L_8 = L_7.get_y_3();
+		float L_9 = __this->get_maxCameraHeight_15();
+		PanGestureRecognizer_t9ECCCD257DB2394658802169F5F1C96A3D0C2A82 * L_10 = __this->get_panner_10();
 		NullCheck(L_10);
-		Transform_Translate_m0F354939D5084DDFF6B9902E62D3DCA7A3B53EA3(L_10, L_19, /*hidden argument*/NULL);
-		return;
+		float L_11 = GestureRecognizer_get_DeltaY_mB2000F59EC56D07B6C904E848C9598371A8EFA9A(L_10, /*hidden argument*/NULL);
+		float L_12 = __this->get_panSpeed_6();
+		float L_13 = Time_get_deltaTime_m16F98FC9BA931581236008C288E3B25CBCB7C81E(/*hidden argument*/NULL);
+		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_14 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
+		NullCheck(L_14);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_15 = Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294(L_14, /*hidden argument*/NULL);
+		float L_16 = L_15.get_y_3();
+		float L_17 = __this->get_maxCameraHeight_15();
+		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&V_0), ((float)((float)((float)((float)((float)il2cpp_codegen_multiply((float)((float)il2cpp_codegen_multiply((float)((float)il2cpp_codegen_multiply((float)((-L_3)), (float)L_4)), (float)L_5)), (float)L_8))/(float)L_9))/(float)(5.0f))), (0.0f), ((float)((float)((float)((float)((float)il2cpp_codegen_multiply((float)((float)il2cpp_codegen_multiply((float)((float)il2cpp_codegen_multiply((float)((-L_11)), (float)L_12)), (float)L_13)), (float)L_16))/(float)L_17))/(float)(5.0f))), /*hidden argument*/NULL);
+		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_18 = __this->get_target_4();
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_19 = V_0;
+		NullCheck(L_18);
+		Transform_Translate_m0F354939D5084DDFF6B9902E62D3DCA7A3B53EA3(L_18, L_19, /*hidden argument*/NULL);
 	}
 
-IL_008c:
-	{
-		PanGestureRecognizer_t9ECCCD257DB2394658802169F5F1C96A3D0C2A82 * L_20 = __this->get_panner_10();
-		NullCheck(L_20);
-		float L_21 = GestureRecognizer_get_DeltaX_m2CD9BCC0C365CE41D851AECFE9A4915B839E8387(L_20, /*hidden argument*/NULL);
-		float L_22 = __this->get_panSpeed_6();
-		float L_23 = Time_get_deltaTime_m16F98FC9BA931581236008C288E3B25CBCB7C81E(/*hidden argument*/NULL);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_24 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		NullCheck(L_24);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_25 = Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294(L_24, /*hidden argument*/NULL);
-		float L_26 = L_25.get_y_3();
-		float L_27 = __this->get_maxCameraHeight_15();
-		PanGestureRecognizer_t9ECCCD257DB2394658802169F5F1C96A3D0C2A82 * L_28 = __this->get_panner_10();
-		NullCheck(L_28);
-		float L_29 = GestureRecognizer_get_DeltaY_mB2000F59EC56D07B6C904E848C9598371A8EFA9A(L_28, /*hidden argument*/NULL);
-		float L_30 = __this->get_panSpeed_6();
-		float L_31 = Time_get_deltaTime_m16F98FC9BA931581236008C288E3B25CBCB7C81E(/*hidden argument*/NULL);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_32 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		NullCheck(L_32);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_33 = Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294(L_32, /*hidden argument*/NULL);
-		float L_34 = L_33.get_y_3();
-		float L_35 = __this->get_maxCameraHeight_15();
-		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&V_0), ((float)((float)((float)((float)((float)il2cpp_codegen_multiply((float)((float)il2cpp_codegen_multiply((float)((float)il2cpp_codegen_multiply((float)((-L_21)), (float)L_22)), (float)L_23)), (float)L_26))/(float)L_27))/(float)(5.0f))), (0.0f), ((float)((float)((float)((float)((float)il2cpp_codegen_multiply((float)((float)il2cpp_codegen_multiply((float)((float)il2cpp_codegen_multiply((float)((-L_29)), (float)L_30)), (float)L_31)), (float)L_34))/(float)L_35))/(float)(5.0f))), /*hidden argument*/NULL);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_36 = __this->get_target_4();
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_37 = V_0;
-		NullCheck(L_36);
-		Transform_Translate_m0F354939D5084DDFF6B9902E62D3DCA7A3B53EA3(L_36, L_37, /*hidden argument*/NULL);
-	}
-
-IL_0112:
+IL_0097:
 	{
 		return;
 	}
@@ -14078,7 +14036,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraController_Zoom_m72884FBE0FB1DCB80
 		int32_t L_1 = GestureRecognizer_get_State_m47B7DD332816CAA727D009C7CDDD29BD8C5E14A3(L_0, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_1) == ((uint32_t)4))))
 		{
-			goto IL_009d;
+			goto IL_0086;
 		}
 	}
 	{
@@ -14097,62 +14055,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraController_Zoom_m72884FBE0FB1DCB80
 		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_10 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
 		NullCheck(L_10);
 		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_11 = Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294(L_10, /*hidden argument*/NULL);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_12 = __this->get_target_4();
-		NullCheck(L_12);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_13 = Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294(L_12, /*hidden argument*/NULL);
-		float L_14 = Vector3_Distance_mE316E10B9B319A5C2A29F86E028740FD528149E7(L_11, L_13, /*hidden argument*/NULL);
-		float L_15 = __this->get_minCameraHeight_16();
-		if ((!(((float)L_14) < ((float)L_15))))
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_12 = V_1;
+		float L_13 = Vector3_Distance_mE316E10B9B319A5C2A29F86E028740FD528149E7(L_11, L_12, /*hidden argument*/NULL);
+		float L_14 = __this->get_minCameraHeight_16();
+		if ((!(((float)L_13) < ((float)L_14))))
 		{
-			goto IL_0065;
+			goto IL_0058;
 		}
 	}
 	{
-		float L_16 = V_0;
-		if ((((float)L_16) < ((float)(1.0f))))
+		float L_15 = V_0;
+		if ((((float)L_15) < ((float)(1.0f))))
 		{
-			goto IL_0090;
+			goto IL_0079;
 		}
 	}
 
-IL_0065:
+IL_0058:
 	{
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_17 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		NullCheck(L_17);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_18 = Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294(L_17, /*hidden argument*/NULL);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_19 = __this->get_target_4();
-		NullCheck(L_19);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_20 = Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294(L_19, /*hidden argument*/NULL);
+		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_16 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
+		NullCheck(L_16);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_17 = Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294(L_16, /*hidden argument*/NULL);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_18 = V_1;
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var);
-		float L_21 = Vector3_Distance_mE316E10B9B319A5C2A29F86E028740FD528149E7(L_18, L_20, /*hidden argument*/NULL);
-		float L_22 = __this->get_minCameraHeight_16();
-		if ((!(((float)L_21) > ((float)L_22))))
+		float L_19 = Vector3_Distance_mE316E10B9B319A5C2A29F86E028740FD528149E7(L_17, L_18, /*hidden argument*/NULL);
+		float L_20 = __this->get_minCameraHeight_16();
+		if ((!(((float)L_19) > ((float)L_20))))
 		{
-			goto IL_0091;
+			goto IL_007a;
 		}
 	}
 	{
-		float L_23 = V_0;
-		if ((!(((float)L_23) > ((float)(1.0f)))))
+		float L_21 = V_0;
+		if ((!(((float)L_21) > ((float)(1.0f)))))
 		{
-			goto IL_0091;
+			goto IL_007a;
 		}
 	}
 
-IL_0090:
+IL_0079:
 	{
 		return;
 	}
 
-IL_0091:
+IL_007a:
 	{
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_24 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_25 = V_1;
-		NullCheck(L_24);
-		Transform_Translate_m0F354939D5084DDFF6B9902E62D3DCA7A3B53EA3(L_24, L_25, /*hidden argument*/NULL);
+		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_22 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_23 = V_1;
+		NullCheck(L_22);
+		Transform_Translate_m0F354939D5084DDFF6B9902E62D3DCA7A3B53EA3(L_22, L_23, /*hidden argument*/NULL);
 	}
 
-IL_009d:
+IL_0086:
 	{
 		return;
 	}
@@ -29156,7 +29110,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_SpawnPopulation_mE235D6C0
 	memset((&V_4), 0, sizeof(V_4));
 	{
 		V_0 = 0;
-		goto IL_0087;
+		goto IL_0088;
 	}
 
 IL_0007:
@@ -29183,7 +29137,7 @@ IL_0007:
 		bool L_11 = Physics_Raycast_mCE618579F667A62D15CB74CEF76147136EB2D495(L_10, (RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 *)(&V_4), /*hidden argument*/NULL);
 		if (!L_11)
 		{
-			goto IL_0083;
+			goto IL_0084;
 		}
 	}
 	{
@@ -29194,21 +29148,21 @@ IL_0007:
 		bool L_14 = Object_op_Inequality_m31EF58E217E8F4BDD3E409DEF79E1AEE95874FC1(L_13, (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 *)NULL, /*hidden argument*/NULL);
 		if (!L_14)
 		{
-			goto IL_0083;
+			goto IL_0084;
 		}
 	}
 	{
 		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_15 = RaycastHit_get_point_m0E564B2A72C7A744B889AE9D596F3EFA55059001((RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 *)(&V_4), /*hidden argument*/NULL);
-		GameController_createPerson_mD60EAC6F7F913D26D7740BD21A6091EA0CDF49B9(__this, L_15, /*hidden argument*/NULL);
+		GameController_createPerson_mA35CEA9A6F9385A6EA572AA046CE41519EC7CDCB(__this, L_15, /*hidden argument*/NULL);
 	}
 
-IL_0083:
+IL_0084:
 	{
 		int32_t L_16 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_16, (int32_t)1));
 	}
 
-IL_0087:
+IL_0088:
 	{
 		int32_t L_17 = V_0;
 		int32_t L_18 = __this->get_population_8();
@@ -29221,13 +29175,13 @@ IL_0087:
 		return;
 	}
 }
-// System.Void GameController::createPerson(UnityEngine.Vector3)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_createPerson_mD60EAC6F7F913D26D7740BD21A6091EA0CDF49B9 (GameController_t8BB0D3CE8992C95BED5FB508588730F0A74009A3 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___position0, const RuntimeMethod* method)
+// Person GameController::createPerson(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Person_t09BE8BCBE0ABA67A53A792A918EA0A4FA74EE0E6 * GameController_createPerson_mA35CEA9A6F9385A6EA572AA046CE41519EC7CDCB (GameController_t8BB0D3CE8992C95BED5FB508588730F0A74009A3 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___position0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (GameController_createPerson_mD60EAC6F7F913D26D7740BD21A6091EA0CDF49B9_MetadataUsageId);
+		il2cpp_codegen_initialize_method (GameController_createPerson_mA35CEA9A6F9385A6EA572AA046CE41519EC7CDCB_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	Person_t09BE8BCBE0ABA67A53A792A918EA0A4FA74EE0E6 * V_0 = NULL;
@@ -29249,7 +29203,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_createPerson_mD60EAC6F7F9
 		Person_t09BE8BCBE0ABA67A53A792A918EA0A4FA74EE0E6 * L_8 = V_0;
 		NullCheck(L_7);
 		List_1_Add_m626E34E22947B238F8828771774FF7D56CC48E4D(L_7, L_8, /*hidden argument*/List_1_Add_m626E34E22947B238F8828771774FF7D56CC48E4D_RuntimeMethod_var);
-		return;
+		Person_t09BE8BCBE0ABA67A53A792A918EA0A4FA74EE0E6 * L_9 = V_0;
+		return L_9;
 	}
 }
 // System.Void GameController::.ctor()
@@ -29463,6 +29418,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void House_AddResouce_mBCF173E4476D260E53A245
 		il2cpp_codegen_initialize_method (House_AddResouce_mBCF173E4476D260E53A24595E7B3F94C03B165D0_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
+	Person_t09BE8BCBE0ABA67A53A792A918EA0A4FA74EE0E6 * V_0 = NULL;
 	{
 		int32_t L_0 = __this->get_resouces_6();
 		int32_t L_1 = ___amount0;
@@ -29472,7 +29428,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void House_AddResouce_mBCF173E4476D260E53A245
 		int32_t L_4 = __this->get_level_7();
 		if ((((int32_t)L_2) <= ((int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_3, (int32_t)L_4)), (int32_t)3)))))
 		{
-			goto IL_0069;
+			goto IL_0078;
 		}
 	}
 	{
@@ -29483,26 +29439,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void House_AddResouce_mBCF173E4476D260E53A245
 		NullCheck(L_7);
 		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_8 = Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294(L_7, /*hidden argument*/NULL);
 		NullCheck(L_6);
-		GameController_createPerson_mD60EAC6F7F913D26D7740BD21A6091EA0CDF49B9(L_6, L_8, /*hidden argument*/NULL);
-		int32_t L_9 = __this->get_level_7();
-		List_1_tBA8D772D87B6502B2A4D0EFE166C846285F50650 * L_10 = __this->get_prefabs_8();
+		Person_t09BE8BCBE0ABA67A53A792A918EA0A4FA74EE0E6 * L_9 = GameController_createPerson_mA35CEA9A6F9385A6EA572AA046CE41519EC7CDCB(L_6, L_8, /*hidden argument*/NULL);
+		V_0 = L_9;
+		Person_t09BE8BCBE0ABA67A53A792A918EA0A4FA74EE0E6 * L_10 = V_0;
 		NullCheck(L_10);
-		int32_t L_11 = List_1_get_Count_m448499BD6BA2B98A6E4F92B96088CEA9EE3F4D35(L_10, /*hidden argument*/List_1_get_Count_m448499BD6BA2B98A6E4F92B96088CEA9EE3F4D35_RuntimeMethod_var);
-		if ((!(((uint32_t)L_9) == ((uint32_t)L_11))))
+		L_10->set_house_6(__this);
+		int32_t L_11 = __this->get_level_7();
+		List_1_tBA8D772D87B6502B2A4D0EFE166C846285F50650 * L_12 = __this->get_prefabs_8();
+		NullCheck(L_12);
+		int32_t L_13 = List_1_get_Count_m448499BD6BA2B98A6E4F92B96088CEA9EE3F4D35(L_12, /*hidden argument*/List_1_get_Count_m448499BD6BA2B98A6E4F92B96088CEA9EE3F4D35_RuntimeMethod_var);
+		if ((!(((uint32_t)L_11) == ((uint32_t)L_13))))
 		{
-			goto IL_0063;
+			goto IL_0072;
 		}
 	}
 	{
 		__this->set_level_7(0);
+		Person_t09BE8BCBE0ABA67A53A792A918EA0A4FA74EE0E6 * L_14 = V_0;
+		NullCheck(L_14);
+		L_14->set_house_6((House_t20C8453E98ED8C5FEA3946455D39127007D8E5FB *)NULL);
 	}
 
-IL_0063:
+IL_0072:
 	{
 		House_UpdatePrefab_m313245B16586EEDECAFFA2565F538B7DEE6C20D2(__this, /*hidden argument*/NULL);
 	}
 
-IL_0069:
+IL_0078:
 	{
 		return;
 	}

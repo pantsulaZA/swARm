@@ -65,6 +65,7 @@ public class CameraController : MonoBehaviour
 
         rotator = new RotateGestureRecognizer();
         rotator.StateUpdated += Rotate;
+        rotator.AllowSimultaneousExecution(zoomer);
         FingersScript.Instance.AddGesture(rotator);
     }
 
@@ -72,19 +73,19 @@ public class CameraController : MonoBehaviour
     {
         if (panner.State == GestureRecognizerState.Executing)
         {
-            if (tempFocus != null)
-            {
-                target.Rotate(new Vector3(x: 0, y: panner.DeltaX * rotateSpeed * Time.deltaTime, z: 0));
-                transform.Translate(-Vector3.forward * panner.DeltaY * zoomSpeed * Time.deltaTime);
+            // if (tempFocus != null)
+            // {
+            //     target.Rotate(new Vector3(x: 0, y: panner.DeltaX * rotateSpeed * Time.deltaTime, z: 0));
+            //     transform.Translate(-Vector3.forward * panner.DeltaY * zoomSpeed * Time.deltaTime);
 
-            }
-            else
-            {
+            // }
+            // else
+            // {
                 Vector3 newPosition = new Vector3(-panner.DeltaX * panSpeed * Time.deltaTime * transform.position.y / maxCameraHeight / 5,
                  0,
                  -panner.DeltaY * panSpeed * Time.deltaTime * transform.position.y / maxCameraHeight / 5);
                 target.Translate(newPosition);
-            }
+            // }
         }
     }
     private void ScreenTapped(GestureRecognizer gesture)
@@ -122,8 +123,8 @@ public class CameraController : MonoBehaviour
         {
             float zoom = (1 - zoomer.ScaleMultiplier);
             Vector3 newPosition = -Vector3.forward * zoom * zoomSpeed;
-            if ((Vector3.Distance(transform.position, target.position) < minCameraHeight && zoom < 1) ||
-            (Vector3.Distance(transform.position, target.position) > minCameraHeight && zoom > 1))
+            if ((Vector3.Distance(transform.position, newPosition) < minCameraHeight && zoom < 1) ||
+            (Vector3.Distance(transform.position, newPosition) > minCameraHeight && zoom > 1))
             {
                 return;
             }

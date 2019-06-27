@@ -52,8 +52,8 @@ extern void GameController_PlantTrees_mDE5CC048805B3B84097AB0117A344EB5649C59A9 
 extern void GameController_PlantTree_m1B37ECDF9487EC10F431AB00B953249A7A9E9024 ();
 // 0x00000010 System.Void GameController::SpawnPopulation()
 extern void GameController_SpawnPopulation_mE235D6C0733CBBE285E38ABE561FF048DDDDDB8D ();
-// 0x00000011 System.Void GameController::createPerson(UnityEngine.Vector3)
-extern void GameController_createPerson_mD60EAC6F7F913D26D7740BD21A6091EA0CDF49B9 ();
+// 0x00000011 Person GameController::createPerson(UnityEngine.Vector3)
+extern void GameController_createPerson_mA35CEA9A6F9385A6EA572AA046CE41519EC7CDCB ();
 // 0x00000012 System.Void GameController::.ctor()
 extern void GameController__ctor_m839A9CFB9635B009C1DA139BEAD0E38467E57464 ();
 // 0x00000013 System.Void House::Reset()
@@ -929,7 +929,7 @@ static Il2CppMethodPointer s_methodPointers[446] =
 	GameController_PlantTrees_mDE5CC048805B3B84097AB0117A344EB5649C59A9,
 	GameController_PlantTree_m1B37ECDF9487EC10F431AB00B953249A7A9E9024,
 	GameController_SpawnPopulation_mE235D6C0733CBBE285E38ABE561FF048DDDDDB8D,
-	GameController_createPerson_mD60EAC6F7F913D26D7740BD21A6091EA0CDF49B9,
+	GameController_createPerson_mA35CEA9A6F9385A6EA572AA046CE41519EC7CDCB,
 	GameController__ctor_m839A9CFB9635B009C1DA139BEAD0E38467E57464,
 	House_Reset_mB460CE759902E6426C63A14D75B79BF46B1A548A,
 	House_AddResouce_mBCF173E4476D260E53A24595E7B3F94C03B165D0,
@@ -1378,7 +1378,7 @@ static const int32_t s_InvokerIndices[446] =
 	13,
 	1115,
 	13,
-	1115,
+	1167,
 	13,
 	13,
 	9,

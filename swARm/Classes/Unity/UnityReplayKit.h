@@ -18,7 +18,7 @@
 @property(nonatomic, readonly) BOOL recordingPreviewAvailable;
 @property(nonatomic, readonly, getter = isRecording) BOOL recording;
 
-- (BOOL)startRecording:(BOOL)enableMicrophone;
+- (BOOL)startRecording;
 - (BOOL)stopRecording;
 - (BOOL)showPreview;
 - (BOOL)discardPreview;
@@ -28,16 +28,26 @@
 
 @property(nonatomic, readonly) BOOL broadcastingApiAvailable;
 @property(nonatomic, readonly) BOOL isBroadcasting;
+@property(nonatomic, readonly) BOOL isBroadcastingPaused;
+@property(nonatomic, readonly) BOOL isPreviewControllerActive;
 @property(nonatomic, readonly) NSURL* broadcastURL;
 @property(nonatomic, setter = setCameraEnabled:, getter = isCameraEnabled) BOOL cameraEnabled;
 @property(nonatomic, setter = setMicrophoneEnabled:, getter = isMicrophoneEnabled) BOOL microphoneEnabled;
 
 - (void)startBroadcastingWithCallback:(void *)callback;
 - (void)stopBroadcasting;
-- (BOOL)showCameraPreviewAt:(CGPoint)position;
+- (void)pauseBroadcasting;
+- (void)resumeBroadcasting;
+- (BOOL)showCameraPreviewAt:(CGPoint)position width:(float)width height:(float)height;
 - (void)hideCameraPreview;
 - (void)createOverlayWindow;
 @end
 
+// starting with iOS13 RPScreenRecorder is not immediately ready for recording
+//   * it seems it does some magic on background thread
+// meaning that our api usage (do init in [UnityReplayKit sharedInstance]) is prone to errors
+// hence we introduce easly RPScreenRecorder "init"
+
+void InitUnityReplayKit();
 
 #endif  // UNITY_REPLAY_KIT_AVAILABLE

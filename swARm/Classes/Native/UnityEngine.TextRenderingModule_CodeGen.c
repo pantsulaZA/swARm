@@ -74,9 +74,9 @@ extern void TextGenerator_get_lineCount_m7A3CC9D67099CDC4723A683716BE5FBC623EE9C
 extern void TextGenerator_Internal_Create_m127DBEDE47D3028812950FD9184A18C9F3A5E994 ();
 // 0x0000001B System.Void UnityEngine.TextGenerator::Internal_Destroy(System.IntPtr)
 extern void TextGenerator_Internal_Destroy_mB7FE56C2FAAE16938DE8BC7256EB44643E1845A5 ();
-// 0x0000001C System.Boolean UnityEngine.TextGenerator::Populate_Internal(System.String,UnityEngine.Font,UnityEngine.Color,System.Int32,System.Single,System.Single,UnityEngine.FontStyle,System.Boolean,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,UnityEngine.TextAnchor,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Boolean,System.UInt32U26)
+// 0x0000001C System.Boolean UnityEngine.TextGenerator::Populate_Internal(System.String,UnityEngine.Font,UnityEngine.Color,System.Int32,System.Single,System.Single,UnityEngine.FontStyle,System.Boolean,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,UnityEngine.TextAnchor,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Boolean,System.UInt32&)
 extern void TextGenerator_Populate_Internal_mCA54081A0855AED6EC6345265603409FE330985C ();
-// 0x0000001D System.Boolean UnityEngine.TextGenerator::Populate_Internal(System.String,UnityEngine.Font,UnityEngine.Color,System.Int32,System.Single,System.Single,UnityEngine.FontStyle,System.Boolean,System.Boolean,System.Int32,System.Int32,UnityEngine.VerticalWrapMode,UnityEngine.HorizontalWrapMode,System.Boolean,UnityEngine.TextAnchor,UnityEngine.Vector2,UnityEngine.Vector2,System.Boolean,System.Boolean,UnityEngine.TextGenerationErrorU26)
+// 0x0000001D System.Boolean UnityEngine.TextGenerator::Populate_Internal(System.String,UnityEngine.Font,UnityEngine.Color,System.Int32,System.Single,System.Single,UnityEngine.FontStyle,System.Boolean,System.Boolean,System.Int32,System.Int32,UnityEngine.VerticalWrapMode,UnityEngine.HorizontalWrapMode,System.Boolean,UnityEngine.TextAnchor,UnityEngine.Vector2,UnityEngine.Vector2,System.Boolean,System.Boolean,UnityEngine.TextGenerationError&)
 extern void TextGenerator_Populate_Internal_m42F7FED165D62BFD9C006D19A0FCE5B70C1EF92B ();
 // 0x0000001E System.Void UnityEngine.TextGenerator::GetVerticesInternal(System.Object)
 extern void TextGenerator_GetVerticesInternal_mB794B94982BA35D2CDB8F3AA77880B33AEB42B9A ();
@@ -84,9 +84,9 @@ extern void TextGenerator_GetVerticesInternal_mB794B94982BA35D2CDB8F3AA77880B33A
 extern void TextGenerator_GetCharactersInternal_m4383B9A162CF10430636BFD248DDBDDB4D64E967 ();
 // 0x00000020 System.Void UnityEngine.TextGenerator::GetLinesInternal(System.Object)
 extern void TextGenerator_GetLinesInternal_mA54A05D512EE1CED958F73E0024FB913E648EDAD ();
-// 0x00000021 System.Void UnityEngine.TextGenerator::get_rectExtents_Injected(UnityEngine.RectU26)
+// 0x00000021 System.Void UnityEngine.TextGenerator::get_rectExtents_Injected(UnityEngine.Rect&)
 extern void TextGenerator_get_rectExtents_Injected_mD8FC9E47642590C7AC78DA83B583E5F4271842D0 ();
-// 0x00000022 System.Boolean UnityEngine.TextGenerator::Populate_Internal_Injected(System.String,UnityEngine.Font,UnityEngine.ColorU26,System.Int32,System.Single,System.Single,UnityEngine.FontStyle,System.Boolean,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,UnityEngine.TextAnchor,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Boolean,System.UInt32U26)
+// 0x00000022 System.Boolean UnityEngine.TextGenerator::Populate_Internal_Injected(System.String,UnityEngine.Font,UnityEngine.Color&,System.Int32,System.Single,System.Single,UnityEngine.FontStyle,System.Boolean,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,UnityEngine.TextAnchor,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Boolean,System.UInt32&)
 extern void TextGenerator_Populate_Internal_Injected_mC1D6A0A0A9E0BFDB146EA921DA459D83FF33DEDE ();
 // 0x00000023 System.Void UnityEngine.UIVertex::.cctor()
 extern void UIVertex__cctor_m86F60F5BB996D3C59B19B80C4BFB5770802BFB30 ();
@@ -166,53 +166,53 @@ static Il2CppMethodPointer s_methodPointers[47] =
 };
 static const int32_t s_InvokerIndices[47] = 
 {
-	1273,
-	1274,
-	1275,
-	13,
-	9,
-	13,
-	13,
-	18,
-	1276,
-	13,
-	4,
-	4,
-	4,
-	1277,
-	1277,
-	1278,
-	1279,
-	1280,
-	1280,
+	1185,
+	1186,
+	1187,
+	23,
+	32,
+	23,
+	23,
+	10,
+	1188,
+	23,
+	26,
+	26,
+	26,
+	1189,
+	1189,
+	1190,
+	1191,
+	1192,
+	1192,
 	14,
 	14,
 	14,
-	1076,
-	18,
-	18,
-	716,
-	59,
-	1281,
-	1282,
-	4,
-	4,
-	4,
-	46,
-	1283,
-	8,
+	979,
+	10,
+	10,
+	684,
+	25,
+	1193,
+	1194,
+	26,
+	26,
+	26,
+	6,
+	1195,
+	3,
+	111,
+	111,
+	14,
+	102,
+	10,
+	111,
+	193,
 	30,
-	30,
-	14,
-	17,
-	18,
-	30,
-	228,
-	61,
-	144,
-	13,
-	16,
-	4,
+	163,
+	23,
+	101,
+	26,
 };
 extern const Il2CppCodeGenModule g_UnityEngine_TextRenderingModuleCodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_TextRenderingModuleCodeGenModule = 

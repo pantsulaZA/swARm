@@ -12,6 +12,7 @@
 @class UILocalNotification;
 @class NSString;
 @class NSDictionary;
+@class NSArray;
 @class NSSet;
 @class NSData;
 @class NSError;
@@ -28,6 +29,7 @@ typedef struct objc_object UIEvent;
 typedef struct objc_object UILocalNotification;
 typedef struct objc_object NSString;
 typedef struct objc_object NSDictionary;
+typedef struct objc_object NSArray;
 typedef struct objc_object NSSet;
 typedef struct objc_object NSError;
 typedef struct objc_object NSData;
@@ -89,16 +91,6 @@ typedef enum
 }
 LogType;
 
-// be aware that this enum is shared with unity implementation so you should absolutely not change it
-typedef enum AppInBackgroundBehavior
-{
-    appbgCustom     = -1,
-    appbgSuspend    = 0,
-    appbgExit       = 1,
-}
-AppInBackgroundBehavior;
-
-
 // this dictates touches processing on os level: should we transform touches to unity view coords or not.
 // N.B. touch.position will always be adjusted to current resolution
 //      i.e. if you touch right border of view, touch.position.x will be Screen.width, not view.width
@@ -142,5 +134,6 @@ extern "C" {
     bool UnityiOS110orNewer();
     bool UnityiOS111orNewer();
     bool UnityiOS112orNewer();
+    bool UnityiOS130orNewer();
 }
 #endif

@@ -35,12 +35,14 @@ extern "C" {
 
 // life cycle management
 
-void    UnityInitStartupTime();
 void    UnityInitRuntime(int argc, char* argv[]);
 void    UnityInitApplicationNoGraphics(const char* appPathName);
+void    UnityUnloadApplication();
+void    UnityQuitApplication(int exitCode);
 void    UnityInitApplicationGraphics();
 void    UnityCleanup();
 void    UnityLoadApplication();
+void    UnityLoadApplicationFromSceneLessState();
 void    UnityPlayerLoop();                  // normal player loop
 void    UnityBatchPlayerLoop();             // batch mode like player loop, without rendering (usable for background processing)
 void    UnitySetPlayerFocus(int focused);   // send OnApplicationFocus() message to scripts
@@ -86,6 +88,8 @@ void    UnityReloadResources();
 int     UnityIsCaptureScreenshotRequested();
 void    UnityCaptureScreenshot();
 void    UnitySendMessage(const char* obj, const char* method, const char* msg);
+void    UnityUpdateMuteState(int mute);
+void    UnityUpdateAudioOutputState();
 
 EAGLContext*        UnityGetDataContextGLES();
 
@@ -122,6 +126,7 @@ int     UnityReportResizeView(unsigned w, unsigned h, unsigned /*ScreenOrientati
 void    UnityReportSafeAreaChange(float x, float y, float w, float h);
 void    UnityReportBackbufferChange(UnityRenderBufferHandle colorBB, UnityRenderBufferHandle depthBB);
 float   UnityCalculateScalingFactorFromTargetDPI(UIScreen* screen);
+void    UnityReportDisplayCutouts(const float* x, const float* y, const float* width, const float* height, int count);
 
 // player settings
 
@@ -133,7 +138,7 @@ int     UnityGetWideColorRequested();
 int     UnityGetShowActivityIndicatorOnLoading();
 int     UnityGetAccelerometerFrequency();
 int     UnityGetTargetFPS();
-int     UnityGetAppBackgroundBehavior();
+int     UnityGetUseCustomAppBackgroundBehavior();
 int     UnityGetDeferSystemGesturesTopEdge();
 int     UnityGetDeferSystemGesturesBottomEdge();
 int     UnityGetDeferSystemGesturesLeftEdge();
@@ -142,6 +147,7 @@ int     UnityGetHideHomeButton();
 int     UnityMetalFramebufferOnly();
 int     UnityMetalMemorylessDepth();
 int     UnityPreserveFramebufferAlpha();
+void    UnitySetAbsoluteURL(const char* url);
 
 // push notifications
 #if !PLATFORM_TVOS
@@ -175,6 +181,7 @@ void    UnityDidAccelerate(float x, float y, float z, double timestamp);
 void    UnitySetJoystickPosition(int joyNum, int axis, float pos);
 int     UnityStringToKey(const char *name);
 void    UnitySetKeyState(int key, int /*bool*/ state);
+void    UnitySetKeyboardKeyState(int key, int /*bool*/ state);
 void    UnitySendKeyboardCommand(UIKeyCommand* command);
 
 // WWW connection handling
@@ -264,8 +271,7 @@ void            UnityUpdateGyroData();
 void            UnitySetGyroUpdateInterval(int idx, float interval);
 float           UnityGetGyroUpdateInterval(int idx);
 void            UnityUpdateJoystickData();
-int             UnityGetJoystickCount();
-void            UnityGetJoystickName(int idx, char* buffer, int maxLen);
+NSArray*        UnityGetJoystickNames();
 void            UnityGetJoystickAxisName(int idx, int axis, char* buffer, int maxLen);
 void            UnityGetNiceKeyname(int key, char* buffer, int maxLen);
 
@@ -280,6 +286,7 @@ NSBundle*           UnityGetMetalBundle();
 MTLDeviceRef        UnityGetMetalDevice();
 MTLCommandQueueRef  UnityGetMetalCommandQueue();
 MTLCommandQueueRef  UnityGetMetalDrawableCommandQueue();
+int UnityCommandQueueMaxCommandBufferCountMTL();
 
 EAGLContext*        UnityGetDataContextEAGL();
 
@@ -337,30 +344,36 @@ const char*     UnityDeviceUniqueIdentifier();
 const char*     UnityVendorIdentifier();
 const char*     UnityAdvertisingIdentifier();
 int             UnityAdvertisingTrackingEnabled();
+int             UnityGetLowPowerModeEnabled();
+int             UnityGetWantsSoftwareDimming();
+void            UnitySetWantsSoftwareDimming(int enabled);
 const char*     UnityDeviceName();
 const char*     UnitySystemName();
 const char*     UnitySystemVersion();
 const char*     UnityDeviceModel();
 int             UnityDeviceCPUCount();
+int             UnityGetPhysicalMemory();
 int             UnityDeviceGeneration();
 float           UnityDeviceDPI();
 const char*     UnitySystemLanguage();
+int             UnityDeviceSupportsUpsideDown();
 
 // Unity/DisplayManager.mm
 EAGLContext*    UnityGetMainScreenContextGLES();
 EAGLContext*    UnityGetContextEAGL();
 void            UnityStartFrameRendering();
 void            UnityDestroyUnityRenderSurfaces();
+int             UnityMainScreenRefreshRate();
+void            UnitySetBrightness(float brightness);
+float           UnityGetBrightness();
 
 // Unity/Filesystem.mm
-const char*     UnityApplicationDir();
+const char*     UnityDataBundleDir();
+void            UnitySetDataBundleDirWithBundleId(const char * bundleId);
 const char*     UnityDocumentsDir();
 const char*     UnityLibraryDir();
 const char*     UnityCachesDir();
 int             UnityUpdateNoBackupFlag(const char* path, int setFlag); // Returns 1 if successful, otherwise 0
-
-// Unity/MetalHelper.mm
-void                UnityAddNewMetalAPIImplIfNeeded(MTLDeviceRef device);
 
 // Unity/WWWConnection.mm
 void*           UnityStartWWWConnectionGet(void* udata, const void* headerDict, const char* url);

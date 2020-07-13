@@ -1,12 +1,11 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 
-#include <AdSupport/ASIdentifierManager.h>
-
 #include "DisplayManager.h"
 
 // ad/vendor ids
-
+#if UNITY_USES_IAD
+#include <AdSupport/ASIdentifierManager.h>
 static id QueryASIdentifierManager()
 {
     NSBundle* bundle = [NSBundle bundleWithPath: @"/System/Library/Frameworks/AdSupport.framework"];
@@ -20,9 +19,13 @@ static id QueryASIdentifierManager()
     return nil;
 }
 
+#endif
+
 extern "C" const char* UnityAdvertisingIdentifier()
 {
     static const char* _ADID = NULL;
+
+#if UNITY_USES_IAD
     static const NSString* _ADIDNSString = nil;
 
     // ad id can be reset during app lifetime
@@ -38,18 +41,44 @@ extern "C" const char* UnityAdvertisingIdentifier()
             _ADID = AllocCString(adid);
         }
     }
+#endif
 
     return _ADID;
+}
+
+extern "C" int UnityGetLowPowerModeEnabled()
+{
+    return [[NSProcessInfo processInfo] isLowPowerModeEnabled] ? 1 : 0;
+}
+
+extern "C" int UnityGetWantsSoftwareDimming()
+{
+#if !PLATFORM_TVOS
+    UIScreen* mainScreen = [UIScreen mainScreen];
+    return mainScreen.wantsSoftwareDimming ? 1 : 0;
+#else
+    return 0;
+#endif
+}
+
+extern "C" void UnitySetWantsSoftwareDimming(int enabled)
+{
+#if !PLATFORM_TVOS
+    UIScreen* mainScreen = [UIScreen mainScreen];
+    mainScreen.wantsSoftwareDimming = enabled;
+#endif
 }
 
 extern "C" int UnityAdvertisingTrackingEnabled()
 {
     bool _AdTrackingEnabled = false;
 
+#if UNITY_USES_IAD
     // ad tracking can be changed during app lifetime
     id manager = QueryASIdentifierManager();
     if (manager)
         _AdTrackingEnabled = [manager performSelector: @selector(isAdvertisingTrackingEnabled)];
+#endif
 
     return _AdTrackingEnabled ? 1 : 0;
 }
@@ -131,6 +160,11 @@ extern "C" int UnityDeviceCPUCount()
     return _DeviceCPUCount;
 }
 
+extern "C" int UnityGetPhysicalMemory()
+{
+    return ([[NSProcessInfo processInfo] physicalMemory]) / (1024 * 1024);
+}
+
 // misc
 extern "C" const char* UnitySystemLanguage()
 {
@@ -191,9 +225,15 @@ DeviceTableEntry DeviceTable[] =
     { iPhone, 11, 2, 2, deviceiPhoneXS },
     { iPhone, 11, 4, 4, deviceiPhoneXSMax },
     { iPhone, 11, 6, 6, deviceiPhoneXSMax },
+    { iPhone, 12, 1, 1, deviceiPhone11 },
+    { iPhone, 12, 3, 3, deviceiPhone11Pro },
+    { iPhone, 12, 5, 5, deviceiPhone11ProMax },
+
     { iPod, 4, 1, 1, deviceiPodTouch4Gen },
     { iPod, 5, 1, 1, deviceiPodTouch5Gen },
     { iPod, 7, 1, 1, deviceiPodTouch6Gen },
+    { iPod, 9, 1, 1, deviceiPodTouch7Gen },
+
     { iPad, 2, 5, 7, deviceiPadMini1Gen },
     { iPad, 4, 4, 6, deviceiPadMini2Gen },
     { iPad, 4, 7, 9, deviceiPadMini3Gen },
@@ -202,6 +242,8 @@ DeviceTableEntry DeviceTable[] =
     { iPad, 3, 1, 3, deviceiPad3Gen },
     { iPad, 3, 4, 6, deviceiPad4Gen },
     { iPad, 6, 11, 12, deviceiPad5Gen },
+    { iPad, 7, 5, 6, deviceiPad6Gen },
+    { iPad, 7, 11, 12, deviceiPad7Gen },
     { iPad, 4, 1, 3, deviceiPadAir1 },
     { iPad, 5, 3, 4, deviceiPadAir2 },
     { iPad, 6, 7, 8, deviceiPadPro1Gen },
@@ -280,6 +322,19 @@ extern "C" int UnityDeviceGeneration()
     return _DeviceGeneration;
 }
 
+extern "C" int UnityDeviceSupportsUpsideDown()
+{
+    switch (UnityDeviceGeneration())
+    {
+        // devices without home button
+        case deviceiPhoneX: case deviceiPhoneXS: case deviceiPhoneXSMax: case deviceiPhoneXR:
+        case deviceiPhone11: case deviceiPhone11Pro: case deviceiPhone11ProMax:
+            return 0;
+        default:
+            return 1;
+    }
+}
+
 extern "C" int UnityDeviceSupportedOrientations()
 {
     int device = UnityDeviceGeneration();
@@ -288,17 +343,9 @@ extern "C" int UnityDeviceSupportedOrientations()
     orientations |= (1 << portrait);
     orientations |= (1 << landscapeLeft);
     orientations |= (1 << landscapeRight);
+    if (UnityDeviceSupportsUpsideDown())
+        orientations |= (1 << portraitUpsideDown);
 
-    switch (device)
-    {
-        case deviceiPhoneX:
-        case deviceiPhoneXS:
-        case deviceiPhoneXSMax:
-        case deviceiPhoneXR:
-            break;
-        default:
-            orientations |= (1 << portraitUpsideDown);
-    }
     return orientations;
 }
 
@@ -308,17 +355,15 @@ extern "C" int UnityDeviceIsStylusTouchSupported()
     return (deviceGen == deviceiPadPro1Gen ||
         deviceGen == deviceiPadPro10Inch1Gen ||
         deviceGen == deviceiPadPro2Gen ||
-        deviceGen == deviceiPadPro10Inch2Gen) ? 1 : 0;
+        deviceGen == deviceiPadPro10Inch2Gen ||
+        deviceGen == deviceiPadPro11Inch ||
+        deviceGen == deviceiPadPro3Gen ||
+        deviceGen == deviceiPad6Gen) ? 1 : 0;
 }
 
 extern "C" int UnityDeviceCanShowWideColor()
 {
-    UIScreen* mainScreen = [UIScreen mainScreen];
-    UITraitCollection* traits = mainScreen.traitCollection;
-    if ([traits respondsToSelector: @selector(displayGamut)])
-        return traits.displayGamut == UIDisplayGamutP3;
-
-    return false;
+    return [UIScreen mainScreen].traitCollection.displayGamut == UIDisplayGamutP3;
 }
 
 extern "C" float UnityDeviceDPI()
@@ -343,6 +388,7 @@ extern "C" float UnityDeviceDPI()
             case deviceiPhone7:
             case deviceiPhone8:
             case deviceiPhoneXR:
+            case deviceiPhone11:
                 _DeviceDPI = 326.0f; break;
             case deviceiPhone6Plus:
             case deviceiPhone6SPlus:
@@ -352,6 +398,8 @@ extern "C" float UnityDeviceDPI()
             case deviceiPhoneX:
             case deviceiPhoneXS:
             case deviceiPhoneXSMax:
+            case deviceiPhone11Pro:
+            case deviceiPhone11ProMax:
                 _DeviceDPI = 458.0f; break;
 
             // iPad
@@ -366,9 +414,12 @@ extern "C" float UnityDeviceDPI()
             case deviceiPadPro2Gen:
             case deviceiPadPro10Inch2Gen:
             case deviceiPad5Gen:
+            case deviceiPad6Gen:
             case deviceiPadPro11Inch:
             case deviceiPadPro3Gen:
                 _DeviceDPI = 264.0f; break;
+            case deviceiPad7Gen:
+                _DeviceDPI = 326.0f; break;
 
             // iPad mini
             case deviceiPadMini1Gen:
@@ -382,6 +433,7 @@ extern "C" float UnityDeviceDPI()
             case deviceiPodTouch4Gen:
             case deviceiPodTouch5Gen:
             case deviceiPodTouch6Gen:
+            case deviceiPodTouch7Gen:
                 _DeviceDPI = 326.0f; break;
 
             // unknown (new) devices

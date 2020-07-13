@@ -12,13 +12,16 @@ static UnityReplayKit* _replayKit = nil;
 
 @protocol UnityReplayKit_RPScreenRecorder<NSObject>
 
+- (void)setMicrophoneEnabled:(BOOL)value;
 - (BOOL)isMicrophoneEnabled;
 - (void)setCameraEnabled:(BOOL)value;
 - (BOOL)isCameraEnabled;
+- (BOOL)isPreviewControllerActive;
 
-@property (nonatomic, getter = isMicrophoneEnabled) BOOL microphoneEnabled;
+@property (nonatomic, setter = setMicrophoneEnabled:, getter = isMicrophoneEnabled) BOOL microphoneEnabled;
 @property (nonatomic, setter = setCameraEnabled:, getter = isCameraEnabled) BOOL cameraEnabled;
 @property (nonatomic, readonly) UIView* cameraPreviewView;
+@property (nonatomic, getter = isPreviewControllerActive) BOOL previewControllerActive;
 
 @end
 
@@ -28,10 +31,11 @@ static UnityReplayKit* _replayKit = nil;
 @property(nonatomic, readonly, getter = isBroadcasting) BOOL broadcasting;
 @property(nonatomic, readonly) NSString *broadcastExtensionBundleID;
 //@property(nonatomic, weak) id<RPBroadcastControllerDelegate> delegate;
-@property(nonatomic, readonly, getter = isPaused) BOOL paused;
+@property(nonatomic, readonly, getter = isBroadcastingPaused) BOOL paused;
 @property(nonatomic, readonly) NSDictionary<NSString *, NSObject<NSCoding> *> *serviceInfo;
 
 - (BOOL)isBroadcasting;
+- (BOOL)isBroadcastingPaused;
 - (void)finishBroadcastWithHandler:(void (^)(NSError *error))handler;
 - (void)startBroadcastWithHandler:(void (^)(NSError *error))handler;
 - (void)pauseBroadcast;
@@ -98,6 +102,7 @@ static UnityReplayKit* _replayKit = nil;
     id<UnityReplayKit_RPBroadcastController> broadcastController;
     void* broadcastStartStatusCallback;
     UIView* currentCameraPreviewView;
+    bool currentPreviewControllerActive;
 
     UIWindow* overlayWindow;
 }
@@ -121,10 +126,7 @@ static UnityReplayKit* _replayKit = nil;
 
 + (UnityReplayKit*)sharedInstance
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _replayKit = [[UnityReplayKit alloc] init];
-    });
+    NSAssert(_replayKit != nil, @"InitUnityReplayKit should be called before using ReplayKit api.");
     return _replayKit;
 }
 
@@ -138,7 +140,7 @@ static UnityReplayKit* _replayKit = nil;
     return _previewController != nil;
 }
 
-- (BOOL)startRecording:(BOOL)enableMicrophone
+- (BOOL)startRecording
 {
     RPScreenRecorder* recorder = [RPScreenRecorder sharedRecorder];
     if (recorder == nil)
@@ -149,7 +151,7 @@ static UnityReplayKit* _replayKit = nil;
 
     recorder.delegate = self;
     __block BOOL success = YES;
-    [recorder startRecordingWithMicrophoneEnabled: enableMicrophone handler:^(NSError* error) {
+    [recorder startRecordingWithHandler:^(NSError* error) {
         if (error != nil)
         {
             _lastError = [error description];
@@ -226,6 +228,9 @@ static UnityReplayKit* _replayKit = nil;
     {
         _previewController = nil;
     }];
+
+    currentPreviewControllerActive = YES;
+
     return YES;
 }
 
@@ -250,6 +255,8 @@ static UnityReplayKit* _replayKit = nil;
     // TODO - the above callback doesn't seem to be working at the moment.
     _previewController = nil;
 
+    currentPreviewControllerActive = NO;
+
     return YES;
 }
 
@@ -259,6 +266,13 @@ static UnityReplayKit* _replayKit = nil;
     {
         [previewController dismissViewControllerAnimated: YES completion: nil];
     }
+
+    currentPreviewControllerActive = NO;
+}
+
+- (BOOL)isPreviewControllerActive
+{
+    return currentPreviewControllerActive;
 }
 
 /****************************************
@@ -289,41 +303,51 @@ static UnityReplayKit* _replayKit = nil;
     return [broadcastController isBroadcasting];
 }
 
+- (BOOL)isBroadcastingPaused
+{
+    if (broadcastController == nil)
+    {
+        return NO;
+    }
+    return [broadcastController isBroadcastingPaused];
+}
+
 - (void)broadcastActivityViewController:(UnityReplayKit_RPBroadcastActivityViewController *)sBroadcastActivityViewController
-    didFinishWithBroadcastController:(id<UnityReplayKit_RPBroadcastController>)sBroadcastController
+    didFinishWithBroadcastController:(id<UnityReplayKit_RPBroadcastController>)inRPBroadcastController
     error:(NSError *)error
 {
     dispatch_sync(dispatch_get_main_queue(), ^{
         UnityPause(0);
-    });
 
-    if (sBroadcastController == nil)
-    {
-        _lastError = [error description];
-        UnityReplayKitTriggerBroadcastStatusCallback(broadcastStartStatusCallback, false, [_lastError UTF8String]);
-        broadcastStartStatusCallback = nullptr;
-        [UnityGetGLViewController() dismissViewControllerAnimated: YES completion: nil];
-        return;
-    }
-
-    broadcastController = sBroadcastController;
-    [UnityGetGLViewController() dismissViewControllerAnimated: YES completion:^
-    {
-        [broadcastController startBroadcastWithHandler:^(NSError* error)
+        broadcastController = inRPBroadcastController;
+        if (broadcastController == nil)  // broadcast was canceled
         {
-            if (error != nil)
+            _lastError = [error description];
+            UnityReplayKitTriggerBroadcastStatusCallback(broadcastStartStatusCallback, false, [_lastError UTF8String]);
+            broadcastStartStatusCallback = nil;
+            [UnityGetGLViewController() dismissViewControllerAnimated: YES completion: nil];
+        }
+        else                            // start broadcast
+        {
+            [UnityGetGLViewController() dismissViewControllerAnimated: YES completion:^
             {
-                _lastError = [error description];
-                UnityReplayKitTriggerBroadcastStatusCallback(broadcastStartStatusCallback, false, [_lastError UTF8String]);
-                broadcastStartStatusCallback = nullptr;
-                broadcastController = nil;
-                return;
-            }
-            UnityReplayKitTriggerBroadcastStatusCallback(broadcastStartStatusCallback, true, "");
-            broadcastStartStatusCallback = nullptr;
-            _lastError = nil;
-        }];
-    }];
+                [broadcastController startBroadcastWithHandler:^(NSError* error)
+                {
+                    if (error != nil)
+                    {
+                        _lastError = [error description];
+                        UnityReplayKitTriggerBroadcastStatusCallback(broadcastStartStatusCallback, false, [_lastError UTF8String]);
+                        broadcastStartStatusCallback = nil; broadcastController = nil;
+                    }
+                    else
+                    {
+                        UnityReplayKitTriggerBroadcastStatusCallback(broadcastStartStatusCallback, true, "");
+                        broadcastStartStatusCallback = nil; _lastError = nil;
+                    }
+                }];
+            }];
+        }
+    });
 }
 
 - (void)startBroadcastingWithCallback:(void *)callback
@@ -363,12 +387,22 @@ static UnityReplayKit* _replayKit = nil;
         vc.delegate = self;
         broadcastStartStatusCallback = callback;
 
+        // oh apple, how much do you like confusing docs and contradicting behaviours
+        // on ios13 UIModalPresentationPopover meaning was changed; what's more: it is now broken if portrait is disabled
+        // pre ios13 it was intended to be UIModalPresentationPopover for ipads, UIModalPresentationFullScreen for iphones
+        // yet having fully blackscreen (UIModalPresentationFullScreen) was not looking good for lots of people
+        //   so we use popover for both ipad/iphone but ONLY before ios13
+        // note that tvos is fullscreen always (this is the only option here)
     #if PLATFORM_TVOS
         vc.modalPresentationStyle = UIModalPresentationFullScreen;
     #else
-        vc.modalPresentationStyle = UIModalPresentationPopover;
-        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        if (UnityiOS130orNewer())
         {
+            vc.modalPresentationStyle = UIModalPresentationFormSheet;
+        }
+        else
+        {
+            vc.modalPresentationStyle = UIModalPresentationPopover;
             vc.popoverPresentationController.sourceRect = CGRectMake(GetAppController().rootView.bounds.size.width / 2, 0, 0, 0);
             vc.popoverPresentationController.sourceView = GetAppController().rootView;
         }
@@ -396,6 +430,26 @@ static UnityReplayKit* _replayKit = nil;
             return;
         _lastError = [error description];
     }];
+}
+
+- (void)pauseBroadcasting
+{
+    if (broadcastController == nil || !broadcastController.broadcasting)
+    {
+        return;
+    }
+
+    [broadcastController pauseBroadcast];
+}
+
+- (void)resumeBroadcasting
+{
+    if (broadcastController == nil || !broadcastController.broadcasting)
+    {
+        return;
+    }
+
+    [broadcastController resumeBroadcast];
 }
 
 - (BOOL)isCameraEnabled
@@ -446,7 +500,23 @@ static UnityReplayKit* _replayKit = nil;
     return screenRecorder.microphoneEnabled;
 }
 
-- (BOOL)showCameraPreviewAt:(CGPoint)position
+- (void)setMicrophoneEnabled:(BOOL)microphoneEnabled
+{
+    if (![self apiAvailable])
+    {
+        return;
+    }
+
+    id<UnityReplayKit_RPScreenRecorder> screenRecorder = (id)[RPScreenRecorder sharedRecorder];
+    if (![screenRecorder respondsToSelector: @selector(setMicrophoneEnabled:)])
+    {
+        return;
+    }
+
+    screenRecorder.microphoneEnabled = microphoneEnabled;
+}
+
+- (BOOL)showCameraPreviewAt:(CGPoint)position width:(float)width height:(float)height
 {
     if (currentCameraPreviewView == nil)
     {
@@ -467,8 +537,12 @@ static UnityReplayKit* _replayKit = nil;
         [cameraPreviewView setUserInteractionEnabled: NO];
     }
 
-    int width = currentCameraPreviewView.frame.size.width;
-    int height = currentCameraPreviewView.frame.size.height;
+    if (width < 0.0f)
+        width = currentCameraPreviewView.frame.size.width;
+
+    if (height < 0.0f)
+        height = currentCameraPreviewView.frame.size.height;
+
     [currentCameraPreviewView setFrame: CGRectMake(position.x, position.y, width, height)];
 
     return YES;
@@ -484,5 +558,15 @@ static UnityReplayKit* _replayKit = nil;
 }
 
 @end
+
+static dispatch_once_t onceToken_InitUnityReplayKit;
+void InitUnityReplayKit()
+{
+    dispatch_once(&onceToken_InitUnityReplayKit, ^{
+        _replayKit = [[UnityReplayKit alloc] init];
+        // that seems to be enough to trigger RPScreenRecorder to become "ready"
+        [RPScreenRecorder sharedRecorder].delegate = _replayKit;
+    });
+}
 
 #endif  // UNITY_REPLAY_KIT_AVAILABLE

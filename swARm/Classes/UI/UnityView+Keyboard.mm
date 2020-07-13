@@ -1,13 +1,37 @@
 #import "UnityView.h"
 #include "UI/Keyboard.h"
+#include <sys/time.h>
+#include <map>
+#include <vector>
 
 static NSArray* keyboardCommands = nil;
-static int pressedButton = 0;
 
-@interface UnityView (Keyboard)
-@end
+extern "C" int UnityGetAppleTVRemoteAllowExitToMenu();
+extern "C" void UnitySetAppleTVRemoteAllowExitToMenu(int val);
 
 @implementation UnityView (Keyboard)
+
+// Keyboard shortcuts don't provide events for key up
+// Keyboard shortcut callbacks are called with 0.4 (first time) and 0.1 (following times) seconds interval while pressing the key
+// Below we implement key expiration mechanism where key up event is generated if shortcut callback
+// is not called for specific key for more than <kKeyTimeoutInSeconds>
+
+typedef std::map<int, double> KeyMap;
+static const double kKeyTimeoutInSeconds = 0.5;
+
+static KeyMap& GetKeyMap()
+{
+    static KeyMap s_Map;
+    return s_Map;
+}
+
+static double GetTimeInSeconds()
+{
+    timeval now;
+    gettimeofday(&now, NULL);
+
+    return now.tv_sec + now.tv_usec / 1000000.0;
+}
 
 - (void)createKeyboard
 {
@@ -29,6 +53,7 @@ static int pressedButton = 0;
         NSString* input = [numpadLayout substringWithRange: NSMakeRange(i, 1)];
         [commands addObject: [UIKeyCommand keyCommandWithInput: input modifierFlags: UIKeyModifierNumericPad action: @selector(handleCommand:)]];
     }
+
     for (NSInteger i = 0; i < upperCaseLetters.length; ++i)
     {
         NSString* input = [upperCaseLetters substringWithRange: NSMakeRange(i, 1)];
@@ -52,22 +77,8 @@ static int pressedButton = 0;
     keyboardCommands = commands.copy;
 }
 
-// UIKeyCommand can't handle key up events,
-// So we're simulating key up event in case if any other button is pressed or UIView calls keyCommands method.
-// Because of this there is no way to handle simultanious key presses.
-- (void)releaseButton
-{
-    if (pressedButton != 0)
-    {
-        UnitySetKeyState(pressedButton, false);
-        pressedButton = 0;
-    }
-}
-
 - (NSArray*)keyCommands
 {
-    [self releaseButton];
-
     //keyCommands take controll of buttons over UITextView, that's why need to return nil if text input field is active
     if ([[KeyboardDelegate Instance] status] == Visible)
     {
@@ -88,14 +99,11 @@ static int pressedButton = 0;
 
 - (void)handleCommand:(UIKeyCommand *)command
 {
-    [self releaseButton];
-
     NSString* input = command.input;
     UIKeyModifierFlags modifierFlags = command.modifierFlags;
 
     char inputChar = ([input length] > 0) ? [input characterAtIndex: 0] : 0;
     int code = (int)inputChar; // ASCII code
-
     UnitySendKeyboardCommand(command);
 
     if (![self isValidCodeForButton: code])
@@ -185,46 +193,43 @@ static int pressedButton = 0;
     else if (input == UIKeyInputEscape)
         code = UnityStringToKey("escape");
 
-    UnitySetKeyState(code, true);
-    pressedButton = code;
-}
-
-#if PLATFORM_TVOS
-- (int)pressTypeToCode:(UIPress *)press
-{
-    if ([press type] == UIPressTypeUpArrow)
-        return UnityStringToKey("up");
-    else if ([press type] == UIPressTypeDownArrow)
-        return UnityStringToKey("down");
-    else if ([press type] == UIPressTypeRightArrow)
-        return UnityStringToKey("right");
-    else if ([press type] == UIPressTypeLeftArrow)
-        return UnityStringToKey("left");
-    else if ([press type] == UIPressTypeSelect)
-        return UnityStringToKey("joystick button 14");
-    else if ([press type] == UIPressTypePlayPause)
-        return UnityStringToKey("joystick button 15");
-    else if ([press type] == UIPressTypeMenu)
-        return UnityStringToKey("joystick button 0");
-    return 0;
-}
-
-- (void)pressesBegan:(NSSet<UIPress *> *)presses withEvent:(UIPressesEvent *)event
-{
-    for (UIPress *press in presses)
+    KeyMap::iterator item = GetKeyMap().find(code);
+    if (item == GetKeyMap().end())
     {
-        UnitySetKeyState([self pressTypeToCode: press], true);
+        // New key is down, register it and its time
+        UnitySetKeyboardKeyState(code, true);
+        GetKeyMap()[code] = GetTimeInSeconds();
+    }
+    else
+    {
+        // Still holding the key, update its time
+        item->second = GetTimeInSeconds();
     }
 }
 
-- (void)pressesEnded:(NSSet<UIPress *> *)presses withEvent:(UIPressesEvent *)event
+- (void)processKeyboard
 {
-    for (UIPress *press in presses)
+    KeyMap& map = GetKeyMap();
+    if (map.size() == 0)
+        return;
+    std::vector<int> keysToUnpress;
+    double nowTime = GetTimeInSeconds();
+    for (KeyMap::iterator item = map.begin();
+         item != map.end();
+         item++)
     {
-        UnitySetKeyState([self pressTypeToCode: press], false);
+        // Key has expired, register it for key up event
+        if (nowTime - item->second > kKeyTimeoutInSeconds)
+            keysToUnpress.push_back(item->first);
+    }
+
+    for (std::vector<int>::iterator item = keysToUnpress.begin();
+         item != keysToUnpress.end();
+         item++)
+    {
+        map.erase(*item);
+        UnitySetKeyboardKeyState(*item, false);
     }
 }
-
-#endif
 
 @end

@@ -11,7 +11,7 @@
     <key>CFBundleExecutable</key>
     <string>${EXECUTABLE_NAME}</string>
     <key>CFBundleIdentifier</key>
-    <string>io.flatcircle.${PRODUCT_NAME}</string>
+    <string>${PRODUCT_BUNDLE_IDENTIFIER}</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
@@ -31,8 +31,8 @@
     </dict>
     <key>NSCameraUsageDescription</key>
     <string>Required for augmented reality support.</string>
-    <key>UIApplicationExitsOnSuspend</key>
-    <false />
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen-iPhone</string>
     <key>UILaunchStoryboardName~ipad</key>
     <string>LaunchScreen-iPad</string>
     <key>UILaunchStoryboardName~iphone</key>
@@ -44,24 +44,7 @@
     <key>UIRequiredDeviceCapabilities</key>
     <array>
       <string>armv7</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
-      <string>arkit</string>
+      <string>metal</string>
       <string>arkit</string>
     </array>
     <key>UIRequiresFullScreen</key>
@@ -82,8 +65,8 @@
     <key>Unity_LoadingActivityIndicatorStyle</key>
     <integer>-1</integer>
     <key>UnityCloudProjectID</key>
-    <string></string>
+    <string />
     <key>UnityCrashSubmissionURL</key>
-    <string>https://a:b@perf-events.cloud.unity3d.com/symbolicate</string>
+    <string />
   </dict>
 </plist>

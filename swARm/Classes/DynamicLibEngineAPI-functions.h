@@ -11,12 +11,11 @@ UnityExternCall(bool, UnityiOS103orNewer);
 UnityExternCall(bool, UnityiOS110orNewer);
 UnityExternCall(bool, UnityiOS111orNewer);
 UnityExternCall(bool, UnityiOS112orNewer);
+UnityExternCall(bool, UnityiOS130orNewer);
 
 // CrashReporter.mm
 UnityExternCall(void,     CrashedCheckBelowForHintsWhy);
-UnityExternCall(uint8_t*, UnityGetAppLoadAddress);
-UnityExternCall(const uint8_t*, UnityGetAppLoadCommandAddress);
-UnityExternCall(int,      UnityGetAppLoadCommandCount);
+UnityExternCall(const decltype(_mh_execute_header)*, UnityGetExecuteMachHeader);
 
 // iPhone_Sensors.mm
 UnityExternCall(void,  UnityInitJoysticks);
@@ -29,8 +28,7 @@ UnityExternCall(void,  UnityUpdateGyroData);
 UnityExternCall(void,  UnitySetGyroUpdateInterval, int, float);
 UnityExternCall(float, UnityGetGyroUpdateInterval, int);
 UnityExternCall(void,  UnityUpdateJoystickData);
-UnityExternCall(int,   UnityGetJoystickCount);
-UnityExternCall(void,  UnityGetJoystickName, int, char*, int);
+UnityExternCall(NSArray*,  UnityGetJoystickNames);
 UnityExternCall(void,  UnityGetJoystickAxisName, int, int, char*, int);
 UnityExternCall(void,  UnityGetNiceKeyname, int, char*, int);
 UnityExternCall(bool,  IsCompensatingSensors);
@@ -43,6 +41,7 @@ UnityExternCall(UIView*,            UnityGetGLView);
 UnityExternCall(UIWindow*,          UnityGetMainWindow);
 UnityExternCall(void,               UnityRequestQuit);
 UnityExternCall(void,               UnityDestroyDisplayLink);
+UnityExternCall(void,               UnityCleanupTrampoline);
 
 // UnityAppController+Rendering.mm
 UnityExternCall(void,             UnityInitMainScreenRenderingCallback);
@@ -63,10 +62,8 @@ UnityExternCall(void,                       DisplayManagerEndFrameRendering);
 UnityExternCall(void,                       UnityPrepareScreenshot);
 
 // Unity/MetalHelper.mm
-#if (GFX_SUPPORTS_METAL + 0) || (UNITY_CAN_USE_METAL + 0)
-UnityExternCall(void,             UnityAddNewMetalAPIImplIfNeeded, MTLDeviceRef);
 UnityExternCall(MTLTextureRef,    AcquireDrawableMTL, UnityDisplaySurfaceMTL*);
-#endif
+UnityExternCall(int,              UnityCommandQueueMaxCommandBufferCountMTL);
 
 // EAGLContextHelper.mm
 UnityExternCall(void,             UnityMakeCurrentContextEAGL, EAGLContext*);
@@ -132,19 +129,28 @@ UnityExternCall(const char*,      UnitySystemName);
 UnityExternCall(const char*,      UnitySystemVersion);
 UnityExternCall(const char*,      UnityDeviceModel);
 UnityExternCall(int,              UnityDeviceCPUCount);
+UnityExternCall(int,              UnityGetPhysicalMemory);
 UnityExternCall(int,              UnityDeviceGeneration);
 UnityExternCall(int,              ParseDeviceGeneration);
+UnityExternCall(int,              UnityDeviceSupportsUpsideDown);
 UnityExternCall(int,              UnityDeviceSupportedOrientations);
 UnityExternCall(int,              UnityDeviceIsStylusTouchSupported);
 UnityExternCall(int,              UnityDeviceCanShowWideColor);
 UnityExternCall(float,            UnityDeviceDPI);
 UnityExternCall(const char*,      UnitySystemLanguage);
+UnityExternCall(int,              UnityGetLowPowerModeEnabled);
+UnityExternCall(int,              UnityGetWantsSoftwareDimming);
+UnityExternCall(void,             UnitySetWantsSoftwareDimming, int);
 
 // Unity/DisplayManager.mm
 UnityExternCall(EAGLContext*,     UnityGetMainScreenContextGLES);
 UnityExternCall(EAGLContext*,     UnityGetContextEAGL);
 UnityExternCall(void,             UnityStartFrameRendering);
 UnityExternCall(void,             UnityDestroyUnityRenderSurfaces);
+UnityExternCall(int,              UnityMainScreenRefreshRate);
+UnityExternCall(void,             UnitySetBrightness, float);
+UnityExternCall(float,            UnityGetBrightness);
+
 
 #if SUPPORT_MULTIPLE_DISPLAYS || PLATFORM_IOS
 UnityExternCall(int,              UnityDisplayManager_DisplayCount);
@@ -157,7 +163,8 @@ UnityExternCall(void,             UnityDisplayManager_DisplaySystemResolution, v
 #endif
 
 // Unity/Filesystem.mm
-UnityExternCall(const char*,      UnityApplicationDir);
+UnityExternCall(const char*,      UnityDataBundleDir);
+UnityExternCall(void,             UnitySetDataBundleDirWithBundleId, const char*);
 UnityExternCall(const char*,      UnityDocumentsDir);
 UnityExternCall(const char*,      UnityLibraryDir);
 UnityExternCall(const char*,      UnityCachesDir);
@@ -192,23 +199,27 @@ UnityExternCall(NSString*,                     UnityOnDemandResourcesGetResource
 UnityExternCall(int,          UnityReplayKitAPIAvailable);
 UnityExternCall(int,          UnityReplayKitRecordingAvailable);
 UnityExternCall(const char*,  UnityReplayKitLastError);
-UnityExternCall(int,          UnityReplayKitStartRecording, int);
+UnityExternCall(int,          UnityReplayKitStartRecording);
 UnityExternCall(int,          UnityReplayKitIsRecording);
 UnityExternCall(int,          UnityReplayKitStopRecording);
 UnityExternCall(int,          UnityReplayKitDiscard);
 UnityExternCall(int,          UnityReplayKitPreview);
+UnityExternCall(int,          UnityReplayKitIsPreviewControllerActive);
 
 UnityExternCall(int,          UnityReplayKitBroadcastingAPIAvailable);
 UnityExternCall(void,         UnityReplayKitStartBroadcasting, void*);
 UnityExternCall(void,         UnityReplayKitStopBroadcasting);
+UnityExternCall(void,         UnityReplayKitPauseBroadcasting);
+UnityExternCall(void,         UnityReplayKitResumeBroadcasting);
 UnityExternCall(int,          UnityReplayKitIsBroadcasting);
+UnityExternCall(int,          UnityReplayKitIsBroadcastingPaused);
 UnityExternCall(const char*,  UnityReplayKitGetBroadcastURL);
 
 UnityExternCall(int,          UnityReplayKitIsCameraEnabled);
 UnityExternCall(int,          UnityReplayKitSetCameraEnabled, bool);
 UnityExternCall(int,          UnityReplayKitIsMicrophoneEnabled);
 UnityExternCall(int,          UnityReplayKitSetMicrophoneEnabled, bool);
-UnityExternCall(int,          UnityReplayKitShowCameraPreviewAt, float, float);
+UnityExternCall(int,          UnityReplayKitShowCameraPreviewAt, float, float, float, float);
 UnityExternCall(void,         UnityReplayKitHideCameraPreview);
 UnityExternCall(void,         UnityReplayKitCreateOverlayWindow);
 
@@ -242,5 +253,3 @@ UnityExternCall(void,     UnitySetAppleTVRemoteTouchesEnabled, int);
 // misc not in trampoline
 UnityExternCall(bool,     Unity_il2cppNoExceptions);
 UnityExternCall(void,     RegisterStaticallyLinkedModulesGranular);
-
-UnityExternCall(NSArray<NSString*>*, GetLaunchImageNames, UIUserInterfaceIdiom, const OrientationMask&, const CGSize&, ScreenOrientation, float);

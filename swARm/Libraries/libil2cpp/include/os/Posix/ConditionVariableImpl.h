@@ -1,5 +1,4 @@
 #pragma once
-#if NET_4_0
 #if IL2CPP_THREADS_PTHREAD && !IL2CPP_TINY_WITHOUT_DEBUGGER
 
 #include <pthread.h>
@@ -28,5 +27,4 @@ namespace os
 }
 }
 
-#endif
 #endif

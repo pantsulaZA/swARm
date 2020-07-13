@@ -116,11 +116,10 @@ static DisplayManager* _DisplayManager = nil;
         if (api == apiMetal)
         {
             UnityDisplaySurfaceMTL* surf = new UnityDisplaySurfaceMTL();
-            surf->writeCount    = 0;
             surf->layer         = (CAMetalLayer*)_view.layer;
             surf->device        = UnityGetMetalDevice();
-            surf->commandQueue  = [surf->device newCommandQueue];
-            surf->drawableCommandQueue = [surf->device newCommandQueue];
+            surf->commandQueue  = [surf->device newCommandQueueWithMaxCommandBufferCount: UnityCommandQueueMaxCommandBufferCountMTL()];
+            surf->drawableCommandQueue = [surf->device newCommandQueueWithMaxCommandBufferCount: UnityCommandQueueMaxCommandBufferCountMTL()];
             _surface = surf;
         }
         else
@@ -138,9 +137,18 @@ static DisplayManager* _DisplayManager = nil;
 {
     [self initRendering];
 
+    // On metal we depend on hardware screen compositor to handle upscaling this way avoiding additional blit
     CGSize layerSize = _view.layer.bounds.size;
     float scale = _view.contentScaleFactor;
-    _screenSize = CGSizeMake(layerSize.width * scale, layerSize.height * scale);
+    CGSize screenSize = CGSizeMake(layerSize.width * scale, layerSize.height * scale);
+    // if we did request custom resolution we apply it here.
+    // for metal we use hardware scaler which will be triggered exactly because our window is not of "native" size
+    // but we also want to enforce native resolution as maximum, otherwise we might run out of memory vert fast
+    // TODO: how about supersampling screenshots? maybe there are reasonable usecases
+    if (UnitySelectedRenderingAPI() == apiMetal && params.renderW > 0 && params.renderH > 0)
+        _screenSize = CGSizeMake(fminf(screenSize.width, params.renderW), fminf(screenSize.height, params.renderH));
+    else
+        _screenSize = screenSize;
 
     bool systemSizeChanged  = _surface->systemW != _screenSize.width || _surface->systemH != _screenSize.height;
     bool msaaChanged        = _supportsMSAA && (_surface->msaaSamples != params.msaaSampleCount);
@@ -196,7 +204,7 @@ static DisplayManager* _DisplayManager = nil;
     UnityInvalidateDisplayDataCache((__bridge void*)_screen);
 }
 
-- (void)dealloc
+- (void)destroySurface
 {
     if (_surface)
     {
@@ -219,6 +227,11 @@ static DisplayManager* _DisplayManager = nil;
 
     delete _surface;
     _surface = 0;
+}
+
+- (void)dealloc
+{
+    NSAssert(_surface == 0, @"At this point surface should be already destroyed!");
 
     _view   = nil;
     _window = nil;
@@ -302,6 +315,11 @@ static DisplayManager* _DisplayManager = nil;
         _mainDisplay = self[[UIScreen mainScreen]];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver: self];
 }
 
 - (BOOL)displayAvailable:(UIScreen*)targetScreen;
@@ -401,8 +419,10 @@ static DisplayManager* _DisplayManager = nil;
     if (conn != nil && conn.surface != nil)
         UnityDisableRenderBuffers(conn.surface->unityColorBuffer, conn.surface->unityDepthBuffer);
 
-    [_displayConnection removeObjectForKey: screen];
+    [conn destroySurface];
     conn = nil;
+
+    [_displayConnection removeObjectForKey: screen];
     [self updateDisplayListCacheInUnity];
 }
 
@@ -419,6 +439,11 @@ static DisplayManager* _DisplayManager = nil;
         _DisplayManager = [[DisplayManager alloc] init];
 
     return _DisplayManager;
+}
+
++ (void)Destroy
+{
+    _DisplayManager = nil;
 }
 
 @end
@@ -481,11 +506,17 @@ extern "C" int UnityDisplayManager_DisplayCount()
 
 extern "C" bool UnityDisplayManager_DisplayAvailable(void* nativeDisplay)
 {
+    if (nativeDisplay == NULL)
+        return false;
+
     return [[DisplayManager Instance] displayAvailable: (__bridge UIScreen*)nativeDisplay];
 }
 
 extern "C" bool UnityDisplayManager_DisplayActive(void* nativeDisplay)
 {
+    if (nativeDisplay == NULL)
+        return false;
+
     return UnityDisplayManager_DisplayAvailable(nativeDisplay);
 }
 
@@ -598,6 +629,15 @@ extern "C" float UnityScreenScaleFactor(UIScreen* screen)
     return screen.scale;
 }
 
+extern "C" int UnityMainScreenRefreshRate()
+{
+    if (@available(iOS 10.3, tvOS 10.3, *))
+        return (int)[UIScreen mainScreen].maximumFramesPerSecond;
+
+    // this is backwards-compatible value
+    return 30;
+}
+
 extern "C" void UnityStartFrameRendering()
 {
     [[DisplayManager Instance] startFrameRendering];
@@ -606,6 +646,25 @@ extern "C" void UnityStartFrameRendering()
 extern "C" void UnityDestroyUnityRenderSurfaces()
 {
     [[DisplayManager Instance] enumerateDisplaysWithBlock:^(DisplayConnection* conn) {
-        DestroyUnityRenderBuffers(conn.surface);
+        [conn destroySurface];
     }];
+}
+
+extern "C" void UnitySetBrightness(float brightness)
+{
+    #if !PLATFORM_TVOS
+    brightness = (brightness > 1.0 ? 1.0 : brightness) < 0 ? 0.0 : brightness;
+    UIScreen* screen  = [UIScreen mainScreen];
+    screen.brightness = brightness;
+    #endif
+}
+
+extern "C" float UnityGetBrightness()
+{
+#if !PLATFORM_TVOS
+    UIScreen* screen  = [UIScreen mainScreen];
+    return screen.brightness;
+#else
+    return 1.0f;
+#endif
 }

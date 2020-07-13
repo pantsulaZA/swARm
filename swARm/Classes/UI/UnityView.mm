@@ -25,11 +25,6 @@ extern bool _supportsMSAA;
     CGSize systemRenderSize = CGSizeMake(size.width * self.contentScaleFactor, size.height * self.contentScaleFactor);
     _curOrientation = (ScreenOrientation)UnityReportResizeView(systemRenderSize.width, systemRenderSize.height, _curOrientation);
     ReportSafeAreaChangeForView(self);
-
-#if UNITY_CAN_USE_METAL
-    if (UnitySelectedRenderingAPI() == apiMetal)
-        ((CAMetalLayer*)self.layer).drawableSize = systemRenderSize;
-#endif
 }
 
 - (void)initImpl:(CGRect)frame scaleFactor:(CGFloat)scale
@@ -203,6 +198,31 @@ void ReportSafeAreaChangeForView(UIView* view)
     CGRect safeArea = ComputeSafeArea(view);
     UnityReportSafeAreaChange(safeArea.origin.x, safeArea.origin.y,
         safeArea.size.width, safeArea.size.height);
+
+    switch (UnityDeviceGeneration())
+    {
+        case deviceiPhoneXR:
+        {
+            const float x = 184, y = 1726, w = 460, h = 66;
+            UnityReportDisplayCutouts(&x, &y, &w, &h, 1);
+            break;
+        }
+        case deviceiPhoneX:
+        case deviceiPhoneXS:
+        {
+            const float x = 250, y = 2346, w = 625, h = 90;
+            UnityReportDisplayCutouts(&x, &y, &w, &h, 1);
+            break;
+        }
+        case deviceiPhoneXSMax:
+        {
+            const float x = 308, y = 2598, w = 626, h = 90;
+            UnityReportDisplayCutouts(&x, &y, &w, &h, 1);
+            break;
+        }
+        default:
+            UnityReportDisplayCutouts(nullptr, nullptr, nullptr, nullptr, 0);
+    }
 }
 
 CGRect ComputeSafeArea(UIView* view)

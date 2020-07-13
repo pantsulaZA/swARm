@@ -13,5 +13,3 @@ void InvokeRegisterStaticallyLinkedModuleClasses() {}
 extern "C" void RegisterStaticallyLinkedModulesGranular() {}
 
 #endif // INIT_SCRIPTING_BACKEND
-
-void RegisterMonoModules() {}

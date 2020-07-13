@@ -38,7 +38,9 @@ static id gGameControllerClass = nil;
 // This defines the number of maximum acceleration events Unity will queue internally for scripts to access.
 extern "C" int UnityMaxQueuedAccelerationEvents() { return 2 * 60; } // 120 events or 2 seconds at 60Hz reporting.
 
+#if !PLATFORM_TVOS
 static NSMutableSet *pressedButtons = nil;
+#endif
 
 static ControllerPausedHandler gControllerHandler = ^(GCController *controller)
 {
@@ -358,6 +360,8 @@ enum JoystickButtonNumbers
     BTN_R1 = 9,
     BTN_R2 = 11,
     BTN_MENU = 16,
+    BTN_L3 = 17,
+    BTN_R3 = 18,
     BTN_COUNT
 };
 
@@ -410,9 +414,9 @@ extern "C" void UnityInitJoysticks()
             gAggregatedJoystickState[i].buttonCode = UnityStringToKey(buf);
             gAggregatedJoystickState[i].state = false;
         }
-
+#if !PLATFORM_TVOS
         pressedButtons = [[NSMutableSet alloc] init];
-
+#endif
         gJoysticksInited = true;
     }
 }
@@ -426,27 +430,39 @@ static void ResetAggregatedJoystickState()
 {
     for (int i = 0; i < BTN_COUNT; i++)
     {
-        if ([pressedButtons containsObject: [NSNumber numberWithInteger: gAggregatedJoystickState[i].buttonCode]])
+        BOOL shouldSetState = YES;
+
+#if !PLATFORM_TVOS
+        shouldSetState = [pressedButtons containsObject: [NSNumber numberWithInteger: gAggregatedJoystickState[i].buttonCode]];
+#endif
+        if (shouldSetState)
         {
             gAggregatedJoystickState[i].state = false;
         }
     }
+#if !PLATFORM_TVOS
     for (NSNumber *code in pressedButtons)
     {
         UnitySetKeyState((int)[code integerValue], false);
     }
+
     [pressedButtons removeAllObjects];
+#endif
 }
 
 static void SetAggregatedJoystickState()
 {
     for (int i = 0; i < BTN_COUNT; i++)
     {
+#if !PLATFORM_TVOS
         if (gAggregatedJoystickState[i].state)
         {
             UnitySetKeyState(gAggregatedJoystickState[i].buttonCode, gAggregatedJoystickState[i].state);
             [pressedButtons addObject: [NSNumber numberWithInteger: gAggregatedJoystickState[i].buttonCode]];
         }
+#else
+        UnitySetKeyState(gAggregatedJoystickState[i].buttonCode, gAggregatedJoystickState[i].state);
+#endif
     }
 }
 
@@ -459,6 +475,7 @@ static void ReportAggregatedJoystickButton(int buttonNum, int state)
 
 static void SetJoystickButtonState(int joyNum, int buttonNum, int state)
 {
+#if !PLATFORM_TVOS
     if (state)
     {
         char buf[128];
@@ -467,7 +484,11 @@ static void SetJoystickButtonState(int joyNum, int buttonNum, int state)
         [pressedButtons addObject: [NSNumber numberWithInteger: code]];
         UnitySetKeyState(code, state);
     }
-
+#else
+    char buf[128];
+    sprintf(buf, "joystick %d button %d", joyNum, buttonNum);
+    UnitySetKeyState(UnityStringToKey(buf), state);
+#endif
     ReportAggregatedJoystickButton(buttonNum, state);
 }
 
@@ -537,14 +558,6 @@ static void ReportJoystickBasic(int idx, GCGamepad* gamepad)
 static void ReportJoystickExtended(int idx, GCExtendedGamepad* gamepad)
 {
     GCControllerDirectionPad* dpad = [gamepad dpad];
-    GCControllerDirectionPad* leftStick = [gamepad leftThumbstick];
-    GCControllerDirectionPad* rightStick = [gamepad rightThumbstick];
-
-    UnitySetJoystickPosition(idx + 1, 0, GetAxisValue([leftStick xAxis]));
-    UnitySetJoystickPosition(idx + 1, 1, -GetAxisValue([leftStick yAxis]));
-
-    UnitySetJoystickPosition(idx + 1, 2, GetAxisValue([rightStick xAxis]));
-    UnitySetJoystickPosition(idx + 1, 3, -GetAxisValue([rightStick yAxis]));
     ReportJoystickButton(idx, BTN_DPAD_UP, [dpad up]);
     ReportJoystickButton(idx, BTN_DPAD_RIGHT, [dpad right]);
     ReportJoystickButton(idx, BTN_DPAD_DOWN, [dpad down]);
@@ -559,6 +572,29 @@ static void ReportJoystickExtended(int idx, GCExtendedGamepad* gamepad)
     ReportJoystickButton(idx, BTN_R1, [gamepad rightShoulder]);
     ReportJoystickButton(idx, BTN_L2, [gamepad leftTrigger]);
     ReportJoystickButton(idx, BTN_R2, [gamepad rightTrigger]);
+
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 12.1)
+    {
+        ReportJoystickButton(idx, BTN_L3, [gamepad valueForKey: @"leftThumbstickButton"]);
+        ReportJoystickButton(idx, BTN_R3, [gamepad valueForKey: @"rightThumbstickButton"]);
+    }
+
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 13.0)
+    {
+        ReportJoystickButton(idx, BTN_MENU, [gamepad valueForKey: @"buttonMenu"]);
+        ReportJoystickButton(idx, BTN_PAUSE, [gamepad valueForKey: @"buttonOptions"]);
+    }
+
+    // To avoid overwriting axis input with button input when axis index
+    // overlaps with button enum value, handle directional input after buttons.
+    GCControllerDirectionPad* leftStick = [gamepad leftThumbstick];
+    GCControllerDirectionPad* rightStick = [gamepad rightThumbstick];
+
+    UnitySetJoystickPosition(idx + 1, 0, GetAxisValue([leftStick xAxis]));
+    UnitySetJoystickPosition(idx + 1, 1, -GetAxisValue([leftStick yAxis]));
+
+    UnitySetJoystickPosition(idx + 1, 2, GetAxisValue([rightStick xAxis]));
+    UnitySetJoystickPosition(idx + 1, 3, -GetAxisValue([rightStick yAxis]));
 }
 
 static void SimulateAttitudeViaGravityVector(const Vector3f& gravity, Quaternion4f& currentAttitude, Vector3f& rotationRate)
@@ -733,27 +769,14 @@ extern "C" void UnityUpdateJoystickData()
     SetAggregatedJoystickState();
 }
 
-extern "C" int  UnityGetJoystickCount()
+static NSString* FormatJoystickIdentifier(int idx, const char* typeString, const char* attachment, const char* vendorName)
 {
-    NSArray* list = QueryControllerCollection();
-    int count = list != nil ? (int)[list count] : 0;
-#if UNITY_TVOS_SIMULATOR_FAKE_REMOTE
-    count++;
-#endif
-    return count;
+    return [NSString stringWithFormat: @"[%s,%s] joystick %d by %s", typeString, attachment, idx + 1, vendorName];
 }
 
-static void FormatJoystickIdentifier(int idx, char* buffer, int maxLen, const char* typeString,
-    const char* attachment, const char* vendorName)
+NSString* GetJoystickName(GCController* controller, int idx)
 {
-    snprintf(buffer, maxLen, "[%s,%s] joystick %d by %s",
-        typeString, attachment, idx + 1, vendorName);
-}
-
-extern "C" void UnityGetJoystickName(int idx, char* buffer, int maxLen)
-{
-    GCController* controller = [QueryControllerCollection() objectAtIndex: idx];
-
+    NSString* joystickName;
     if (controller != nil)
     {
         // iOS 8 has bug, which is encountered when controller is being attached
@@ -766,21 +789,37 @@ extern "C" void UnityGetJoystickName(int idx, char* buffer, int maxLen)
             attached = (controller.attachedToDevice ? "wired" : "wireless");
 
         const char* typeString = [controller extendedGamepad] != nil ? "extended" : "basic";
-
-        FormatJoystickIdentifier(idx, buffer, maxLen, typeString, attached,
-            [[controller vendorName] UTF8String]);
+        joystickName = FormatJoystickIdentifier(idx, typeString, attached, [[controller vendorName] UTF8String]);
     }
     else
     {
 #if UNITY_TVOS_SIMULATOR_FAKE_REMOTE
         if (idx == [QueryControllerCollection() count])
         {
-            FormatJoystickIdentifier(idx, buffer, maxLen, "basic", "wireless", "Unity");
-            return;
+            joystickName = FormatJoystickIdentifier(idx, "basic", "wireless", "Unity");
         }
 #endif
-        strncpy(buffer, "unknown", maxLen);
+        joystickName = @"unknown";
     }
+    return joystickName;
+}
+
+extern "C" NSArray* UnityGetJoystickNames()
+{
+    NSArray* joysticks = QueryControllerCollection();
+    int count = joysticks != nil ? (int)[joysticks count] : 0;
+
+    #if UNITY_TVOS_SIMULATOR_FAKE_REMOTE
+    count++;
+    #endif
+
+    NSMutableArray * joystickNames = [NSMutableArray arrayWithCapacity: count];
+
+    for (int i = 0; i < count; i++)
+    {
+        [joystickNames addObject: GetJoystickName(joysticks[i], i)];
+    }
+    return joystickNames;
 }
 
 extern "C" void UnityGetJoystickAxisName(int idx, int axis, char* buffer, int maxLen)

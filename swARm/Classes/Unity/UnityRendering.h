@@ -105,7 +105,7 @@ typedef struct UnityDisplaySurfaceBase
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wmissing-declarations"
 
-#define kUnityNumOffscreenSurfaces 3
+#define kUnityNumOffscreenSurfaces 2
 
 // GLES display surface
 START_STRUCT(UnityDisplaySurfaceGLES, UnityDisplaySurfaceBase)
@@ -138,7 +138,7 @@ END_STRUCT(UnityDisplaySurfaceGLES)
 // Metal display surface
 START_STRUCT(UnityDisplaySurfaceMTL, UnityDisplaySurfaceBase)
 OBJC_OBJECT_PTR CAMetalLayer *       layer;
-OBJC_OBJECT_PTR MTLDeviceRef        device;
+OBJC_OBJECT_PTR MTLDeviceRef         device;
 
 OBJC_OBJECT_PTR MTLCommandQueueRef  commandQueue;
 OBJC_OBJECT_PTR MTLCommandQueueRef  drawableCommandQueue;
@@ -149,10 +149,8 @@ OBJC_OBJECT_PTR CAMetalDrawableRef  drawable;
 OBJC_OBJECT_PTR MTLTextureRef       drawableProxyRT[kUnityNumOffscreenSurfaces];
 
 // These are used on a Mac with drawableProxyRT when off-screen rendering is used
-volatile int32_t                    readCount;
-volatile int32_t                    writeCount;
-volatile int32_t                    bufferChanged;
-volatile int32_t                    bufferCompleted[kUnityNumOffscreenSurfaces];
+volatile int32_t                    bufferCompleted;
+volatile int32_t                    bufferSwap;
 
 OBJC_OBJECT_PTR MTLTextureRef       systemColorRB;
 OBJC_OBJECT_PTR MTLTextureRef       targetColorRT;
@@ -254,6 +252,8 @@ MTLTextureRef AcquireDrawableMTL(UnityDisplaySurfaceMTL* surface);
 // hence we keep normal processing for main screen, but when airplay is used we will create extra command buffers
 void PreparePresentNonMainScreenMTL(UnityDisplaySurfaceMTL* surface);
 
+void SetDrawableSizeMTL(UnityDisplaySurfaceMTL* surface, int width, int height);
+
 #ifdef __cplusplus
 } // extern "C"
 #endif
@@ -291,6 +291,8 @@ void MetalUpdateDisplaySync();
 UnityRenderBufferHandle UnityNativeRenderBufferFromHandle(void *rb);
 
 MTLCommandBufferRef UnityCurrentMTLCommandBuffer();
+
+void UnityUpdateDrawableSize(UnityDisplaySurfaceMTL* surface);
 
 #ifdef __cplusplus
 } // extern "C"

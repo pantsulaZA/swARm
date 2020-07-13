@@ -1,55 +1,115 @@
 const CFIndex streamSize = 1024;
-static NSOperationQueue *webOperationQueue;
+static NSOperationQueue* webOperationQueue;
+static NSURLSession* unityWebRequestSession;
 
-@interface UnityWebRequestDelegate : NSObject<NSURLSessionDataDelegate, NSURLSessionTaskDelegate>
-{
-}
 
-@property (readwrite, nonatomic) void* udata;
-@property (readwrite, nonatomic) NSURLSessionDataTask* task;
-@property (readwrite, strong, nonatomic) NSOutputStream* outputStream;
-@property (readwrite, strong, nonatomic) NSURL* url;
-@property (readwrite, strong, nonatomic) NSString* method;
-@property (readwrite, strong, nonatomic) NSMutableDictionary* headers;
+@interface UnityURLRequest : NSMutableURLRequest
+
+@property (readonly, nonatomic) void* udata;
+@property (readwrite, nonatomic) NSUInteger taskIdentifier;
+@property (readonly, nonatomic) long long estimatedContentLength;
+@property (readonly, nonatomic) long long receivedBytes;
 @property (readwrite, nonatomic) bool wantCertificateCallback;
+@property (readwrite, nonatomic) bool redirecting;
+@property (readwrite) bool isDone;
+
+- (id)init:(void*)udata;
 
 @end
 
+static NSMutableArray<UnityURLRequest*>* currentRequests;
+static NSLock* currentRequestsLock;
 
-@implementation UnityWebRequestDelegate
+@implementation UnityURLRequest
 {
     void* _udata;
-    NSURLSessionDataTask* _task;
-    NSURL* _url;
-    NSString* _method;
-    NSMutableDictionary* _headers;
-    bool _wantCertificateCallback;
+    NSUInteger _taskIdentifier;
     long long _estimatedContentLength;
     long long _receivedBytes;
+    bool _wantCertificateCallback;
     bool _redirecting;
+    bool _isDone;
 }
 
 @synthesize udata = _udata;
-@synthesize task = _task;
-@synthesize url = _url;
-@synthesize method = _method;
-@synthesize headers = _headers;
+@synthesize taskIdentifier = _taskIdentifier;
+@synthesize estimatedContentLength = _estimatedContentLength;
+@synthesize receivedBytes = _receivedBytes;
 @synthesize wantCertificateCallback = _wantCertificateCallback;
+@synthesize redirecting = _redirecting;
+@synthesize isDone = _isDone;
 
-+ (id)newDelegate:(void*)udata
++ (void)storeRequest:(UnityURLRequest *)request taskID:(NSUInteger)taskId
 {
-    UnityWebRequestDelegate* delegate = [[UnityWebRequestDelegate alloc] init];
-    delegate.udata = udata;
-    return delegate;
+    request.taskIdentifier = taskId;
+    [currentRequestsLock lock];
+    [currentRequests addObject: request];
+    [currentRequestsLock unlock];
 }
 
-- (id)init
++ (UnityURLRequest*)requestForTask:(NSURLSessionTask*)task
 {
-    _udata = NULL;
-    _task = nil;
+    UnityURLRequest* request = nil;
+    [currentRequestsLock lock];
+    for (unsigned i = 0; i < currentRequests.count; ++i)
+        if (currentRequests[i].taskIdentifier == task.taskIdentifier)
+        {
+            request = currentRequests[i];
+            break;
+        }
+    [currentRequestsLock unlock];
+    return request;
+}
+
++ (void)removeRequest:(UnityURLRequest*)request
+{
+    // removeObject would remove all identical request, taskIdentifier is unique
+    [currentRequestsLock lock];
+    for (unsigned i = 0; i < currentRequests.count; ++i)
+        if (currentRequests[i].taskIdentifier == request.taskIdentifier)
+        {
+            [currentRequests removeObjectAtIndex: i];
+            break;
+        }
+    [currentRequestsLock unlock];
+}
+
++ (void)writeBody:(NSOutputStream*)outputStream task:(NSURLSessionTask*)task udata:(void*)udata
+{
+    unsigned dataSize = streamSize;
+    BOOL uploadComplete = FALSE;
+    while (!uploadComplete)
+    {
+        dataSize = streamSize;
+        const UInt8* data = (const UInt8*)UnityWebRequestGetUploadData(udata, &dataSize);
+        if (dataSize == 0)
+            break;
+        NSInteger transmitted = [outputStream write: data maxLength: dataSize];
+        if (transmitted > 0)
+            UnityWebRequestConsumeUploadData(udata, (unsigned)transmitted);
+        switch (task.state)
+        {
+            case NSURLSessionTaskStateCanceling:
+            case NSURLSessionTaskStateCompleted:
+                uploadComplete = TRUE;
+                break;
+            default:
+                uploadComplete = FALSE;
+        }
+    }
+    [outputStream close];
+}
+
+- (id)init:(void*)udata
+{
+    self = [super init];
+    _udata = udata;
+    _taskIdentifier = 0;
     _estimatedContentLength = 0;
     _receivedBytes = 0;
+    _wantCertificateCallback = false;
     _redirecting = false;
+    _isDone = false;
     return self;
 }
 
@@ -66,36 +126,74 @@ static NSOperationQueue *webOperationQueue;
         _estimatedContentLength = _receivedBytes;
 }
 
+@end
+
+
+@interface UnityWebRequestDelegate : NSObject<NSURLSessionDataDelegate, NSURLSessionTaskDelegate>
+@end
+
+
+@implementation UnityWebRequestDelegate
+
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(nonnull NSURLResponse *)response completionHandler:(nonnull void (^)(NSURLSessionResponseDisposition))completionHandler
 {
-    [self handleResponse: (NSHTTPURLResponse*)response];
+    [self handleResponse: response task: dataTask];
     completionHandler(NSURLSessionResponseAllow);
 }
 
-- (void)handleResponse:(NSHTTPURLResponse *)response
+- (void)handleResponse:(NSURLResponse*)response task:(NSURLSessionTask*)task
 {
-    [self updateEstimatedContentLength: [response expectedContentLength]];
-    _receivedBytes = 0;
-    UnityReportWebRequestStatus(self.udata, (int)[response statusCode]);
+    UnityURLRequest* urequest = [UnityURLRequest requestForTask: task];
+    if (urequest == nil)
+        return;
+    if ([response isKindOfClass: [NSHTTPURLResponse class]])
+        [self handleHTTPResponse: (NSHTTPURLResponse*)response urequest: urequest];
+    else
+        [self handleResponse: response urequest: urequest];
+}
+
+- (void)handleHTTPResponse:(NSHTTPURLResponse*)response task:(NSURLSessionTask*)task
+{
+    UnityURLRequest* urequest = [UnityURLRequest requestForTask: task];
+    if (urequest == nil)
+        return;
+    [self handleHTTPResponse: response urequest: urequest];
+}
+
+- (void)handleHTTPResponse:(NSHTTPURLResponse*)response urequest:(UnityURLRequest*)urequest
+{
+    UnityReportWebRequestStatus(urequest.udata, (int)[response statusCode]);
     NSDictionary* respHeader = [response allHeaderFields];
     NSEnumerator* headerEnum = [respHeader keyEnumerator];
     for (id headerKey = [headerEnum nextObject]; headerKey; headerKey = [headerEnum nextObject])
-        UnityReportWebRequestResponseHeader(self.udata, [headerKey UTF8String], [[respHeader objectForKey: headerKey] UTF8String]);
-    UnityReportWebRequestReceivedResponse(self.udata, (unsigned int)_estimatedContentLength);
+        UnityReportWebRequestResponseHeader(urequest.udata, [headerKey UTF8String], [[respHeader objectForKey: headerKey] UTF8String]);
+    [self handleResponse: response urequest: urequest];
+}
+
+- (void)handleResponse:(NSURLResponse*)response urequest:(UnityURLRequest*)urequest
+{
+    [urequest updateEstimatedContentLength: response.expectedContentLength];
+    UnityReportWebRequestReceivedResponse(urequest.udata, (unsigned int)urequest.estimatedContentLength);
 }
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
 {
-    [self updateEstimatedContentLength: [dataTask countOfBytesExpectedToReceive]];
+    UnityURLRequest* urequest = [UnityURLRequest requestForTask: dataTask];
+    if (urequest == nil)
+        return;
+    [urequest updateEstimatedContentLength: [dataTask countOfBytesExpectedToReceive]];
     [data enumerateByteRangesUsingBlock:^(const void* bytes, NSRange range, BOOL* stop) {
-        UnityReportWebRequestReceivedData(self.udata, bytes, (unsigned int)range.length, (unsigned int)_estimatedContentLength);
+        UnityReportWebRequestReceivedData(urequest.udata, bytes, (unsigned int)range.length, (unsigned int)urequest.estimatedContentLength);
     }];
 }
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task willPerformHTTPRedirection:(NSHTTPURLResponse *)response newRequest:(NSURLRequest *)request completionHandler:(void (^)(NSURLRequest * _Nullable))completionHandler
 {
-    _redirecting = true;
-    [self handleResponse: response];
+    UnityURLRequest* urequest = [UnityURLRequest requestForTask: task];
+    if (urequest == nil)
+        return;
+    urequest.redirecting = true;
+    [self handleHTTPResponse: response task: task];
     completionHandler(nil);
     [task cancel];
 }
@@ -104,7 +202,8 @@ static NSOperationQueue *webOperationQueue;
 {
     if ([[challenge protectionSpace] authenticationMethod] == NSURLAuthenticationMethodServerTrust)
     {
-        if (!_wantCertificateCallback)
+        UnityURLRequest* urequest = [UnityURLRequest requestForTask: task];
+        if (urequest == nil || !urequest.wantCertificateCallback)
         {
             completionHandler(NSURLSessionAuthChallengePerformDefaultHandling, nil);
             return;
@@ -135,7 +234,7 @@ static NSOperationQueue *webOperationQueue;
             CFDataRef serverCertificateData = SecCertificateCopyData(serverCertificate);
             const UInt8* const data = CFDataGetBytePtr(serverCertificateData);
             const CFIndex size = CFDataGetLength(serverCertificateData);
-            bool trust = UnityReportWebRequestValidateCertificate(self.udata, (const char*)data, (unsigned)size);
+            bool trust = UnityReportWebRequestValidateCertificate(urequest.udata, (const char*)data, (unsigned)size);
             CFRelease(serverCertificateData);
             if (trust)
             {
@@ -152,46 +251,17 @@ static NSOperationQueue *webOperationQueue;
         completionHandler(NSURLSessionAuthChallengePerformDefaultHandling, nil);
 }
 
-- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task needNewBodyStream:(void (^)(NSInputStream * _Nullable))completionHandler
-{
-    CFReadStreamRef readStream;
-    CFWriteStreamRef writeStream;
-    CFStreamCreateBoundPair(kCFAllocatorDefault, &readStream, &writeStream, streamSize);
-    CFWriteStreamOpen(writeStream);
-    self.outputStream = (__bridge NSOutputStream*)writeStream;
-    completionHandler((__bridge NSInputStream*)readStream);
-    [self writeMoreBody: false];
-}
-
-- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend
-{
-    [self writeMoreBody: true];
-}
-
-- (void)writeMoreBody:(bool)closeStreamIfDone
-{
-    unsigned dataSize = streamSize;
-    const UInt8* data = (const UInt8*)UnityWebRequestGetUploadData(_udata, &dataSize);
-    NSInteger transmitted = 0;
-    if (dataSize > 0)
-    {
-        transmitted = [_outputStream write: data maxLength: dataSize];
-        UnityWebRequestConsumeUploadData(_udata, (unsigned)transmitted);
-    }
-    if (closeStreamIfDone && dataSize < streamSize && transmitted >= dataSize)
-    {
-        [_outputStream close];
-        self.outputStream = nil;
-    }
-}
-
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
 {
-    if (_redirecting)
+    UnityURLRequest* urequest = [UnityURLRequest requestForTask: task];
+    if (urequest == nil)
+        return;
+    urequest.isDone = true;
+    if (urequest.redirecting)
         return;
     if (error != nil)
-        UnityReportWebRequestNetworkError(self.udata, (int)[error code]);
-    UnityReportWebRequestFinishedLoadingData(self.udata);
+        UnityReportWebRequestNetworkError(urequest.udata, (int)[error code]);
+    UnityReportWebRequestFinishedLoadingData(urequest.udata);
 }
 
 @end
@@ -199,62 +269,91 @@ static NSOperationQueue *webOperationQueue;
 
 extern "C" void* UnityCreateWebRequestBackend(void* udata, const char* methodString, const void* headerDict, const char* url)
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        webOperationQueue = [[NSOperationQueue alloc] init];
-        webOperationQueue.maxConcurrentOperationCount = [NSProcessInfo processInfo].activeProcessorCount * 5;
-        webOperationQueue.name = @"com.unity3d.WebOperationQueue";
-    });
+    @autoreleasepool
+    {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            @autoreleasepool
+            {
+                webOperationQueue = [[NSOperationQueue alloc] init];
+                webOperationQueue.name = @"com.unity3d.WebOperationQueue";
 
-    NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    UnityWebRequestDelegate* delegate = [UnityWebRequestDelegate newDelegate: udata];
-    delegate.url = [NSURL URLWithString: [NSString stringWithUTF8String: url]];
-    delegate.method = [NSString stringWithUTF8String: methodString];
-    delegate.headers = (__bridge NSMutableDictionary*)headerDict;
-    NSURLSession* session = [NSURLSession sessionWithConfiguration: config delegate: delegate delegateQueue: webOperationQueue];
-    return (__bridge_retained void*)session;
+                currentRequests = [[NSMutableArray<UnityURLRequest*> alloc] init];
+                currentRequestsLock = [[NSLock alloc] init];
+
+                NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
+                UnityWebRequestDelegate* delegate = [[UnityWebRequestDelegate alloc] init];
+                unityWebRequestSession = [NSURLSession sessionWithConfiguration: config delegate: delegate delegateQueue: webOperationQueue];
+            }
+        });
+
+        UnityURLRequest* request = [[UnityURLRequest alloc] init: udata];
+        request.URL = [NSURL URLWithString: [NSString stringWithUTF8String: url]];
+        request.HTTPMethod = [NSString stringWithUTF8String: methodString];
+        request.allHTTPHeaderFields = (__bridge NSMutableDictionary*)headerDict;
+        [request setCachePolicy: NSURLRequestReloadIgnoringLocalCacheData];
+        return (__bridge_retained void*)request;
+    }
 }
 
 extern "C" void UnitySendWebRequest(void* connection, unsigned length, unsigned long timeoutSec, bool wantCertificateCallback)
 {
-    NSURLSession* session = (__bridge NSURLSession*)connection;
-    UnityWebRequestDelegate* delegate = (UnityWebRequestDelegate*)session.delegate;
-    delegate.wantCertificateCallback = wantCertificateCallback;
+    @autoreleasepool
+    {
+        UnityURLRequest* request = (__bridge UnityURLRequest*)connection;
+        request.wantCertificateCallback = wantCertificateCallback;
+        request.timeoutInterval = timeoutSec;
 
-    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] init];
-    [request setHTTPMethod: delegate.method];
-    [request setURL: delegate.url];
-    [request setCachePolicy: NSURLRequestReloadIgnoringLocalCacheData];
-    [request setAllHTTPHeaderFields: delegate.headers];
-
-    if (length > 0)
-        delegate.task = [session uploadTaskWithStreamedRequest: request];
-    else
-        delegate.task = [session dataTaskWithRequest: request];
-    [delegate.task resume];
-    delegate.url = nil;
-    delegate.method = nil;
-    delegate.headers = nil;
+        NSOutputStream* outputStream = nil;
+        if (length > 0)
+        {
+            CFReadStreamRef readStream;
+            CFWriteStreamRef writeStream;
+            CFStreamCreateBoundPair(kCFAllocatorDefault, &readStream, &writeStream, streamSize);
+            CFWriteStreamOpen(writeStream);
+            outputStream = (__bridge_transfer NSOutputStream*)writeStream;
+            request.HTTPBodyStream = (__bridge_transfer NSInputStream*)readStream;
+        }
+        NSURLSessionTask* task = [unityWebRequestSession dataTaskWithRequest: request];
+        [UnityURLRequest storeRequest: request taskID: task.taskIdentifier];
+        [task resume];
+        if (length > 0)
+            [webOperationQueue addOperationWithBlock:^{
+                [UnityURLRequest writeBody: outputStream task: task udata: request.udata];
+            }];
+    }
 }
 
 extern "C" bool UnityWebRequestIsDone(void* connection)
 {
-    NSURLSession* session = (__bridge NSURLSession*)connection;
-    UnityWebRequestDelegate* delegate = (UnityWebRequestDelegate*)session.delegate;
-    if (delegate == nil)
-        return true;
-    return [delegate.task state] == NSURLSessionTaskStateCompleted;
+    @autoreleasepool
+    {
+        UnityURLRequest* request = (__bridge UnityURLRequest*)connection;
+        return request.isDone;
+    }
 }
 
 extern "C" void UnityDestroyWebRequestBackend(void* connection)
 {
-    NSURLSession* session = (__bridge_transfer NSURLSession*)connection;
-    [session invalidateAndCancel];
+    @autoreleasepool
+    {
+        UnityURLRequest* request = (__bridge_transfer UnityURLRequest*)connection;
+        [UnityURLRequest removeRequest: request];
+    }
 }
 
-extern "C" void UnityCancelWebRequest(const void* connection)
+extern "C" void UnityCancelWebRequest(void* connection)
 {
-    NSURLSession* session = (__bridge NSURLSession*)connection;
-    UnityWebRequestDelegate* delegate = (UnityWebRequestDelegate*)session.delegate;
-    [delegate.task cancel];
+    @autoreleasepool
+    {
+        UnityURLRequest* request = (__bridge UnityURLRequest*)connection;
+        [unityWebRequestSession getAllTasksWithCompletionHandler:^(NSArray<NSURLSessionTask*>* _Nonnull tasks) {
+            for (unsigned i = 0; i < tasks.count; ++i)
+                if (tasks[i].taskIdentifier == request.taskIdentifier)
+                {
+                    [tasks[i] cancel];
+                    break;
+                }
+        }];
+    }
 }

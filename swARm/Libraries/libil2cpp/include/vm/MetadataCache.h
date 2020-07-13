@@ -47,6 +47,7 @@ namespace vm
         static Il2CppClass* GetPointerType(Il2CppClass* type);
         static Il2CppClass* GetWindowsRuntimeClass(const char* fullName);
         static const char* GetWindowsRuntimeClassName(const Il2CppClass* klass);
+        static Il2CppMethodPointer GetWindowsRuntimeFactoryCreationFunction(const char* fullName);
         static Il2CppClass* GetClassForGuid(const Il2CppGuid* guid);
         static void AddPointerType(Il2CppClass* type, Il2CppClass* pointerType);
 
@@ -70,7 +71,7 @@ namespace vm
         static Il2CppMethodPointer GetMethodPointer(const Il2CppImage* image, uint32_t token);
         static InvokerMethod GetMethodInvoker(const Il2CppImage* image, uint32_t token);
         static const Il2CppInteropData* GetInteropDataForType(const Il2CppType* type);
-        static Il2CppMethodPointer GetReversePInvokeWrapper(const Il2CppImage* image, uint32_t token);
+        static Il2CppMethodPointer GetReversePInvokeWrapper(const Il2CppImage* image, const MethodInfo* method);
 
         static Il2CppMethodPointer GetUnresolvedVirtualCallStub(const MethodInfo* method);
 

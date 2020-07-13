@@ -17,6 +17,9 @@ typedef MTLDeviceRef (*MTLCreateSystemDefaultDeviceFunc)();
 
 #else
 
+// everything below is to allow compilation of the code that uses metal interfaces for simulator
+// as protocols declarations should be available even if we do not call functions themselves
+
 #if !(TARGET_IPHONE_SIMULATOR && defined(__IPHONE_11_0)) && !(TARGET_TVOS_SIMULATOR && defined(__TVOS_11_0))
 
 typedef NSUInteger MTLPixelFormat;
@@ -49,6 +52,7 @@ enum
 
 @protocol MTLDevice
 - (id<MTLCommandQueue>)newCommandQueue;
+- (id<MTLCommandQueue>)newCommandQueueWithMaxCommandBufferCount:(NSUInteger)maxCommandBufferCount;
 - (BOOL)supportsTextureSampleCount:(NSUInteger)sampleCount;
 @end
 

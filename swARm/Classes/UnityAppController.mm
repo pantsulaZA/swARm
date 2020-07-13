@@ -7,6 +7,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <QuartzCore/CADisplayLink.h>
 #import <Availability.h>
+#import <AVFoundation/AVFoundation.h>
 
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/EAGLDrawable.h>
@@ -41,11 +42,16 @@
 
 // we assume that app delegate is never changed and we can cache it, instead of re-query UIApplication every time
 UnityAppController* _UnityAppController = nil;
+UnityAppController* GetAppController()
+{
+    return _UnityAppController;
+}
 
 // we keep old bools around to support "old" code that might have used them
 bool _ios81orNewer = false, _ios82orNewer = false, _ios83orNewer = false, _ios90orNewer = false, _ios91orNewer = false;
 bool _ios100orNewer = false, _ios101orNewer = false, _ios102orNewer = false, _ios103orNewer = false;
 bool _ios110orNewer = false, _ios111orNewer = false, _ios112orNewer = false;
+bool _ios130orNewer = false;
 
 // was unity rendering already inited: we should not touch rendering while this is false
 bool    _renderingInited        = false;
@@ -133,6 +139,17 @@ NSInteger _forceInterfaceOrientationMask = 0;
     [self createDisplayLink];
 
     UnitySetPlayerFocus(1);
+
+    AVAudioSession* audioSession = [AVAudioSession sharedInstance];
+    [audioSession setActive: YES error: nil];
+    [audioSession addObserver: self forKeyPath: @"outputVolume" options: 0 context: nil];
+    UnityUpdateMuteState([audioSession outputVolume] < 0.01f ? 1 : 0);
+
+#if UNITY_REPLAY_KIT_AVAILABLE
+    void InitUnityReplayKit();  // Classes/Unity/UnityReplayKit.mm
+
+    InitUnityReplayKit();
+#endif
 }
 
 extern "C" void UnityDestroyDisplayLink()
@@ -147,6 +164,31 @@ extern "C" void UnityRequestQuit()
         GetAppController().quitHandler();
     else
         exit(0);
+}
+
+extern void SensorsCleanup();
+extern "C" void UnityCleanupTrampoline()
+{
+    // Unity view and viewController will not necessary be destroyed right after this function execution.
+    // We need to ensure that these objects will not receive any callbacks from system during that time.
+    [_UnityAppController window].rootViewController = nil;
+    [[_UnityAppController unityView] removeFromSuperview];
+
+    // Prevent multiple cleanups
+    if (_UnityAppController == nil)
+        return;
+
+    [KeyboardDelegate Destroy];
+
+    SensorsCleanup();
+
+    Profiler_UninitProfiler();
+
+    [DisplayManager Destroy];
+
+    UnityDestroyDisplayLink();
+
+    _UnityAppController = nil;
 }
 
 #if UNITY_SUPPORT_ROTATION
@@ -224,11 +266,28 @@ extern "C" void UnityRequestQuit()
     id sourceApplication = options[UIApplicationOpenURLOptionsSourceApplicationKey], annotation = options[UIApplicationOpenURLOptionsAnnotationKey];
 
     NSMutableDictionary<NSString*, id>* notifData = [NSMutableDictionary dictionaryWithCapacity: 3];
-    if (url) notifData[@"url"] = url;
+    if (url)
+    {
+        notifData[@"url"] = url;
+        UnitySetAbsoluteURL(url.absoluteString.UTF8String);
+    }
     if (sourceApplication) notifData[@"sourceApplication"] = sourceApplication;
     if (annotation) notifData[@"annotation"] = annotation;
 
     AppController_SendNotificationWithArg(kUnityOnOpenURL, notifData);
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity
+#if defined(__IPHONE_12_0) || defined(__TVOS_12_0)
+    restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring> > * _Nullable restorableObjects))restorationHandler
+#else
+    restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler
+#endif
+{
+    NSURL* url = userActivity.webpageURL;
+    if (url)
+        UnitySetAbsoluteURL(url.absoluteString.UTF8String);
     return YES;
 }
 
@@ -251,7 +310,7 @@ extern "C" void UnityRequestQuit()
         [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 #endif
 
-    UnityInitApplicationNoGraphics([[[NSBundle mainBundle] bundlePath] UTF8String]);
+    UnityInitApplicationNoGraphics(UnityDataBundleDir());
 
     [self selectRenderingAPI];
     [UnityRenderingView InitializeForAPI: self.renderingAPI];
@@ -270,6 +329,14 @@ extern "C" void UnityRequestQuit()
     [KeyboardDelegate Initialize];
 
     return YES;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey, id> *)change context:(void *)context
+{
+    if ([keyPath isEqual: @"outputVolume"])
+    {
+        UnityUpdateMuteState([[AVAudioSession sharedInstance] outputVolume] < 0.01f ? 1 : 0);
+    }
 }
 
 - (void)applicationDidEnterBackground:(UIApplication*)application
@@ -293,7 +360,7 @@ extern "C" void UnityRequestQuit()
 {
     ::printf("-> applicationDidBecomeActive()\n");
 
-    [self removeSnapshotView];
+    [self removeSnapshotViewController];
 
     if (_unityAppReady)
     {
@@ -307,6 +374,8 @@ extern "C" void UnityRequestQuit()
             if (UnityIsFullScreenPlaying())
                 TryResumeFullScreenVideo();
         }
+        // need to do this with delay because FMOD restarts audio in AVAudioSessionInterruptionNotification handler
+        [self performSelector: @selector(updateUnityAudioOutput) withObject: nil afterDelay: 0.1];
         UnitySetPlayerFocus(1);
     }
     else if (!_startUnityScheduled)
@@ -318,15 +387,58 @@ extern "C" void UnityRequestQuit()
     _didResignActive = false;
 }
 
-- (void)removeSnapshotView
+- (void)updateUnityAudioOutput
+{
+    UnityUpdateAudioOutputState();
+    UnityUpdateMuteState([[AVAudioSession sharedInstance] outputVolume] < 0.01f ? 1 : 0);
+}
+
+- (void)addSnapshotViewController
+{
+    // This is done on the next frame so that
+    // in the case where unity is paused while going
+    // into the background and an input is deactivated
+    // we don't mess with the view hierarchy while taking
+    // a view snapshot (case 760747).
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // if we are active again, we don't need to do this anymore
+        if (!_didResignActive || _snapshotViewController)
+        {
+            return;
+        }
+
+        UIView* snapshotView = [self createSnapshotView];
+
+        if (snapshotView != nil)
+        {
+            _snapshotViewController = [[UIViewController alloc] init];
+            _snapshotViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+            _snapshotViewController.view = snapshotView;
+
+            [_rootController presentViewController: _snapshotViewController animated: false completion: nil];
+        }
+    });
+}
+
+- (void)removeSnapshotViewController
 {
     // do this on the main queue async so that if we try to create one
     // and remove in the same frame, this always happens after in the same queue
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (_snapshotView)
+        if (_snapshotViewController)
         {
-            [_snapshotView removeFromSuperview];
-            _snapshotView = nil;
+            // we've got a view on top of the snapshot view (3rd party plugin/social media login etc).
+            if (_snapshotViewController.presentedViewController)
+            {
+                [self performSelector: @selector(removeSnapshotViewController) withObject: nil afterDelay: 0.05];
+                return;
+            }
+
+            [_snapshotViewController dismissViewControllerAnimated: NO completion: nil];
+            _snapshotViewController = nil;
+
+            // Make sure that the keyboard input field regains focus after the application becomes active.
+            [[KeyboardDelegate Instance] becomeFirstResponder];
         }
     });
 }
@@ -342,10 +454,9 @@ extern "C" void UnityRequestQuit()
         _wasPausedExternal = UnityIsPaused();
         if (_wasPausedExternal == false)
         {
-            // do pause unity only if we dont need special background processing
-            // otherwise batched player loop can be called to run user scripts
-            int bgBehavior = UnityGetAppBackgroundBehavior();
-            if (bgBehavior == appbgSuspend || bgBehavior == appbgExit)
+            // Pause Unity only if we don't need special background processing
+            // otherwise batched player loop can be called to run user scripts.
+            if (!UnityGetUseCustomAppBackgroundBehavior())
             {
                 // Force player to do one more frame, so scripts get a chance to render custom screen for minimized app in task manager.
                 // NB: UnityWillPause will schedule OnApplicationPause message, which will be sent normally inside repaint (unity player loop)
@@ -354,22 +465,7 @@ extern "C" void UnityRequestQuit()
                 [self repaint];
                 UnityPause(1);
 
-                // this is done on the next frame so that
-                // in the case where unity is paused while going
-                // into the background and an input is deactivated
-                // we don't mess with the view hierarchy while taking
-                // a view snapshot (case 760747).
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    // if we are active again, we don't need to do this anymore
-                    if (!_didResignActive)
-                    {
-                        return;
-                    }
-
-                    _snapshotView = [self createSnapshotView];
-                    if (_snapshotView)
-                        [_rootView addSubview: _snapshotView];
-                });
+                [self addSnapshotViewController];
             }
         }
     }
@@ -387,11 +483,13 @@ extern "C" void UnityRequestQuit()
 {
     ::printf("-> applicationWillTerminate()\n");
 
-    Profiler_UninitProfiler();
-    UnityCleanup();
-
-    extern void SensorsCleanup();
-    SensorsCleanup();
+    // Only clean up if Unity has finished initializing, else the clean up process will crash,
+    // this happens if the app is force closed immediately after opening it.
+    if (_unityAppReady)
+    {
+        UnityCleanup();
+        UnityCleanupTrampoline();
+    }
 }
 
 - (void)application:(UIApplication*)application handleEventsForBackgroundURLSession:(nonnull NSString *)identifier completionHandler:(nonnull void (^)())completionHandler
@@ -488,6 +586,7 @@ void UnityInitTrampoline()
     _ios90orNewer  = CHECK_VER(@"9.0"),  _ios91orNewer  = CHECK_VER(@"9.1");
     _ios100orNewer = CHECK_VER(@"10.0"), _ios101orNewer = CHECK_VER(@"10.1"), _ios102orNewer = CHECK_VER(@"10.2"), _ios103orNewer = CHECK_VER(@"10.3");
     _ios110orNewer = CHECK_VER(@"11.0"), _ios111orNewer = CHECK_VER(@"11.1"), _ios112orNewer = CHECK_VER(@"11.2");
+    _ios130orNewer  = CHECK_VER(@"13.0");
 
 #undef CHECK_VER
 
@@ -511,20 +610,12 @@ extern "C" bool UnityiOS103orNewer() { return _ios103orNewer; }
 extern "C" bool UnityiOS110orNewer() { return _ios110orNewer; }
 extern "C" bool UnityiOS111orNewer() { return _ios111orNewer; }
 extern "C" bool UnityiOS112orNewer() { return _ios112orNewer; }
+extern "C" bool UnityiOS130orNewer() { return _ios130orNewer; }
 
 // sometimes apple adds new api with obvious fallback on older ios.
 // in that case we simply add these functions ourselves to simplify code
 static void AddNewAPIImplIfNeeded()
 {
-    if (![[CADisplayLink class] instancesRespondToSelector: @selector(setPreferredFramesPerSecond:)])
-    {
-        IMP CADisplayLink_setPreferredFramesPerSecond_IMP = imp_implementationWithBlock(^void(id _self, NSInteger fps) {
-            typedef void (*SetFrameIntervalFunc)(id, SEL, NSInteger);
-            UNITY_OBJC_CALL_ON_SELF(_self, @selector(setFrameInterval:), SetFrameIntervalFunc, (int)(60.0f / fps));
-        });
-        class_replaceMethod([CADisplayLink class], @selector(setPreferredFramesPerSecond:), CADisplayLink_setPreferredFramesPerSecond_IMP, CADisplayLink_setPreferredFramesPerSecond_Enc);
-    }
-
     if (![[UIScreen class] instancesRespondToSelector: @selector(maximumFramesPerSecond)])
     {
         IMP UIScreen_MaximumFramesPerSecond_IMP = imp_implementationWithBlock(^NSInteger(id _self) {

@@ -8,6 +8,10 @@
 #include "CVTextureCache.h"
 #include "InternalProfiler.h"
 
+////////////////////////////////////////////////////////////////////////////////
+// OpenGLES2 and OpenGLES3 on iOS and tvOS are deprecated as of Unity 2019.3 ///
+////////////////////////////////////////////////////////////////////////////////
+
 // here goes some gles magic
 
 // we include gles3 header so we will use gles3 constants.
@@ -43,6 +47,7 @@ extern "C" void InitRenderingGLES()
     int api = UnitySelectedRenderingAPI();
     assert(api == apiOpenGLES2 || api == apiOpenGLES3);
 
+    EAGLContextSetCurrentAutoRestore autorestore(GetMainDisplaySurface());
     _supportsDiscard        = api == apiOpenGLES2 ? UnityHasRenderingAPIExtension("GL_EXT_discard_framebuffer")         : true;
     _supportsMSAA           = api == apiOpenGLES2 ? UnityHasRenderingAPIExtension("GL_APPLE_framebuffer_multisample")   : true;
     _supportsPackedStencil  = api == apiOpenGLES2 ? UnityHasRenderingAPIExtension("GL_OES_packed_depth_stencil")        : true;

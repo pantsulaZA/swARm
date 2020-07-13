@@ -121,13 +121,8 @@ extern bool _unityAppReady;
 
 - (UIView*)createSnapshotView
 {
-    // Snapshot API appeared on iOS 7, however before iOS 8 tweaking hierarchy like that on going to
-    // background results in all kind of weird things when going back to foreground so we do snapshotting
-    // only on iOS 8 and newer.
-
-    // Note that on iPads with iOS 9 or later (up to iOS 10.2 at least) there's a bug in the iOS
-    // compositor: any use of -[UIView snapshotViewAfterScreenUpdates] causes black screen being shown
-    // temporarily when 4 finger gesture to swipe to another app in the task switcher is being performed slowly
+    // Note that on iPads with iOS 9 or later (up to iOS 10.2 at least) there's a bug in the iOS compositor: any use of -[UIView snapshotViewAfterScreenUpdates]
+    // causes black screen being shown temporarily when 4 finger gesture to swipe to another app in the task switcher is being performed slowly
 #if UNITY_SNAPSHOT_VIEW_ON_APPLICATION_PAUSE
     return [_rootView snapshotViewAfterScreenUpdates: YES];
 #else
@@ -340,23 +335,23 @@ extern bool _unityAppReady;
     const bool autorot = UnityShouldAutorotate();
     if (UnityShouldChangeAllowedOrientations() && autorot)
     {
-        // if we are currently autorotating AND changed allowed orientations while keeping current interface orientation allowed:
-        // we can simply trigger attemptRotationToDeviceOrientation and we are done
-        // please note that this can happen when current *device* orientation is disabled (and we want to enable it)
-
         NSUInteger rootOrient = 1 << UIViewControllerInterfaceOrientation(self.rootViewController);
         if (_rootController == _viewControllerForOrientation[0] && (rootOrient & EnabledAutorotationInterfaceOrientations()))
         {
+            // if we are currently autorotating AND changed allowed orientations while keeping current interface orientation allowed:
+            // we can simply trigger attemptRotationToDeviceOrientation and we are done
+            // please note that this can happen when current *device* orientation is disabled (and we want to enable it)
             [UIViewController attemptRotationToDeviceOrientation];
-            return;
         }
-
-        // otherwise we recreate default autorotating view controller
-        // please note that below we will check if root controller still equals _viewControllerForOrientation[0]
-        // in that case (we update _viewControllerForOrientation[0]) the check will fail and will trigger transition (as expected)
-        // you may look at this check as "are we autorotating with same constraints"
-        _viewControllerForOrientation[0] = [self createUnityViewControllerDefault];
-        changeOrient = true;
+        else
+        {
+            // otherwise we recreate default autorotating view controller
+            // please note that below we will check if root controller still equals _viewControllerForOrientation[0]
+            // in that case (we update _viewControllerForOrientation[0]) the check will fail and will trigger transition (as expected)
+            // you may look at this check as "are we autorotating with same constraints"
+            _viewControllerForOrientation[0] = [self createUnityViewControllerDefault];
+            changeOrient = true;
+        }
     }
 
     if (changeOrient)
@@ -375,8 +370,12 @@ extern bool _unityAppReady;
         }
         else
         {
-            ScreenOrientation requestedOrient = (ScreenOrientation)UnityRequestedScreenOrientation();
-            [self orientInterface: ConvertToIosScreenOrientation(requestedOrient)];
+            UIInterfaceOrientation requestedOrient = ConvertToIosScreenOrientation((ScreenOrientation)UnityRequestedScreenOrientation());
+            // on one hand orientInterface: should be perfectly fine "reorienting" to current orientation
+            // in reality, ios might be confused by transitionToViewController: shenanigans coupled with "nothing have changed actually"
+            // as an example: prior to ios12 that might result in status bar going "bad" (becoming transparent)
+            if (_rootController != _viewControllerForOrientation[requestedOrient])
+                [self orientInterface: requestedOrient];
         }
     }
 

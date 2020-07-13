@@ -13,32 +13,20 @@
 #endif
 
 #include "ObjCRuntime.h"
-extern "C" Class MTLTextureDescriptorClass;
-extern Class MTLHeapDescriptorClass;
 
-extern "C" void UnityAddNewMetalAPIImplIfNeeded(id<MTLDevice> device)
-{
-    // we were adding [MTLDevice supportsTextureSampleCount:] and MTLTextureDescriptor.usage
-    // but after we switched to ios 9.0 as min target this is no longer needed
-
-    if (class_getProperty(MTLHeapDescriptorClass, "storageMode") == 0)
-    {
-        IMP MTLHeapDescriptor_SetStorageMode_IMP = imp_implementationWithBlock(^void(id _self, MTLStorageMode mode) {});
-        class_replaceMethod(MTLHeapDescriptorClass, @selector(setStorageMode:), MTLHeapDescriptor_SetStorageMode_IMP, MTLHeapDescriptor_setStorageMode_Enc);
-    }
-
-    if (class_getProperty(MTLHeapDescriptorClass, "size") == 0)
-    {
-        IMP MTLHeapDescriptor_SetSize_IMP = imp_implementationWithBlock(^void(id _self, NSUInteger size) {});
-        class_replaceMethod(MTLHeapDescriptorClass, @selector(setSize:), MTLHeapDescriptor_SetSize_IMP, MTLHeapDescriptor_setSize_Enc);
-    }
-}
+#if UNITY_TRAMPOLINE_IN_USE
+static Class MTLTextureDescriptorClass;
+#else
+extern Class MTLTextureDescriptorClass;
+#endif
 
 extern "C" void InitRenderingMTL()
 {
 #if UNITY_TRAMPOLINE_IN_USE
     extern bool _supportsMSAA;
     _supportsMSAA = true;
+
+    MTLTextureDescriptorClass = [UnityGetMetalBundle() classNamed: @"MTLTextureDescriptor"];
 #endif
 }
 
@@ -74,13 +62,10 @@ extern "C" void CreateSystemRenderingSurfaceMTL(UnityDisplaySurfaceMTL* surface)
         CGColorRelease(color);
         CGColorSpaceRelease(colorSpace);
     }
-    else
 #endif
-    {
-        surface->layer.opaque = YES;
-    }
 
 #if PLATFORM_OSX
+    surface->layer.opaque = YES;
     MetalUpdateDisplaySync();
 #endif
 
@@ -96,6 +81,9 @@ extern "C" void CreateSystemRenderingSurfaceMTL(UnityDisplaySurfaceMTL* surface)
     CGColorSpaceRelease(colorSpaceRef);
 #endif
 
+    // Update the native screen resolution
+    UnityUpdateDrawableSize(surface);
+
     surface->layer.device = surface->device;
     surface->layer.pixelFormat = colorFormat;
     surface->layer.framebufferOnly = (surface->framebufferOnly != 0);
@@ -109,19 +97,19 @@ extern "C" void CreateSystemRenderingSurfaceMTL(UnityDisplaySurfaceMTL* surface)
 
     @synchronized(surface->layer)
     {
-        OSAtomicCompareAndSwap32Barrier(surface->bufferChanged, 0, &surface->bufferChanged);
+        OSAtomicCompareAndSwap32Barrier(0, 0, &surface->bufferCompleted);
+        OSAtomicCompareAndSwap32Barrier(0, 0, &surface->bufferSwap);
 
         for (int i = 0; i < kUnityNumOffscreenSurfaces; i++)
         {
-            OSAtomicCompareAndSwap32Barrier(surface->bufferCompleted[i], -1, &surface->bufferCompleted[i]);
             // Allocating a proxy texture is cheap until it's being rendered to and the GPU driver does allocation
             surface->drawableProxyRT[i] = [surface->device newTextureWithDescriptor: txDesc];
+            surface->drawableProxyRT[i].label = @"DrawableProxy";
+            // We mostly need the proxy for some of its state like width, height and pixelFormat (not the actual memory) before we can get the real drawable
+            // Making it empty discards its backed memory/contents
+            for (int i = 0; i < kUnityNumOffscreenSurfaces; ++i)
+                [surface->drawableProxyRT[i] setPurgeableState: MTLPurgeableStateEmpty];
         }
-
-#if PLATFORM_OSX
-        OSAtomicCompareAndSwap32Barrier(surface->writeCount, surface->writeCount + (kUnityNumOffscreenSurfaces - 1), &surface->writeCount);
-        OSAtomicCompareAndSwap32Barrier(surface->readCount, surface->writeCount - 1, &surface->readCount);
-#endif
     }
 }
 
@@ -183,14 +171,6 @@ extern "C" void CreateRenderingSurfaceMTL(UnityDisplaySurfaceMTL* surface)
             txDesc.sampleCount = 4;
         surface->targetAAColorRT = [surface->device newTextureWithDescriptor: txDesc];
         surface->targetAAColorRT.label = @"targetAAColorRT";
-
-        if (!surface->targetColorRT)
-        {
-            MTLTextureDescriptor* txDescResolve = [txDesc copyWithZone: nil];
-            txDescResolve.textureType = MTLTextureType2D;
-            txDescResolve.sampleCount = 1;
-            surface->targetColorRT = [surface->device newTextureWithDescriptor: txDescResolve];
-        }
     }
 }
 
@@ -249,20 +229,34 @@ extern "C" void CreateUnityRenderBuffersMTL(UnityDisplaySurfaceMTL* surface)
     UnityRenderBufferDesc sys_desc = { surface->systemW, surface->systemH, 1, 1, 1 };
     UnityRenderBufferDesc tgt_desc = { surface->targetW, surface->targetH, 1, (unsigned int)surface->msaaSamples, 1 };
 
-    surface->systemColorRB  = surface->drawableProxyRT[surface->writeCount % kUnityNumOffscreenSurfaces];
-    if (surface->targetAAColorRT)
-        surface->unityColorBuffer   = UnityCreateExternalColorSurfaceMTL(surface->unityColorBuffer, surface->targetAAColorRT, surface->targetColorRT, &tgt_desc, nil);
-    else if (surface->targetColorRT)
-        surface->unityColorBuffer   = UnityCreateExternalColorSurfaceMTL(surface->unityColorBuffer, surface->targetColorRT, nil, &tgt_desc, nil);
+    // To avoid race condition with EndFrameRenderingMTL where systemColorRB is nulled we store it here
+    MTLTextureRef systemColorRB = surface->drawableProxyRT[0];
+    surface->systemColorRB = systemColorRB;
+
+    // we could unify all of it with ugly chain of ternary operators but what if karma exists?
+
+    if (surface->targetColorRT)
+    {
+        // render to interim RT: we do NOT need to request drawable
+        MTLTextureRef texRender     = surface->targetAAColorRT ? surface->targetAAColorRT : surface->targetColorRT;
+        MTLTextureRef texResolve    = surface->targetAAColorRT ? surface->targetColorRT : nil;
+        surface->unityColorBuffer   = UnityCreateExternalColorSurfaceMTL(surface->unityColorBuffer, texRender, texResolve, &tgt_desc, nil);
+    }
     else
-        surface->unityColorBuffer   = UnityCreateExternalColorSurfaceMTL(surface->unityColorBuffer, surface->systemColorRB, nil, &tgt_desc, surface);
+    {
+        // render to backbuffer directly: we will request drawable hence we need to pass surface
+        MTLTextureRef texRender     = surface->targetAAColorRT ? surface->targetAAColorRT : systemColorRB;
+        MTLTextureRef texResolve    = surface->targetAAColorRT ? systemColorRB : nil;
+
+        surface->unityColorBuffer   = UnityCreateExternalColorSurfaceMTL(surface->unityColorBuffer, texRender, texResolve, &tgt_desc, surface);
+    }
 
     if (surface->depthRB)
         surface->unityDepthBuffer   = UnityCreateExternalDepthSurfaceMTL(surface->unityDepthBuffer, surface->depthRB, surface->stencilRB, &tgt_desc);
     else
         surface->unityDepthBuffer   = UnityCreateDummySurface(surface->unityDepthBuffer, false, &tgt_desc);
 
-    surface->systemColorBuffer = UnityCreateExternalColorSurfaceMTL(surface->systemColorBuffer, surface->systemColorRB, nil, &sys_desc, surface);
+    surface->systemColorBuffer = UnityCreateExternalColorSurfaceMTL(surface->systemColorBuffer, systemColorRB, nil, &sys_desc, surface);
     surface->systemDepthBuffer = UnityCreateDummySurface(surface->systemDepthBuffer, false, &sys_desc);
 }
 
@@ -299,20 +293,17 @@ extern "C" void PresentMTL(UnityDisplaySurfaceMTL* surface)
 {
     if (surface->drawable)
     {
-#if (PLATFORM_IOS && UNITY_HAS_IOSSDK_10_3) || (PLATFORM_TVOS && UNITY_HAS_TVOSSDK_10_2)
-        int targetFPS = UnityGetTargetFPS();
-        targetFPS = targetFPS > 0 ? targetFPS : 30;
-        if ([UnityCurrentMTLCommandBuffer() respondsToSelector: @selector(presentDrawable:afterMinimumDuration:)])
+    #if PLATFORM_IOS || PLATFORM_TVOS
+        if (@available(iOS 10.3, tvOS 10.2, *))
         {
-            [UnityCurrentMTLCommandBuffer() presentDrawable: surface->drawable afterMinimumDuration: (1.0 / targetFPS)];
+            const int targetFPS = UnityGetTargetFPS(); assert(targetFPS > 0);
+            [UnityCurrentMTLCommandBuffer() presentDrawable: surface->drawable afterMinimumDuration: 1.0 / targetFPS];
+            return;
         }
-        else
-        {
-            [UnityCurrentMTLCommandBuffer() presentDrawable: surface->drawable];
-        }
-#else
+    #endif
+
+        // note that we end up here if presentDrawable: afterMinimumDuration: is not supported
         [UnityCurrentMTLCommandBuffer() presentDrawable: surface->drawable];
-#endif
     }
 }
 
@@ -332,21 +323,31 @@ extern "C" MTLTextureRef AcquireDrawableMTL(UnityDisplaySurfaceMTL* surface)
     return surface->systemColorRB;
 }
 
+extern "C" int UnityCommandQueueMaxCommandBufferCountMTL()
+{
+    // customizable argument to pass towards [MTLDevice newCommandQueueWithMaxCommandBufferCount:],
+    // the default value is 64 but with Parallel Render Encoder workloads, it might need to be increased
+
+    return 256;
+}
+
 extern "C" void StartFrameRenderingMTL(UnityDisplaySurfaceMTL* surface)
 {
     // we will acquire drawable lazily in AcquireDrawableMTL
     surface->drawable = nil;
 
 #if PLATFORM_OSX
-    // For non-Mac platforms, writeCount remains static
-    bool bufferChanged = (bool)surface->bufferChanged;
-    OSAtomicCompareAndSwap32Barrier(surface->bufferChanged, 0, &surface->bufferChanged);
+    bool bufferSwap = OSAtomicCompareAndSwap32Barrier(1, 0, &surface->bufferSwap);
 
-    if (bufferChanged && surface->writeCount <= surface->readCount)
-        OSAtomicAdd32Barrier(1, &surface->writeCount);
-    OSAtomicCompareAndSwap32Barrier(surface->bufferCompleted[surface->writeCount % kUnityNumOffscreenSurfaces], 0, &surface->bufferCompleted[surface->writeCount % kUnityNumOffscreenSurfaces]);
+    if (bufferSwap || surface->bufferCompleted == 1)
+    {
+        MTLTextureRef texture0 = surface->drawableProxyRT[0];
+        MTLTextureRef texture1 = surface->drawableProxyRT[1];
+        surface->drawableProxyRT[0] = texture1;
+        surface->drawableProxyRT[1] = texture0;
+    }
 #endif
-    surface->systemColorRB  = surface->drawableProxyRT[surface->writeCount % kUnityNumOffscreenSurfaces];
+    surface->systemColorRB  = surface->drawableProxyRT[0];
 
     UnityRenderBufferDesc sys_desc = { surface->systemW, surface->systemH, 1, 1, 1};
     UnityRenderBufferDesc tgt_desc = { surface->targetW, surface->targetH, 1, (unsigned int)surface->msaaSamples, 1};
@@ -367,10 +368,6 @@ extern "C" void EndFrameRenderingMTL(UnityDisplaySurfaceMTL* surface)
     {
         if (surface->presentCB)
         {
-            // currently we expect EndFrameRenderingMTL to be called AFTER unity is done with "main" CB
-            // alas internally main CB is enqueued right before commit (like is done there),
-            // so we need to make sure it was committed (and niled) to make sure we present to external screens AFTER drawing is done
-            assert(UnityCurrentMTLCommandBuffer() == nil);
             [surface->presentCB enqueue]; [surface->presentCB commit];
             surface->presentCB = nil;
         }
@@ -389,6 +386,11 @@ extern "C" void PreparePresentNonMainScreenMTL(UnityDisplaySurfaceMTL* surface)
     }
 }
 
+extern "C" void SetDrawableSizeMTL(UnityDisplaySurfaceMTL* surface, int width, int height)
+{
+    surface->layer.drawableSize = CGSizeMake(width, height);
+}
+
 #else
 
 extern "C" void InitRenderingMTL()                                          {}
@@ -405,5 +407,10 @@ extern "C" void StartFrameRenderingMTL(UnityDisplaySurfaceMTL*)             {}
 extern "C" void EndFrameRenderingMTL(UnityDisplaySurfaceMTL*)               {}
 extern "C" void PreparePresentMTL(UnityDisplaySurfaceMTL*)                  {}
 extern "C" void PresentMTL(UnityDisplaySurfaceMTL*)                         {}
+extern "C" int  UnityCommandQueueMaxCommandBufferCountMTL()                 { return 0; }
+extern "C" void SetDrawableSizeMTL(UnityDisplaySurfaceMTL*, int, int)       {}
+
+extern "C" MTLTextureRef    AcquireDrawableMTL(UnityDisplaySurfaceMTL*)     { return nil; }
+
 
 #endif

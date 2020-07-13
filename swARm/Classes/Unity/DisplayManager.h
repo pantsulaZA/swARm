@@ -16,6 +16,7 @@
 - (void)createWithWindow:(UIWindow*)window andView:(UIView*)view;
 - (void)initRendering;
 - (void)recreateSurface:(RenderingSurfaceParams)params;
+- (void)destroySurface;
 
 - (void)shouldShowWindow:(BOOL)show;
 - (void)requestRenderingResolution:(CGSize)res;
@@ -46,6 +47,7 @@
 
 + (void)Initialize;
 + (DisplayManager*)Instance;
++ (void)Destroy;
 
 @property (readonly, nonatomic) DisplayConnection*  mainDisplay;
 

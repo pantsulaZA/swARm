@@ -13,7 +13,16 @@ extern "C" bool AllocateRenderBufferStorageFromEAGLLayer(void* eaglContext, void
 
 extern "C" void DeallocateRenderBufferStorageFromEAGLLayer(void* eaglContext)
 {
-    [(__bridge EAGLContext*)eaglContext renderbufferStorage: GL_RENDERBUFFER fromDrawable: nil];
+    // After deprecating OpenGL ES, Apple implement gles driver in metal.
+    // Alas, it seem that on older iOS versions (< 13.0) there seems to be a bug in
+    // [EAGLContext renderbufferStorage: fromDrawable:nil]
+    // resulting in metal validation failure.
+    // Thankfully this code path is taken only to delete the backbuffer, so this is not that bad:
+    //   we go there only on exit/going-to-background or unloading unity library
+    // If we look at the metal - all this would mean drawable recreation (and this happens inside gles driver)
+    //  so memory-wise we should be still fine ignoring this completely
+    if (UnityiOS130orNewer())
+        [(__bridge EAGLContext*)eaglContext renderbufferStorage: GL_RENDERBUFFER fromDrawable: nil];
 }
 
 extern "C" EAGLContext* UnityCreateContextEAGL(EAGLContext * parent, int api)
@@ -59,6 +68,7 @@ EAGLContextSetCurrentAutoRestore::~EAGLContextSetCurrentAutoRestore()
     if (old != cur)
     {
         [EAGLContext setCurrentContext: old];
-        UnityOnSetCurrentGLContext(old);
+        if (old)
+            UnityOnSetCurrentGLContext(old);
     }
 }

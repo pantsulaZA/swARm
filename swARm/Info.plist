@@ -4,6 +4,8 @@
   <dict>
     <key>CADisableMinimumFrameDuration</key>
     <false />
+    <key>CFBundleAllowMixedLocalizations</key>
+    <true />
     <key>CFBundleDevelopmentRegion</key>
     <string>en</string>
     <key>CFBundleDisplayName</key>
@@ -43,7 +45,7 @@
     <false />
     <key>UIRequiredDeviceCapabilities</key>
     <array>
-      <string>armv7</string>
+      <string>arm64</string>
       <string>metal</string>
       <string>arkit</string>
     </array>

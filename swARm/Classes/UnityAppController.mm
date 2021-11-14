@@ -9,14 +9,9 @@
 #import <Availability.h>
 #import <AVFoundation/AVFoundation.h>
 
-#import <OpenGLES/EAGL.h>
-#import <OpenGLES/EAGLDrawable.h>
-#import <OpenGLES/ES2/gl.h>
-#import <OpenGLES/ES2/glext.h>
-
 #include <mach/mach_time.h>
 
-// MSAA_DEFAULT_SAMPLE_COUNT was moved to iPhone_GlesSupport.h
+// MSAA_DEFAULT_SAMPLE_COUNT was removed
 // ENABLE_INTERNAL_PROFILER and related defines were moved to iPhone_Profiler.h
 // kFPS define for removed: you can use Application.targetFrameRate (30 fps by default)
 // DisplayLink is the only run loop mode now - all others were removed
@@ -29,8 +24,6 @@
 #include "UI/SplashScreen.h"
 #include "Unity/InternalProfiler.h"
 #include "Unity/DisplayManager.h"
-#include "Unity/EAGLContextHelper.h"
-#include "Unity/GlesHelper.h"
 #include "Unity/ObjCRuntime.h"
 #include "PluginBase/AppDelegateListener.h"
 
@@ -72,8 +65,6 @@ bool    _didResignActive        = false;
 
 // was startUnity scheduled: used to make startup robust in case of locking device
 static bool _startUnityScheduled    = false;
-
-bool    _supportsMSAA           = false;
 
 #if UNITY_SUPPORT_ROTATION
 // Required to enable specific orientation for some presentation controllers: see supportedInterfaceOrientationsForWindow below for details
@@ -141,6 +132,19 @@ NSInteger _forceInterfaceOrientationMask = 0;
     UnitySetPlayerFocus(1);
 
     AVAudioSession* audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory: AVAudioSessionCategoryAmbient error: nil];
+    if (UnityIsAudioManagerAvailableAndEnabled())
+    {
+        if (UnityShouldPrepareForIOSRecording())
+        {
+            [audioSession setCategory: AVAudioSessionCategoryPlayAndRecord error: nil];
+        }
+        else if (UnityShouldMuteOtherAudioSources())
+        {
+            [audioSession setCategory: AVAudioSessionCategorySoloAmbient error: nil];
+        }
+    }
+
     [audioSession setActive: YES error: nil];
     [audioSession addObserver: self forKeyPath: @"outputVolume" options: 0 context: nil];
     UnityUpdateMuteState([audioSession outputVolume] < 0.01f ? 1 : 0);
@@ -198,6 +202,11 @@ extern "C" void UnityCleanupTrampoline()
     // No rootViewController is set because we are switching from one view controller to another, all orientations should be enabled
     if ([window rootViewController] == nil)
         return UIInterfaceOrientationMaskAll;
+
+    // During splash screen show phase no forced orientations should be allowed.
+    // This will prevent unwanted rotation while splash screen is on and application is not yet ready to present (Ex. Fogbugz cases: 1190428, 1269547).
+    if (!_unityAppReady)
+        return [_rootController supportedInterfaceOrientations];
 
     // Some presentation controllers (e.g. UIImagePickerController) require portrait orientation and will throw exception if it is not supported.
     // At the same time enabling all orientations by returning UIInterfaceOrientationMaskAll might cause unwanted orientation change
@@ -297,6 +306,30 @@ extern "C" void UnityCleanupTrampoline()
     return YES;
 }
 
+#if (PLATFORM_IOS && defined(__IPHONE_13_0)) || (PLATFORM_TVOS && defined(__TVOS_13_0))
+- (UIWindowScene*)pickStartupWindowScene:(NSSet<UIScene*>*)scenes API_AVAILABLE(ios(13.0), tvos(13.0))
+{
+    // if we have scene with UISceneActivationStateForegroundActive - pick it
+    // otherwise UISceneActivationStateForegroundInactive will work
+    //   it will be the scene going into active state
+    UIWindowScene* foregroundScene = nil;
+    for (UIScene* scene in scenes)
+    {
+        if (![scene isKindOfClass: [UIWindowScene class]])
+            continue;
+        UIWindowScene* windowScene = (UIWindowScene*)scene;
+
+        if (scene.activationState == UISceneActivationStateForegroundActive)
+            return windowScene;
+        if (scene.activationState == UISceneActivationStateForegroundInactive)
+            foregroundScene = windowScene;
+    }
+
+    NSAssert(foregroundScene != nil, @"No foreground window scene found at startup");
+    return foregroundScene;
+}
+#endif
+
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     ::printf("-> applicationDidFinishLaunching()\n");
@@ -315,11 +348,22 @@ extern "C" void UnityCleanupTrampoline()
     [self selectRenderingAPI];
     [UnityRenderingView InitializeForAPI: self.renderingAPI];
 
-    _window         = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
-    _unityView      = [self createUnityView];
+#if (PLATFORM_IOS && defined(__IPHONE_13_0)) || (PLATFORM_TVOS && defined(__TVOS_13_0))
+    if (@available(iOS 13, tvOS 13, *))
+        _window = [[UIWindow alloc] initWithWindowScene: [self pickStartupWindowScene: application.connectedScenes]];
+    else
+#endif
+    _window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
+
+    _unityView = [self createUnityView];
+#if (PLATFORM_IOS && defined(__IPHONE_13_0))
+    if (@available(iOS 13, *))
+        _unityView.backgroundColor = [UIColor systemBackgroundColor];
+#endif
+
 
     [DisplayManager Initialize];
-    _mainDisplay    = [DisplayManager Instance].mainDisplay;
+    _mainDisplay = [DisplayManager Instance].mainDisplay;
     [_mainDisplay createWithWindow: _window andView: _unityView];
 
     [self createUI];
@@ -450,6 +494,10 @@ extern "C" void UnityCleanupTrampoline()
     if (_unityAppReady)
     {
         UnitySetPlayerFocus(0);
+
+        // signal unity that the frame rendering have ended
+        // as we will not get the callback from the display link current frame
+        UnityDisplayLinkCallback(0);
 
         _wasPausedExternal = UnityIsPaused();
         if (_wasPausedExternal == false)
@@ -587,7 +635,6 @@ void UnityInitTrampoline()
     _ios100orNewer = CHECK_VER(@"10.0"), _ios101orNewer = CHECK_VER(@"10.1"), _ios102orNewer = CHECK_VER(@"10.2"), _ios103orNewer = CHECK_VER(@"10.3");
     _ios110orNewer = CHECK_VER(@"11.0"), _ios111orNewer = CHECK_VER(@"11.1"), _ios112orNewer = CHECK_VER(@"11.2");
     _ios130orNewer  = CHECK_VER(@"13.0");
-
 #undef CHECK_VER
 
     AddNewAPIImplIfNeeded();
@@ -632,3 +679,17 @@ static void AddNewAPIImplIfNeeded()
         class_replaceMethod([UIView class], @selector(safeAreaInsets), UIView_SafeAreaInsets_IMP, UIView_safeAreaInsets_Enc);
     }
 }
+
+// xcode11 uses new compiler-rt lib
+// if we build unity player lib with xcode11 and then user links final project with older xcode
+//   the link fails with Undefined Symbol ___isPlatformVersionAtLeast
+// hence we add this as a temporary hack until we start requiring xcode11
+
+#if __clang_major__ < 11
+extern "C" int32_t __isOSVersionAtLeast(int32_t Major, int32_t Minor, int32_t Subminor);
+extern "C" int32_t __isPlatformVersionAtLeast(uint32_t Platform, uint32_t Major, uint32_t Minor, uint32_t Subminor)
+{
+    return __isOSVersionAtLeast(Major, Minor, Subminor);
+}
+
+#endif

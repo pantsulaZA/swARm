@@ -82,8 +82,8 @@ typedef struct UnityDisplaySurfaceBase
     UnityRenderBufferHandle systemColorBuffer;
     UnityRenderBufferHandle systemDepthBuffer;
 
-    void*               cvTextureCache;         // CVOpenGLESTextureCacheRef
-    void*               cvTextureCacheTexture;  // CVOpenGLESTextureRef
+    void*               cvTextureCache;         // CVMetalTextureCacheRef
+    void*               cvTextureCacheTexture;  // CVMetalTextureRef
     void*               cvPixelBuffer;          // CVPixelBufferRef
 
     unsigned            targetW, targetH;
@@ -93,6 +93,7 @@ typedef struct UnityDisplaySurfaceBase
     int                 useCVTextureCache;      // [bool]
     int                 srgb;                   // [bool]
     int                 wideColor;              // [bool]
+    int                 hdr;                    // [bool]
     int                 disableDepthAndStencil; // [bool]
     int                 allowScreenshot;        // [bool] currently we allow screenshots (from script) only on main display
     int                 memorylessDepth;        // [bool]
@@ -148,9 +149,9 @@ OBJC_OBJECT_PTR CAMetalDrawableRef  drawable;
 
 OBJC_OBJECT_PTR MTLTextureRef       drawableProxyRT[kUnityNumOffscreenSurfaces];
 
-// These are used on a Mac with drawableProxyRT when off-screen rendering is used
-volatile int32_t                    bufferCompleted;
-volatile int32_t                    bufferSwap;
+// This is used on a Mac with drawableProxyRT when off-screen rendering is used
+int                                 proxySwaps;         // Counts times proxy RTs have swapped since surface recreated
+int                                 proxyReady;         // [bool] Proxy RT has swapped; ready to present
 
 OBJC_OBJECT_PTR MTLTextureRef       systemColorRB;
 OBJC_OBJECT_PTR MTLTextureRef       targetColorRT;
@@ -170,13 +171,15 @@ END_STRUCT(UnityDisplaySurfaceMTL)
 // be aware that this enum is shared with unity implementation so you should absolutely not change it
 typedef enum UnityRenderingAPI
 {
-    apiOpenGLES2    = 2,
-    apiOpenGLES3    = 3,
     apiMetal        = 4,
+
+    // command line argument: -nographics
+    // does not initialize real graphics device and bypass all the rendering
+    // currently supported only on simulators
+    apiNoGraphics   = -1,
 } UnityRenderingAPI;
 
-typedef struct
-    RenderingSurfaceParams
+typedef struct RenderingSurfaceParams
 {
     // rendering setup
     int msaaSampleCount;
@@ -184,43 +187,19 @@ typedef struct
     int renderH;
     int srgb;
     int wideColor;
+    int hdr;
     int metalFramebufferOnly;
     int metalMemorylessDepth;
 
     // unity setup
     int disableDepthAndStencil;
     int useCVTextureCache;
-}
-RenderingSurfaceParams;
+} RenderingSurfaceParams;
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 int UnitySelectedRenderingAPI();
-#ifdef __cplusplus
-} // extern "C"
-#endif
-
-// gles
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-void InitRenderingGLES();
-
-void CreateSystemRenderingSurfaceGLES(UnityDisplaySurfaceGLES* surface);
-void DestroySystemRenderingSurfaceGLES(UnityDisplaySurfaceGLES* surface);
-void CreateRenderingSurfaceGLES(UnityDisplaySurfaceGLES* surface);
-void DestroyRenderingSurfaceGLES(UnityDisplaySurfaceGLES* surface);
-void CreateSharedDepthbufferGLES(UnityDisplaySurfaceGLES* surface);
-void DestroySharedDepthbufferGLES(UnityDisplaySurfaceGLES* surface);
-void CreateUnityRenderBuffersGLES(UnityDisplaySurfaceGLES* surface);
-void DestroyUnityRenderBuffersGLES(UnityDisplaySurfaceGLES* surface);
-void StartFrameRenderingGLES(UnityDisplaySurfaceGLES* surface);
-void EndFrameRenderingGLES(UnityDisplaySurfaceGLES* surface);
-void PreparePresentGLES(UnityDisplaySurfaceGLES* surface);
-void PresentGLES(UnityDisplaySurfaceGLES* surface);
-
 #ifdef __cplusplus
 } // extern "C"
 #endif
@@ -248,6 +227,8 @@ void PresentMTL(UnityDisplaySurfaceMTL* surface);
 // Acquires CAMetalDrawable resource for the surface and returns the drawable texture
 MTLTextureRef AcquireDrawableMTL(UnityDisplaySurfaceMTL* surface);
 
+unsigned UnityHDRSurfaceDepth();
+
 // starting with ios11 apple insists on having just one presentDrawable per command buffer
 // hence we keep normal processing for main screen, but when airplay is used we will create extra command buffers
 void PreparePresentNonMainScreenMTL(UnityDisplaySurfaceMTL* surface);
@@ -258,14 +239,36 @@ void SetDrawableSizeMTL(UnityDisplaySurfaceMTL* surface, int width, int height);
 } // extern "C"
 #endif
 
+// no graphics
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+void InitRenderingNULL();
+void CreateSystemRenderingSurfaceNULL(UnityDisplaySurfaceBase* surface);
+void CreateRenderingSurfaceNULL(UnityDisplaySurfaceBase* surface);
+void DestroyRenderingSurfaceNULL(UnityDisplaySurfaceBase* surface);
+void CreateSharedDepthbufferNULL(UnityDisplaySurfaceBase* surface);
+void DestroySharedDepthbufferNULL(UnityDisplaySurfaceBase* surface);
+void CreateUnityRenderBuffersNULL(UnityDisplaySurfaceBase* surface);
+void DestroySystemRenderingSurfaceNULL(UnityDisplaySurfaceBase* surface);
+void DestroyUnityRenderBuffersNULL(UnityDisplaySurfaceBase* surface);
+void StartFrameRenderingNULL(UnityDisplaySurfaceBase* surface);
+void EndFrameRenderingNULL(UnityDisplaySurfaceBase* surface);
+void PreparePresentNULL(UnityDisplaySurfaceBase* surface);
+void PresentNULL(UnityDisplaySurfaceBase* surface);
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 // for Create* functions if surf is null we will actuially create new one, otherwise we update the one provided
-// gles: one and only one of texid/rbid should be non-zero
 // metal: resolveTex should be non-nil only if tex have AA
-UnityRenderBufferHandle UnityCreateExternalSurfaceGLES(UnityRenderBufferHandle surf, int isColor, unsigned texid, unsigned rbid, unsigned glesFormat, const UnityRenderBufferDesc* desc);
 UnityRenderBufferHandle UnityCreateExternalSurfaceMTL(UnityRenderBufferHandle surf, int isColor, MTLTextureRef tex, const UnityRenderBufferDesc* desc);
 // Passing non-nil displaySurface will mark render surface as proxy and will do a delayed drawable acquisition when setting up framebuffer
 UnityRenderBufferHandle UnityCreateExternalColorSurfaceMTL(UnityRenderBufferHandle surf, MTLTextureRef tex, MTLTextureRef resolveTex, const UnityRenderBufferDesc* desc, UnityDisplaySurfaceMTL* displaySurface);
@@ -300,19 +303,23 @@ void UnityUpdateDrawableSize(UnityDisplaySurfaceMTL* surface);
 
 // metal/gles unification
 
-#define GLES_METAL_COMMON_IMPL_SURF(f)                                              \
-inline void f(UnityDisplaySurfaceBase* surface)                                     \
-{                                                                                   \
-    if(surface->api == apiMetal)    f ## MTL((UnityDisplaySurfaceMTL*)surface); \
-    else                            f ## GLES((UnityDisplaySurfaceGLES*)surface);\
-}                                                                                   \
+#define GLES_METAL_COMMON_IMPL_SURF(f)                                                                  \
+inline void f(UnityDisplaySurfaceBase* surface)                                                         \
+{                                                                                                       \
+    switch(surface->api) {                                                                              \
+        case apiMetal:                          f ## MTL((UnityDisplaySurfaceMTL*)surface);     break;  \
+        case apiNoGraphics:                     f ## NULL(surface);                             break;  \
+    }                                                                                                   \
+}                                                                                                       \
 
-#define GLES_METAL_COMMON_IMPL(f)                               \
-inline void f()                                                 \
-{                                                               \
-    if(UnitySelectedRenderingAPI() == apiMetal) f ## MTL();     \
-    else                                        f ## GLES();\
-}                                                               \
+#define GLES_METAL_COMMON_IMPL(f)                                       \
+inline void f()                                                         \
+{                                                                       \
+    switch(UnitySelectedRenderingAPI()) {                               \
+        case apiMetal:                          f ## MTL();     break;  \
+        case apiNoGraphics:                     f ## NULL();    break;  \
+    }                                                                   \
+}                                                                       \
 
 
 GLES_METAL_COMMON_IMPL(InitRendering);

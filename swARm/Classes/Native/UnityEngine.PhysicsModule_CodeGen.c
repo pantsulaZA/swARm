@@ -1,11 +1,9 @@
-﻿#include "il2cpp-config.h"
-
+﻿#include "pch-c.h"
 #ifndef _MSC_VER
 # include <alloca.h>
 #else
 # include <malloc.h>
 #endif
-
 
 
 #include "codegen/il2cpp-codegen-metadata.h"
@@ -14,262 +12,293 @@
 
 
 
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
-
-
-
-
 // 0x00000001 UnityEngine.Collider UnityEngine.RaycastHit::get_collider()
-extern void RaycastHit_get_collider_mE70B84C4312B567344F60992A6067855F2C3A7A9_AdjustorThunk ();
+extern void RaycastHit_get_collider_m13A3DE16FBC631E0A1F987E0B22CE70AF8AB539E (void);
 // 0x00000002 UnityEngine.Vector3 UnityEngine.RaycastHit::get_point()
-extern void RaycastHit_get_point_m0E564B2A72C7A744B889AE9D596F3EFA55059001_AdjustorThunk ();
+extern void RaycastHit_get_point_m32F7282CBB2E13393A33BAD046BDA218E48DD21E (void);
 // 0x00000003 UnityEngine.Vector3 UnityEngine.RaycastHit::get_normal()
-extern void RaycastHit_get_normal_mF736A6D09D98D63AB7E5BF10F38AEBFC177A1D94_AdjustorThunk ();
+extern void RaycastHit_get_normal_m2C813B25BAECD87FD9E9CB294278B291F4CC6674 (void);
 // 0x00000004 System.Single UnityEngine.RaycastHit::get_distance()
-extern void RaycastHit_get_distance_m1CBA60855C35F29BBC348D374BBC76386A243543_AdjustorThunk ();
+extern void RaycastHit_get_distance_m85FCA98D7957C3BF1D449CA1B48C116CCD6226FA (void);
 // 0x00000005 UnityEngine.Transform UnityEngine.RaycastHit::get_transform()
-extern void RaycastHit_get_transform_m3C0BEE7439CA37F82FD5216143B92BF32F995279_AdjustorThunk ();
+extern void RaycastHit_get_transform_m2DD983DBD3602DE848DE287EE5233FD02EEC608D (void);
 // 0x00000006 UnityEngine.Rigidbody UnityEngine.RaycastHit::get_rigidbody()
-extern void RaycastHit_get_rigidbody_m8E28BDE09DC588AAF0C15182AFF3C00EE11EB0FC_AdjustorThunk ();
+extern void RaycastHit_get_rigidbody_mE48E45893FDAFD03162C6A73AAF02C6CB0E079FB (void);
 // 0x00000007 System.Void UnityEngine.Rigidbody::.ctor()
-extern void Rigidbody__ctor_m7E9FF7B44B8A3B05217339C2C852A4BF620A12E4 ();
+extern void Rigidbody__ctor_m0E43BA3B0E70E71B2CA62B165EE5B7CFAEFACDE9 (void);
 // 0x00000008 UnityEngine.Rigidbody UnityEngine.Collider::get_attachedRigidbody()
-extern void Collider_get_attachedRigidbody_m9E3C688EAE2F6A76C9AC14968D96769D9A71B1E8 ();
+extern void Collider_get_attachedRigidbody_m101FED12AD292F372F98E94A6D02A5E428AA896A (void);
 // 0x00000009 System.Void UnityEngine.MeshCollider::set_sharedMesh(UnityEngine.Mesh)
-extern void MeshCollider_set_sharedMesh_m88BE136B396DA960BC78F1A563BE0A810AA0FBBA ();
+extern void MeshCollider_set_sharedMesh_m5E39BE3C85A9D21D846E8B7DBA1ED14820ED0406 (void);
 // 0x0000000A System.String UnityEngine.PhysicsScene::ToString()
-extern void PhysicsScene_ToString_m192392A2C486E2F76AAC736C519CB117BD187BE9_AdjustorThunk ();
+extern void PhysicsScene_ToString_mBB6D0AC1E3E2EDC34CB4A7A34485B24B6271903F (void);
 // 0x0000000B System.Int32 UnityEngine.PhysicsScene::GetHashCode()
-extern void PhysicsScene_GetHashCode_m8B6554AA89D7DFD183573EA89E5ACF6B21E08654_AdjustorThunk ();
+extern void PhysicsScene_GetHashCode_m5344CC6CCCB1CA6EBB149775EE028089DD74B8A2 (void);
 // 0x0000000C System.Boolean UnityEngine.PhysicsScene::Equals(System.Object)
-extern void PhysicsScene_Equals_m538C6A86CCC4EF0546590BAC51E5D08ACC2CBEF9_AdjustorThunk ();
+extern void PhysicsScene_Equals_m2645ABB96C598F197F734EB712494795928CBCEC (void);
 // 0x0000000D System.Boolean UnityEngine.PhysicsScene::Equals(UnityEngine.PhysicsScene)
-extern void PhysicsScene_Equals_m25CC71614BEABB76B6FB618516B8807DAF8CDDF8_AdjustorThunk ();
+extern void PhysicsScene_Equals_m8C948B86D105177D519A3608816CDC698C8686B8 (void);
 // 0x0000000E System.Boolean UnityEngine.PhysicsScene::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void PhysicsScene_Raycast_mA90972A8E828722A26EBC754EABB3086BE6E2336_AdjustorThunk ();
+extern void PhysicsScene_Raycast_m8C3E61EB7C3DB8AAC6FEB098D815062BEF821187 (void);
 // 0x0000000F System.Boolean UnityEngine.PhysicsScene::Internal_RaycastTest(UnityEngine.PhysicsScene,UnityEngine.Ray,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void PhysicsScene_Internal_RaycastTest_m09DD752D166094AC2A6F19302F7DDB2EA88DE67F ();
+extern void PhysicsScene_Internal_RaycastTest_m6715CAD8D0330195269AA7FCCD91613BC564E3EB (void);
 // 0x00000010 System.Boolean UnityEngine.PhysicsScene::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void PhysicsScene_Raycast_m90D1AE1F641D9344BEBEF32E7AC0BAC883024C0B_AdjustorThunk ();
+extern void PhysicsScene_Raycast_mFC0D59C4439EE9DA6E8AA5F6891915132D587208 (void);
 // 0x00000011 System.Boolean UnityEngine.PhysicsScene::Internal_Raycast(UnityEngine.PhysicsScene,UnityEngine.Ray,System.Single,UnityEngine.RaycastHit&,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void PhysicsScene_Internal_Raycast_m2769B78FDCAA21C6F609DD709BADFF6F4B07C529 ();
+extern void PhysicsScene_Internal_Raycast_m1E630AA11805114B090FC50741AEF64D677AF2C7 (void);
 // 0x00000012 System.Int32 UnityEngine.PhysicsScene::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit[],System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void PhysicsScene_Raycast_mFB4A1BB42BB1D950E3854A08DFE3ECCDEA3BCCB1_AdjustorThunk ();
+extern void PhysicsScene_Raycast_m95CAB68EB9165E3AB2A4D441F7DF9767AD4B7F73 (void);
 // 0x00000013 System.Int32 UnityEngine.PhysicsScene::Internal_RaycastNonAlloc(UnityEngine.PhysicsScene,UnityEngine.Ray,UnityEngine.RaycastHit[],System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void PhysicsScene_Internal_RaycastNonAlloc_m9E5DAC724FC74D6B618C82BC8F19980E9636D5B1 ();
+extern void PhysicsScene_Internal_RaycastNonAlloc_mE7833EE5F1082431A4C2D29362F5DCDEFBF6D2BD (void);
 // 0x00000014 System.Boolean UnityEngine.PhysicsScene::Internal_RaycastTest_Injected(UnityEngine.PhysicsScene&,UnityEngine.Ray&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void PhysicsScene_Internal_RaycastTest_Injected_m544D0227B2312D7431A9351ADA5082B390B4ADDF ();
+extern void PhysicsScene_Internal_RaycastTest_Injected_m956474EFEA507F82ABE0BCB75DDB3CC8EFF4D12B (void);
 // 0x00000015 System.Boolean UnityEngine.PhysicsScene::Internal_Raycast_Injected(UnityEngine.PhysicsScene&,UnityEngine.Ray&,System.Single,UnityEngine.RaycastHit&,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void PhysicsScene_Internal_Raycast_Injected_m039B99FEFE39873FF8B0F60F44DE817BF43D48DA ();
+extern void PhysicsScene_Internal_Raycast_Injected_m8868E0BF89F8C42D11F42F94F9CF767647433BB1 (void);
 // 0x00000016 System.Int32 UnityEngine.PhysicsScene::Internal_RaycastNonAlloc_Injected(UnityEngine.PhysicsScene&,UnityEngine.Ray&,UnityEngine.RaycastHit[],System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void PhysicsScene_Internal_RaycastNonAlloc_Injected_m4A5BC29FB0D0AAFC1DE827838CE144F882FE632E ();
+extern void PhysicsScene_Internal_RaycastNonAlloc_Injected_m59FB44C18E62D21E9320F30229C0AA9F9B971211 (void);
 // 0x00000017 UnityEngine.PhysicsScene UnityEngine.Physics::get_defaultPhysicsScene()
-extern void Physics_get_defaultPhysicsScene_mEA96CE906577479223C956BFF0B8D0B79BB47B30 ();
+extern void Physics_get_defaultPhysicsScene_mA6361488FBAC110DA8397E5E4CB473EBF4191010 (void);
 // 0x00000018 System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void Physics_Raycast_m511ECD9EF3223645EF104DDA50BB81C07F29717C ();
+extern void Physics_Raycast_m9DE0EEA1CF8DEF7D06216225F19E2958D341F7BA (void);
 // 0x00000019 System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Int32)
-extern void Physics_Raycast_mC87F52EDC44BBBAFFED0D9DC92B37B11C6E07BEA ();
+extern void Physics_Raycast_m09F21E13465121A73F19C07FC5F5314CF15ACD15 (void);
 // 0x0000001A System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)
-extern void Physics_Raycast_m0583CCAA9E2F3BD031F12FA080837E9A48EEC16D ();
+extern void Physics_Raycast_m284670765E1627E43B7B0F5EC811A688EE595091 (void);
 // 0x0000001B System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3)
-extern void Physics_Raycast_m6FFBDC7166A2129B70027FC392D06C735F81C73E ();
+extern void Physics_Raycast_mDA2EB8C7692308A7178222D31CBA4C7A1C7DC915 (void);
 // 0x0000001C System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void Physics_Raycast_m44270C2D7C8CD056B6D78DE60A4C91FCC0A225C1 ();
+extern void Physics_Raycast_m2EA572B4613E1BD7DBAA299511CFD2DBA179A163 (void);
 // 0x0000001D System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit&,System.Single,System.Int32)
-extern void Physics_Raycast_mFB0018A196CC9E45CA8A238899EA8B093264B024 ();
+extern void Physics_Raycast_mCBD5F7D498C246713EDDBB446E97205DA206C49C (void);
 // 0x0000001E System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit&,System.Single)
-extern void Physics_Raycast_mBEC747ED0A7660BB12AA48B663CCBF7B1EE93D6B ();
+extern void Physics_Raycast_m18E12C65F127D1AA50D196623F04F81CB138FD12 (void);
 // 0x0000001F System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit&)
-extern void Physics_Raycast_m000FC36D038952F8AC5E3E562E7D39BAA8D1E287 ();
+extern void Physics_Raycast_mE84D30EEFE59DA28DA172342068F092A35B2BE4A (void);
 // 0x00000020 System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Ray,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void Physics_Raycast_mF33E3BA9FDFE0D19B193D2AB05028B2086738D47 ();
+extern void Physics_Raycast_m77560CCAA49DC821E51FDDD1570B921D7704646F (void);
 // 0x00000021 System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Ray,System.Single,System.Int32)
-extern void Physics_Raycast_m5BA453EA32F5B660CD9A537FED97B995971820E1 ();
+extern void Physics_Raycast_mFDC4B8E7979495E3C22D0E3CEA4BCAB271EEC25A (void);
 // 0x00000022 System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Ray,System.Single)
-extern void Physics_Raycast_m198FD20B3D1BC1634AE30E80E0FD1491D55417E5 ();
+extern void Physics_Raycast_mD7A711D3A790AC505F7229A4FFFA2E389008176B (void);
 // 0x00000023 System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Ray)
-extern void Physics_Raycast_mF1112EC53F3393455B4ABA0E0092A58E3CD0114A ();
+extern void Physics_Raycast_m111AFC36A136A67BE4776670E356E99A82010BFE (void);
 // 0x00000024 System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Ray,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void Physics_Raycast_m6B6C7CB6DDED17F9B1905C606035A56FF9AE88F8 ();
+extern void Physics_Raycast_mCA3F2DD1DC08199AAD8466BB857318CD454AC774 (void);
 // 0x00000025 System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Ray,UnityEngine.RaycastHit&,System.Single,System.Int32)
-extern void Physics_Raycast_m9F5CAD8DA7923E897C5DCAF913BD411AD1A87950 ();
+extern void Physics_Raycast_m46E12070D6996F4C8C91D49ADC27C74AC1D6A3D8 (void);
 // 0x00000026 System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Ray,UnityEngine.RaycastHit&,System.Single)
-extern void Physics_Raycast_mE1590EE4E2DC950A9FC2437E98EE8CD2EC2DEE67 ();
+extern void Physics_Raycast_mA64F8C30681E3A6A8F2B7EDE592FE7BBC0D354F4 (void);
 // 0x00000027 System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Ray,UnityEngine.RaycastHit&)
-extern void Physics_Raycast_mCE618579F667A62D15CB74CEF76147136EB2D495 ();
+extern void Physics_Raycast_m80EC8EEDA0ABA8B01838BA9054834CD1A381916E (void);
 // 0x00000028 UnityEngine.RaycastHit[] UnityEngine.Physics::Internal_RaycastAll(UnityEngine.PhysicsScene,UnityEngine.Ray,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void Physics_Internal_RaycastAll_m366801D3E9D3DE8E9A94C5243D1FB2132DFDD851 ();
+extern void Physics_Internal_RaycastAll_m39EE7CF896F9D8BA58CC623F14E4DB0641480523 (void);
 // 0x00000029 UnityEngine.RaycastHit[] UnityEngine.Physics::RaycastAll(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void Physics_RaycastAll_m6627435AE46B6720066FEEA5A80923420EE8FD2D ();
+extern void Physics_RaycastAll_m5103E7C60CC66BAFA6534D1736138A92EB1EF2B8 (void);
 // 0x0000002A UnityEngine.RaycastHit[] UnityEngine.Physics::RaycastAll(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Int32)
-extern void Physics_RaycastAll_m4FC397E4B7FEF7B5C9D172F95D6FB32CFC0F66FC ();
+extern void Physics_RaycastAll_m2C977C8B022672F42B5E18F40B529C0A74B7E471 (void);
 // 0x0000002B UnityEngine.RaycastHit[] UnityEngine.Physics::RaycastAll(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)
-extern void Physics_RaycastAll_m93B94F31C64E8F64ACE18231FC85168D519B7F04 ();
+extern void Physics_RaycastAll_m2BBC8D2731B38EE0B704A5C6A09D0F8BBA074A4D (void);
 // 0x0000002C UnityEngine.RaycastHit[] UnityEngine.Physics::RaycastAll(UnityEngine.Vector3,UnityEngine.Vector3)
-extern void Physics_RaycastAll_mE2ED29FCF8983C212F2628A8934CFAEBA4B683DE ();
+extern void Physics_RaycastAll_m83F28CB671653C07995FB1BCDC561121DE3D9CA6 (void);
 // 0x0000002D UnityEngine.RaycastHit[] UnityEngine.Physics::RaycastAll(UnityEngine.Ray,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void Physics_RaycastAll_mF5DB872CCEFE1710439DB9939EACE1DCDEFE2A7D ();
+extern void Physics_RaycastAll_m55EB4478198ED6EF838500257FA3BE1A871D3605 (void);
 // 0x0000002E UnityEngine.RaycastHit[] UnityEngine.Physics::RaycastAll(UnityEngine.Ray,System.Single,System.Int32)
-extern void Physics_RaycastAll_mE9ACFB603E337E2195E4B9419099E178F7FF82F4 ();
+extern void Physics_RaycastAll_mA24B9B922C98C5D18397FAE55C04AEAFDD47F029 (void);
 // 0x0000002F UnityEngine.RaycastHit[] UnityEngine.Physics::RaycastAll(UnityEngine.Ray,System.Single)
-extern void Physics_RaycastAll_m6D5629FD1D3E3B0001F2819C1AE8660A3949C51F ();
+extern void Physics_RaycastAll_m72947571EFB0EFB34E48340AA2EC0C8030D27C50 (void);
 // 0x00000030 UnityEngine.RaycastHit[] UnityEngine.Physics::RaycastAll(UnityEngine.Ray)
-extern void Physics_RaycastAll_m37C7F423486CE3ACBAB4F1A326B9EBD7572B4056 ();
+extern void Physics_RaycastAll_m529EE59D6D03E4CFAECE4016C8CC4181BEC2D26D (void);
 // 0x00000031 System.Int32 UnityEngine.Physics::RaycastNonAlloc(UnityEngine.Ray,UnityEngine.RaycastHit[],System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void Physics_RaycastNonAlloc_m606B435CE959801C9B7D7111E49071E893C951DE ();
+extern void Physics_RaycastNonAlloc_m7C81125AD7D5891EBC3AB48C6DED7B60F53DF099 (void);
 // 0x00000032 System.Int32 UnityEngine.Physics::RaycastNonAlloc(UnityEngine.Ray,UnityEngine.RaycastHit[],System.Single,System.Int32)
-extern void Physics_RaycastNonAlloc_mBFDB05B1AA90C5D587A1BEA6BEE66FEF2DF89894 ();
+extern void Physics_RaycastNonAlloc_m8F62EE5A33E81A02E4983A171023B7BC4AC700CA (void);
 // 0x00000033 System.Int32 UnityEngine.Physics::RaycastNonAlloc(UnityEngine.Ray,UnityEngine.RaycastHit[],System.Single)
-extern void Physics_RaycastNonAlloc_m0A9CEF12FB7EE9C790609A15CBFE975725365CF9 ();
+extern void Physics_RaycastNonAlloc_m41BB7BB8755B09700C10F59A29C3541D45AB9CCD (void);
 // 0x00000034 System.Int32 UnityEngine.Physics::RaycastNonAlloc(UnityEngine.Ray,UnityEngine.RaycastHit[])
-extern void Physics_RaycastNonAlloc_m9CC4B976EA1936076FFA1339BF6FBE78A2DA593F ();
+extern void Physics_RaycastNonAlloc_mBC5BE514E55B8D98A8F4752DED6850E02EE8AD98 (void);
 // 0x00000035 System.Int32 UnityEngine.Physics::RaycastNonAlloc(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit[],System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void Physics_RaycastNonAlloc_m120ADF6BD8DF57A40E6B395299B03FAEE348973F ();
+extern void Physics_RaycastNonAlloc_m2C90D14E472DE7929EFD54FDA7BC512D3FBDE4ED (void);
 // 0x00000036 System.Int32 UnityEngine.Physics::RaycastNonAlloc(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit[],System.Single,System.Int32)
-extern void Physics_RaycastNonAlloc_mA795C150FCE1F242C9806AAAFF04125594B56DDB ();
+extern void Physics_RaycastNonAlloc_m316F597067055C9F923F57CC68D68FF917C3B4D1 (void);
 // 0x00000037 System.Int32 UnityEngine.Physics::RaycastNonAlloc(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit[],System.Single)
-extern void Physics_RaycastNonAlloc_m63644DC59B0554846D62ED3BE3B5517BC97D3316 ();
+extern void Physics_RaycastNonAlloc_m1B8F31BF41F756F561F6AC3A2E0736F2BC9C4DB4 (void);
 // 0x00000038 System.Int32 UnityEngine.Physics::RaycastNonAlloc(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit[])
-extern void Physics_RaycastNonAlloc_mD4393134F4470C9B319603A6CD3FF601F5981C88 ();
+extern void Physics_RaycastNonAlloc_m9076DDE1A65F87DB3D2824DAD4E5B8B534159F1F (void);
 // 0x00000039 System.Void UnityEngine.Physics::get_defaultPhysicsScene_Injected(UnityEngine.PhysicsScene&)
-extern void Physics_get_defaultPhysicsScene_Injected_mEAB07CA5307D0DDB331A31E6A6BA28CF83009262 ();
+extern void Physics_get_defaultPhysicsScene_Injected_m0B71068269B3C8499A258BBCAEA7E3D9D020BADA (void);
 // 0x0000003A UnityEngine.RaycastHit[] UnityEngine.Physics::Internal_RaycastAll_Injected(UnityEngine.PhysicsScene&,UnityEngine.Ray&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
-extern void Physics_Internal_RaycastAll_Injected_m1FD369E67F19BB09F85967481F69EB24B5247913 ();
+extern void Physics_Internal_RaycastAll_Injected_mD4C3E8762D9FCEE654CE0415E636EB7DBEC92A5B (void);
 static Il2CppMethodPointer s_methodPointers[58] = 
 {
-	RaycastHit_get_collider_mE70B84C4312B567344F60992A6067855F2C3A7A9_AdjustorThunk,
-	RaycastHit_get_point_m0E564B2A72C7A744B889AE9D596F3EFA55059001_AdjustorThunk,
-	RaycastHit_get_normal_mF736A6D09D98D63AB7E5BF10F38AEBFC177A1D94_AdjustorThunk,
-	RaycastHit_get_distance_m1CBA60855C35F29BBC348D374BBC76386A243543_AdjustorThunk,
-	RaycastHit_get_transform_m3C0BEE7439CA37F82FD5216143B92BF32F995279_AdjustorThunk,
-	RaycastHit_get_rigidbody_m8E28BDE09DC588AAF0C15182AFF3C00EE11EB0FC_AdjustorThunk,
-	Rigidbody__ctor_m7E9FF7B44B8A3B05217339C2C852A4BF620A12E4,
-	Collider_get_attachedRigidbody_m9E3C688EAE2F6A76C9AC14968D96769D9A71B1E8,
-	MeshCollider_set_sharedMesh_m88BE136B396DA960BC78F1A563BE0A810AA0FBBA,
-	PhysicsScene_ToString_m192392A2C486E2F76AAC736C519CB117BD187BE9_AdjustorThunk,
-	PhysicsScene_GetHashCode_m8B6554AA89D7DFD183573EA89E5ACF6B21E08654_AdjustorThunk,
-	PhysicsScene_Equals_m538C6A86CCC4EF0546590BAC51E5D08ACC2CBEF9_AdjustorThunk,
-	PhysicsScene_Equals_m25CC71614BEABB76B6FB618516B8807DAF8CDDF8_AdjustorThunk,
-	PhysicsScene_Raycast_mA90972A8E828722A26EBC754EABB3086BE6E2336_AdjustorThunk,
-	PhysicsScene_Internal_RaycastTest_m09DD752D166094AC2A6F19302F7DDB2EA88DE67F,
-	PhysicsScene_Raycast_m90D1AE1F641D9344BEBEF32E7AC0BAC883024C0B_AdjustorThunk,
-	PhysicsScene_Internal_Raycast_m2769B78FDCAA21C6F609DD709BADFF6F4B07C529,
-	PhysicsScene_Raycast_mFB4A1BB42BB1D950E3854A08DFE3ECCDEA3BCCB1_AdjustorThunk,
-	PhysicsScene_Internal_RaycastNonAlloc_m9E5DAC724FC74D6B618C82BC8F19980E9636D5B1,
-	PhysicsScene_Internal_RaycastTest_Injected_m544D0227B2312D7431A9351ADA5082B390B4ADDF,
-	PhysicsScene_Internal_Raycast_Injected_m039B99FEFE39873FF8B0F60F44DE817BF43D48DA,
-	PhysicsScene_Internal_RaycastNonAlloc_Injected_m4A5BC29FB0D0AAFC1DE827838CE144F882FE632E,
-	Physics_get_defaultPhysicsScene_mEA96CE906577479223C956BFF0B8D0B79BB47B30,
-	Physics_Raycast_m511ECD9EF3223645EF104DDA50BB81C07F29717C,
-	Physics_Raycast_mC87F52EDC44BBBAFFED0D9DC92B37B11C6E07BEA,
-	Physics_Raycast_m0583CCAA9E2F3BD031F12FA080837E9A48EEC16D,
-	Physics_Raycast_m6FFBDC7166A2129B70027FC392D06C735F81C73E,
-	Physics_Raycast_m44270C2D7C8CD056B6D78DE60A4C91FCC0A225C1,
-	Physics_Raycast_mFB0018A196CC9E45CA8A238899EA8B093264B024,
-	Physics_Raycast_mBEC747ED0A7660BB12AA48B663CCBF7B1EE93D6B,
-	Physics_Raycast_m000FC36D038952F8AC5E3E562E7D39BAA8D1E287,
-	Physics_Raycast_mF33E3BA9FDFE0D19B193D2AB05028B2086738D47,
-	Physics_Raycast_m5BA453EA32F5B660CD9A537FED97B995971820E1,
-	Physics_Raycast_m198FD20B3D1BC1634AE30E80E0FD1491D55417E5,
-	Physics_Raycast_mF1112EC53F3393455B4ABA0E0092A58E3CD0114A,
-	Physics_Raycast_m6B6C7CB6DDED17F9B1905C606035A56FF9AE88F8,
-	Physics_Raycast_m9F5CAD8DA7923E897C5DCAF913BD411AD1A87950,
-	Physics_Raycast_mE1590EE4E2DC950A9FC2437E98EE8CD2EC2DEE67,
-	Physics_Raycast_mCE618579F667A62D15CB74CEF76147136EB2D495,
-	Physics_Internal_RaycastAll_m366801D3E9D3DE8E9A94C5243D1FB2132DFDD851,
-	Physics_RaycastAll_m6627435AE46B6720066FEEA5A80923420EE8FD2D,
-	Physics_RaycastAll_m4FC397E4B7FEF7B5C9D172F95D6FB32CFC0F66FC,
-	Physics_RaycastAll_m93B94F31C64E8F64ACE18231FC85168D519B7F04,
-	Physics_RaycastAll_mE2ED29FCF8983C212F2628A8934CFAEBA4B683DE,
-	Physics_RaycastAll_mF5DB872CCEFE1710439DB9939EACE1DCDEFE2A7D,
-	Physics_RaycastAll_mE9ACFB603E337E2195E4B9419099E178F7FF82F4,
-	Physics_RaycastAll_m6D5629FD1D3E3B0001F2819C1AE8660A3949C51F,
-	Physics_RaycastAll_m37C7F423486CE3ACBAB4F1A326B9EBD7572B4056,
-	Physics_RaycastNonAlloc_m606B435CE959801C9B7D7111E49071E893C951DE,
-	Physics_RaycastNonAlloc_mBFDB05B1AA90C5D587A1BEA6BEE66FEF2DF89894,
-	Physics_RaycastNonAlloc_m0A9CEF12FB7EE9C790609A15CBFE975725365CF9,
-	Physics_RaycastNonAlloc_m9CC4B976EA1936076FFA1339BF6FBE78A2DA593F,
-	Physics_RaycastNonAlloc_m120ADF6BD8DF57A40E6B395299B03FAEE348973F,
-	Physics_RaycastNonAlloc_mA795C150FCE1F242C9806AAAFF04125594B56DDB,
-	Physics_RaycastNonAlloc_m63644DC59B0554846D62ED3BE3B5517BC97D3316,
-	Physics_RaycastNonAlloc_mD4393134F4470C9B319603A6CD3FF601F5981C88,
-	Physics_get_defaultPhysicsScene_Injected_mEAB07CA5307D0DDB331A31E6A6BA28CF83009262,
-	Physics_Internal_RaycastAll_Injected_m1FD369E67F19BB09F85967481F69EB24B5247913,
+	RaycastHit_get_collider_m13A3DE16FBC631E0A1F987E0B22CE70AF8AB539E,
+	RaycastHit_get_point_m32F7282CBB2E13393A33BAD046BDA218E48DD21E,
+	RaycastHit_get_normal_m2C813B25BAECD87FD9E9CB294278B291F4CC6674,
+	RaycastHit_get_distance_m85FCA98D7957C3BF1D449CA1B48C116CCD6226FA,
+	RaycastHit_get_transform_m2DD983DBD3602DE848DE287EE5233FD02EEC608D,
+	RaycastHit_get_rigidbody_mE48E45893FDAFD03162C6A73AAF02C6CB0E079FB,
+	Rigidbody__ctor_m0E43BA3B0E70E71B2CA62B165EE5B7CFAEFACDE9,
+	Collider_get_attachedRigidbody_m101FED12AD292F372F98E94A6D02A5E428AA896A,
+	MeshCollider_set_sharedMesh_m5E39BE3C85A9D21D846E8B7DBA1ED14820ED0406,
+	PhysicsScene_ToString_mBB6D0AC1E3E2EDC34CB4A7A34485B24B6271903F,
+	PhysicsScene_GetHashCode_m5344CC6CCCB1CA6EBB149775EE028089DD74B8A2,
+	PhysicsScene_Equals_m2645ABB96C598F197F734EB712494795928CBCEC,
+	PhysicsScene_Equals_m8C948B86D105177D519A3608816CDC698C8686B8,
+	PhysicsScene_Raycast_m8C3E61EB7C3DB8AAC6FEB098D815062BEF821187,
+	PhysicsScene_Internal_RaycastTest_m6715CAD8D0330195269AA7FCCD91613BC564E3EB,
+	PhysicsScene_Raycast_mFC0D59C4439EE9DA6E8AA5F6891915132D587208,
+	PhysicsScene_Internal_Raycast_m1E630AA11805114B090FC50741AEF64D677AF2C7,
+	PhysicsScene_Raycast_m95CAB68EB9165E3AB2A4D441F7DF9767AD4B7F73,
+	PhysicsScene_Internal_RaycastNonAlloc_mE7833EE5F1082431A4C2D29362F5DCDEFBF6D2BD,
+	PhysicsScene_Internal_RaycastTest_Injected_m956474EFEA507F82ABE0BCB75DDB3CC8EFF4D12B,
+	PhysicsScene_Internal_Raycast_Injected_m8868E0BF89F8C42D11F42F94F9CF767647433BB1,
+	PhysicsScene_Internal_RaycastNonAlloc_Injected_m59FB44C18E62D21E9320F30229C0AA9F9B971211,
+	Physics_get_defaultPhysicsScene_mA6361488FBAC110DA8397E5E4CB473EBF4191010,
+	Physics_Raycast_m9DE0EEA1CF8DEF7D06216225F19E2958D341F7BA,
+	Physics_Raycast_m09F21E13465121A73F19C07FC5F5314CF15ACD15,
+	Physics_Raycast_m284670765E1627E43B7B0F5EC811A688EE595091,
+	Physics_Raycast_mDA2EB8C7692308A7178222D31CBA4C7A1C7DC915,
+	Physics_Raycast_m2EA572B4613E1BD7DBAA299511CFD2DBA179A163,
+	Physics_Raycast_mCBD5F7D498C246713EDDBB446E97205DA206C49C,
+	Physics_Raycast_m18E12C65F127D1AA50D196623F04F81CB138FD12,
+	Physics_Raycast_mE84D30EEFE59DA28DA172342068F092A35B2BE4A,
+	Physics_Raycast_m77560CCAA49DC821E51FDDD1570B921D7704646F,
+	Physics_Raycast_mFDC4B8E7979495E3C22D0E3CEA4BCAB271EEC25A,
+	Physics_Raycast_mD7A711D3A790AC505F7229A4FFFA2E389008176B,
+	Physics_Raycast_m111AFC36A136A67BE4776670E356E99A82010BFE,
+	Physics_Raycast_mCA3F2DD1DC08199AAD8466BB857318CD454AC774,
+	Physics_Raycast_m46E12070D6996F4C8C91D49ADC27C74AC1D6A3D8,
+	Physics_Raycast_mA64F8C30681E3A6A8F2B7EDE592FE7BBC0D354F4,
+	Physics_Raycast_m80EC8EEDA0ABA8B01838BA9054834CD1A381916E,
+	Physics_Internal_RaycastAll_m39EE7CF896F9D8BA58CC623F14E4DB0641480523,
+	Physics_RaycastAll_m5103E7C60CC66BAFA6534D1736138A92EB1EF2B8,
+	Physics_RaycastAll_m2C977C8B022672F42B5E18F40B529C0A74B7E471,
+	Physics_RaycastAll_m2BBC8D2731B38EE0B704A5C6A09D0F8BBA074A4D,
+	Physics_RaycastAll_m83F28CB671653C07995FB1BCDC561121DE3D9CA6,
+	Physics_RaycastAll_m55EB4478198ED6EF838500257FA3BE1A871D3605,
+	Physics_RaycastAll_mA24B9B922C98C5D18397FAE55C04AEAFDD47F029,
+	Physics_RaycastAll_m72947571EFB0EFB34E48340AA2EC0C8030D27C50,
+	Physics_RaycastAll_m529EE59D6D03E4CFAECE4016C8CC4181BEC2D26D,
+	Physics_RaycastNonAlloc_m7C81125AD7D5891EBC3AB48C6DED7B60F53DF099,
+	Physics_RaycastNonAlloc_m8F62EE5A33E81A02E4983A171023B7BC4AC700CA,
+	Physics_RaycastNonAlloc_m41BB7BB8755B09700C10F59A29C3541D45AB9CCD,
+	Physics_RaycastNonAlloc_mBC5BE514E55B8D98A8F4752DED6850E02EE8AD98,
+	Physics_RaycastNonAlloc_m2C90D14E472DE7929EFD54FDA7BC512D3FBDE4ED,
+	Physics_RaycastNonAlloc_m316F597067055C9F923F57CC68D68FF917C3B4D1,
+	Physics_RaycastNonAlloc_m1B8F31BF41F756F561F6AC3A2E0736F2BC9C4DB4,
+	Physics_RaycastNonAlloc_m9076DDE1A65F87DB3D2824DAD4E5B8B534159F1F,
+	Physics_get_defaultPhysicsScene_Injected_m0B71068269B3C8499A258BBCAEA7E3D9D020BADA,
+	Physics_Internal_RaycastAll_Injected_mD4C3E8762D9FCEE654CE0415E636EB7DBEC92A5B,
+};
+extern void RaycastHit_get_collider_m13A3DE16FBC631E0A1F987E0B22CE70AF8AB539E_AdjustorThunk (void);
+extern void RaycastHit_get_point_m32F7282CBB2E13393A33BAD046BDA218E48DD21E_AdjustorThunk (void);
+extern void RaycastHit_get_normal_m2C813B25BAECD87FD9E9CB294278B291F4CC6674_AdjustorThunk (void);
+extern void RaycastHit_get_distance_m85FCA98D7957C3BF1D449CA1B48C116CCD6226FA_AdjustorThunk (void);
+extern void RaycastHit_get_transform_m2DD983DBD3602DE848DE287EE5233FD02EEC608D_AdjustorThunk (void);
+extern void RaycastHit_get_rigidbody_mE48E45893FDAFD03162C6A73AAF02C6CB0E079FB_AdjustorThunk (void);
+extern void PhysicsScene_ToString_mBB6D0AC1E3E2EDC34CB4A7A34485B24B6271903F_AdjustorThunk (void);
+extern void PhysicsScene_GetHashCode_m5344CC6CCCB1CA6EBB149775EE028089DD74B8A2_AdjustorThunk (void);
+extern void PhysicsScene_Equals_m2645ABB96C598F197F734EB712494795928CBCEC_AdjustorThunk (void);
+extern void PhysicsScene_Equals_m8C948B86D105177D519A3608816CDC698C8686B8_AdjustorThunk (void);
+extern void PhysicsScene_Raycast_m8C3E61EB7C3DB8AAC6FEB098D815062BEF821187_AdjustorThunk (void);
+extern void PhysicsScene_Raycast_mFC0D59C4439EE9DA6E8AA5F6891915132D587208_AdjustorThunk (void);
+extern void PhysicsScene_Raycast_m95CAB68EB9165E3AB2A4D441F7DF9767AD4B7F73_AdjustorThunk (void);
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[13] = 
+{
+	{ 0x06000001, RaycastHit_get_collider_m13A3DE16FBC631E0A1F987E0B22CE70AF8AB539E_AdjustorThunk },
+	{ 0x06000002, RaycastHit_get_point_m32F7282CBB2E13393A33BAD046BDA218E48DD21E_AdjustorThunk },
+	{ 0x06000003, RaycastHit_get_normal_m2C813B25BAECD87FD9E9CB294278B291F4CC6674_AdjustorThunk },
+	{ 0x06000004, RaycastHit_get_distance_m85FCA98D7957C3BF1D449CA1B48C116CCD6226FA_AdjustorThunk },
+	{ 0x06000005, RaycastHit_get_transform_m2DD983DBD3602DE848DE287EE5233FD02EEC608D_AdjustorThunk },
+	{ 0x06000006, RaycastHit_get_rigidbody_mE48E45893FDAFD03162C6A73AAF02C6CB0E079FB_AdjustorThunk },
+	{ 0x0600000A, PhysicsScene_ToString_mBB6D0AC1E3E2EDC34CB4A7A34485B24B6271903F_AdjustorThunk },
+	{ 0x0600000B, PhysicsScene_GetHashCode_m5344CC6CCCB1CA6EBB149775EE028089DD74B8A2_AdjustorThunk },
+	{ 0x0600000C, PhysicsScene_Equals_m2645ABB96C598F197F734EB712494795928CBCEC_AdjustorThunk },
+	{ 0x0600000D, PhysicsScene_Equals_m8C948B86D105177D519A3608816CDC698C8686B8_AdjustorThunk },
+	{ 0x0600000E, PhysicsScene_Raycast_m8C3E61EB7C3DB8AAC6FEB098D815062BEF821187_AdjustorThunk },
+	{ 0x06000010, PhysicsScene_Raycast_mFC0D59C4439EE9DA6E8AA5F6891915132D587208_AdjustorThunk },
+	{ 0x06000012, PhysicsScene_Raycast_m95CAB68EB9165E3AB2A4D441F7DF9767AD4B7F73_AdjustorThunk },
 };
 static const int32_t s_InvokerIndices[58] = 
 {
-	14,
-	993,
-	993,
-	653,
-	14,
-	14,
-	23,
-	14,
-	26,
-	14,
-	10,
-	9,
-	1283,
-	1284,
-	1285,
-	1286,
-	1287,
-	1288,
-	1289,
 	1290,
-	1291,
-	1292,
-	1293,
-	1294,
-	1295,
-	1296,
-	1076,
-	1297,
-	1298,
-	1299,
-	1300,
-	1301,
-	1302,
-	1303,
-	1304,
-	1305,
-	1306,
-	1307,
-	1308,
-	1309,
-	1310,
-	1311,
+	1321,
+	1321,
 	1312,
-	1313,
-	1314,
-	1271,
-	1270,
-	1269,
-	1315,
-	1275,
-	1274,
-	1273,
-	1316,
-	1317,
-	1318,
-	1319,
-	17,
-	1320,
+	1290,
+	1290,
+	1323,
+	1290,
+	1122,
+	1290,
+	1276,
+	991,
+	993,
+	132,
+	1495,
+	77,
+	1414,
+	61,
+	1389,
+	1483,
+	1407,
+	1382,
+	2173,
+	1498,
+	1631,
+	1766,
+	1941,
+	1415,
+	1497,
+	1630,
+	1765,
+	1627,
+	1763,
+	1936,
+	2112,
+	1496,
+	1626,
+	1762,
+	1935,
+	1478,
+	1480,
+	1597,
+	1740,
+	1891,
+	1593,
+	1736,
+	1886,
+	2089,
+	1461,
+	1554,
+	1695,
+	1853,
+	1392,
+	1463,
+	1556,
+	1697,
+	2142,
+	1465,
 };
-extern const Il2CppCodeGenModule g_UnityEngine_PhysicsModuleCodeGenModule;
-const Il2CppCodeGenModule g_UnityEngine_PhysicsModuleCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_UnityEngine_PhysicsModule_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenModule = 
 {
 	"UnityEngine.PhysicsModule.dll",
 	58,
 	s_methodPointers,
+	13,
+	s_adjustorThunks,
 	s_InvokerIndices,
 	0,
 	NULL,
 	0,
 	NULL,
 	0,
+	NULL,
+	NULL,
+	g_UnityEngine_PhysicsModule_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 };

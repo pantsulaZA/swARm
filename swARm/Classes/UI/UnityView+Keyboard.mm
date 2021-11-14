@@ -60,6 +60,10 @@ static double GetTimeInSeconds()
         [commands addObject: [UIKeyCommand keyCommandWithInput: input modifierFlags: UIKeyModifierShift action: @selector(handleCommand:)]];
     }
 
+    // pageUp, pageDown
+    [commands addObject: [UIKeyCommand keyCommandWithInput: @"UIKeyInputPageUp" modifierFlags: kNilOptions action: @selector(handleCommand:)]];
+    [commands addObject: [UIKeyCommand keyCommandWithInput: @"UIKeyInputPageDown" modifierFlags: kNilOptions action: @selector(handleCommand:)]];
+
     // up, down, left, right, esc
     [commands addObject: [UIKeyCommand keyCommandWithInput: UIKeyInputUpArrow modifierFlags: kNilOptions action: @selector(handleCommand:)]];
     [commands addObject: [UIKeyCommand keyCommandWithInput: UIKeyInputDownArrow modifierFlags: kNilOptions action: @selector(handleCommand:)]];
@@ -79,17 +83,29 @@ static double GetTimeInSeconds()
 
 - (NSArray*)keyCommands
 {
-    //keyCommands take controll of buttons over UITextView, that's why need to return nil if text input field is active
-    if ([[KeyboardDelegate Instance] status] == Visible)
-    {
+    //keyCommands take control of buttons over UITextView, that's why need to return nil if text input field is active or we have an external keyboard attached AND a first responder
+    if ([[KeyboardDelegate Instance] status] == Visible || ([[KeyboardDelegate Instance] hasExternalKeyboard] && [self hasFirstResponderInHeirachy: UnityGetGLView()]))
         return nil;
-    }
 
     if (keyboardCommands == nil)
     {
         [self createKeyboard];
     }
     return keyboardCommands;
+}
+
+- (bool)hasFirstResponderInHeirachy:(UIView*)view
+{
+    if (view.isFirstResponder)
+        return true;
+
+    for (UIView* subview in view.subviews)
+    {
+        if ([self hasFirstResponderInHeirachy: subview])
+            return true;
+    }
+
+    return false;
 }
 
 - (bool)isValidCodeForButton:(int)code
@@ -192,6 +208,10 @@ static double GetTimeInSeconds()
         code = UnityStringToKey("left");
     else if (input == UIKeyInputEscape)
         code = UnityStringToKey("escape");
+    else if ([input isEqualToString: @"UIKeyInputPageUp"])
+        code = UnityStringToKey("page up");
+    else if ([input isEqualToString: @"UIKeyInputPageDown"])
+        code = UnityStringToKey("page down");
 
     KeyMap::iterator item = GetKeyMap().find(code);
     if (item == GetKeyMap().end())

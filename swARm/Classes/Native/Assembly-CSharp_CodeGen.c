@@ -1,11 +1,9 @@
-﻿#include "il2cpp-config.h"
-
+﻿#include "pch-c.h"
 #ifndef _MSC_VER
 # include <alloca.h>
 #else
 # include <malloc.h>
 #endif
-
 
 
 #include "codegen/il2cpp-codegen-metadata.h"
@@ -14,1813 +12,1850 @@
 
 
 
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
-
-
-
-
 // 0x00000001 System.Void Building::.ctor()
-extern void Building__ctor_mEBB4D311B20B52E8A707C09135B186AAD65243E3 ();
+extern void Building__ctor_mB1BAA261A5F238A037725FDDD528390DCA177239 (void);
 // 0x00000002 System.Void CameraController::Start()
-extern void CameraController_Start_mB6CB2C21A2848E4C149B512DBC2126404E75EB4B ();
+extern void CameraController_Start_mBDE87C2FCF352957C2B86B67610667663422FBE6 (void);
 // 0x00000003 System.Void CameraController::Update()
-extern void CameraController_Update_m63BEE9F8EAB23C1D75FA27F7446068BA984B1A6A ();
+extern void CameraController_Update_m3C257AC762117CFDDAD03C9C4FBBFDE51C61D534 (void);
 // 0x00000004 System.Void CameraController::SetupGesture()
-extern void CameraController_SetupGesture_m8365F6AB4834444827CC46BEB63D0E08E7461B07 ();
+extern void CameraController_SetupGesture_mF32C075D294F44E479F369E680ACEB2481E1BBC5 (void);
 // 0x00000005 System.Void CameraController::PanGestureCallback(DigitalRubyShared.GestureRecognizer)
-extern void CameraController_PanGestureCallback_m0781679B829D0237E2B0C61010D1A71C924966FC ();
+extern void CameraController_PanGestureCallback_m0727407887D69F00CF8C28128B145AA108FB2EE5 (void);
 // 0x00000006 System.Void CameraController::ScreenTapped(DigitalRubyShared.GestureRecognizer)
-extern void CameraController_ScreenTapped_mB33AC40E46972497AC56CC3A1ACF8505DADBC19D ();
+extern void CameraController_ScreenTapped_m48052DDE9E6B14CD800E0EFFA40E53ADCDBBA45C (void);
 // 0x00000007 System.Void CameraController::Zoom(DigitalRubyShared.GestureRecognizer)
-extern void CameraController_Zoom_m72884FBE0FB1DCB80B3CB186B3BAE5C6D7C31AD4 ();
+extern void CameraController_Zoom_m6448689CA102F0AF803DFFB15DFDAE1684301D79 (void);
 // 0x00000008 System.Void CameraController::Rotate(DigitalRubyShared.GestureRecognizer)
-extern void CameraController_Rotate_m13DDAE72C1A318E0426DEAAAD4FAA3ADFD062028 ();
+extern void CameraController_Rotate_m85473EB01129236782FAFE38F452046100066000 (void);
 // 0x00000009 System.Void CameraController::.ctor()
-extern void CameraController__ctor_m3E87BE2198B66EDA7ECA07CF01545ABD1B4761DE ();
+extern void CameraController__ctor_m07EC5A8C82742876097619BE7DD9043F47327DAE (void);
 // 0x0000000A System.Void CameraFollow::.ctor()
-extern void CameraFollow__ctor_m27AF37B0C19243374F9376EBB2C40A2F605DB16E ();
+extern void CameraFollow__ctor_m29F88CCFD2ED12A7BCC75A9BBA892CEF179C83DE (void);
 // 0x0000000B System.Void GameController::Start()
-extern void GameController_Start_m229BE9A914ADF299ACFF1EFD5F15F27FF146D3C0 ();
+extern void GameController_Start_mCC3F0292799528323E2217A12DB08D98CDD492AE (void);
 // 0x0000000C System.Collections.IEnumerator GameController::ConstructWorld()
-extern void GameController_ConstructWorld_mC34CC97B9CC7B9DCBFD7940DC52549F9610F871E ();
+extern void GameController_ConstructWorld_m111C3B61C389873033F43E4C54A4F84C22185265 (void);
 // 0x0000000D System.Void GameController::Update()
-extern void GameController_Update_m7D73FA9AB337123D2EB1CB806C756731D1B9B6F3 ();
+extern void GameController_Update_mA76A2CE1F2AC1AACCDBF913CA6E1EA73DC621CD0 (void);
 // 0x0000000E System.Void GameController::PlantTrees()
-extern void GameController_PlantTrees_mDE5CC048805B3B84097AB0117A344EB5649C59A9 ();
+extern void GameController_PlantTrees_mC9EE4163E3EEC29EF491A9BF00CC76D14C6EC42A (void);
 // 0x0000000F System.Void GameController::PlantTree(UnityEngine.Vector3)
-extern void GameController_PlantTree_m1B37ECDF9487EC10F431AB00B953249A7A9E9024 ();
+extern void GameController_PlantTree_m96A08AF8915C1172DFF0479EE5AE518A8DAD560D (void);
 // 0x00000010 System.Void GameController::SpawnPopulation()
-extern void GameController_SpawnPopulation_mE235D6C0733CBBE285E38ABE561FF048DDDDDB8D ();
+extern void GameController_SpawnPopulation_m12F5D4E4ACFCB7D75B79C2E4C7862541C25E2732 (void);
 // 0x00000011 Person GameController::createPerson(UnityEngine.Vector3)
-extern void GameController_createPerson_mA35CEA9A6F9385A6EA572AA046CE41519EC7CDCB ();
+extern void GameController_createPerson_m04E2AA1F91410BC0B8ECE020EED9D551DA865BFA (void);
 // 0x00000012 System.Void GameController::.ctor()
-extern void GameController__ctor_m839A9CFB9635B009C1DA139BEAD0E38467E57464 ();
-// 0x00000013 System.Void House::Reset()
-extern void House_Reset_mB460CE759902E6426C63A14D75B79BF46B1A548A ();
-// 0x00000014 System.Void House::AddResouce(System.Int32)
-extern void House_AddResouce_mBCF173E4476D260E53A24595E7B3F94C03B165D0 ();
-// 0x00000015 UnityEngine.GameObject House::GetPrefab()
-extern void House_GetPrefab_mCFB29B24E0FB0E64D292B55A64974E37CB03B450 ();
-// 0x00000016 System.Void House::Start()
-extern void House_Start_m8AE0CA09C093114058F1CEB5C78161FEFCC377D0 ();
-// 0x00000017 System.Void House::UpdatePrefab()
-extern void House_UpdatePrefab_m313245B16586EEDECAFFA2565F538B7DEE6C20D2 ();
-// 0x00000018 System.Void House::.ctor()
-extern void House__ctor_m275306BCBE13364D35103066C82CB966AA2BB09E ();
-// 0x00000019 System.Void Island::Start()
-extern void Island_Start_mA74E42D67B414B9B441467016E32C9EA0BE2BBDE ();
-// 0x0000001A System.Void Island::GenerateIsland(System.Single[0...,0...])
-extern void Island_GenerateIsland_mC9E2A7DD54C70CDDA71F624471CED192F85EB4F4 ();
-// 0x0000001B System.Void Island::GenerateMesh(System.Single[0...,0...])
-extern void Island_GenerateMesh_m97E003982F7FBC4BFC20B2EEC1D59C7B7B0A122A ();
-// 0x0000001C System.Void Island::UpdateMesh()
-extern void Island_UpdateMesh_m36661C1C0722FAA7D6E9644E32B49D423D97CAA3 ();
-// 0x0000001D System.Void Island::.ctor()
-extern void Island__ctor_m4F40F9FFF2385F8B1E09F0F74DBC27A9AD8A03A3 ();
-// 0x0000001E System.Collections.IEnumerator LocalNavMeshBuilder::Start()
-extern void LocalNavMeshBuilder_Start_m23CD1C18CECB346A446F74591EF6005799ED713C ();
-// 0x0000001F System.Void LocalNavMeshBuilder::OnEnable()
-extern void LocalNavMeshBuilder_OnEnable_m1B159E81555D69AB95904A007B6A414FB793C92C ();
-// 0x00000020 System.Void LocalNavMeshBuilder::OnDisable()
-extern void LocalNavMeshBuilder_OnDisable_m819DB8403CF7AA0D4BEDF4A2404C6FD34141766B ();
-// 0x00000021 System.Void LocalNavMeshBuilder::UpdateNavMesh(System.Boolean)
-extern void LocalNavMeshBuilder_UpdateNavMesh_mD6557EBC579DD85B3721A2FADE3B6730DF0B5101 ();
-// 0x00000022 UnityEngine.Vector3 LocalNavMeshBuilder::Quantize(UnityEngine.Vector3,UnityEngine.Vector3)
-extern void LocalNavMeshBuilder_Quantize_m157FCCF68EB16A8D2D0308EF61BDE80BFD567583 ();
-// 0x00000023 UnityEngine.Bounds LocalNavMeshBuilder::QuantizedBounds()
-extern void LocalNavMeshBuilder_QuantizedBounds_m1E0716E365C5E2546484B464EAF389CBC4CC9EF3 ();
-// 0x00000024 System.Void LocalNavMeshBuilder::OnDrawGizmosSelected()
-extern void LocalNavMeshBuilder_OnDrawGizmosSelected_m717B4BF7E5BD487F243304532168DA26963446B4 ();
-// 0x00000025 System.Void LocalNavMeshBuilder::.ctor()
-extern void LocalNavMeshBuilder__ctor_mB9B086205B8C8665B2853233536C29EA816CB7CC ();
-// 0x00000026 System.Void MapDisplay::DrawTexture(UnityEngine.Texture2D)
-extern void MapDisplay_DrawTexture_m9AA71A59E80BCDEAA348D33CC0274AB0262F17E4 ();
-// 0x00000027 System.Void MapDisplay::DrawMesh(MeshData,UnityEngine.Texture2D)
-extern void MapDisplay_DrawMesh_m10801956EF9A02C242E6783FFEE6FDD162CBF8F1 ();
-// 0x00000028 System.Void MapDisplay::.ctor()
-extern void MapDisplay__ctor_mA278AA99450F146777D33513A4024D81F853F369 ();
-// 0x00000029 System.Single[0...,0...] MapGenerator::GenerateMap()
-extern void MapGenerator_GenerateMap_m45C96FE76B42123C8A6905E4DD1A6423BDF81785 ();
-// 0x0000002A System.Void MapGenerator::OnValidate()
-extern void MapGenerator_OnValidate_mFFF8F731A805B9BCACAF717DA2D4F0BFED9237D3 ();
-// 0x0000002B System.Void MapGenerator::.ctor()
-extern void MapGenerator__ctor_m73A70E0A98CA25E3A8319F5DC52E783D13D5702B ();
-// 0x0000002C MeshData MeshGenerator::GenerateMesh(System.Single[0...,0...],System.Single,UnityEngine.AnimationCurve)
-extern void MeshGenerator_GenerateMesh_m9623F22E9EFF1FF40A9DB10A5D38CFDC48251FF3 ();
-// 0x0000002D System.Void MeshGenerator::.ctor()
-extern void MeshGenerator__ctor_m61B3CCF641176DC3019842377ED531911B1A2D7E ();
-// 0x0000002E System.Void MeshData::.ctor(System.Int32,System.Int32)
-extern void MeshData__ctor_m9BBB670A0953F228B0779876651C9EEA041AAC9C ();
-// 0x0000002F System.Void MeshData::AddTriangle(System.Int32,System.Int32,System.Int32)
-extern void MeshData_AddTriangle_m498235099D40E339B85F5FC6D1A0CD952031F197 ();
-// 0x00000030 UnityEngine.Mesh MeshData::CreateMesh()
-extern void MeshData_CreateMesh_m1CDC0E49C8AAA4CEB70D346F97430402EDDB9CF8 ();
-// 0x00000031 System.Void NavMeshSourceTag::OnEnable()
-extern void NavMeshSourceTag_OnEnable_m45A810204EB7C3DE84C71022F657E708987A297F ();
-// 0x00000032 System.Void NavMeshSourceTag::OnDisable()
-extern void NavMeshSourceTag_OnDisable_m767004196F477CBD91714751CCD168124770A8E6 ();
-// 0x00000033 System.Void NavMeshSourceTag::Collect(System.Collections.Generic.List`1<UnityEngine.AI.NavMeshBuildSource>&)
-extern void NavMeshSourceTag_Collect_m0A1546338D46421F6290EB7219C5945B8C3268DC ();
-// 0x00000034 System.Void NavMeshSourceTag::.ctor()
-extern void NavMeshSourceTag__ctor_m42ED6C6EFCAF1A72278ECBA6E768157AAF192E71 ();
-// 0x00000035 System.Void NavMeshSourceTag::.cctor()
-extern void NavMeshSourceTag__cctor_mD2F823B40361B3AD6088AF854036C42D2C122835 ();
-// 0x00000036 System.Single[0...,0...] Noise::Generate(System.Int32,System.Int32,System.Int32,System.Single,System.Int32,System.Single,System.Single,UnityEngine.Vector2)
-extern void Noise_Generate_m0D41F702D002D331B9FE68A2C13CC28904C693A8 ();
-// 0x00000037 System.Void BaseState::.ctor(UnityEngine.GameObject)
-extern void BaseState__ctor_m4D15CF53FACC4B7CFD3F7BB4D4E3099B2FD3F40E ();
-// 0x00000038 System.Type BaseState::Tick()
-// 0x00000039 System.Void BuildingState::.ctor(Person)
-extern void BuildingState__ctor_mC48EDAD7CE3AF6E856543DD1C19A449393D31A59 ();
-// 0x0000003A System.Type BuildingState::Tick()
-extern void BuildingState_Tick_m943D99D63FDDA81F862B1568EB7182A267813125 ();
-// 0x0000003B System.Void ChoppingState::.ctor(Person)
-extern void ChoppingState__ctor_m754CBFD07FC7CF8CBF8A6775F0F93AA6B8B060F3 ();
-// 0x0000003C System.Type ChoppingState::Tick()
-extern void ChoppingState_Tick_mE3C966E0613FF0B6815144D65F15548A56C4228D ();
-// 0x0000003D System.Void GatherState::.ctor(Person)
-extern void GatherState__ctor_m2F59FB51085CCAE09650AFD83F7CC45B05AF2546 ();
-// 0x0000003E System.Type GatherState::Tick()
-extern void GatherState_Tick_mC16C51490E8223D0B69B0037F0B830D348E6564D ();
-// 0x0000003F System.Void IdleState::.ctor(Person)
-extern void IdleState__ctor_mE9042C368BDE2AFB367CD2092B6EE934E65148FD ();
-// 0x00000040 System.Type IdleState::Tick()
-extern void IdleState_Tick_m62EEE4CF1633BAAE3F7F460AC27B9C225D3BD107 ();
-// 0x00000041 System.Void Person::Awake()
-extern void Person_Awake_mF40DE8CB7C00E41B3231C9D9B5124BAC1E9BD7BE ();
-// 0x00000042 System.Void Person::Start()
-extern void Person_Start_m61977F677DCEDFE18F47C652E7F912BA41194880 ();
-// 0x00000043 System.Void Person::Update()
-extern void Person_Update_m82EF73FF5A7E2DF12A908C69ED7B6014C506CF06 ();
-// 0x00000044 System.Void Person::SetAnimation(System.String)
-extern void Person_SetAnimation_mD2DE29A41E027D158D9F23CC21E0B3EDCB5A87DD ();
-// 0x00000045 System.Void Person::StartAction(System.Single)
-extern void Person_StartAction_m706A1843A4C347717E0D9A1D21FFD730FAAB1117 ();
-// 0x00000046 System.Boolean Person::isActionDone()
-extern void Person_isActionDone_mE850380B61FF46EF4A938B10B4975C1C21C88116 ();
-// 0x00000047 System.Void Person::Pickup(System.Int32)
-extern void Person_Pickup_mB7622381404D2EEC965E76322E9271857DAA9983 ();
-// 0x00000048 System.Void Person::Drop()
-extern void Person_Drop_m1B4B34E39E7B5A4D375A699A021497CFBE603C05 ();
-// 0x00000049 System.Void Person::SetupStateMachine()
-extern void Person_SetupStateMachine_m377B774652A9445442B405BA3A6B1EBD48489578 ();
-// 0x0000004A System.Void Person::GotoNearestResource()
-extern void Person_GotoNearestResource_m40F8CE18760A037E6FE39A15363AFDCE9E3CE981 ();
-// 0x0000004B System.Void Person::GoHome()
-extern void Person_GoHome_m0DD6E5BF1A58DF94FEB6C59088847D78EC163781 ();
-// 0x0000004C System.Boolean Person::IsAtDestination()
-extern void Person_IsAtDestination_mF651A903B40781AE92485C7DFEB4FD969A21948E ();
-// 0x0000004D System.Boolean Person::IsInvertoryFull()
-extern void Person_IsInvertoryFull_m49B3C56C20BA6437FDF5FC9F89DEB52EEC841215 ();
-// 0x0000004E System.Void Person::.ctor()
-extern void Person__ctor_m5006AA1AAFA45A11827F5B2D3FFFF1B6128143FB ();
-// 0x0000004F BaseState PersonStateMachine::get_currentState()
-extern void PersonStateMachine_get_currentState_m6D5057F255D7129B999D6E9B1137D334A72CE9B6 ();
-// 0x00000050 System.Void PersonStateMachine::set_currentState(BaseState)
-extern void PersonStateMachine_set_currentState_mDF3559D80FEE0FF850018342432BF589DB0293C8 ();
-// 0x00000051 System.Void PersonStateMachine::SetStates(System.Collections.Generic.Dictionary`2<System.Type,BaseState>,BaseState)
-extern void PersonStateMachine_SetStates_m0B5F44755DC882F6FB1545B15464D1C19B70F86C ();
-// 0x00000052 System.Void PersonStateMachine::Update()
-extern void PersonStateMachine_Update_mFB0AD24D66BB14A7AC2127275A2422B9E2FCF1C8 ();
-// 0x00000053 System.Void PersonStateMachine::SwitchToNextState(System.Type)
-extern void PersonStateMachine_SwitchToNextState_mAB7815604EC6ADDC1ADF801C2AA0890B2BE19E19 ();
-// 0x00000054 System.Void PersonStateMachine::.ctor()
-extern void PersonStateMachine__ctor_m32B04A5CE5A9805FF4C4A4131057D2F3178D6F29 ();
-// 0x00000055 System.Void WalkingState::.ctor(Person)
-extern void WalkingState__ctor_m3EF002B834FADCA6424F2253229E2EDB5954EF1D ();
-// 0x00000056 System.Type WalkingState::Tick()
-extern void WalkingState_Tick_m77E5FA6F1EDF5767D16904FC0034F8C39CF1BEE3 ();
-// 0x00000057 System.Void WanderState::Start()
-extern void WanderState_Start_m2A49A935B5AB5AC71C0C33EFCBF393863181D632 ();
-// 0x00000058 System.Void WanderState::Update()
-extern void WanderState_Update_mB3C88C2A7F01473977DC80F191AD21B7590E3426 ();
-// 0x00000059 System.Void WanderState::.ctor()
-extern void WanderState__ctor_m6B0BE7EF98A0C35B9BA832A4AB9F032C66C09551 ();
-// 0x0000005A System.Void Plantable::.ctor()
-extern void Plantable__ctor_mBC585B09D02A9C7B89F4DAF955AB8157E9BE0B27 ();
-// 0x0000005B System.Void SelectableObject::.ctor()
-extern void SelectableObject__ctor_m421B7CFC3676B31505EBBB3C54D74A223B553A09 ();
-// 0x0000005C UnityEngine.Transform Storage::GetTransform()
-extern void Storage_GetTransform_mA955152E2EE9B235E844290F61A661A408BD7CC0 ();
-// 0x0000005D System.Void Storage::.ctor()
-extern void Storage__ctor_mEAB8488BB5358EA6C821CE6D19F8AFC4256D3E29 ();
-// 0x0000005E UnityEngine.Texture2D TextureGenertor::TextureFromColorMap(UnityEngine.Color[],System.Int32,System.Int32)
-extern void TextureGenertor_TextureFromColorMap_mAB2E67FE16C84F2896DCF221700140145F2CEF00 ();
-// 0x0000005F UnityEngine.Texture2D TextureGenertor::TextureFromHeightMap(System.Single[0...,0...])
-extern void TextureGenertor_TextureFromHeightMap_m6C538D675C6380BA2FEB46DC61389C3E0833DD68 ();
-// 0x00000060 System.Void DigitalRubyShared.DemoAsteroidScript::Start()
-extern void DemoAsteroidScript_Start_mD7F7B0423EC9C3DAEB119FBE25902042EB393DF6 ();
-// 0x00000061 System.Void DigitalRubyShared.DemoAsteroidScript::Update()
-extern void DemoAsteroidScript_Update_m28E346B911C7196524DD9EB11EF77CA35E9648C1 ();
-// 0x00000062 System.Void DigitalRubyShared.DemoAsteroidScript::OnBecameInvisible()
-extern void DemoAsteroidScript_OnBecameInvisible_mFC6508995BACE4224870F71DA3A7DEC957864628 ();
-// 0x00000063 System.Void DigitalRubyShared.DemoAsteroidScript::.ctor()
-extern void DemoAsteroidScript__ctor_mE442B327D762609A2E5E076AC7E3A5BC6D50776F ();
-// 0x00000064 System.Void DigitalRubyShared.DemoScript::DebugText(System.String,System.Object[])
-extern void DemoScript_DebugText_mB16EFDC1D084ABF277C7FA45E05A8C0DB7634AFC ();
-// 0x00000065 UnityEngine.GameObject DigitalRubyShared.DemoScript::CreateAsteroid(System.Single,System.Single)
-extern void DemoScript_CreateAsteroid_mEF532C2EB156AC6F111EDDE7A9A2FDA44AAD2CDF ();
-// 0x00000066 System.Void DigitalRubyShared.DemoScript::RemoveAsteroids(System.Single,System.Single,System.Single)
-extern void DemoScript_RemoveAsteroids_m8CF8FE4EC4C3B1ED5AFF7DD17C4914A356C2484D ();
-// 0x00000067 System.Void DigitalRubyShared.DemoScript::BeginDrag(System.Single,System.Single)
-extern void DemoScript_BeginDrag_mA3244374B856C7971EED72F3DBC58AA75676AFB1 ();
-// 0x00000068 System.Void DigitalRubyShared.DemoScript::DragTo(System.Single,System.Single)
-extern void DemoScript_DragTo_m1D44992D5D31342021C37334C2763D534984268D ();
-// 0x00000069 System.Void DigitalRubyShared.DemoScript::EndDrag(System.Single,System.Single)
-extern void DemoScript_EndDrag_mFF99E75EBB72BC704B39B8458B37D79A68999CC3 ();
-// 0x0000006A System.Void DigitalRubyShared.DemoScript::HandleSwipe(System.Single,System.Single)
-extern void DemoScript_HandleSwipe_m379C3F162A1EFE43110392B76B7B8EC0FC06D88D ();
-// 0x0000006B System.Void DigitalRubyShared.DemoScript::TapGestureCallback(DigitalRubyShared.GestureRecognizer)
-extern void DemoScript_TapGestureCallback_mEC64518A6B0DCE9BF617F4B35AC4FB4EE693D3FE ();
-// 0x0000006C System.Void DigitalRubyShared.DemoScript::CreateTapGesture()
-extern void DemoScript_CreateTapGesture_mB02666A47EE0808BDA992862848253B2844E5EF2 ();
-// 0x0000006D System.Void DigitalRubyShared.DemoScript::DoubleTapGestureCallback(DigitalRubyShared.GestureRecognizer)
-extern void DemoScript_DoubleTapGestureCallback_mE7D6DE22B47EA1688087612EA047F3C1E52C4D5C ();
-// 0x0000006E System.Void DigitalRubyShared.DemoScript::CreateDoubleTapGesture()
-extern void DemoScript_CreateDoubleTapGesture_m87495B7555BDB3520EDD1DC2B2839180FC69F6F4 ();
-// 0x0000006F System.Void DigitalRubyShared.DemoScript::SwipeGestureCallback(DigitalRubyShared.GestureRecognizer)
-extern void DemoScript_SwipeGestureCallback_m6A98B35E38D4032AEEFA8D3DA12E770A6470381E ();
-// 0x00000070 System.Void DigitalRubyShared.DemoScript::CreateSwipeGesture()
-extern void DemoScript_CreateSwipeGesture_m88703CD13F71058D2CBA5BBD1EA52778B1F05690 ();
-// 0x00000071 System.Void DigitalRubyShared.DemoScript::PanGestureCallback(DigitalRubyShared.GestureRecognizer)
-extern void DemoScript_PanGestureCallback_m7E20E0A818B226965B446599F6719C772E136D37 ();
-// 0x00000072 System.Void DigitalRubyShared.DemoScript::CreatePanGesture()
-extern void DemoScript_CreatePanGesture_mE7E4B29A08BE3BE077E6344ACC4CC71EC5A08BA1 ();
-// 0x00000073 System.Void DigitalRubyShared.DemoScript::ScaleGestureCallback(DigitalRubyShared.GestureRecognizer)
-extern void DemoScript_ScaleGestureCallback_m39B7FDC38F2A7CDD9BCF4EC322255304A4B51841 ();
-// 0x00000074 System.Void DigitalRubyShared.DemoScript::CreateScaleGesture()
-extern void DemoScript_CreateScaleGesture_mE30ADC28AD470590C2B05F816E27203B71EBFDED ();
-// 0x00000075 System.Void DigitalRubyShared.DemoScript::RotateGestureCallback(DigitalRubyShared.GestureRecognizer)
-extern void DemoScript_RotateGestureCallback_mE9F0CB7B15D61022B3234FD96C7BB888C4ED7D02 ();
-// 0x00000076 System.Void DigitalRubyShared.DemoScript::CreateRotateGesture()
-extern void DemoScript_CreateRotateGesture_m0594F9970D8768B7806962D59AB4C1DAC1A1D30B ();
-// 0x00000077 System.Void DigitalRubyShared.DemoScript::LongPressGestureCallback(DigitalRubyShared.GestureRecognizer)
-extern void DemoScript_LongPressGestureCallback_m6B427CCE7CD6334B888D543675DC012D5275B954 ();
-// 0x00000078 System.Void DigitalRubyShared.DemoScript::CreateLongPressGesture()
-extern void DemoScript_CreateLongPressGesture_m18E4016BE13DA9554DB89A35BFAC9489606622B8 ();
-// 0x00000079 System.Void DigitalRubyShared.DemoScript::PlatformSpecificViewTapUpdated(DigitalRubyShared.GestureRecognizer)
-extern void DemoScript_PlatformSpecificViewTapUpdated_mFEA972D81E2A66952FB2F4EC3D64A9A5A74F3509 ();
-// 0x0000007A System.Void DigitalRubyShared.DemoScript::CreatePlatformSpecificViewTripleTapGesture()
-extern void DemoScript_CreatePlatformSpecificViewTripleTapGesture_m7D1EC0D6C974A4533BF72B11753C5CAFC0ABA5B5 ();
-// 0x0000007B System.Nullable`1<System.Boolean> DigitalRubyShared.DemoScript::CaptureGestureHandler(UnityEngine.GameObject)
-extern void DemoScript_CaptureGestureHandler_mEFBC571981C6E6DD6A0D5397AFB7FEEE5F1FDD94 ();
-// 0x0000007C System.Void DigitalRubyShared.DemoScript::Start()
-extern void DemoScript_Start_m95146C5BA1FB7CE7CF9D2F723DDD846F20A1D541 ();
-// 0x0000007D System.Void DigitalRubyShared.DemoScript::Update()
-extern void DemoScript_Update_m6370A3246DAF0BC37C5198F6FB9278B69B955612 ();
-// 0x0000007E System.Void DigitalRubyShared.DemoScript::LateUpdate()
-extern void DemoScript_LateUpdate_mAA4D2A142D192AD9E0B91559068E7E7970EB9A83 ();
-// 0x0000007F System.Void DigitalRubyShared.DemoScript::OnRenderObject()
-extern void DemoScript_OnRenderObject_m9656AA5C8E4A66610059DE2F5AC172B844256D43 ();
-// 0x00000080 System.Void DigitalRubyShared.DemoScript::ReloadDemoScene()
-extern void DemoScript_ReloadDemoScene_m25A659AB89F29865EE21FBE6F6729F1604CAC708 ();
-// 0x00000081 System.Void DigitalRubyShared.DemoScript::.ctor()
-extern void DemoScript__ctor_mEB207EFAA2366844A14EA7C8CF3D4787CCCBDDD9 ();
-// 0x00000082 System.Collections.IEnumerator DigitalRubyShared.FingersScript::MainThreadCallback(System.Single,System.Action)
-extern void FingersScript_MainThreadCallback_m8055434989ECB50BBBF4775ED419CDE22759E285 ();
-// 0x00000083 DigitalRubyShared.FingersScript_CaptureResult DigitalRubyShared.FingersScript::ShouldCaptureGesture(UnityEngine.GameObject)
-extern void FingersScript_ShouldCaptureGesture_m6966CCB8EFAC3E193DA8F48F8A43D31A67A29E78 ();
-// 0x00000084 System.Void DigitalRubyShared.FingersScript::PopulateGameObjectsForTouch(System.Int32,System.Single,System.Single)
-extern void FingersScript_PopulateGameObjectsForTouch_m6AB80447D68D5B85D5AD5A15C3FAEA86B027FC8E ();
-// 0x00000085 DigitalRubyShared.GestureTouch DigitalRubyShared.FingersScript::GestureTouchFromTouch(UnityEngine.Touch&)
-extern void FingersScript_GestureTouchFromTouch_m07FC261CC6AF8F5D57E7EA916D486A27CFD6CF9C ();
-// 0x00000086 System.Void DigitalRubyShared.FingersScript::FingersBeginTouch(DigitalRubyShared.GestureTouch&)
-extern void FingersScript_FingersBeginTouch_m882CAE44C7AACF9D40847BD9D965A287EF748C50 ();
-// 0x00000087 System.Void DigitalRubyShared.FingersScript::FingersContinueTouch(DigitalRubyShared.GestureTouch&)
-extern void FingersScript_FingersContinueTouch_mDFDE3193FE1988428113293855A602712750D4DD ();
-// 0x00000088 System.Void DigitalRubyShared.FingersScript::FingersEndTouch(DigitalRubyShared.GestureTouch&,System.Boolean)
-extern void FingersScript_FingersEndTouch_m025FBC9AE339F303742652B9D8358D03D1954278 ();
-// 0x00000089 System.Void DigitalRubyShared.FingersScript::FingersProcessTouch(DigitalRubyShared.GestureTouch&)
-extern void FingersScript_FingersProcessTouch_m4057DA61E2B0CE68EED0E365BB0A6DCF24E39B59 ();
-// 0x0000008A System.Void DigitalRubyShared.FingersScript::AddMouseTouch(System.Int32,System.Int32,System.Single,System.Single)
-extern void FingersScript_AddMouseTouch_m603C702382B886D125D11F6992FFF4F3D8394A8C ();
-// 0x0000008B System.Void DigitalRubyShared.FingersScript::ProcessTouches()
-extern void FingersScript_ProcessTouches_m8436874D15F8CE5838ADB681447F3038768288A5 ();
-// 0x0000008C System.Void DigitalRubyShared.FingersScript::RotateAroundPoint(System.Single&,System.Single&,System.Single,System.Single,System.Single)
-extern void FingersScript_RotateAroundPoint_m671DC6E8C846EB0941AA6B141C9D398AA4616921 ();
-// 0x0000008D System.Void DigitalRubyShared.FingersScript::ProcessMouseButtons()
-extern void FingersScript_ProcessMouseButtons_m7B6DFEBE0563346EEA4A120883C0755526CC748A ();
-// 0x0000008E System.Void DigitalRubyShared.FingersScript::ProcessMouseWheel()
-extern void FingersScript_ProcessMouseWheel_m6941EDDF3D5B1AB64C276941FC9FA74896284333 ();
-// 0x0000008F System.Void DigitalRubyShared.FingersScript::ProcessLostTouches()
-extern void FingersScript_ProcessLostTouches_m015B09D265EE6CB0091D4DDB363B846832ADE0AF ();
-// 0x00000090 System.Boolean DigitalRubyShared.FingersScript::GameObjectMatchesPlatformSpecificView(System.Collections.Generic.List`1<UnityEngine.GameObject>,DigitalRubyShared.GestureRecognizer)
-extern void FingersScript_GameObjectMatchesPlatformSpecificView_m77A2472DA667A1D45737E9356E5AC612BE9D076D ();
-// 0x00000091 System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch> DigitalRubyShared.FingersScript::FilterTouchesBegan(System.Collections.Generic.List`1<DigitalRubyShared.GestureTouch>,DigitalRubyShared.GestureRecognizer)
-extern void FingersScript_FilterTouchesBegan_m8C0B0D9E9688F5E33AFEB3570514460070896D8D ();
-// 0x00000092 System.Void DigitalRubyShared.FingersScript::CleanupPassThroughObjects()
-extern void FingersScript_CleanupPassThroughObjects_m027DEC3772B43539366BB445132B45BCD4B12A3A ();
-// 0x00000093 System.Void DigitalRubyShared.FingersScript::SetupDefaultPassThroughComponents()
-extern void FingersScript_SetupDefaultPassThroughComponents_m14D86B416AA02497E72502D614AC1DD60559002A ();
-// 0x00000094 System.Void DigitalRubyShared.FingersScript::SceneManagerSceneUnloaded(UnityEngine.SceneManagement.Scene)
-extern void FingersScript_SceneManagerSceneUnloaded_mB4050A147FE967C326D2A837E6D949BB0BD1AD96 ();
-// 0x00000095 System.Void DigitalRubyShared.FingersScript::Awake()
-extern void FingersScript_Awake_m17F5ACA093E74E88A5D25D78A70EB50672AB04F7 ();
-// 0x00000096 System.Void DigitalRubyShared.FingersScript::Update()
-extern void FingersScript_Update_mA22F99BED9E0EDA2B3DBE9FE7524F8F23EBB6D07 ();
-// 0x00000097 System.Void DigitalRubyShared.FingersScript::OnDestroy()
-extern void FingersScript_OnDestroy_mA366651387B56CCFEC2D701C7418F521F7C5681D ();
-// 0x00000098 System.Boolean DigitalRubyShared.FingersScript::AddGesture(DigitalRubyShared.GestureRecognizer)
-extern void FingersScript_AddGesture_mFB11DEF382EC5FCAD78FE5C91B6C6F264DE5A50B ();
-// 0x00000099 System.Boolean DigitalRubyShared.FingersScript::RemoveGesture(DigitalRubyShared.GestureRecognizer)
-extern void FingersScript_RemoveGesture_m2FE3EEB2EA9B1D0B7BC029AC9EDED60920F54CC6 ();
-// 0x0000009A System.Void DigitalRubyShared.FingersScript::ResetState(System.Boolean)
-extern void FingersScript_ResetState_m008AFF57604F2C0439884E0514E1A662C8978B8A ();
-// 0x0000009B UnityEngine.Rect DigitalRubyShared.FingersScript::RectTransformToScreenSpace(UnityEngine.RectTransform)
-extern void FingersScript_RectTransformToScreenSpace_m61BE8DC71EF5C6B7A095D11990926AF3225AA6DF ();
-// 0x0000009C System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch> DigitalRubyShared.FingersScript::get_Touches()
-extern void FingersScript_get_Touches_m2023AE631A6D150814D47AE453C8C71E70BBA141 ();
-// 0x0000009D System.Collections.Generic.HashSet`1<System.Type> DigitalRubyShared.FingersScript::get_ComponentTypesToDenyPassThrough()
-extern void FingersScript_get_ComponentTypesToDenyPassThrough_mCDE0F7555A5965D36C4381AB7357425485D8169A ();
-// 0x0000009E System.Collections.Generic.HashSet`1<System.Type> DigitalRubyShared.FingersScript::get_ComponentTypesToIgnorePassThrough()
-extern void FingersScript_get_ComponentTypesToIgnorePassThrough_mE1EB553CDFA4F17F31D375EBF48C193C08F49BE1 ();
-// 0x0000009F System.Collections.ObjectModel.ReadOnlyCollection`1<DigitalRubyShared.GestureTouch> DigitalRubyShared.FingersScript::get_CurrentTouches()
-extern void FingersScript_get_CurrentTouches_m4F5B9C21F9BAA226F38BFB33A7DA871EB9F14CC7 ();
-// 0x000000A0 System.Collections.ObjectModel.ReadOnlyCollection`1<DigitalRubyShared.GestureRecognizer> DigitalRubyShared.FingersScript::get_Gestures()
-extern void FingersScript_get_Gestures_m58C7E67E5A989E0C5D07B9668C88874202004ABF ();
-// 0x000000A1 DigitalRubyShared.FingersScript DigitalRubyShared.FingersScript::get_Instance()
-extern void FingersScript_get_Instance_mF33044E7D615F376A929E1E351D1060C05BE73F5 ();
-// 0x000000A2 System.Boolean DigitalRubyShared.FingersScript::get_HasInstance()
-extern void FingersScript_get_HasInstance_m2C3589D33F5F08FEAE586CC9A38B4CFA5E85FA88 ();
-// 0x000000A3 System.Void DigitalRubyShared.FingersScript::.ctor()
-extern void FingersScript__ctor_m368D1EE90D52DF57FB33869D3ADE40653BB5F603 ();
-// 0x000000A4 System.Void DigitalRubyShared.FingersScript::<Awake>b__53_0(System.Single,System.Action)
-extern void FingersScript_U3CAwakeU3Eb__53_0_m196C2CCDBFAD0C9575F9F2FA2F5AD8FEF78B9B60 ();
-// 0x000000A5 System.Single DigitalRubyShared.DeviceInfo::CentimetersToInches(System.Single)
-extern void DeviceInfo_CentimetersToInches_m66C6D87BE17579B5DB0099D5BBD75EA2C7CD8CEF ();
-// 0x000000A6 System.Single DigitalRubyShared.DeviceInfo::InchesToCentimeters(System.Single)
-extern void DeviceInfo_InchesToCentimeters_m7399473FAED623BC7C92418655670674EFC8728A ();
-// 0x000000A7 System.Single DigitalRubyShared.DeviceInfo::PixelsToUnits(System.Single)
-extern void DeviceInfo_PixelsToUnits_mDCB7E2E0D153E1A4E0A11F556339B1E1FB6ED161 ();
-// 0x000000A8 System.Single DigitalRubyShared.DeviceInfo::UnitsToPixels(System.Single)
-extern void DeviceInfo_UnitsToPixels_mF754A66D0D7F3D4B027BA61F6B615D5AFAC84DC2 ();
-// 0x000000A9 System.Single DigitalRubyShared.DeviceInfo::get_PixelsPerInch()
-extern void DeviceInfo_get_PixelsPerInch_mE784E5EF6B3481CB0362C4F3B940D5E31E7C2EEA ();
-// 0x000000AA System.Void DigitalRubyShared.DeviceInfo::set_PixelsPerInch(System.Single)
-extern void DeviceInfo_set_PixelsPerInch_mC8DE3098D1531313ED07AE14DCEBD0B0F807869C ();
-// 0x000000AB System.Single DigitalRubyShared.DeviceInfo::get_UnitMultiplier()
-extern void DeviceInfo_get_UnitMultiplier_m46190E08ACFC874955C656AEEC7038CE7511C5C1 ();
-// 0x000000AC System.Void DigitalRubyShared.DeviceInfo::set_UnitMultiplier(System.Single)
-extern void DeviceInfo_set_UnitMultiplier_m8654B27F008E80164634CE444A1087DD15D123EB ();
-// 0x000000AD System.Void DigitalRubyShared.GestureTouch::.ctor(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single,System.Object,DigitalRubyShared.TouchPhase)
-extern void GestureTouch__ctor_m3DD78BE40CB0489A5F5E42877F9EB061DA497FB0_AdjustorThunk ();
-// 0x000000AE System.Int32 DigitalRubyShared.GestureTouch::CompareTo(DigitalRubyShared.GestureTouch)
-extern void GestureTouch_CompareTo_m36B9A638B6659AB9ED4BA406CD02C5EE5F736CE5_AdjustorThunk ();
-// 0x000000AF System.Int32 DigitalRubyShared.GestureTouch::GetHashCode()
-extern void GestureTouch_GetHashCode_mB814ED3E5AD2E477860B3BC42EDACD02AE605876_AdjustorThunk ();
-// 0x000000B0 System.Boolean DigitalRubyShared.GestureTouch::Equals(System.Object)
-extern void GestureTouch_Equals_mF4334E989D20F01EF2A91072F883D6A7888C0204_AdjustorThunk ();
-// 0x000000B1 System.Int32 DigitalRubyShared.GestureTouch::get_Id()
-extern void GestureTouch_get_Id_mA4F629D6AC89791AABEEE40B4DB30A5A1D58E457_AdjustorThunk ();
-// 0x000000B2 System.Single DigitalRubyShared.GestureTouch::get_ScreenX()
-extern void GestureTouch_get_ScreenX_m2BAD6521795FECF086192278967D8CD1F672FF7F_AdjustorThunk ();
-// 0x000000B3 System.Single DigitalRubyShared.GestureTouch::get_X()
-extern void GestureTouch_get_X_m6439F407FB74121410E68BCDB23162677D3EA199_AdjustorThunk ();
-// 0x000000B4 System.Single DigitalRubyShared.GestureTouch::get_ScreenY()
-extern void GestureTouch_get_ScreenY_m638BD1DCA995A758050EFF170212D9D9A9F38F5E_AdjustorThunk ();
-// 0x000000B5 System.Single DigitalRubyShared.GestureTouch::get_Y()
-extern void GestureTouch_get_Y_m472A26A18D8B2FF3EF2B2F932C50BF2540FDA4F9_AdjustorThunk ();
-// 0x000000B6 System.Single DigitalRubyShared.GestureTouch::get_PreviousX()
-extern void GestureTouch_get_PreviousX_mC8793952AA0BB2F22D5E6312890C30E6DEE717F8_AdjustorThunk ();
-// 0x000000B7 System.Single DigitalRubyShared.GestureTouch::get_PreviousY()
-extern void GestureTouch_get_PreviousY_m1B608287D6B50E471BC1E5EA125F509A68022737_AdjustorThunk ();
-// 0x000000B8 System.Single DigitalRubyShared.GestureTouch::get_Pressure()
-extern void GestureTouch_get_Pressure_m9C1E7F37ED4C2007BBE32C56EC2F6EA67EEE9394_AdjustorThunk ();
-// 0x000000B9 System.Single DigitalRubyShared.GestureTouch::get_DeltaX()
-extern void GestureTouch_get_DeltaX_m20ABF4593AFC78A289F6A5274BAF5880C14866F3_AdjustorThunk ();
-// 0x000000BA System.Single DigitalRubyShared.GestureTouch::get_DeltaY()
-extern void GestureTouch_get_DeltaY_m149DC1AC3723A1D4972FFB9D5AC6B54B308AAB4B_AdjustorThunk ();
-// 0x000000BB System.Object DigitalRubyShared.GestureTouch::get_PlatformSpecificTouch()
-extern void GestureTouch_get_PlatformSpecificTouch_m9BA7FBF1E670CBB8D8B448C28F430A61AD9699A0_AdjustorThunk ();
-// 0x000000BC DigitalRubyShared.TouchPhase DigitalRubyShared.GestureTouch::get_TouchPhase()
-extern void GestureTouch_get_TouchPhase_m7461DF9511C127080F61DAE5259F5E3AACAA3EB4_AdjustorThunk ();
-// 0x000000BD System.Void DigitalRubyShared.GestureRecognizerStateUpdatedDelegate::.ctor(System.Object,System.IntPtr)
-extern void GestureRecognizerStateUpdatedDelegate__ctor_m5F97A130CC6C152218D0FA2089EF55893520FF35 ();
-// 0x000000BE System.Void DigitalRubyShared.GestureRecognizerStateUpdatedDelegate::Invoke(DigitalRubyShared.GestureRecognizer)
-extern void GestureRecognizerStateUpdatedDelegate_Invoke_m8847B2C469EE94DFFDE1A3CF77B95AD490D7EB87 ();
-// 0x000000BF System.IAsyncResult DigitalRubyShared.GestureRecognizerStateUpdatedDelegate::BeginInvoke(DigitalRubyShared.GestureRecognizer,System.AsyncCallback,System.Object)
-extern void GestureRecognizerStateUpdatedDelegate_BeginInvoke_m77E0E8CF2BCAC5ECF5F82D60D5D8577D142310E4 ();
-// 0x000000C0 System.Void DigitalRubyShared.GestureRecognizerStateUpdatedDelegate::EndInvoke(System.IAsyncResult)
-extern void GestureRecognizerStateUpdatedDelegate_EndInvoke_mEFCD99D9F56CD989089CC638AD7877903846C225 ();
-// 0x000000C1 System.Void DigitalRubyShared.GestureRecognizerUpdated::.ctor(System.Object,System.IntPtr)
-extern void GestureRecognizerUpdated__ctor_mD856B5C8C71DF98895374A22C85739CBFD4539FB ();
-// 0x000000C2 System.Void DigitalRubyShared.GestureRecognizerUpdated::Invoke(DigitalRubyShared.GestureRecognizer,System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizerUpdated_Invoke_m1F7B00ADCE84BE7A6EEA9A40A6690633661803CB ();
-// 0x000000C3 System.IAsyncResult DigitalRubyShared.GestureRecognizerUpdated::BeginInvoke(DigitalRubyShared.GestureRecognizer,System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>,System.AsyncCallback,System.Object)
-extern void GestureRecognizerUpdated_BeginInvoke_m497C5DA3BB3F53743576F69CF16894D913AC9B7E ();
-// 0x000000C4 System.Void DigitalRubyShared.GestureRecognizerUpdated::EndInvoke(System.IAsyncResult)
-extern void GestureRecognizerUpdated_EndInvoke_m81D949B5B6E4AB95A2D38B023BC3478F1478A15D ();
-// 0x000000C5 System.Void DigitalRubyShared.GestureVelocityTracker::AddItem(System.Single,System.Single,System.Single)
-extern void GestureVelocityTracker_AddItem_m296A9412A845069D417D5AB021E93C15CE4D4453 ();
-// 0x000000C6 System.Void DigitalRubyShared.GestureVelocityTracker::Reset()
-extern void GestureVelocityTracker_Reset_m665A28E2B8AAD42D69AA5993D59CB1B857E8699F ();
-// 0x000000C7 System.Void DigitalRubyShared.GestureVelocityTracker::Restart()
-extern void GestureVelocityTracker_Restart_mCD87FF1C8A265528A5153E7BC19B5AD7ECFECA04 ();
-// 0x000000C8 System.Void DigitalRubyShared.GestureVelocityTracker::Restart(System.Single,System.Single)
-extern void GestureVelocityTracker_Restart_m35909EE111CFE5796174B5A276A723EE15E4A631 ();
-// 0x000000C9 System.Void DigitalRubyShared.GestureVelocityTracker::Update(System.Single,System.Single)
-extern void GestureVelocityTracker_Update_mCEE032C80C1096A50B9CB2907422E20C17FDEE63 ();
-// 0x000000CA System.Single DigitalRubyShared.GestureVelocityTracker::get_ElapsedSeconds()
-extern void GestureVelocityTracker_get_ElapsedSeconds_mB5956C67CD612B8C998E346416CEE0E9036C4496 ();
-// 0x000000CB System.Single DigitalRubyShared.GestureVelocityTracker::get_VelocityX()
-extern void GestureVelocityTracker_get_VelocityX_mC98B97D13C4126330F9C91291A574F50A3745E38 ();
-// 0x000000CC System.Void DigitalRubyShared.GestureVelocityTracker::set_VelocityX(System.Single)
-extern void GestureVelocityTracker_set_VelocityX_mC4B01A570015A83FD04F499DF1CEDF43E9FB6888 ();
-// 0x000000CD System.Single DigitalRubyShared.GestureVelocityTracker::get_VelocityY()
-extern void GestureVelocityTracker_get_VelocityY_m6C3599FC78FECF82FB057837F2C82F59CE907801 ();
-// 0x000000CE System.Void DigitalRubyShared.GestureVelocityTracker::set_VelocityY(System.Single)
-extern void GestureVelocityTracker_set_VelocityY_mF1293EB1696EF06437FE891871FF1A8467E9B8EE ();
-// 0x000000CF System.Single DigitalRubyShared.GestureVelocityTracker::get_Speed()
-extern void GestureVelocityTracker_get_Speed_mC049B0E1B8DEB82BCBE461FD401B855741A26A8C ();
-// 0x000000D0 System.Void DigitalRubyShared.GestureVelocityTracker::.ctor()
-extern void GestureVelocityTracker__ctor_mB6D8D53EE76E426A85C1390A6C24058B4EC5D84B ();
-// 0x000000D1 System.Single DigitalRubyShared.GestureRecognizer::get_PrevFocusX()
-extern void GestureRecognizer_get_PrevFocusX_m5DC2D3699DB238782BE4EFF260ACA3AC0433C372 ();
-// 0x000000D2 System.Void DigitalRubyShared.GestureRecognizer::set_PrevFocusX(System.Single)
-extern void GestureRecognizer_set_PrevFocusX_m60FABF374AEFEC9C12351C53527614D9F2E9ED4C ();
-// 0x000000D3 System.Single DigitalRubyShared.GestureRecognizer::get_PrevFocusY()
-extern void GestureRecognizer_get_PrevFocusY_m5C1B534D858D9558328ABB6B1EB7A27C3C68B96D ();
-// 0x000000D4 System.Void DigitalRubyShared.GestureRecognizer::set_PrevFocusY(System.Single)
-extern void GestureRecognizer_set_PrevFocusY_m251DFA0FC1EAB0DF1487DDBFF72BDADCC25A808B ();
-// 0x000000D5 System.Void DigitalRubyShared.GestureRecognizer::UpdateTouchState(System.Boolean)
-extern void GestureRecognizer_UpdateTouchState_m7EA481B6482105BB4247FF2C8EE61654F158D293 ();
-// 0x000000D6 System.Void DigitalRubyShared.GestureRecognizer::EndGesture()
-extern void GestureRecognizer_EndGesture_mE0B7139ADBA09D0BD2CE1CA17D8A507AA0683DA9 ();
-// 0x000000D7 System.Void DigitalRubyShared.GestureRecognizer::RemoveFromActiveGestures()
-extern void GestureRecognizer_RemoveFromActiveGestures_mDFD30A7ED015B896026C64F9BEC89C0A959C0F4F ();
-// 0x000000D8 System.Boolean DigitalRubyShared.GestureRecognizer::CanExecuteGestureWithOtherGesturesOrFail(DigitalRubyShared.GestureRecognizerState)
-extern void GestureRecognizer_CanExecuteGestureWithOtherGesturesOrFail_m370E95B2486CD240A8B0C9E29BF2F1C886EC6F92 ();
-// 0x000000D9 System.Void DigitalRubyShared.GestureRecognizer::FailGestureNow()
-extern void GestureRecognizer_FailGestureNow_m9C8D73E0998224FAE1CED0880B3D20F094868FDD ();
-// 0x000000DA System.Boolean DigitalRubyShared.GestureRecognizer::TouchesIntersect(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>,System.Collections.Generic.List`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizer_TouchesIntersect_m625E4A85D37AF70BC3F357F86D3E1274CFC2C0FE ();
-// 0x000000DB System.Void DigitalRubyShared.GestureRecognizer::UpdateTrackedTouches(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizer_UpdateTrackedTouches_m36904203F5612EEF6570E44A9658382B404E296B ();
-// 0x000000DC System.Int32 DigitalRubyShared.GestureRecognizer::TrackTouchesInternal(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizer_TrackTouchesInternal_m4E2AE0759694AB19ED277EE6A0FA5FBCDE06B5B9 ();
-// 0x000000DD System.Int32 DigitalRubyShared.GestureRecognizer::StopTrackingTouches(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizer_StopTrackingTouches_mB529D17D59D4BFCC7BC111D625A9CC14ECC361F7 ();
-// 0x000000DE System.Void DigitalRubyShared.GestureRecognizer::ResetInternal(System.Boolean)
-extern void GestureRecognizer_ResetInternal_m49DDB4CDA7C279EFFB49AA2F6DFFB1EFF538495F ();
-// 0x000000DF System.Void DigitalRubyShared.GestureRecognizer::RunActionAfterDelayInternal(System.Single,System.Action)
-extern void GestureRecognizer_RunActionAfterDelayInternal_m234C2E17B70A2C03FCDB80D17E2E6DF0132C58F7 ();
-// 0x000000E0 System.Boolean DigitalRubyShared.GestureRecognizer::IgnoreTouch(System.Int32)
-extern void GestureRecognizer_IgnoreTouch_mDEFADB4AA4E29819378E99E9B58C452BBDFC74F6 ();
-// 0x000000E1 System.Void DigitalRubyShared.GestureRecognizer::TrackCurrentTrackedTouchesStartLocations()
-extern void GestureRecognizer_TrackCurrentTrackedTouchesStartLocations_m6F3D0D47D411632EAB5BDD1890F97A22A4557527 ();
-// 0x000000E2 System.Boolean DigitalRubyShared.GestureRecognizer::AreTrackedTouchesWithinDistance(System.Single)
-extern void GestureRecognizer_AreTrackedTouchesWithinDistance_m42B33D64C43E8C82C48C02BE433A0823E95BC369 ();
-// 0x000000E3 System.Boolean DigitalRubyShared.GestureRecognizer::CalculateFocus(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizer_CalculateFocus_m4C547C703D487D9977DABD49DFE67E13950A15FF ();
-// 0x000000E4 System.Boolean DigitalRubyShared.GestureRecognizer::CalculateFocus(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>,System.Boolean)
-extern void GestureRecognizer_CalculateFocus_mD50FA06A1A9E6BF716679F07514F6E2F9F2DC862 ();
-// 0x000000E5 System.Void DigitalRubyShared.GestureRecognizer::StateChanged()
-extern void GestureRecognizer_StateChanged_mF1D1C537A8450C921929A8456E55AE8572F0C11B ();
-// 0x000000E6 System.Boolean DigitalRubyShared.GestureRecognizer::SetState(DigitalRubyShared.GestureRecognizerState)
-extern void GestureRecognizer_SetState_m15CAAA1B09DB1C2E4AA8BC5B54B884E92E6906CE ();
-// 0x000000E7 System.Boolean DigitalRubyShared.GestureRecognizer::RequiredGesturesToFailAllowsEndPending()
-extern void GestureRecognizer_RequiredGesturesToFailAllowsEndPending_m2D3A66AC729ED65E6BA8EA716F088E50DB13369E ();
-// 0x000000E8 System.Boolean DigitalRubyShared.GestureRecognizer::HasAllRequiredFailGesturesToEndFromEndPending()
-extern void GestureRecognizer_HasAllRequiredFailGesturesToEndFromEndPending_m3B5659BCFA5EC8AAE7DEEEAE4D3AFED3B7468D1B ();
-// 0x000000E9 System.Void DigitalRubyShared.GestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizer_TouchesBegan_m4E93092F77B8262033DEE3AE2380454C25C12663 ();
-// 0x000000EA System.Void DigitalRubyShared.GestureRecognizer::TouchesMoved()
-extern void GestureRecognizer_TouchesMoved_mAAA9971F2AF9D5D88449E77301B0E8146E1AAC8E ();
-// 0x000000EB System.Void DigitalRubyShared.GestureRecognizer::TouchesEnded()
-extern void GestureRecognizer_TouchesEnded_m12D5F2085B5C2D3B7D2F461AA119530339E7808A ();
-// 0x000000EC System.Int32 DigitalRubyShared.GestureRecognizer::TrackTouches(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizer_TrackTouches_m178412789718BA913B3AAA577D76F0B4C02917B8 ();
-// 0x000000ED System.Void DigitalRubyShared.GestureRecognizer::.ctor()
-extern void GestureRecognizer__ctor_m5E0CEF43C0FD219A3CAA0BCFAC76EDD4F95DD8A5 ();
-// 0x000000EE System.Boolean DigitalRubyShared.GestureRecognizer::Simulate(System.Single[])
-extern void GestureRecognizer_Simulate_m21B17406F366FE29FE5CA50A3A4515FC4987F871 ();
-// 0x000000EF System.Void DigitalRubyShared.GestureRecognizer::Finalize()
-extern void GestureRecognizer_Finalize_m65174B76DC8E0F807062A8822E4EE52ECA00EAA9 ();
-// 0x000000F0 System.String DigitalRubyShared.GestureRecognizer::ToString()
-extern void GestureRecognizer_ToString_m36E9F69DB2A7061766C46271CF6E1E95451235DD ();
-// 0x000000F1 System.Void DigitalRubyShared.GestureRecognizer::Reset()
-extern void GestureRecognizer_Reset_m27DAD936F4E3B3BF03AB09B0B098F6941932B759 ();
-// 0x000000F2 System.Boolean DigitalRubyShared.GestureRecognizer::BeginGestureRestart()
-extern void GestureRecognizer_BeginGestureRestart_m93E8033BA3534A310609A140891E85B225D7CB0A ();
-// 0x000000F3 System.Boolean DigitalRubyShared.GestureRecognizer::EndGestureRestart(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizer_EndGestureRestart_m605980ACF8F5AEDA1DE2AABC300E0F51572DC9B7 ();
-// 0x000000F4 System.Void DigitalRubyShared.GestureRecognizer::ProcessTouchesBegan(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizer_ProcessTouchesBegan_m7FD12728B9AF44677066DBE73E22EAB4199BB6D0 ();
-// 0x000000F5 System.Void DigitalRubyShared.GestureRecognizer::ProcessTouchesMoved(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizer_ProcessTouchesMoved_mD5FA3BE149EA9900179C75F2BCAFE9670ECD3CB8 ();
-// 0x000000F6 System.Void DigitalRubyShared.GestureRecognizer::ProcessTouchesEnded(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizer_ProcessTouchesEnded_m533BF1411095868E0C96EFDD036DAD3DB70D6C03 ();
-// 0x000000F7 System.Void DigitalRubyShared.GestureRecognizer::ProcessTouchesCancelled(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
-extern void GestureRecognizer_ProcessTouchesCancelled_mFE45958BCD09EF38D18CFCD8A24FADF27B2271F7 ();
-// 0x000000F8 System.Boolean DigitalRubyShared.GestureRecognizer::PointsAreWithinDistance(System.Single,System.Single,System.Single,System.Single,System.Single)
-extern void GestureRecognizer_PointsAreWithinDistance_mED87F1FC05E4AAFBE08D90A78347D106DD8C7CD0 ();
-// 0x000000F9 System.Single DigitalRubyShared.GestureRecognizer::DistanceBetweenPoints(System.Single,System.Single,System.Single,System.Single)
-extern void GestureRecognizer_DistanceBetweenPoints_mC398620A532F6FC39391D207EC5AB0727598A42C ();
-// 0x000000FA System.Single DigitalRubyShared.GestureRecognizer::Distance(System.Single,System.Single)
-extern void GestureRecognizer_Distance_m184981591FA7B4F2A44E9871D5E10FAEEC4D5D0D ();
-// 0x000000FB System.Single DigitalRubyShared.GestureRecognizer::Distance(System.Single)
-extern void GestureRecognizer_Distance_m29BDA371805CE43489A2AF37EC158B2A4E483562 ();
-// 0x000000FC System.Void DigitalRubyShared.GestureRecognizer::Dispose()
-extern void GestureRecognizer_Dispose_mC08ADF559DDAE809ABFC6D13907B28760DB3030F ();
-// 0x000000FD System.Void DigitalRubyShared.GestureRecognizer::AllowSimultaneousExecution(DigitalRubyShared.GestureRecognizer)
-extern void GestureRecognizer_AllowSimultaneousExecution_mF28B94548CB69A2A41A0ECD5962817C79B9EF424 ();
-// 0x000000FE System.Void DigitalRubyShared.GestureRecognizer::AllowSimultaneousExecutionWithAllGestures()
-extern void GestureRecognizer_AllowSimultaneousExecutionWithAllGestures_mE0A6AE66D3FABD633C1E2B4D6E4E6576DD4AA197 ();
-// 0x000000FF System.Void DigitalRubyShared.GestureRecognizer::DisallowSimultaneousExecution(DigitalRubyShared.GestureRecognizer)
-extern void GestureRecognizer_DisallowSimultaneousExecution_m86496DEEBEBC6F482637DB9A9741E08DF70B62F3 ();
-// 0x00000100 System.Void DigitalRubyShared.GestureRecognizer::DisallowSimultaneousExecutionWithAllGestures()
-extern void GestureRecognizer_DisallowSimultaneousExecutionWithAllGestures_mCFC6411D93EB4D23CF2B906A29A926F43A30C079 ();
-// 0x00000101 System.Void DigitalRubyShared.GestureRecognizer::AddRequiredGestureRecognizerToFail(DigitalRubyShared.GestureRecognizer)
-extern void GestureRecognizer_AddRequiredGestureRecognizerToFail_mE439393992292CE36B49165EE93615BD08EBD858 ();
-// 0x00000102 System.Void DigitalRubyShared.GestureRecognizer::RemoveRequiredGestureRecognizerToFail(DigitalRubyShared.GestureRecognizer)
-extern void GestureRecognizer_RemoveRequiredGestureRecognizerToFail_mC0C79A07407F9A55E8ECAB7C14D3F1D6A1D86D8D ();
-// 0x00000103 System.Void DigitalRubyShared.GestureRecognizer::RunActionAfterDelay(System.Single,System.Action)
-extern void GestureRecognizer_RunActionAfterDelay_mE8C0E4E7199435445255E0E3FAA8E95AC7E5E041 ();
-// 0x00000104 System.Int32 DigitalRubyShared.GestureRecognizer::NumberOfGesturesInProgress()
-extern void GestureRecognizer_NumberOfGesturesInProgress_m1458E712AB9A9AD59CA76A92D757105A61705C0F ();
-// 0x00000105 System.Boolean DigitalRubyShared.GestureRecognizer::get_Enabled()
-extern void GestureRecognizer_get_Enabled_m6A9E5FF183C36B74A96C4F99458F0DCEC9995E3D ();
-// 0x00000106 System.Void DigitalRubyShared.GestureRecognizer::set_Enabled(System.Boolean)
-extern void GestureRecognizer_set_Enabled_m6EFB210A1BE7F1C2FC7584DFAA78745D9FECB31E ();
-// 0x00000107 DigitalRubyShared.GestureRecognizerState DigitalRubyShared.GestureRecognizer::get_State()
-extern void GestureRecognizer_get_State_m47B7DD332816CAA727D009C7CDDD29BD8C5E14A3 ();
-// 0x00000108 System.Void DigitalRubyShared.GestureRecognizer::add_Updated(DigitalRubyShared.GestureRecognizerUpdated)
-extern void GestureRecognizer_add_Updated_m5EDA17E6B141514E7EA54D42D63DD519407ED6D1 ();
-// 0x00000109 System.Void DigitalRubyShared.GestureRecognizer::remove_Updated(DigitalRubyShared.GestureRecognizerUpdated)
-extern void GestureRecognizer_remove_Updated_m1F877E41A86DB72A5753BE963F928B162C31B69E ();
-// 0x0000010A System.Void DigitalRubyShared.GestureRecognizer::add_StateUpdated(DigitalRubyShared.GestureRecognizerStateUpdatedDelegate)
-extern void GestureRecognizer_add_StateUpdated_mB65CA9E927D967DEB7057BE825CF32E3EA284EF4 ();
-// 0x0000010B System.Void DigitalRubyShared.GestureRecognizer::remove_StateUpdated(DigitalRubyShared.GestureRecognizerStateUpdatedDelegate)
-extern void GestureRecognizer_remove_StateUpdated_m9920AF25B394A6864593E6EBF1B95A77D279916A ();
-// 0x0000010C System.Collections.ObjectModel.ReadOnlyCollection`1<DigitalRubyShared.GestureTouch> DigitalRubyShared.GestureRecognizer::get_CurrentTrackedTouches()
-extern void GestureRecognizer_get_CurrentTrackedTouches_m971595A998439D1E70E72426DF0F7E8F22E20DC1 ();
-// 0x0000010D System.Single DigitalRubyShared.GestureRecognizer::get_FocusX()
-extern void GestureRecognizer_get_FocusX_mCFDD83704B116EF9E8178600AE00476F717CD65A ();
-// 0x0000010E System.Void DigitalRubyShared.GestureRecognizer::set_FocusX(System.Single)
-extern void GestureRecognizer_set_FocusX_m4163EE003777BD2B03AED88B430DE2F3EE0B3100 ();
-// 0x0000010F System.Single DigitalRubyShared.GestureRecognizer::get_FocusY()
-extern void GestureRecognizer_get_FocusY_mF3C4E8E5C815185A9F29CD67BD21AF1AB5E13512 ();
-// 0x00000110 System.Void DigitalRubyShared.GestureRecognizer::set_FocusY(System.Single)
-extern void GestureRecognizer_set_FocusY_m04E226397FD086156D189D99A8AAD4002963FFDE ();
-// 0x00000111 System.Single DigitalRubyShared.GestureRecognizer::get_StartFocusX()
-extern void GestureRecognizer_get_StartFocusX_m40147F75FCF47634C1D4BBA17744BEA400CB6E00 ();
-// 0x00000112 System.Void DigitalRubyShared.GestureRecognizer::set_StartFocusX(System.Single)
-extern void GestureRecognizer_set_StartFocusX_mF57CA7EE8B992488E9ED135B79C44DE58BA356B1 ();
-// 0x00000113 System.Single DigitalRubyShared.GestureRecognizer::get_StartFocusY()
-extern void GestureRecognizer_get_StartFocusY_mC385D01A716258FD902DAB86F8B687DEBED12B21 ();
-// 0x00000114 System.Void DigitalRubyShared.GestureRecognizer::set_StartFocusY(System.Single)
-extern void GestureRecognizer_set_StartFocusY_mD11869B44C1F0C8AA7493EE60A0376F18A33CD00 ();
-// 0x00000115 System.Single DigitalRubyShared.GestureRecognizer::get_DeltaX()
-extern void GestureRecognizer_get_DeltaX_m2CD9BCC0C365CE41D851AECFE9A4915B839E8387 ();
-// 0x00000116 System.Void DigitalRubyShared.GestureRecognizer::set_DeltaX(System.Single)
-extern void GestureRecognizer_set_DeltaX_m154746A085892AF04A6A030BD68AAB335F7C6CA3 ();
-// 0x00000117 System.Single DigitalRubyShared.GestureRecognizer::get_DeltaY()
-extern void GestureRecognizer_get_DeltaY_mB2000F59EC56D07B6C904E848C9598371A8EFA9A ();
-// 0x00000118 System.Void DigitalRubyShared.GestureRecognizer::set_DeltaY(System.Single)
-extern void GestureRecognizer_set_DeltaY_m217D5A5CE94DF1F1B026E6286EF702DD8FF29941 ();
-// 0x00000119 System.Single DigitalRubyShared.GestureRecognizer::get_DistanceX()
-extern void GestureRecognizer_get_DistanceX_m17008F3FF4DB0DFB5126F1D5FE93569DB4603043 ();
-// 0x0000011A System.Void DigitalRubyShared.GestureRecognizer::set_DistanceX(System.Single)
-extern void GestureRecognizer_set_DistanceX_m22C3A34045EBCE729087620329D146C6FECF8523 ();
-// 0x0000011B System.Single DigitalRubyShared.GestureRecognizer::get_DistanceY()
-extern void GestureRecognizer_get_DistanceY_m9C44F5FB1300B069014AE79D094973EF8451CD58 ();
-// 0x0000011C System.Void DigitalRubyShared.GestureRecognizer::set_DistanceY(System.Single)
-extern void GestureRecognizer_set_DistanceY_m451F3A185BC5B31376ABA1014FA34EE904BF9A68 ();
-// 0x0000011D System.Single DigitalRubyShared.GestureRecognizer::get_VelocityX()
-extern void GestureRecognizer_get_VelocityX_mBA1589303FC4CE50D51581FF150CC045725A75D2 ();
-// 0x0000011E System.Single DigitalRubyShared.GestureRecognizer::get_VelocityY()
-extern void GestureRecognizer_get_VelocityY_mBD87883AAA6A132E5AA81DD024A89002E4877C0A ();
-// 0x0000011F System.Single DigitalRubyShared.GestureRecognizer::get_Speed()
-extern void GestureRecognizer_get_Speed_mC86A9587E4F3C38ABF3E65CF9CB2EC9054209038 ();
-// 0x00000120 System.Single DigitalRubyShared.GestureRecognizer::get_Pressure()
-extern void GestureRecognizer_get_Pressure_m392D5DCA758503048C8CCB39415D1250D3F93D60 ();
-// 0x00000121 System.Void DigitalRubyShared.GestureRecognizer::set_Pressure(System.Single)
-extern void GestureRecognizer_set_Pressure_mF95FC73E33FD46A3F67746929F2A89EFA934069E ();
-// 0x00000122 System.Object DigitalRubyShared.GestureRecognizer::get_PlatformSpecificView()
-extern void GestureRecognizer_get_PlatformSpecificView_m9A642C836FB6B97A1C55F0C7934A8FB9BFEFC41F ();
-// 0x00000123 System.Void DigitalRubyShared.GestureRecognizer::set_PlatformSpecificView(System.Object)
-extern void GestureRecognizer_set_PlatformSpecificView_mBB00094733738EDB50BBCFFE7101BEF4C2FB5F17 ();
-// 0x00000124 System.Single DigitalRubyShared.GestureRecognizer::get_PlatformSpecificViewScale()
-extern void GestureRecognizer_get_PlatformSpecificViewScale_m611CD28CC48780573BE66E5F570CA16281E46566 ();
-// 0x00000125 System.Void DigitalRubyShared.GestureRecognizer::set_PlatformSpecificViewScale(System.Single)
-extern void GestureRecognizer_set_PlatformSpecificViewScale_mEF1DD5109BA0811B8D360D20142AE3050895EF66 ();
-// 0x00000126 System.Object DigitalRubyShared.GestureRecognizer::get_CustomData()
-extern void GestureRecognizer_get_CustomData_m0286F0816CE227C14D2A52F1C82317BC99D1E544 ();
-// 0x00000127 System.Void DigitalRubyShared.GestureRecognizer::set_CustomData(System.Object)
-extern void GestureRecognizer_set_CustomData_m3C95D828B776D5CDEB49B0373B73D9C75E20F6F2 ();
-// 0x00000128 DigitalRubyShared.GestureRecognizer DigitalRubyShared.GestureRecognizer::get_RequireGestureRecognizerToFail()
-extern void GestureRecognizer_get_RequireGestureRecognizerToFail_m3324AC93C76FDA6A904723E82B3340CE54F408C5 ();
-// 0x00000129 System.Void DigitalRubyShared.GestureRecognizer::set_RequireGestureRecognizerToFail(DigitalRubyShared.GestureRecognizer)
-extern void GestureRecognizer_set_RequireGestureRecognizerToFail_mA78D78A5730A54799D95E8A0CEADF145BA0CD66E ();
-// 0x0000012A System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureRecognizer> DigitalRubyShared.GestureRecognizer::get_RequireGestureRecognizersToFail()
-extern void GestureRecognizer_get_RequireGestureRecognizersToFail_m6278282907C7B7E95E747DAE4B9F2E9FAF5748F8 ();
-// 0x0000012B System.Int32 DigitalRubyShared.GestureRecognizer::get_MinimumNumberOfTouchesToTrack()
-extern void GestureRecognizer_get_MinimumNumberOfTouchesToTrack_m23E751C9A9334632807D3E4B559076900F83A16F ();
-// 0x0000012C System.Void DigitalRubyShared.GestureRecognizer::set_MinimumNumberOfTouchesToTrack(System.Int32)
-extern void GestureRecognizer_set_MinimumNumberOfTouchesToTrack_m36E4D236C65A970AAC9B511B6FBBDC0B3BEE8E92 ();
-// 0x0000012D System.Int32 DigitalRubyShared.GestureRecognizer::get_MaximumNumberOfTouchesToTrack()
-extern void GestureRecognizer_get_MaximumNumberOfTouchesToTrack_m976F977FAAD0B411A1E80014761CC1B2C1DFB3D8 ();
-// 0x0000012E System.Void DigitalRubyShared.GestureRecognizer::set_MaximumNumberOfTouchesToTrack(System.Int32)
-extern void GestureRecognizer_set_MaximumNumberOfTouchesToTrack_m00AA69945255ADA17ECA19F5ACC33AE1CFCDCEAB ();
-// 0x0000012F System.Boolean DigitalRubyShared.GestureRecognizer::get_TrackedTouchCountIsWithinRange()
-extern void GestureRecognizer_get_TrackedTouchCountIsWithinRange_mF2FAD7849F56F14B959731F891D2AC078619CE68 ();
-// 0x00000130 System.Boolean DigitalRubyShared.GestureRecognizer::get_ClearTrackedTouchesOnEndOrFail()
-extern void GestureRecognizer_get_ClearTrackedTouchesOnEndOrFail_mC96CA1BE90017091208855336CE377FB05CFCE86 ();
-// 0x00000131 System.Void DigitalRubyShared.GestureRecognizer::set_ClearTrackedTouchesOnEndOrFail(System.Boolean)
-extern void GestureRecognizer_set_ClearTrackedTouchesOnEndOrFail_mF0C644DB623A35A47B6D008FD1D19B1B7F9D8F66 ();
-// 0x00000132 System.Boolean DigitalRubyShared.GestureRecognizer::get_AllowSimultaneousExecutionIfPlatformSpecificViewsAreDifferent()
-extern void GestureRecognizer_get_AllowSimultaneousExecutionIfPlatformSpecificViewsAreDifferent_m60976EE02743F4C98E98EF19DFAFD5D95A5C1BB6 ();
-// 0x00000133 System.Void DigitalRubyShared.GestureRecognizer::set_AllowSimultaneousExecutionIfPlatformSpecificViewsAreDifferent(System.Boolean)
-extern void GestureRecognizer_set_AllowSimultaneousExecutionIfPlatformSpecificViewsAreDifferent_m06888247812BEB3B9A7D7FCA7EE8CE256EA63C67 ();
-// 0x00000134 System.Boolean DigitalRubyShared.GestureRecognizer::get_ResetOnEnd()
-extern void GestureRecognizer_get_ResetOnEnd_mA7F961ED0B399C4633403FB8BCD714FC8122AE2A ();
-// 0x00000135 System.Boolean DigitalRubyShared.GestureRecognizer::get_IsRestarting()
-extern void GestureRecognizer_get_IsRestarting_m8264604331D236672642CA87FA6E0D05C5FE03BB ();
-// 0x00000136 System.Boolean DigitalRubyShared.GestureRecognizer::get_ReceivedAdditionalTouches()
-extern void GestureRecognizer_get_ReceivedAdditionalTouches_m4F17265FB846607E6E4C9C0FDF2A947D59C93695 ();
-// 0x00000137 System.Void DigitalRubyShared.GestureRecognizer::set_ReceivedAdditionalTouches(System.Boolean)
-extern void GestureRecognizer_set_ReceivedAdditionalTouches_m5D525EAFB913C25A35F78EB5B4B3559F8FDDBE45 ();
-// 0x00000138 System.Void DigitalRubyShared.GestureRecognizer::.cctor()
-extern void GestureRecognizer__cctor_m1CD52851A88E0E83031BB2B0EA490E34617F9FFB ();
-// 0x00000139 System.Void DigitalRubyShared.GestureLogger::Log(DigitalRubyShared.GestureRecognizer,System.String,System.Object[])
-extern void GestureLogger_Log_mCBF4C95FC6CF234B61EB3D6B7A7B84A512126618 ();
-// 0x0000013A System.Void DigitalRubyShared.LongPressGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
-extern void LongPressGestureRecognizer_TouchesBegan_mAFF9C39BCEEF1E08AC5B0C0A58944FF7D48CC3E7 ();
-// 0x0000013B System.Void DigitalRubyShared.LongPressGestureRecognizer::TouchesMoved()
-extern void LongPressGestureRecognizer_TouchesMoved_m057B1640C5427316440A22938DCCC6D9B950A858 ();
-// 0x0000013C System.Void DigitalRubyShared.LongPressGestureRecognizer::TouchesEnded()
-extern void LongPressGestureRecognizer_TouchesEnded_mEBFB96EE9B1AC4AEF32614BFBF87657C9A4A659B ();
-// 0x0000013D System.Void DigitalRubyShared.LongPressGestureRecognizer::.ctor()
-extern void LongPressGestureRecognizer__ctor_m0BE567709291925E2BE95045A34204CD8B674436 ();
-// 0x0000013E System.Single DigitalRubyShared.LongPressGestureRecognizer::get_MinimumDurationSeconds()
-extern void LongPressGestureRecognizer_get_MinimumDurationSeconds_m6A831B22F0BAAD8458CF733D668B3BE11398DF75 ();
-// 0x0000013F System.Void DigitalRubyShared.LongPressGestureRecognizer::set_MinimumDurationSeconds(System.Single)
-extern void LongPressGestureRecognizer_set_MinimumDurationSeconds_mE8F06919A6AD9357CCB14073BE1ACE22533B10FB ();
-// 0x00000140 System.Single DigitalRubyShared.LongPressGestureRecognizer::get_ThresholdUnits()
-extern void LongPressGestureRecognizer_get_ThresholdUnits_m4E1C4C84B95DBB429E0A71E40EF3EFF94D6DE1E0 ();
-// 0x00000141 System.Void DigitalRubyShared.LongPressGestureRecognizer::set_ThresholdUnits(System.Single)
-extern void LongPressGestureRecognizer_set_ThresholdUnits_mB9BDF613BD3606FE173524332192A91C06971139 ();
-// 0x00000142 System.Single DigitalRubyShared.OneTouchRotateGestureRecognizer::CurrentAngle()
-extern void OneTouchRotateGestureRecognizer_CurrentAngle_m70AB48AB7A4BE978D117AD7EE8D8F0627BD699FF ();
-// 0x00000143 System.Void DigitalRubyShared.OneTouchRotateGestureRecognizer::.ctor()
-extern void OneTouchRotateGestureRecognizer__ctor_m176983A394C8DE06A462026539D17C2EA91C2A1B ();
-// 0x00000144 System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::.ctor()
-extern void OneTouchScaleGestureRecognizer__ctor_mA026673CD6C9B3E390EED18D77CB725CF4084401 ();
-// 0x00000145 System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
-extern void OneTouchScaleGestureRecognizer_TouchesBegan_m44DB52390794941C119BF0B683977CAA1CD791B8 ();
-// 0x00000146 System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::TouchesMoved()
-extern void OneTouchScaleGestureRecognizer_TouchesMoved_mD02AAAB4AD0E4E002B0E2BFA3FAFEDDA25C0A550 ();
-// 0x00000147 System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::TouchesEnded()
-extern void OneTouchScaleGestureRecognizer_TouchesEnded_mDEF7C2C1563EF89F6FC05304790E69CEB6CD6E14 ();
-// 0x00000148 System.Single DigitalRubyShared.OneTouchScaleGestureRecognizer::get_ScaleMultiplier()
-extern void OneTouchScaleGestureRecognizer_get_ScaleMultiplier_mE503E488FD4D6F22AFB568279A335C6491A41C04 ();
-// 0x00000149 System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::set_ScaleMultiplier(System.Single)
-extern void OneTouchScaleGestureRecognizer_set_ScaleMultiplier_mE3075DF237AC79F1DCFF7654040C766238C8BC0C ();
-// 0x0000014A System.Single DigitalRubyShared.OneTouchScaleGestureRecognizer::get_ScaleMultiplierX()
-extern void OneTouchScaleGestureRecognizer_get_ScaleMultiplierX_m8F406A3A2BA174E92C70BB99D372F113D6495705 ();
-// 0x0000014B System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::set_ScaleMultiplierX(System.Single)
-extern void OneTouchScaleGestureRecognizer_set_ScaleMultiplierX_m8E09F98CD912E8EB95BB37AE5BA71637A60D4F09 ();
-// 0x0000014C System.Single DigitalRubyShared.OneTouchScaleGestureRecognizer::get_ScaleMultiplierY()
-extern void OneTouchScaleGestureRecognizer_get_ScaleMultiplierY_m08BC131B67F368307F46A01014EC90CF8306397C ();
-// 0x0000014D System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::set_ScaleMultiplierY(System.Single)
-extern void OneTouchScaleGestureRecognizer_set_ScaleMultiplierY_m1009E0E63F7FC689A5D51C0EC50BB6950A78B3A3 ();
-// 0x0000014E System.Single DigitalRubyShared.OneTouchScaleGestureRecognizer::get_ZoomSpeed()
-extern void OneTouchScaleGestureRecognizer_get_ZoomSpeed_m7FAA6269365AE08EC6BC53687E8EB876C011714E ();
-// 0x0000014F System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::set_ZoomSpeed(System.Single)
-extern void OneTouchScaleGestureRecognizer_set_ZoomSpeed_mB8B05F9C7D834A32FD4A37BA39068761AA19BF82 ();
-// 0x00000150 System.Single DigitalRubyShared.OneTouchScaleGestureRecognizer::get_ThresholdUnits()
-extern void OneTouchScaleGestureRecognizer_get_ThresholdUnits_m61791E94ED104F24D12F36369C91D5A0786095D5 ();
-// 0x00000151 System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::set_ThresholdUnits(System.Single)
-extern void OneTouchScaleGestureRecognizer_set_ThresholdUnits_mA8CF36119B3C180695098A59A1E37A35D63BC4BC ();
-// 0x00000152 System.Void DigitalRubyShared.PanGestureRecognizer::ProcessTouches(System.Boolean)
-extern void PanGestureRecognizer_ProcessTouches_m0DD3FEF714F74798A0A7B60E89B383A6D2412109 ();
-// 0x00000153 System.Void DigitalRubyShared.PanGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
-extern void PanGestureRecognizer_TouchesBegan_m939FEF4FF981273E06EE8E963CF72156CF668380 ();
-// 0x00000154 System.Void DigitalRubyShared.PanGestureRecognizer::TouchesMoved()
-extern void PanGestureRecognizer_TouchesMoved_m44691ADDC3049499BE66C4489F5C97018B4BFAD5 ();
-// 0x00000155 System.Void DigitalRubyShared.PanGestureRecognizer::TouchesEnded()
-extern void PanGestureRecognizer_TouchesEnded_m915E4FED8857CB20BD1B5C4585846E8500F55990 ();
-// 0x00000156 System.Void DigitalRubyShared.PanGestureRecognizer::.ctor()
-extern void PanGestureRecognizer__ctor_mBAC433A713D672ED8F298C68618DAE9AF5CBC420 ();
-// 0x00000157 System.Single DigitalRubyShared.PanGestureRecognizer::get_ThresholdUnits()
-extern void PanGestureRecognizer_get_ThresholdUnits_mA638CFF822F7A12100B695C75DF94DFB60FBECC9 ();
-// 0x00000158 System.Void DigitalRubyShared.PanGestureRecognizer::set_ThresholdUnits(System.Single)
-extern void PanGestureRecognizer_set_ThresholdUnits_m60587687ECE0736AAFB61A4119703BB127D530EF ();
-// 0x00000159 System.Single DigitalRubyShared.RotateGestureRecognizer::DifferenceBetweenAngles(System.Single,System.Single)
-extern void RotateGestureRecognizer_DifferenceBetweenAngles_m90EC23FEEEE81FF7C9A42D1448CB47C5A0A0CB17 ();
-// 0x0000015A System.Void DigitalRubyShared.RotateGestureRecognizer::UpdateAngle()
-extern void RotateGestureRecognizer_UpdateAngle_m36BF8D2F47BEDA0BA5C292B5EC3B0EB037175375 ();
-// 0x0000015B System.Void DigitalRubyShared.RotateGestureRecognizer::CheckForStart()
-extern void RotateGestureRecognizer_CheckForStart_mF5CC0E6E85F2BDD1910D36314FE932E74465ABB9 ();
-// 0x0000015C System.Void DigitalRubyShared.RotateGestureRecognizer::StateChanged()
-extern void RotateGestureRecognizer_StateChanged_m38ED4C0BBF6AD1A28C281698A09FAF92FBEF098B ();
-// 0x0000015D System.Void DigitalRubyShared.RotateGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
-extern void RotateGestureRecognizer_TouchesBegan_m84F58E1A7492FD6C6A199C1C6279945E0E61D3F8 ();
-// 0x0000015E System.Void DigitalRubyShared.RotateGestureRecognizer::TouchesMoved()
-extern void RotateGestureRecognizer_TouchesMoved_mE43F441492864A05B46146A3747F21B656A00A74 ();
-// 0x0000015F System.Void DigitalRubyShared.RotateGestureRecognizer::TouchesEnded()
-extern void RotateGestureRecognizer_TouchesEnded_mB1AE2D36AC698CE41DE65D8C843780C525D214CD ();
-// 0x00000160 System.Single DigitalRubyShared.RotateGestureRecognizer::CurrentAngle()
-extern void RotateGestureRecognizer_CurrentAngle_m792E9708D044B5535E78620CF3C0FE79F5461C76 ();
-// 0x00000161 System.Void DigitalRubyShared.RotateGestureRecognizer::.ctor()
-extern void RotateGestureRecognizer__ctor_m7517536B9CA2A949BA02EA8B105742CD72F780BB ();
-// 0x00000162 System.Single DigitalRubyShared.RotateGestureRecognizer::get_AngleThreshold()
-extern void RotateGestureRecognizer_get_AngleThreshold_m0FACDDAA2A722DAFD2178140C15D7858E2B68062 ();
-// 0x00000163 System.Void DigitalRubyShared.RotateGestureRecognizer::set_AngleThreshold(System.Single)
-extern void RotateGestureRecognizer_set_AngleThreshold_mCC6230271EC9DC9C2781CFF7C2B9C9531A7C434F ();
-// 0x00000164 System.Single DigitalRubyShared.RotateGestureRecognizer::get_ThresholdUnits()
-extern void RotateGestureRecognizer_get_ThresholdUnits_m50A5363287AC7E95E73BEF38C67209CCB0038837 ();
-// 0x00000165 System.Void DigitalRubyShared.RotateGestureRecognizer::set_ThresholdUnits(System.Single)
-extern void RotateGestureRecognizer_set_ThresholdUnits_mFA1A89967E662AF774DD79978196AB7B894342DE ();
-// 0x00000166 System.Single DigitalRubyShared.RotateGestureRecognizer::get_RotationRadians()
-extern void RotateGestureRecognizer_get_RotationRadians_mA6F9D3B64B8AFD9D4D02BDBDF4B252E0CA8F0D74 ();
-// 0x00000167 System.Void DigitalRubyShared.RotateGestureRecognizer::set_RotationRadians(System.Single)
-extern void RotateGestureRecognizer_set_RotationRadians_m635B7D435EB729E7A972D4E2BDB2577059BE6A43 ();
-// 0x00000168 System.Single DigitalRubyShared.RotateGestureRecognizer::get_RotationRadiansDelta()
-extern void RotateGestureRecognizer_get_RotationRadiansDelta_m401EDED9A15BB8B51A665BF8A8C0EC2BD56E6E64 ();
-// 0x00000169 System.Void DigitalRubyShared.RotateGestureRecognizer::set_RotationRadiansDelta(System.Single)
-extern void RotateGestureRecognizer_set_RotationRadiansDelta_m25436AA2B0244ECC89E02E34E78496EB59DC538D ();
-// 0x0000016A System.Single DigitalRubyShared.RotateGestureRecognizer::get_RotationDegrees()
-extern void RotateGestureRecognizer_get_RotationDegrees_mA6FA8E6C25676B44A8F46FBF7E19DCB8ADCDB507 ();
-// 0x0000016B System.Single DigitalRubyShared.RotateGestureRecognizer::get_RotationDegreesDelta()
-extern void RotateGestureRecognizer_get_RotationDegreesDelta_m7DC983A6170C06E8E5314EB1910244A294A98579 ();
-// 0x0000016C System.Void DigitalRubyShared.ScaleGestureRecognizer::.ctor()
-extern void ScaleGestureRecognizer__ctor_mA80BE72D3D940D31860240166906345A5FDD4E47 ();
-// 0x0000016D System.Void DigitalRubyShared.ScaleGestureRecognizer::SetPreviousDistance(System.Single,System.Single,System.Single)
-extern void ScaleGestureRecognizer_SetPreviousDistance_mE4E8DDB406B396A8B7932F8E8B42126844BE5B9D ();
-// 0x0000016E System.Single DigitalRubyShared.ScaleGestureRecognizer::ClampScale(System.Single)
-extern void ScaleGestureRecognizer_ClampScale_mE7F91E88B1D97F9CC8A45D1C27E305716B58DABC ();
-// 0x0000016F System.Single DigitalRubyShared.ScaleGestureRecognizer::GetScale(System.Single)
-extern void ScaleGestureRecognizer_GetScale_m9A8FCAFD15CDA75CC41710B7E8664401429DA0DA ();
-// 0x00000170 System.Void DigitalRubyShared.ScaleGestureRecognizer::ProcessTouches()
-extern void ScaleGestureRecognizer_ProcessTouches_mA728A68FFB571ACF04CBBDF7E1F209FFA0B64CE0 ();
-// 0x00000171 System.Void DigitalRubyShared.ScaleGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
-extern void ScaleGestureRecognizer_TouchesBegan_m2B819AB6861E9D98F4C548A1DF99B2F130868A0A ();
-// 0x00000172 System.Void DigitalRubyShared.ScaleGestureRecognizer::TouchesMoved()
-extern void ScaleGestureRecognizer_TouchesMoved_m9EE4D3C4C8ECE37522D01D707F69AC179F3ADAF3 ();
-// 0x00000173 System.Void DigitalRubyShared.ScaleGestureRecognizer::TouchesEnded()
-extern void ScaleGestureRecognizer_TouchesEnded_m664DF0E6BCD4FEEC70758585872578C8297DAC33 ();
-// 0x00000174 System.Single DigitalRubyShared.ScaleGestureRecognizer::get_ScaleMultiplier()
-extern void ScaleGestureRecognizer_get_ScaleMultiplier_m31E9425A4E62692ADB6A9212ACDE5C476FE9C72D ();
-// 0x00000175 System.Void DigitalRubyShared.ScaleGestureRecognizer::set_ScaleMultiplier(System.Single)
-extern void ScaleGestureRecognizer_set_ScaleMultiplier_mFE1C9A6333F79BFC6277771ABBC2B07CBED966F0 ();
-// 0x00000176 System.Single DigitalRubyShared.ScaleGestureRecognizer::get_ScaleMultiplierX()
-extern void ScaleGestureRecognizer_get_ScaleMultiplierX_mCF634FE7761BE6AE323BEFC5343512E978B8DF16 ();
-// 0x00000177 System.Void DigitalRubyShared.ScaleGestureRecognizer::set_ScaleMultiplierX(System.Single)
-extern void ScaleGestureRecognizer_set_ScaleMultiplierX_mB7674A0F63AE8D8163B5FF1F60DE571D4477C12F ();
-// 0x00000178 System.Single DigitalRubyShared.ScaleGestureRecognizer::get_ScaleMultiplierY()
-extern void ScaleGestureRecognizer_get_ScaleMultiplierY_m13DC28418D21E54083D1B6A3263FBA7151244CF7 ();
-// 0x00000179 System.Void DigitalRubyShared.ScaleGestureRecognizer::set_ScaleMultiplierY(System.Single)
-extern void ScaleGestureRecognizer_set_ScaleMultiplierY_mF9FAD185138C6045D49B4AFBEDF5D366A7205B7E ();
-// 0x0000017A System.Single DigitalRubyShared.ScaleGestureRecognizer::get_ZoomSpeed()
-extern void ScaleGestureRecognizer_get_ZoomSpeed_m12DB6A0500B477132DB5F4CDC45D62E38E0A6E55 ();
-// 0x0000017B System.Void DigitalRubyShared.ScaleGestureRecognizer::set_ZoomSpeed(System.Single)
-extern void ScaleGestureRecognizer_set_ZoomSpeed_mD0E200521842A28826D1D5A41FB01ABB037045E3 ();
-// 0x0000017C System.Single DigitalRubyShared.ScaleGestureRecognizer::get_ThresholdUnits()
-extern void ScaleGestureRecognizer_get_ThresholdUnits_m8CACFDF646DF0B3970C80229EBCF6DBE257A3148 ();
-// 0x0000017D System.Void DigitalRubyShared.ScaleGestureRecognizer::set_ThresholdUnits(System.Single)
-extern void ScaleGestureRecognizer_set_ThresholdUnits_m3195C7F68293E567249E8F1065239F6F20ADFC16 ();
-// 0x0000017E System.Boolean DigitalRubyShared.SwipeGestureRecognizer::CalculateEndDirection(System.Single,System.Single)
-extern void SwipeGestureRecognizer_CalculateEndDirection_m248BAAB9270702B99B6A1CBA41A1B0B650E86AE4 ();
-// 0x0000017F System.Void DigitalRubyShared.SwipeGestureRecognizer::CheckForSwipeCompletion(System.Boolean)
-extern void SwipeGestureRecognizer_CheckForSwipeCompletion_m4F207CC742FFD0F6DEC5DB918BD3AD91167717A9 ();
-// 0x00000180 System.Void DigitalRubyShared.SwipeGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
-extern void SwipeGestureRecognizer_TouchesBegan_mFC1B8374323A0FCD61F1695AAE6CF837BABBB9F3 ();
-// 0x00000181 System.Void DigitalRubyShared.SwipeGestureRecognizer::TouchesMoved()
-extern void SwipeGestureRecognizer_TouchesMoved_m4E6D756B1D9D54525D01229B9945B8F845195454 ();
-// 0x00000182 System.Void DigitalRubyShared.SwipeGestureRecognizer::TouchesEnded()
-extern void SwipeGestureRecognizer_TouchesEnded_mBD8975D43388C815FC922A5D84858127082D6A73 ();
-// 0x00000183 System.Void DigitalRubyShared.SwipeGestureRecognizer::.ctor()
-extern void SwipeGestureRecognizer__ctor_m73E3B0DE450AD7F6DF85E3DF272E418F6F9733D5 ();
-// 0x00000184 System.Void DigitalRubyShared.SwipeGestureRecognizer::Reset()
-extern void SwipeGestureRecognizer_Reset_mE8E859E84EA88693E961159B18CCABAFD71AB32D ();
-// 0x00000185 DigitalRubyShared.SwipeGestureRecognizerDirection DigitalRubyShared.SwipeGestureRecognizer::get_Direction()
-extern void SwipeGestureRecognizer_get_Direction_m70A32B27BAC9CBA7D7E310B865A48C34BA016CCE ();
-// 0x00000186 System.Void DigitalRubyShared.SwipeGestureRecognizer::set_Direction(DigitalRubyShared.SwipeGestureRecognizerDirection)
-extern void SwipeGestureRecognizer_set_Direction_mA29C433B759D11FB8E21B2393C2FA3496E3CA81C ();
-// 0x00000187 System.Single DigitalRubyShared.SwipeGestureRecognizer::get_MinimumDistanceUnits()
-extern void SwipeGestureRecognizer_get_MinimumDistanceUnits_m17FB5A01EFB7C5B28F8BEAE5362E1F687846C7FC ();
-// 0x00000188 System.Void DigitalRubyShared.SwipeGestureRecognizer::set_MinimumDistanceUnits(System.Single)
-extern void SwipeGestureRecognizer_set_MinimumDistanceUnits_m5A64D3374E9E97B6E656F53B9FC042E2B94B1A24 ();
-// 0x00000189 System.Single DigitalRubyShared.SwipeGestureRecognizer::get_MinimumSpeedUnits()
-extern void SwipeGestureRecognizer_get_MinimumSpeedUnits_mFFE58EB5EF473EFB69104476A00F71D49E3AEAF8 ();
-// 0x0000018A System.Void DigitalRubyShared.SwipeGestureRecognizer::set_MinimumSpeedUnits(System.Single)
-extern void SwipeGestureRecognizer_set_MinimumSpeedUnits_m2935757EE568869B0EFA11A5E38C06C74E6D7E34 ();
-// 0x0000018B System.Single DigitalRubyShared.SwipeGestureRecognizer::get_DirectionThreshold()
-extern void SwipeGestureRecognizer_get_DirectionThreshold_mF6DB21B149E68688F61C2D352B9EF84BCD0F0454 ();
-// 0x0000018C System.Void DigitalRubyShared.SwipeGestureRecognizer::set_DirectionThreshold(System.Single)
-extern void SwipeGestureRecognizer_set_DirectionThreshold_m6B7AE5355B9C8E7433C5993C7E213C53C244BA46 ();
-// 0x0000018D DigitalRubyShared.SwipeGestureRecognizerEndMode DigitalRubyShared.SwipeGestureRecognizer::get_EndMode()
-extern void SwipeGestureRecognizer_get_EndMode_m25703BC82F5214BC9561F5F4CAB8C3E469951FCB ();
-// 0x0000018E System.Void DigitalRubyShared.SwipeGestureRecognizer::set_EndMode(DigitalRubyShared.SwipeGestureRecognizerEndMode)
-extern void SwipeGestureRecognizer_set_EndMode_mB16C668963B248713D995CBE686AA8CDB0B06171 ();
-// 0x0000018F System.Boolean DigitalRubyShared.SwipeGestureRecognizer::get_FailOnDirectionChange()
-extern void SwipeGestureRecognizer_get_FailOnDirectionChange_m1EC59756CC461E13C73A2F84B629EE52449F3717 ();
-// 0x00000190 System.Void DigitalRubyShared.SwipeGestureRecognizer::set_FailOnDirectionChange(System.Boolean)
-extern void SwipeGestureRecognizer_set_FailOnDirectionChange_m7F1A249D0074410B3ABB968E4B820E412DA52F70 ();
-// 0x00000191 DigitalRubyShared.SwipeGestureRecognizerDirection DigitalRubyShared.SwipeGestureRecognizer::get_EndDirection()
-extern void SwipeGestureRecognizer_get_EndDirection_m12E48C361592619DE728C6C9D47A96C47D1079C5 ();
-// 0x00000192 System.Void DigitalRubyShared.SwipeGestureRecognizer::set_EndDirection(DigitalRubyShared.SwipeGestureRecognizerDirection)
-extern void SwipeGestureRecognizer_set_EndDirection_m9F467468634F54A9AE498E63D74351D7BD9A9CE1 ();
-// 0x00000193 System.Boolean DigitalRubyShared.SwipeGestureRecognizer::get_SendBeginExecutingStates()
-extern void SwipeGestureRecognizer_get_SendBeginExecutingStates_mA38C52DF91F21397AC2DFEC6AD134D88A738EED0 ();
-// 0x00000194 System.Void DigitalRubyShared.SwipeGestureRecognizer::set_SendBeginExecutingStates(System.Boolean)
-extern void SwipeGestureRecognizer_set_SendBeginExecutingStates_mF6F8CEC22C7CC612E59EB605DEDA7C21CB70F7D8 ();
-// 0x00000195 System.Void DigitalRubyShared.TapGestureRecognizer::VerifyFailGestureAfterDelay()
-extern void TapGestureRecognizer_VerifyFailGestureAfterDelay_m56CC80821B7322E0775EE0DB586003C55CFF7225 ();
-// 0x00000196 System.Void DigitalRubyShared.TapGestureRecognizer::FailGestureAfterDelayIfNoTap()
-extern void TapGestureRecognizer_FailGestureAfterDelayIfNoTap_m6CADBD64668CDC75B7436992B79BFC20D95E291D ();
-// 0x00000197 System.Void DigitalRubyShared.TapGestureRecognizer::StateChanged()
-extern void TapGestureRecognizer_StateChanged_mEE7B1B627635C13A3C493BA7EA09276BFF00FA8B ();
-// 0x00000198 System.Void DigitalRubyShared.TapGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
-extern void TapGestureRecognizer_TouchesBegan_m4BEA03D52B63A049BEBF4D52FB93A433D3630BA9 ();
-// 0x00000199 System.Void DigitalRubyShared.TapGestureRecognizer::TouchesMoved()
-extern void TapGestureRecognizer_TouchesMoved_m25780A552565BF55973699136A08C4F497FD4A7B ();
-// 0x0000019A System.Void DigitalRubyShared.TapGestureRecognizer::TouchesEnded()
-extern void TapGestureRecognizer_TouchesEnded_m34CC5A90B6CB4A1C1FF8AA8F150FB4C55BA1C56D ();
-// 0x0000019B System.Void DigitalRubyShared.TapGestureRecognizer::.ctor()
-extern void TapGestureRecognizer__ctor_mE23A029971A702A7F7D5B547A261BBF0614845B7 ();
-// 0x0000019C System.String DigitalRubyShared.TapGestureRecognizer::ToString()
-extern void TapGestureRecognizer_ToString_m1443707E9F472BB1F757F00872AB4270600EE677 ();
-// 0x0000019D System.Int32 DigitalRubyShared.TapGestureRecognizer::get_NumberOfTapsRequired()
-extern void TapGestureRecognizer_get_NumberOfTapsRequired_mD89D406E702F84976CDACCEDCCA6E95B65E27167 ();
-// 0x0000019E System.Void DigitalRubyShared.TapGestureRecognizer::set_NumberOfTapsRequired(System.Int32)
-extern void TapGestureRecognizer_set_NumberOfTapsRequired_mC8A3693EE8CC9A699E5FD21C10760986BF6BBD4F ();
-// 0x0000019F System.Single DigitalRubyShared.TapGestureRecognizer::get_ThresholdSeconds()
-extern void TapGestureRecognizer_get_ThresholdSeconds_m9395B120C9D91CEABF7B31E1D2D5F4D0C41B14FE ();
-// 0x000001A0 System.Void DigitalRubyShared.TapGestureRecognizer::set_ThresholdSeconds(System.Single)
-extern void TapGestureRecognizer_set_ThresholdSeconds_mC62F62C05A4F27DFA4D7DA4E7EA844F6C38808D1 ();
-// 0x000001A1 System.Single DigitalRubyShared.TapGestureRecognizer::get_ThresholdUnits()
-extern void TapGestureRecognizer_get_ThresholdUnits_m12EDD1B72DB681687179C9C942F4A73B0FBE624D ();
-// 0x000001A2 System.Void DigitalRubyShared.TapGestureRecognizer::set_ThresholdUnits(System.Single)
-extern void TapGestureRecognizer_set_ThresholdUnits_mBA130371EF7E2CC3AA1A4C0FB63CEE2E6F39954F ();
-// 0x000001A3 System.Boolean DigitalRubyShared.TapGestureRecognizer::get_SendBeginState()
-extern void TapGestureRecognizer_get_SendBeginState_mBED37F738376AB0C246A098D5C0AAC92D4F9D215 ();
-// 0x000001A4 System.Void DigitalRubyShared.TapGestureRecognizer::set_SendBeginState(System.Boolean)
-extern void TapGestureRecognizer_set_SendBeginState_m83A9A0DCFF8142B05ACE50E1638A13B788CC12EC ();
-// 0x000001A5 System.Collections.ObjectModel.ReadOnlyCollection`1<DigitalRubyShared.GestureTouch> DigitalRubyShared.TapGestureRecognizer::get_TapTouches()
-extern void TapGestureRecognizer_get_TapTouches_mE29E1590367AF2B9D7C4D161358CE577E3B85B00 ();
-// 0x000001A6 System.Void DigitalRubyShared.TapGestureRecognizer::set_TapTouches(System.Collections.ObjectModel.ReadOnlyCollection`1<DigitalRubyShared.GestureTouch>)
-extern void TapGestureRecognizer_set_TapTouches_m3163E432B9D2C3B92C35050780F16DEEEFF787DB ();
-// 0x000001A7 System.Void GameController_<ConstructWorld>d__9::.ctor(System.Int32)
-extern void U3CConstructWorldU3Ed__9__ctor_m165D28A32828E501D0914F120521524EDF14DAFF ();
-// 0x000001A8 System.Void GameController_<ConstructWorld>d__9::System.IDisposable.Dispose()
-extern void U3CConstructWorldU3Ed__9_System_IDisposable_Dispose_m4736E01FA3D7F572317673DCAD5130316B78186E ();
-// 0x000001A9 System.Boolean GameController_<ConstructWorld>d__9::MoveNext()
-extern void U3CConstructWorldU3Ed__9_MoveNext_m7EA72E1D79B116FC9BEF149C4AA7D4484BA4202A ();
-// 0x000001AA System.Object GameController_<ConstructWorld>d__9::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CConstructWorldU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4DF7843FAD38A02B3022D1420191252196FB7EF0 ();
-// 0x000001AB System.Void GameController_<ConstructWorld>d__9::System.Collections.IEnumerator.Reset()
-extern void U3CConstructWorldU3Ed__9_System_Collections_IEnumerator_Reset_m6A21F608C9D49212C54A98BC1A09A4018B26DC16 ();
-// 0x000001AC System.Object GameController_<ConstructWorld>d__9::System.Collections.IEnumerator.get_Current()
-extern void U3CConstructWorldU3Ed__9_System_Collections_IEnumerator_get_Current_mDBECE2D7FCB1D9ADE3983E35412E8799223ACC94 ();
-// 0x000001AD System.Void LocalNavMeshBuilder_<Start>d__6::.ctor(System.Int32)
-extern void U3CStartU3Ed__6__ctor_mCDA6C0AB89CAC7EB038FCA3C07BAB6F668AE61EB ();
-// 0x000001AE System.Void LocalNavMeshBuilder_<Start>d__6::System.IDisposable.Dispose()
-extern void U3CStartU3Ed__6_System_IDisposable_Dispose_mA3439B1E0E1E671988E2F50CC959B062951F563A ();
-// 0x000001AF System.Boolean LocalNavMeshBuilder_<Start>d__6::MoveNext()
-extern void U3CStartU3Ed__6_MoveNext_m36474F18CDA1FB6231DA6EB551739489028D0DA7 ();
-// 0x000001B0 System.Object LocalNavMeshBuilder_<Start>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CStartU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4DECEAA7159701E49888AC489CB55361B59C4BBA ();
-// 0x000001B1 System.Void LocalNavMeshBuilder_<Start>d__6::System.Collections.IEnumerator.Reset()
-extern void U3CStartU3Ed__6_System_Collections_IEnumerator_Reset_mFA7F93206D2D7DB34770DB0E28748AA5A66FA60E ();
-// 0x000001B2 System.Object LocalNavMeshBuilder_<Start>d__6::System.Collections.IEnumerator.get_Current()
-extern void U3CStartU3Ed__6_System_Collections_IEnumerator_get_Current_m3C20E4432E8A4BC367C476C7D41E9AA814085A73 ();
-// 0x000001B3 System.Void DigitalRubyShared.FingersScript_<MainThreadCallback>d__34::.ctor(System.Int32)
-extern void U3CMainThreadCallbackU3Ed__34__ctor_m7E5A053DE6D871457345CF84E54E6E6143E79DD9 ();
-// 0x000001B4 System.Void DigitalRubyShared.FingersScript_<MainThreadCallback>d__34::System.IDisposable.Dispose()
-extern void U3CMainThreadCallbackU3Ed__34_System_IDisposable_Dispose_m02985D2EB9FC866441C1C728C1F843261D2314BC ();
-// 0x000001B5 System.Boolean DigitalRubyShared.FingersScript_<MainThreadCallback>d__34::MoveNext()
-extern void U3CMainThreadCallbackU3Ed__34_MoveNext_mA987BC3D2F0A1B15F19A06D1F2A62164E57D3F72 ();
-// 0x000001B6 System.Object DigitalRubyShared.FingersScript_<MainThreadCallback>d__34::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CMainThreadCallbackU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0245BDAD224E3CF125ABF6F79381C4B8A851738A ();
-// 0x000001B7 System.Void DigitalRubyShared.FingersScript_<MainThreadCallback>d__34::System.Collections.IEnumerator.Reset()
-extern void U3CMainThreadCallbackU3Ed__34_System_Collections_IEnumerator_Reset_m68B33C4FAF39CB7B840212BE94A28DB642A16277 ();
-// 0x000001B8 System.Object DigitalRubyShared.FingersScript_<MainThreadCallback>d__34::System.Collections.IEnumerator.get_Current()
-extern void U3CMainThreadCallbackU3Ed__34_System_Collections_IEnumerator_get_Current_m2710DECBE7335C9AFC35A3BCAE2DF17232D78DCF ();
-// 0x000001B9 System.Void DigitalRubyShared.FingersScript_<>c__DisplayClass36_0::.ctor()
-extern void U3CU3Ec__DisplayClass36_0__ctor_m0E3133BD66387DF081067EECEA9AEED9B8522623 ();
-// 0x000001BA System.Boolean DigitalRubyShared.FingersScript_<>c__DisplayClass36_0::<PopulateGameObjectsForTouch>b__0(UnityEngine.EventSystems.RaycastResult)
-extern void U3CU3Ec__DisplayClass36_0_U3CPopulateGameObjectsForTouchU3Eb__0_m88D36CE52CED30ADB9E2BAC58B2CE65935BA9DFE ();
-// 0x000001BB System.Void DigitalRubyShared.GestureRecognizer_CallbackMainThreadDelegate::.ctor(System.Object,System.IntPtr)
-extern void CallbackMainThreadDelegate__ctor_mF05122B6B24D6675B327E9E0393BD943035F34FD ();
-// 0x000001BC System.Void DigitalRubyShared.GestureRecognizer_CallbackMainThreadDelegate::Invoke(System.Single,System.Action)
-extern void CallbackMainThreadDelegate_Invoke_mB51CAFF41E944CF355FAB16ED4DA42F0CD5A7FD1 ();
-// 0x000001BD System.IAsyncResult DigitalRubyShared.GestureRecognizer_CallbackMainThreadDelegate::BeginInvoke(System.Single,System.Action,System.AsyncCallback,System.Object)
-extern void CallbackMainThreadDelegate_BeginInvoke_m8B9CA318BA4426E6BA4E2D40F831F0DB148E4421 ();
-// 0x000001BE System.Void DigitalRubyShared.GestureRecognizer_CallbackMainThreadDelegate::EndInvoke(System.IAsyncResult)
-extern void CallbackMainThreadDelegate_EndInvoke_mA86BBFA6237B69B1392EEDF8698E9DB7D1C97ABB ();
+extern void GameController__ctor_m9D952052C0A7234373FA5531292FCA8855BE2643 (void);
+// 0x00000013 System.Void GameController/<ConstructWorld>d__9::.ctor(System.Int32)
+extern void U3CConstructWorldU3Ed__9__ctor_m2C569A58D3FB0B5515B20B3C6FD8EAB13F9E5644 (void);
+// 0x00000014 System.Void GameController/<ConstructWorld>d__9::System.IDisposable.Dispose()
+extern void U3CConstructWorldU3Ed__9_System_IDisposable_Dispose_m64B000E4183BB4032C905391085ACDA95CEE5379 (void);
+// 0x00000015 System.Boolean GameController/<ConstructWorld>d__9::MoveNext()
+extern void U3CConstructWorldU3Ed__9_MoveNext_m3D0F3012B20941ABD34FE1E407824815CF117A04 (void);
+// 0x00000016 System.Object GameController/<ConstructWorld>d__9::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CConstructWorldU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0C7256EB396B35212C9BE06860DFFFF470721C9D (void);
+// 0x00000017 System.Void GameController/<ConstructWorld>d__9::System.Collections.IEnumerator.Reset()
+extern void U3CConstructWorldU3Ed__9_System_Collections_IEnumerator_Reset_mE31232B6C622F8DCE1D99959E8CACB1422D42241 (void);
+// 0x00000018 System.Object GameController/<ConstructWorld>d__9::System.Collections.IEnumerator.get_Current()
+extern void U3CConstructWorldU3Ed__9_System_Collections_IEnumerator_get_Current_mA93E4021F1C8D4D2B9F5ECB9E90D79A8B50C5976 (void);
+// 0x00000019 System.Void House::Reset()
+extern void House_Reset_m0378D14694C06DD3FB02AE15118CF608D632D3E7 (void);
+// 0x0000001A System.Void House::AddResouce(System.Int32)
+extern void House_AddResouce_m427705246A08AA86C0140D21AAE17B234231B6BC (void);
+// 0x0000001B UnityEngine.GameObject House::GetPrefab()
+extern void House_GetPrefab_mA64ABD5785F4A5685622E12E0FD965311691D6A7 (void);
+// 0x0000001C System.Void House::Start()
+extern void House_Start_mD60972956A537B1C085ABE1239055DC3519FAF4B (void);
+// 0x0000001D System.Void House::UpdatePrefab()
+extern void House_UpdatePrefab_m506D20E514E674A32DA177A2BB8EFACFC6BCFDFC (void);
+// 0x0000001E System.Void House::.ctor()
+extern void House__ctor_mF94E70B43AC3CEACA96B63C580B66FF2D7940F17 (void);
+// 0x0000001F System.Void Island::Start()
+extern void Island_Start_m262192A8C64C40EC6C720242B3A0B83657FCA22B (void);
+// 0x00000020 System.Void Island::GenerateIsland(System.Single[0...,0...])
+extern void Island_GenerateIsland_m2CFF5625B4F8F5030ECFDD89E7B6AC7903336307 (void);
+// 0x00000021 System.Void Island::GenerateMesh(System.Single[0...,0...])
+extern void Island_GenerateMesh_m105A7283D10A721802187A239FB1A7554CD250F2 (void);
+// 0x00000022 System.Void Island::UpdateMesh()
+extern void Island_UpdateMesh_m1E9C8E22910106495A83A08C9F14938430A0C7E4 (void);
+// 0x00000023 System.Void Island::.ctor()
+extern void Island__ctor_m58F23245850CFA6A709DF7A2DEB07E1CACED7835 (void);
+// 0x00000024 System.Collections.IEnumerator LocalNavMeshBuilder::Start()
+extern void LocalNavMeshBuilder_Start_m7FA46DC8242DB71A2510164A3516D9E2A710D314 (void);
+// 0x00000025 System.Void LocalNavMeshBuilder::OnEnable()
+extern void LocalNavMeshBuilder_OnEnable_m190491EBE95E75874D9A18CD34D84317446099D6 (void);
+// 0x00000026 System.Void LocalNavMeshBuilder::OnDisable()
+extern void LocalNavMeshBuilder_OnDisable_mF616B96763BA6A0271D4FCF19F05F13D67815E9E (void);
+// 0x00000027 System.Void LocalNavMeshBuilder::UpdateNavMesh(System.Boolean)
+extern void LocalNavMeshBuilder_UpdateNavMesh_mB90AE6CC7AA0A2A49356D6171662E0E759B08FCA (void);
+// 0x00000028 UnityEngine.Vector3 LocalNavMeshBuilder::Quantize(UnityEngine.Vector3,UnityEngine.Vector3)
+extern void LocalNavMeshBuilder_Quantize_m79A8ECA4BB85A7F6CDB960FDFFF34B24B2AB9E9E (void);
+// 0x00000029 UnityEngine.Bounds LocalNavMeshBuilder::QuantizedBounds()
+extern void LocalNavMeshBuilder_QuantizedBounds_m26E892B01C125AEC5F94472B768A3F97B37EDBDD (void);
+// 0x0000002A System.Void LocalNavMeshBuilder::OnDrawGizmosSelected()
+extern void LocalNavMeshBuilder_OnDrawGizmosSelected_mEBC05C7EE683B1DDAAB54EF66CF5132B2F5FDAB9 (void);
+// 0x0000002B System.Void LocalNavMeshBuilder::.ctor()
+extern void LocalNavMeshBuilder__ctor_m3E29904B11F6E685949BFBAB2047052715508995 (void);
+// 0x0000002C System.Void LocalNavMeshBuilder/<Start>d__6::.ctor(System.Int32)
+extern void U3CStartU3Ed__6__ctor_m0DF65A7E28392D1D0282BF943DCBF0F0CC488468 (void);
+// 0x0000002D System.Void LocalNavMeshBuilder/<Start>d__6::System.IDisposable.Dispose()
+extern void U3CStartU3Ed__6_System_IDisposable_Dispose_m5FFB4E6FDFE26317953F38C753182672E6DBAB88 (void);
+// 0x0000002E System.Boolean LocalNavMeshBuilder/<Start>d__6::MoveNext()
+extern void U3CStartU3Ed__6_MoveNext_mA581EB88514744742A0097FE817D6C9F1C278B11 (void);
+// 0x0000002F System.Object LocalNavMeshBuilder/<Start>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CStartU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1641461B31F694382536E25317321C5F4629C0BA (void);
+// 0x00000030 System.Void LocalNavMeshBuilder/<Start>d__6::System.Collections.IEnumerator.Reset()
+extern void U3CStartU3Ed__6_System_Collections_IEnumerator_Reset_m90BFF07997E497BB77BABF59E0078C484EBC09BC (void);
+// 0x00000031 System.Object LocalNavMeshBuilder/<Start>d__6::System.Collections.IEnumerator.get_Current()
+extern void U3CStartU3Ed__6_System_Collections_IEnumerator_get_Current_m0DEF89B61B5FD9CAA83C68DB146E7D38CA23A877 (void);
+// 0x00000032 System.Void MapDisplay::DrawTexture(UnityEngine.Texture2D)
+extern void MapDisplay_DrawTexture_mB809BD3617D5CA0B3AC966C629069115DA7403BB (void);
+// 0x00000033 System.Void MapDisplay::DrawMesh(MeshData,UnityEngine.Texture2D)
+extern void MapDisplay_DrawMesh_mEE7652E36B5E0CFBBCAD2FBDAAA827D31360E96B (void);
+// 0x00000034 System.Void MapDisplay::.ctor()
+extern void MapDisplay__ctor_mDDEFBCF283196F1A54129850CA2A80A556D57284 (void);
+// 0x00000035 System.Single[0...,0...] MapGenerator::GenerateMap()
+extern void MapGenerator_GenerateMap_m85DABD0CD77DD43061742D337D720743452A4A5A (void);
+// 0x00000036 System.Void MapGenerator::OnValidate()
+extern void MapGenerator_OnValidate_m1A6487148CD0C46BCCA37FB67BE84469AF8F5812 (void);
+// 0x00000037 System.Void MapGenerator::.ctor()
+extern void MapGenerator__ctor_mB9C58913280E7537C3EB6A1DACEDE418B41DFE01 (void);
+// 0x00000038 MeshData MeshGenerator::GenerateMesh(System.Single[0...,0...],System.Single,UnityEngine.AnimationCurve)
+extern void MeshGenerator_GenerateMesh_mA5F657FB9F096B527EFF102D56BF4D79089C49C2 (void);
+// 0x00000039 System.Void MeshGenerator::.ctor()
+extern void MeshGenerator__ctor_m5BF7E1EC4EB0D215F8CE283E51A5A4EC46816AFE (void);
+// 0x0000003A System.Void MeshData::.ctor(System.Int32,System.Int32)
+extern void MeshData__ctor_m2477F416C544B2B3483F6B510B2FC2E30EB83321 (void);
+// 0x0000003B System.Void MeshData::AddTriangle(System.Int32,System.Int32,System.Int32)
+extern void MeshData_AddTriangle_m6AB5E2419BFC2852AA5D667331C43B3631DB2BAF (void);
+// 0x0000003C UnityEngine.Mesh MeshData::CreateMesh()
+extern void MeshData_CreateMesh_m4CDFB5B734BEE868159C69519355601016CD5732 (void);
+// 0x0000003D System.Void NavMeshSourceTag::OnEnable()
+extern void NavMeshSourceTag_OnEnable_m364012B996FF08FE3A41ACF872F0E0AA13E29D8C (void);
+// 0x0000003E System.Void NavMeshSourceTag::OnDisable()
+extern void NavMeshSourceTag_OnDisable_mC610EAC1D0C9C2D22F634C0EA8DB1DC76DBC2F0A (void);
+// 0x0000003F System.Void NavMeshSourceTag::Collect(System.Collections.Generic.List`1<UnityEngine.AI.NavMeshBuildSource>&)
+extern void NavMeshSourceTag_Collect_mBFC49240DBAFFF18B3847C14D0010D8BBED35944 (void);
+// 0x00000040 System.Void NavMeshSourceTag::.ctor()
+extern void NavMeshSourceTag__ctor_m8A691B03F1065C853A34221093A18113E7D1DFE1 (void);
+// 0x00000041 System.Void NavMeshSourceTag::.cctor()
+extern void NavMeshSourceTag__cctor_m6912F578B46103E39AB2B70FFF1A4828D7F8EA73 (void);
+// 0x00000042 System.Single[0...,0...] Noise::Generate(System.Int32,System.Int32,System.Int32,System.Single,System.Int32,System.Single,System.Single,UnityEngine.Vector2)
+extern void Noise_Generate_m14B9D1EE6E5BFE755F3DD5D71EE9312ECC8F400D (void);
+// 0x00000043 System.Void BaseState::.ctor(UnityEngine.GameObject)
+extern void BaseState__ctor_m748434FB3752FFCA1244E6BA84D9995764740A6D (void);
+// 0x00000044 System.Type BaseState::Tick()
+// 0x00000045 System.Void BuildingState::.ctor(Person)
+extern void BuildingState__ctor_m84645FD8CB01B6115D44B7A570EC0D0D5B0C0D5E (void);
+// 0x00000046 System.Type BuildingState::Tick()
+extern void BuildingState_Tick_mB80FB7DDE56B69D78CD8CE20DD79FEF08D09462F (void);
+// 0x00000047 System.Void ChoppingState::.ctor(Person)
+extern void ChoppingState__ctor_m82C14C4D44F580F85258B34C6C00558B5693CED3 (void);
+// 0x00000048 System.Type ChoppingState::Tick()
+extern void ChoppingState_Tick_m68E0263B6C394506617C67297336E4C6470D8194 (void);
+// 0x00000049 System.Void GatherState::.ctor(Person)
+extern void GatherState__ctor_m19F493FBB513E47CA5CBBFA90DCC6B9188F04102 (void);
+// 0x0000004A System.Type GatherState::Tick()
+extern void GatherState_Tick_mB33BD41EAB8DB2A1357FCA98426FD2BBD6559026 (void);
+// 0x0000004B System.Void IdleState::.ctor(Person)
+extern void IdleState__ctor_m087BAFEA2892F4B667FD5F02A8599A05A2C15CD7 (void);
+// 0x0000004C System.Type IdleState::Tick()
+extern void IdleState_Tick_mD6E1B3455BBFDCF5032E9019A80BD67B75DC1F2A (void);
+// 0x0000004D System.Void Person::Awake()
+extern void Person_Awake_m1B8F5FE5E298445EAB3CA2B3177977C038629A83 (void);
+// 0x0000004E System.Void Person::Start()
+extern void Person_Start_mB99F9349069059CA2F9BC6C499F38FA61D66E4AB (void);
+// 0x0000004F System.Void Person::Update()
+extern void Person_Update_m3C858F5D5CC27C0BF7EE9F9F5AFC17EDD33300E0 (void);
+// 0x00000050 System.Void Person::SetAnimation(System.String)
+extern void Person_SetAnimation_mE6E03A016EA045E22E91342B5DDC3ECC2D0F7EAF (void);
+// 0x00000051 System.Void Person::StartAction(System.Single)
+extern void Person_StartAction_m1CC3EE20C76F3CE24A7662BB79E52E137904B1FE (void);
+// 0x00000052 System.Boolean Person::isActionDone()
+extern void Person_isActionDone_mB8B6CEF395AE96666BD7A3F4DCE5BEFFCC656C20 (void);
+// 0x00000053 System.Void Person::Pickup(System.Int32)
+extern void Person_Pickup_m12D07C4A80DEFAA57817DE0B2796724A6206FA5C (void);
+// 0x00000054 System.Void Person::Drop()
+extern void Person_Drop_m83058AD8A2793894BF38A4FC8854B3A434F4565C (void);
+// 0x00000055 System.Void Person::SetupStateMachine()
+extern void Person_SetupStateMachine_m9641E68F87E0E4CF9367187C993DE82D24FFAD4D (void);
+// 0x00000056 System.Void Person::GotoNearestResource()
+extern void Person_GotoNearestResource_m3FFD3469A912E31DB2D0BE90B6049C238B3EF56F (void);
+// 0x00000057 System.Void Person::GoHome()
+extern void Person_GoHome_mD1AB26E94FC841FB3A5E03EFA3A1ABBE5A18F7F2 (void);
+// 0x00000058 System.Boolean Person::IsAtDestination()
+extern void Person_IsAtDestination_m84723448D4D39469CCC1F4BCD679A84D4401CDB5 (void);
+// 0x00000059 System.Boolean Person::IsInvertoryFull()
+extern void Person_IsInvertoryFull_m6FC3D5FCF14170E750691D5E2C3E14ADD35E8E36 (void);
+// 0x0000005A System.Void Person::.ctor()
+extern void Person__ctor_m76DBE4061E92220A470EAAA3CA51C8882C2553B6 (void);
+// 0x0000005B BaseState PersonStateMachine::get_currentState()
+extern void PersonStateMachine_get_currentState_m0EA73EE34507E51048864E20BC54E34F04368479 (void);
+// 0x0000005C System.Void PersonStateMachine::set_currentState(BaseState)
+extern void PersonStateMachine_set_currentState_m6AD2BB82CECCC94056B6746E65D0B361CDF5B7E6 (void);
+// 0x0000005D System.Void PersonStateMachine::SetStates(System.Collections.Generic.Dictionary`2<System.Type,BaseState>,BaseState)
+extern void PersonStateMachine_SetStates_m5565B33A5468C6BB0892ECCB2EFDF9065F1F757A (void);
+// 0x0000005E System.Void PersonStateMachine::Update()
+extern void PersonStateMachine_Update_m1609194E29570119A78E2154EB4AD7EE49018229 (void);
+// 0x0000005F System.Void PersonStateMachine::SwitchToNextState(System.Type)
+extern void PersonStateMachine_SwitchToNextState_m44FBAAE104B6749A071F507661042DFAB09A68A5 (void);
+// 0x00000060 System.Void PersonStateMachine::.ctor()
+extern void PersonStateMachine__ctor_mAF79419B1B824E4ADD55D6ECCEB562E93BB24889 (void);
+// 0x00000061 System.Void WalkingState::.ctor(Person)
+extern void WalkingState__ctor_m2B7444DE921CD3D2FE3162BCBDEC878740F7018B (void);
+// 0x00000062 System.Type WalkingState::Tick()
+extern void WalkingState_Tick_mE33C49681A495872438484352D1114F9A393299F (void);
+// 0x00000063 System.Void WanderState::Start()
+extern void WanderState_Start_mD64064A8DC82716FC1F44741F9FF2F806036C177 (void);
+// 0x00000064 System.Void WanderState::Update()
+extern void WanderState_Update_mE52DC541F14C29A98F31DEB7C6F65F9CD9F0F138 (void);
+// 0x00000065 System.Void WanderState::.ctor()
+extern void WanderState__ctor_m99B4D6B48785DF06D8DEAEEFFBE0757C503D38DB (void);
+// 0x00000066 System.Void Plantable::.ctor()
+extern void Plantable__ctor_m4881BDDCC3CBDEEA46ABFB31AF7D756456D0EBAE (void);
+// 0x00000067 System.Void SelectableObject::.ctor()
+extern void SelectableObject__ctor_mAE4CEBC06FC3E8B5EAD296436CF2B948D2CB36C5 (void);
+// 0x00000068 UnityEngine.Transform Storage::GetTransform()
+extern void Storage_GetTransform_m09A63BD5029539FAECBDDD8E5506A820C15BA4E8 (void);
+// 0x00000069 System.Void Storage::.ctor()
+extern void Storage__ctor_mBD5228C8A06A2CD7421E8249D7E413CD5A84A14A (void);
+// 0x0000006A UnityEngine.Texture2D TextureGenertor::TextureFromColorMap(UnityEngine.Color[],System.Int32,System.Int32)
+extern void TextureGenertor_TextureFromColorMap_m859F839F19B9F04EECAD3F1CE8A665964803A553 (void);
+// 0x0000006B UnityEngine.Texture2D TextureGenertor::TextureFromHeightMap(System.Single[0...,0...])
+extern void TextureGenertor_TextureFromHeightMap_mCD160F1FD0C905D85F39579C80272435F91A62DA (void);
+// 0x0000006C System.Void DigitalRubyShared.DemoAsteroidScript::Start()
+extern void DemoAsteroidScript_Start_m06DFAE7C2052536A9BD880E07873A2515986CCCE (void);
+// 0x0000006D System.Void DigitalRubyShared.DemoAsteroidScript::Update()
+extern void DemoAsteroidScript_Update_m0B95CE9FDAE1F466E1D74E94AFF51AC0A98AB762 (void);
+// 0x0000006E System.Void DigitalRubyShared.DemoAsteroidScript::OnBecameInvisible()
+extern void DemoAsteroidScript_OnBecameInvisible_m8C97BB846D009A07908D1398ACA226C48A99EA1F (void);
+// 0x0000006F System.Void DigitalRubyShared.DemoAsteroidScript::.ctor()
+extern void DemoAsteroidScript__ctor_mDEBA207F4885102CF7EF7B7E3C5AED829E9B37BD (void);
+// 0x00000070 System.Void DigitalRubyShared.DemoScript::DebugText(System.String,System.Object[])
+extern void DemoScript_DebugText_mC742B492D0CFE15BAB0A3E42FCCE86FF51A1074F (void);
+// 0x00000071 UnityEngine.GameObject DigitalRubyShared.DemoScript::CreateAsteroid(System.Single,System.Single)
+extern void DemoScript_CreateAsteroid_mF028F930FBAC7469E019DC3716134AA9723C5F0B (void);
+// 0x00000072 System.Void DigitalRubyShared.DemoScript::RemoveAsteroids(System.Single,System.Single,System.Single)
+extern void DemoScript_RemoveAsteroids_mF83BECB074B01B52EDD14C080A94B3A9FFF97B74 (void);
+// 0x00000073 System.Void DigitalRubyShared.DemoScript::BeginDrag(System.Single,System.Single)
+extern void DemoScript_BeginDrag_m6024269E8A1FD7CCD980DE019EAD906F9FA67A64 (void);
+// 0x00000074 System.Void DigitalRubyShared.DemoScript::DragTo(System.Single,System.Single)
+extern void DemoScript_DragTo_mC88E89A16273774465B1DEE14568A0B2940627AE (void);
+// 0x00000075 System.Void DigitalRubyShared.DemoScript::EndDrag(System.Single,System.Single)
+extern void DemoScript_EndDrag_m0BCDFDC2EA33B060D6048CC0E94710830CE41F86 (void);
+// 0x00000076 System.Void DigitalRubyShared.DemoScript::HandleSwipe(System.Single,System.Single)
+extern void DemoScript_HandleSwipe_mBF67ECAA35F0FE9906F6ECF9C1D35CE82B2AEA4A (void);
+// 0x00000077 System.Void DigitalRubyShared.DemoScript::TapGestureCallback(DigitalRubyShared.GestureRecognizer)
+extern void DemoScript_TapGestureCallback_m64D16F9C216B04845AD23DA83BE21B9DA67032F4 (void);
+// 0x00000078 System.Void DigitalRubyShared.DemoScript::CreateTapGesture()
+extern void DemoScript_CreateTapGesture_m5ADB8C5A5A723E1501C0717A082433B43967D252 (void);
+// 0x00000079 System.Void DigitalRubyShared.DemoScript::DoubleTapGestureCallback(DigitalRubyShared.GestureRecognizer)
+extern void DemoScript_DoubleTapGestureCallback_mC5C831B01A7531FDCE53FA1FCA948C6224A601A5 (void);
+// 0x0000007A System.Void DigitalRubyShared.DemoScript::CreateDoubleTapGesture()
+extern void DemoScript_CreateDoubleTapGesture_m8A5BC6419A0DB77A80CB0493333BCE233C6C2684 (void);
+// 0x0000007B System.Void DigitalRubyShared.DemoScript::SwipeGestureCallback(DigitalRubyShared.GestureRecognizer)
+extern void DemoScript_SwipeGestureCallback_m1332C1B12E1CD1714D1B8C5E74E132D3D873FAA3 (void);
+// 0x0000007C System.Void DigitalRubyShared.DemoScript::CreateSwipeGesture()
+extern void DemoScript_CreateSwipeGesture_m2C481536A59B11E78A0F385F30D243A529B137FA (void);
+// 0x0000007D System.Void DigitalRubyShared.DemoScript::PanGestureCallback(DigitalRubyShared.GestureRecognizer)
+extern void DemoScript_PanGestureCallback_m3DEDA9D36011AAD7BD26E007B9FE08BFCA4E3D08 (void);
+// 0x0000007E System.Void DigitalRubyShared.DemoScript::CreatePanGesture()
+extern void DemoScript_CreatePanGesture_m4E9E8B6FF5655865972034035085AC8DFDBED6B7 (void);
+// 0x0000007F System.Void DigitalRubyShared.DemoScript::ScaleGestureCallback(DigitalRubyShared.GestureRecognizer)
+extern void DemoScript_ScaleGestureCallback_m53C07E62B7A81FF1A60A012E9FBCBD2809932E80 (void);
+// 0x00000080 System.Void DigitalRubyShared.DemoScript::CreateScaleGesture()
+extern void DemoScript_CreateScaleGesture_m6DE8053D2575A7E4F18EA6C839C7D35D4E5CB88D (void);
+// 0x00000081 System.Void DigitalRubyShared.DemoScript::RotateGestureCallback(DigitalRubyShared.GestureRecognizer)
+extern void DemoScript_RotateGestureCallback_mE21470793A69D28A5833416F99CE2FE8D3A113DA (void);
+// 0x00000082 System.Void DigitalRubyShared.DemoScript::CreateRotateGesture()
+extern void DemoScript_CreateRotateGesture_m7853D5611772BF24499B9F5520F32A47BB4987AD (void);
+// 0x00000083 System.Void DigitalRubyShared.DemoScript::LongPressGestureCallback(DigitalRubyShared.GestureRecognizer)
+extern void DemoScript_LongPressGestureCallback_m4A6C38E6D60F7539FFA7B5FDD487CD5FE8100351 (void);
+// 0x00000084 System.Void DigitalRubyShared.DemoScript::CreateLongPressGesture()
+extern void DemoScript_CreateLongPressGesture_mC29ACFB7770B7533D955A0BE21FBDA5FD5E477D2 (void);
+// 0x00000085 System.Void DigitalRubyShared.DemoScript::PlatformSpecificViewTapUpdated(DigitalRubyShared.GestureRecognizer)
+extern void DemoScript_PlatformSpecificViewTapUpdated_m1E1851705A9158E372AA5C672A2F5DD404E74A0D (void);
+// 0x00000086 System.Void DigitalRubyShared.DemoScript::CreatePlatformSpecificViewTripleTapGesture()
+extern void DemoScript_CreatePlatformSpecificViewTripleTapGesture_m46A095790DCA2055944C6A404D886FBEF8F92FBE (void);
+// 0x00000087 System.Nullable`1<System.Boolean> DigitalRubyShared.DemoScript::CaptureGestureHandler(UnityEngine.GameObject)
+extern void DemoScript_CaptureGestureHandler_mA0BA06C5E2896D413AE8079CEA270F13519527E3 (void);
+// 0x00000088 System.Void DigitalRubyShared.DemoScript::Start()
+extern void DemoScript_Start_m6699D44EFABE6847B61A0A3238355D55BCD38CD4 (void);
+// 0x00000089 System.Void DigitalRubyShared.DemoScript::Update()
+extern void DemoScript_Update_m03942B42FF78656449706B6A882E55A0A4E96D51 (void);
+// 0x0000008A System.Void DigitalRubyShared.DemoScript::LateUpdate()
+extern void DemoScript_LateUpdate_m0F62F47A25FEAC1DDB3FC4528094167A0F36549B (void);
+// 0x0000008B System.Void DigitalRubyShared.DemoScript::OnRenderObject()
+extern void DemoScript_OnRenderObject_m85604DE9150221D57F7FEB6B77AB287E36FBD304 (void);
+// 0x0000008C System.Void DigitalRubyShared.DemoScript::ReloadDemoScene()
+extern void DemoScript_ReloadDemoScene_m88D1A7196AEB5DD8C830B18B0EA10632837F88BD (void);
+// 0x0000008D System.Void DigitalRubyShared.DemoScript::.ctor()
+extern void DemoScript__ctor_mD304A9C2ECD8432EBE0D8306BA6253E268BE84BB (void);
+// 0x0000008E System.Collections.IEnumerator DigitalRubyShared.FingersScript::MainThreadCallback(System.Single,System.Action)
+extern void FingersScript_MainThreadCallback_m7B8606AACB2DAC081D5F393B01AC4D18745D753E (void);
+// 0x0000008F DigitalRubyShared.FingersScript/CaptureResult DigitalRubyShared.FingersScript::ShouldCaptureGesture(UnityEngine.GameObject)
+extern void FingersScript_ShouldCaptureGesture_mFDFCEEC81C423D81A79E72ABB2500B949C8950A6 (void);
+// 0x00000090 System.Void DigitalRubyShared.FingersScript::PopulateGameObjectsForTouch(System.Int32,System.Single,System.Single)
+extern void FingersScript_PopulateGameObjectsForTouch_m29B73D90EA2629A6659E3886F7CE05EC51EAEB6E (void);
+// 0x00000091 DigitalRubyShared.GestureTouch DigitalRubyShared.FingersScript::GestureTouchFromTouch(UnityEngine.Touch&)
+extern void FingersScript_GestureTouchFromTouch_mB92F790BE589C734662D047D1EAF0F4F46B65A7A (void);
+// 0x00000092 System.Void DigitalRubyShared.FingersScript::FingersBeginTouch(DigitalRubyShared.GestureTouch&)
+extern void FingersScript_FingersBeginTouch_mCC63406516DF6510E67110663FD31EEE0B82677F (void);
+// 0x00000093 System.Void DigitalRubyShared.FingersScript::FingersContinueTouch(DigitalRubyShared.GestureTouch&)
+extern void FingersScript_FingersContinueTouch_mC873BA914BBB603A1514E0FC166238E41340C587 (void);
+// 0x00000094 System.Void DigitalRubyShared.FingersScript::FingersEndTouch(DigitalRubyShared.GestureTouch&,System.Boolean)
+extern void FingersScript_FingersEndTouch_mC7D823C07C531ED490A8DBA5E2227FAC37DAA150 (void);
+// 0x00000095 System.Void DigitalRubyShared.FingersScript::FingersProcessTouch(DigitalRubyShared.GestureTouch&)
+extern void FingersScript_FingersProcessTouch_mD2D7B64711D69F8108E0B0CCCE0A88E6EBA01CB5 (void);
+// 0x00000096 System.Void DigitalRubyShared.FingersScript::AddMouseTouch(System.Int32,System.Int32,System.Single,System.Single)
+extern void FingersScript_AddMouseTouch_mDDB3F7E1A1E632BF61532DB7243E1D84AC782A96 (void);
+// 0x00000097 System.Void DigitalRubyShared.FingersScript::ProcessTouches()
+extern void FingersScript_ProcessTouches_m3CD6400E709D441262050E7DB469C18CC7D20492 (void);
+// 0x00000098 System.Void DigitalRubyShared.FingersScript::RotateAroundPoint(System.Single&,System.Single&,System.Single,System.Single,System.Single)
+extern void FingersScript_RotateAroundPoint_m04F3FF9DB366C9004CAC4F6D0FAD6164C0C8F175 (void);
+// 0x00000099 System.Void DigitalRubyShared.FingersScript::ProcessMouseButtons()
+extern void FingersScript_ProcessMouseButtons_m00C75F8879FA407144A045D9243EBEEDF62CA77B (void);
+// 0x0000009A System.Void DigitalRubyShared.FingersScript::ProcessMouseWheel()
+extern void FingersScript_ProcessMouseWheel_m94AE83D4F280C29CCF191D0C181EB115290BC2B5 (void);
+// 0x0000009B System.Void DigitalRubyShared.FingersScript::ProcessLostTouches()
+extern void FingersScript_ProcessLostTouches_mEB6BE5FAE59DAE0832184B5872B1C059A403C204 (void);
+// 0x0000009C System.Boolean DigitalRubyShared.FingersScript::GameObjectMatchesPlatformSpecificView(System.Collections.Generic.List`1<UnityEngine.GameObject>,DigitalRubyShared.GestureRecognizer)
+extern void FingersScript_GameObjectMatchesPlatformSpecificView_m2CD60BF76402C34C73248061ABF600912B5C0F77 (void);
+// 0x0000009D System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch> DigitalRubyShared.FingersScript::FilterTouchesBegan(System.Collections.Generic.List`1<DigitalRubyShared.GestureTouch>,DigitalRubyShared.GestureRecognizer)
+extern void FingersScript_FilterTouchesBegan_m1C9CDBE752304AC17CB5D9E55CB5142FE62DCFE2 (void);
+// 0x0000009E System.Void DigitalRubyShared.FingersScript::CleanupPassThroughObjects()
+extern void FingersScript_CleanupPassThroughObjects_mD5C9A88A233B646F2D6E16BC66CF40B59328558C (void);
+// 0x0000009F System.Void DigitalRubyShared.FingersScript::SetupDefaultPassThroughComponents()
+extern void FingersScript_SetupDefaultPassThroughComponents_mE4498C151FACD10A40E36D1778A83B31423040AF (void);
+// 0x000000A0 System.Void DigitalRubyShared.FingersScript::SceneManagerSceneUnloaded(UnityEngine.SceneManagement.Scene)
+extern void FingersScript_SceneManagerSceneUnloaded_m41B9B86B9B7A4659CE3C0961852BC99021B21266 (void);
+// 0x000000A1 System.Void DigitalRubyShared.FingersScript::Awake()
+extern void FingersScript_Awake_m6A40BB84601BB63C2B5C9260B4992A0F7C0002A0 (void);
+// 0x000000A2 System.Void DigitalRubyShared.FingersScript::Update()
+extern void FingersScript_Update_m4CB81E9636F87673C32BA1F2DEF9C060F23727C9 (void);
+// 0x000000A3 System.Void DigitalRubyShared.FingersScript::OnDestroy()
+extern void FingersScript_OnDestroy_m00E45CF5C1DBC7E4A951FA37F752F240E423F20A (void);
+// 0x000000A4 System.Boolean DigitalRubyShared.FingersScript::AddGesture(DigitalRubyShared.GestureRecognizer)
+extern void FingersScript_AddGesture_mC336CF24D56C632A35EACFF2F9E58FC3517F04C6 (void);
+// 0x000000A5 System.Boolean DigitalRubyShared.FingersScript::RemoveGesture(DigitalRubyShared.GestureRecognizer)
+extern void FingersScript_RemoveGesture_m5748B651726F0C737841B82C5220F824CDF07B8A (void);
+// 0x000000A6 System.Void DigitalRubyShared.FingersScript::ResetState(System.Boolean)
+extern void FingersScript_ResetState_m42D25809B4DF5F1546F5B8BBF70B748C28E933B5 (void);
+// 0x000000A7 UnityEngine.Rect DigitalRubyShared.FingersScript::RectTransformToScreenSpace(UnityEngine.RectTransform)
+extern void FingersScript_RectTransformToScreenSpace_m2F2FF40DD8001B0017472966A803C72E3DA118CB (void);
+// 0x000000A8 System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch> DigitalRubyShared.FingersScript::get_Touches()
+extern void FingersScript_get_Touches_m9E5EA3C6BF16B694E7F133565D9C7B14D2EFCA73 (void);
+// 0x000000A9 System.Collections.Generic.HashSet`1<System.Type> DigitalRubyShared.FingersScript::get_ComponentTypesToDenyPassThrough()
+extern void FingersScript_get_ComponentTypesToDenyPassThrough_m0D1ED1973AD01A2CCF4185BEDB8D75B2D5E18224 (void);
+// 0x000000AA System.Collections.Generic.HashSet`1<System.Type> DigitalRubyShared.FingersScript::get_ComponentTypesToIgnorePassThrough()
+extern void FingersScript_get_ComponentTypesToIgnorePassThrough_mEB31916F65E8378B9CB28C90FE0A41F070ADADFD (void);
+// 0x000000AB System.Collections.ObjectModel.ReadOnlyCollection`1<DigitalRubyShared.GestureTouch> DigitalRubyShared.FingersScript::get_CurrentTouches()
+extern void FingersScript_get_CurrentTouches_m7B3C41D67216E36116EB4AA6389544B72651AF85 (void);
+// 0x000000AC System.Collections.ObjectModel.ReadOnlyCollection`1<DigitalRubyShared.GestureRecognizer> DigitalRubyShared.FingersScript::get_Gestures()
+extern void FingersScript_get_Gestures_m7B91D8401A69FD17BE5B3D1403090FAD66F72A57 (void);
+// 0x000000AD DigitalRubyShared.FingersScript DigitalRubyShared.FingersScript::get_Instance()
+extern void FingersScript_get_Instance_m5FC1E63248543CC01F6D7F06B1B74747E58D9AF0 (void);
+// 0x000000AE System.Boolean DigitalRubyShared.FingersScript::get_HasInstance()
+extern void FingersScript_get_HasInstance_mC73D814855A7D162A1656A2BAD19AC611C2BB086 (void);
+// 0x000000AF System.Void DigitalRubyShared.FingersScript::.ctor()
+extern void FingersScript__ctor_m0A09E95DC9551885F0C984DB9AA218BBD17D09B9 (void);
+// 0x000000B0 System.Void DigitalRubyShared.FingersScript::<Awake>b__53_0(System.Single,System.Action)
+extern void FingersScript_U3CAwakeU3Eb__53_0_m7D0C37FD22057638BC5D0C0DFEE381E4B0E119A5 (void);
+// 0x000000B1 System.Void DigitalRubyShared.FingersScript/<MainThreadCallback>d__34::.ctor(System.Int32)
+extern void U3CMainThreadCallbackU3Ed__34__ctor_m460E14456A4B57BACC05D4C047B2CEFC4A265B15 (void);
+// 0x000000B2 System.Void DigitalRubyShared.FingersScript/<MainThreadCallback>d__34::System.IDisposable.Dispose()
+extern void U3CMainThreadCallbackU3Ed__34_System_IDisposable_Dispose_mB08C57DD2A98463C04A470953C3D0AD4C0BF932B (void);
+// 0x000000B3 System.Boolean DigitalRubyShared.FingersScript/<MainThreadCallback>d__34::MoveNext()
+extern void U3CMainThreadCallbackU3Ed__34_MoveNext_m7544DCEF1713AB48B8F06B6EA0729261D8C0D8C4 (void);
+// 0x000000B4 System.Object DigitalRubyShared.FingersScript/<MainThreadCallback>d__34::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CMainThreadCallbackU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m15E4CE56F9DA7FEB24576C1A39A9C0EA48910C7B (void);
+// 0x000000B5 System.Void DigitalRubyShared.FingersScript/<MainThreadCallback>d__34::System.Collections.IEnumerator.Reset()
+extern void U3CMainThreadCallbackU3Ed__34_System_Collections_IEnumerator_Reset_m8CA52E80C71E458ABE0D64448E3AB3DFD3D817C9 (void);
+// 0x000000B6 System.Object DigitalRubyShared.FingersScript/<MainThreadCallback>d__34::System.Collections.IEnumerator.get_Current()
+extern void U3CMainThreadCallbackU3Ed__34_System_Collections_IEnumerator_get_Current_m6EA4E8A45C52684188610F16F7A0D11FBAB6EF63 (void);
+// 0x000000B7 System.Void DigitalRubyShared.FingersScript/<>c__DisplayClass36_0::.ctor()
+extern void U3CU3Ec__DisplayClass36_0__ctor_m38140C1DA654053337889DE50DEF0A1F0540225C (void);
+// 0x000000B8 System.Boolean DigitalRubyShared.FingersScript/<>c__DisplayClass36_0::<PopulateGameObjectsForTouch>b__0(UnityEngine.EventSystems.RaycastResult)
+extern void U3CU3Ec__DisplayClass36_0_U3CPopulateGameObjectsForTouchU3Eb__0_mE5565C57DAE9E45DE3604B58021148F4F8D505AD (void);
+// 0x000000B9 System.Single DigitalRubyShared.DeviceInfo::CentimetersToInches(System.Single)
+extern void DeviceInfo_CentimetersToInches_m0BDE574A41B1B6098507C2758AEBA32C2CD53C04 (void);
+// 0x000000BA System.Single DigitalRubyShared.DeviceInfo::InchesToCentimeters(System.Single)
+extern void DeviceInfo_InchesToCentimeters_m1AEFC3A43E8B91DBAACEDE5515F3C6A1D00F7496 (void);
+// 0x000000BB System.Single DigitalRubyShared.DeviceInfo::PixelsToUnits(System.Single)
+extern void DeviceInfo_PixelsToUnits_mBCADCEF1B134011B9EA8AA0502670DBB37B6EFD2 (void);
+// 0x000000BC System.Single DigitalRubyShared.DeviceInfo::UnitsToPixels(System.Single)
+extern void DeviceInfo_UnitsToPixels_m4FF7403D9986C808FAFA120DE5C63D5A4C027E70 (void);
+// 0x000000BD System.Single DigitalRubyShared.DeviceInfo::get_PixelsPerInch()
+extern void DeviceInfo_get_PixelsPerInch_mAD6BBCC15894404194002703FFE74981CE1D25DB (void);
+// 0x000000BE System.Void DigitalRubyShared.DeviceInfo::set_PixelsPerInch(System.Single)
+extern void DeviceInfo_set_PixelsPerInch_mEB7203D9205BE7CE15B9860094146F1CF86569DE (void);
+// 0x000000BF System.Single DigitalRubyShared.DeviceInfo::get_UnitMultiplier()
+extern void DeviceInfo_get_UnitMultiplier_m85C9A6EBA5E7427B035A37FDD0F86F0D12771B69 (void);
+// 0x000000C0 System.Void DigitalRubyShared.DeviceInfo::set_UnitMultiplier(System.Single)
+extern void DeviceInfo_set_UnitMultiplier_m0E0F7C4C704F3D6FB54779A0C225AD14AEDA750E (void);
+// 0x000000C1 System.Void DigitalRubyShared.GestureTouch::.ctor(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single,System.Object,DigitalRubyShared.TouchPhase)
+extern void GestureTouch__ctor_m6424F3021923C3B8CC56D7D2D6EF465E19A4C680 (void);
+// 0x000000C2 System.Int32 DigitalRubyShared.GestureTouch::CompareTo(DigitalRubyShared.GestureTouch)
+extern void GestureTouch_CompareTo_m313C82F0C842640E27645FCED3215FAE3A032122 (void);
+// 0x000000C3 System.Int32 DigitalRubyShared.GestureTouch::GetHashCode()
+extern void GestureTouch_GetHashCode_mC07DA9AB409BC55B71AAC39C9A953E5CEDA867BD (void);
+// 0x000000C4 System.Boolean DigitalRubyShared.GestureTouch::Equals(System.Object)
+extern void GestureTouch_Equals_m4C65BA4738A413584C2AE5B4E41CE22FBD63DC17 (void);
+// 0x000000C5 System.Int32 DigitalRubyShared.GestureTouch::get_Id()
+extern void GestureTouch_get_Id_m83FF759DFFEBA79DCCE618A63DB15521B492726A (void);
+// 0x000000C6 System.Single DigitalRubyShared.GestureTouch::get_ScreenX()
+extern void GestureTouch_get_ScreenX_m15BC1C09F57F915BF4CC49998F207A15E226A100 (void);
+// 0x000000C7 System.Single DigitalRubyShared.GestureTouch::get_X()
+extern void GestureTouch_get_X_mA2469FBADC9E3ED26981589B8A3210279D55BEB0 (void);
+// 0x000000C8 System.Single DigitalRubyShared.GestureTouch::get_ScreenY()
+extern void GestureTouch_get_ScreenY_m06AF90565D8A5DBB32DB9A657B045E6B76301770 (void);
+// 0x000000C9 System.Single DigitalRubyShared.GestureTouch::get_Y()
+extern void GestureTouch_get_Y_m4DDC020CDA3D39A25CA726846894A7F28163E85A (void);
+// 0x000000CA System.Single DigitalRubyShared.GestureTouch::get_PreviousX()
+extern void GestureTouch_get_PreviousX_mB6A761E8457BEB3172288924FDA63903B0539DD9 (void);
+// 0x000000CB System.Single DigitalRubyShared.GestureTouch::get_PreviousY()
+extern void GestureTouch_get_PreviousY_mFE01066E59B77DBAF1DF5E6E8A4C82A687184F63 (void);
+// 0x000000CC System.Single DigitalRubyShared.GestureTouch::get_Pressure()
+extern void GestureTouch_get_Pressure_m72899A5AB79F4BDD9470C5147ABD5B6E1228A638 (void);
+// 0x000000CD System.Single DigitalRubyShared.GestureTouch::get_DeltaX()
+extern void GestureTouch_get_DeltaX_mF0C508A993779B83C15007F3A809DF158ABFCB46 (void);
+// 0x000000CE System.Single DigitalRubyShared.GestureTouch::get_DeltaY()
+extern void GestureTouch_get_DeltaY_m753255CCEDAD7F225AD3B4C932181E5B25825E4D (void);
+// 0x000000CF System.Object DigitalRubyShared.GestureTouch::get_PlatformSpecificTouch()
+extern void GestureTouch_get_PlatformSpecificTouch_m040D56C648F8D700A7D7A21D257E3306D626F9BC (void);
+// 0x000000D0 DigitalRubyShared.TouchPhase DigitalRubyShared.GestureTouch::get_TouchPhase()
+extern void GestureTouch_get_TouchPhase_mC71EED97E1DBCD4247D8C129A0145CA6F08787F7 (void);
+// 0x000000D1 System.Void DigitalRubyShared.GestureRecognizerStateUpdatedDelegate::.ctor(System.Object,System.IntPtr)
+extern void GestureRecognizerStateUpdatedDelegate__ctor_mD59D7AE70C816B91B6944CCEB3E3EDAA04C13CFD (void);
+// 0x000000D2 System.Void DigitalRubyShared.GestureRecognizerStateUpdatedDelegate::Invoke(DigitalRubyShared.GestureRecognizer)
+extern void GestureRecognizerStateUpdatedDelegate_Invoke_mFFABAD54A4FF1D610377C29E2A699608A7217752 (void);
+// 0x000000D3 System.IAsyncResult DigitalRubyShared.GestureRecognizerStateUpdatedDelegate::BeginInvoke(DigitalRubyShared.GestureRecognizer,System.AsyncCallback,System.Object)
+extern void GestureRecognizerStateUpdatedDelegate_BeginInvoke_mF31A39CBE69282BC3CF4899C46509F28E543DE4E (void);
+// 0x000000D4 System.Void DigitalRubyShared.GestureRecognizerStateUpdatedDelegate::EndInvoke(System.IAsyncResult)
+extern void GestureRecognizerStateUpdatedDelegate_EndInvoke_mBCF9FD2D2308ED2BF9D3B2BBABC10C12AB88B9F7 (void);
+// 0x000000D5 System.Void DigitalRubyShared.GestureRecognizerUpdated::.ctor(System.Object,System.IntPtr)
+extern void GestureRecognizerUpdated__ctor_m5C971396A4BE99F758669F96B7BB64BA152858C0 (void);
+// 0x000000D6 System.Void DigitalRubyShared.GestureRecognizerUpdated::Invoke(DigitalRubyShared.GestureRecognizer,System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizerUpdated_Invoke_m366508E84FB717EB346F9FFFBC5AAF25F82ABB17 (void);
+// 0x000000D7 System.IAsyncResult DigitalRubyShared.GestureRecognizerUpdated::BeginInvoke(DigitalRubyShared.GestureRecognizer,System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>,System.AsyncCallback,System.Object)
+extern void GestureRecognizerUpdated_BeginInvoke_m345A8CD4842A6FFE31D2E6B2F18796398A601DE8 (void);
+// 0x000000D8 System.Void DigitalRubyShared.GestureRecognizerUpdated::EndInvoke(System.IAsyncResult)
+extern void GestureRecognizerUpdated_EndInvoke_m5705C4BF9F2AD23EEA25B64D486D488D08D14E15 (void);
+// 0x000000D9 System.Void DigitalRubyShared.GestureVelocityTracker::AddItem(System.Single,System.Single,System.Single)
+extern void GestureVelocityTracker_AddItem_mB6D681FA866FC99300EFAB25C38E9D66D7D62A5E (void);
+// 0x000000DA System.Void DigitalRubyShared.GestureVelocityTracker::Reset()
+extern void GestureVelocityTracker_Reset_m8167072983F867728F939219D9842862DAF3DD53 (void);
+// 0x000000DB System.Void DigitalRubyShared.GestureVelocityTracker::Restart()
+extern void GestureVelocityTracker_Restart_m92F0AE865E3347E604A2BC9D040CE4EF48DE5320 (void);
+// 0x000000DC System.Void DigitalRubyShared.GestureVelocityTracker::Restart(System.Single,System.Single)
+extern void GestureVelocityTracker_Restart_m2180185183B3672F2B3C5A08FC02389676E20BB8 (void);
+// 0x000000DD System.Void DigitalRubyShared.GestureVelocityTracker::Update(System.Single,System.Single)
+extern void GestureVelocityTracker_Update_m12C6C2659854013BFB6E539DBC4BD96C6F7BD0B6 (void);
+// 0x000000DE System.Single DigitalRubyShared.GestureVelocityTracker::get_ElapsedSeconds()
+extern void GestureVelocityTracker_get_ElapsedSeconds_mA08A6DC3B470FE652E9FDEF1672413A185BD1DBC (void);
+// 0x000000DF System.Single DigitalRubyShared.GestureVelocityTracker::get_VelocityX()
+extern void GestureVelocityTracker_get_VelocityX_mEEBC360B1B2BABDDD921D98CB94313ADCB0205D6 (void);
+// 0x000000E0 System.Void DigitalRubyShared.GestureVelocityTracker::set_VelocityX(System.Single)
+extern void GestureVelocityTracker_set_VelocityX_mD17CE6C49B49A4A53E4AC0796DE1D8E19F3E6678 (void);
+// 0x000000E1 System.Single DigitalRubyShared.GestureVelocityTracker::get_VelocityY()
+extern void GestureVelocityTracker_get_VelocityY_mB783BD3ADE8AD4A8671555EBD035D5569B280290 (void);
+// 0x000000E2 System.Void DigitalRubyShared.GestureVelocityTracker::set_VelocityY(System.Single)
+extern void GestureVelocityTracker_set_VelocityY_m8EA56AACBB3CBC2B98BD2015F279989C672FEECD (void);
+// 0x000000E3 System.Single DigitalRubyShared.GestureVelocityTracker::get_Speed()
+extern void GestureVelocityTracker_get_Speed_m10376E343EE74DC6DBD1CD78ED5C8C6662D287C1 (void);
+// 0x000000E4 System.Void DigitalRubyShared.GestureVelocityTracker::.ctor()
+extern void GestureVelocityTracker__ctor_mA81898F475B2CCAE259EF5F69BB503A16EA69B00 (void);
+// 0x000000E5 System.Single DigitalRubyShared.GestureRecognizer::get_PrevFocusX()
+extern void GestureRecognizer_get_PrevFocusX_m816EB68DA8612182CE2C98A5F5F96CF6A6878A62 (void);
+// 0x000000E6 System.Void DigitalRubyShared.GestureRecognizer::set_PrevFocusX(System.Single)
+extern void GestureRecognizer_set_PrevFocusX_mEB8F73F6CFB16083B444FAA66E65D23D5DC84E34 (void);
+// 0x000000E7 System.Single DigitalRubyShared.GestureRecognizer::get_PrevFocusY()
+extern void GestureRecognizer_get_PrevFocusY_m0154AA05822A05DBC984E8652C4A653995AA535B (void);
+// 0x000000E8 System.Void DigitalRubyShared.GestureRecognizer::set_PrevFocusY(System.Single)
+extern void GestureRecognizer_set_PrevFocusY_m832C2B1A4B10B05279C8939BF7F3F65A0CF7B001 (void);
+// 0x000000E9 System.Void DigitalRubyShared.GestureRecognizer::UpdateTouchState(System.Boolean)
+extern void GestureRecognizer_UpdateTouchState_m6218C5C4D92AE1A1784863A14CF0EBC62FB742CB (void);
+// 0x000000EA System.Void DigitalRubyShared.GestureRecognizer::EndGesture()
+extern void GestureRecognizer_EndGesture_m92FECB688A6378D8C12FE35111BAC718E6FF5BCC (void);
+// 0x000000EB System.Void DigitalRubyShared.GestureRecognizer::RemoveFromActiveGestures()
+extern void GestureRecognizer_RemoveFromActiveGestures_m6DC265D675C64FB54D30F0CBC448EBE207EF4342 (void);
+// 0x000000EC System.Boolean DigitalRubyShared.GestureRecognizer::CanExecuteGestureWithOtherGesturesOrFail(DigitalRubyShared.GestureRecognizerState)
+extern void GestureRecognizer_CanExecuteGestureWithOtherGesturesOrFail_m0D284CE35AD9C7ECA505F2EA36C7C20C3C7BAC6C (void);
+// 0x000000ED System.Void DigitalRubyShared.GestureRecognizer::FailGestureNow()
+extern void GestureRecognizer_FailGestureNow_mCEE52528FDCE97E4FD865A7F65D0A0792643A495 (void);
+// 0x000000EE System.Boolean DigitalRubyShared.GestureRecognizer::TouchesIntersect(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>,System.Collections.Generic.List`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizer_TouchesIntersect_mDFB81737169D5CE73963A65235B01ED7FC0C2667 (void);
+// 0x000000EF System.Void DigitalRubyShared.GestureRecognizer::UpdateTrackedTouches(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizer_UpdateTrackedTouches_mC067F832E5BF758DA0A373DEBEABD68E8E461FE0 (void);
+// 0x000000F0 System.Int32 DigitalRubyShared.GestureRecognizer::TrackTouchesInternal(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizer_TrackTouchesInternal_m6FE373E8A4B9163F2009BC0F5F6AC39BB2B04AA4 (void);
+// 0x000000F1 System.Int32 DigitalRubyShared.GestureRecognizer::StopTrackingTouches(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizer_StopTrackingTouches_m29035CE9CA89C1D25ACF240044BCDB3E12D58D04 (void);
+// 0x000000F2 System.Void DigitalRubyShared.GestureRecognizer::ResetInternal(System.Boolean)
+extern void GestureRecognizer_ResetInternal_mD8941B8F075FB1DB2CA1D03587FAFD9246CAA24C (void);
+// 0x000000F3 System.Void DigitalRubyShared.GestureRecognizer::RunActionAfterDelayInternal(System.Single,System.Action)
+extern void GestureRecognizer_RunActionAfterDelayInternal_m6F30ACDD87AFFFD3860806B7BE82F598C8FA8925 (void);
+// 0x000000F4 System.Boolean DigitalRubyShared.GestureRecognizer::IgnoreTouch(System.Int32)
+extern void GestureRecognizer_IgnoreTouch_m99A49FD53CF655B30118EB52E33C0CB69A13354D (void);
+// 0x000000F5 System.Void DigitalRubyShared.GestureRecognizer::TrackCurrentTrackedTouchesStartLocations()
+extern void GestureRecognizer_TrackCurrentTrackedTouchesStartLocations_m61684292414F1B2CDD5E9B343C7076A5A92B85CA (void);
+// 0x000000F6 System.Boolean DigitalRubyShared.GestureRecognizer::AreTrackedTouchesWithinDistance(System.Single)
+extern void GestureRecognizer_AreTrackedTouchesWithinDistance_m5BCB5ECE6EFEA3EAFC4288840F7C13DAE0D490C4 (void);
+// 0x000000F7 System.Boolean DigitalRubyShared.GestureRecognizer::CalculateFocus(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizer_CalculateFocus_m50EBCE4601BE3E946362542E25054A2FCE9B5E0F (void);
+// 0x000000F8 System.Boolean DigitalRubyShared.GestureRecognizer::CalculateFocus(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>,System.Boolean)
+extern void GestureRecognizer_CalculateFocus_m12E91D86B57CF1607FC0771346A77195878868FE (void);
+// 0x000000F9 System.Void DigitalRubyShared.GestureRecognizer::StateChanged()
+extern void GestureRecognizer_StateChanged_mD84FFDD880240C78E5693FA1FBD571190D1631CE (void);
+// 0x000000FA System.Boolean DigitalRubyShared.GestureRecognizer::SetState(DigitalRubyShared.GestureRecognizerState)
+extern void GestureRecognizer_SetState_m60946AC28D102DFE0B524055F78733BF5E843956 (void);
+// 0x000000FB System.Boolean DigitalRubyShared.GestureRecognizer::RequiredGesturesToFailAllowsEndPending()
+extern void GestureRecognizer_RequiredGesturesToFailAllowsEndPending_mDCE234AC4DB42CE9B0F44694B5EE36F68B6C4982 (void);
+// 0x000000FC System.Boolean DigitalRubyShared.GestureRecognizer::HasAllRequiredFailGesturesToEndFromEndPending()
+extern void GestureRecognizer_HasAllRequiredFailGesturesToEndFromEndPending_m00F855625A76D58C0FEB309720FCCFA5E030752C (void);
+// 0x000000FD System.Void DigitalRubyShared.GestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizer_TouchesBegan_mA053495FCB31C6BEC59B71540D5C9111BB0861BF (void);
+// 0x000000FE System.Void DigitalRubyShared.GestureRecognizer::TouchesMoved()
+extern void GestureRecognizer_TouchesMoved_m952E60993D42502DACB5DF2511539A6F9B45D066 (void);
+// 0x000000FF System.Void DigitalRubyShared.GestureRecognizer::TouchesEnded()
+extern void GestureRecognizer_TouchesEnded_m22C69D1D4298363709FE20CDFE2357AE929BF0C7 (void);
+// 0x00000100 System.Int32 DigitalRubyShared.GestureRecognizer::TrackTouches(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizer_TrackTouches_m893EC3A78E94E6275C91C3563870EDAC9D91EAB5 (void);
+// 0x00000101 System.Void DigitalRubyShared.GestureRecognizer::.ctor()
+extern void GestureRecognizer__ctor_mD9B8590B233D5B9881C54B790AE8E546B3C9844C (void);
+// 0x00000102 System.Boolean DigitalRubyShared.GestureRecognizer::Simulate(System.Single[])
+extern void GestureRecognizer_Simulate_m9886B44A56CC90717A648E7FCB607FF304F95C6A (void);
+// 0x00000103 System.Void DigitalRubyShared.GestureRecognizer::Finalize()
+extern void GestureRecognizer_Finalize_m6545BD3BC69A66C3E9E2FDEF7AA8AC479C402340 (void);
+// 0x00000104 System.String DigitalRubyShared.GestureRecognizer::ToString()
+extern void GestureRecognizer_ToString_mFDF94B927E362D8080D8EDF2089C21B5CD84E911 (void);
+// 0x00000105 System.Void DigitalRubyShared.GestureRecognizer::Reset()
+extern void GestureRecognizer_Reset_m17C3CA842EA2CD6C97FDF1B5A9C47E0FA16BFF16 (void);
+// 0x00000106 System.Boolean DigitalRubyShared.GestureRecognizer::BeginGestureRestart()
+extern void GestureRecognizer_BeginGestureRestart_m0534969AD4CB3EFD471658F1DD7500336C26EFAE (void);
+// 0x00000107 System.Boolean DigitalRubyShared.GestureRecognizer::EndGestureRestart(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizer_EndGestureRestart_m2EC153C02AD7EC241C4D067BC62DDA8E7E85CA3B (void);
+// 0x00000108 System.Void DigitalRubyShared.GestureRecognizer::ProcessTouchesBegan(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizer_ProcessTouchesBegan_m06A1C9BDCC1A8CC1405CC7FE012BE83AEA7CAEF9 (void);
+// 0x00000109 System.Void DigitalRubyShared.GestureRecognizer::ProcessTouchesMoved(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizer_ProcessTouchesMoved_m33F1C93BA761DE84551F0ADE26DA92CB901641A5 (void);
+// 0x0000010A System.Void DigitalRubyShared.GestureRecognizer::ProcessTouchesEnded(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizer_ProcessTouchesEnded_mF0C5B233A8CCAB628AEE8DFEB9DA049EA6BDBACE (void);
+// 0x0000010B System.Void DigitalRubyShared.GestureRecognizer::ProcessTouchesCancelled(System.Collections.Generic.ICollection`1<DigitalRubyShared.GestureTouch>)
+extern void GestureRecognizer_ProcessTouchesCancelled_m4E4CE336D8230FB29EA8023EE3537B0976F716A1 (void);
+// 0x0000010C System.Boolean DigitalRubyShared.GestureRecognizer::PointsAreWithinDistance(System.Single,System.Single,System.Single,System.Single,System.Single)
+extern void GestureRecognizer_PointsAreWithinDistance_m7F95DA40B1ECCD3505B57D203863361C65E50F42 (void);
+// 0x0000010D System.Single DigitalRubyShared.GestureRecognizer::DistanceBetweenPoints(System.Single,System.Single,System.Single,System.Single)
+extern void GestureRecognizer_DistanceBetweenPoints_mB4DCF75A0128ECD0B4AD47DA16C9A594AF7928B7 (void);
+// 0x0000010E System.Single DigitalRubyShared.GestureRecognizer::Distance(System.Single,System.Single)
+extern void GestureRecognizer_Distance_m0A20D7EF273504472117966B31D73B8508606544 (void);
+// 0x0000010F System.Single DigitalRubyShared.GestureRecognizer::Distance(System.Single)
+extern void GestureRecognizer_Distance_m176A495C4E680A2D4A9B68FE5EE71E0A6308B1CF (void);
+// 0x00000110 System.Void DigitalRubyShared.GestureRecognizer::Dispose()
+extern void GestureRecognizer_Dispose_mAFBB49A079A7B19E63E68E7E65FE3C718372E99A (void);
+// 0x00000111 System.Void DigitalRubyShared.GestureRecognizer::AllowSimultaneousExecution(DigitalRubyShared.GestureRecognizer)
+extern void GestureRecognizer_AllowSimultaneousExecution_m1D93D898E38404FC9BCC967A2DDC4AA342343F00 (void);
+// 0x00000112 System.Void DigitalRubyShared.GestureRecognizer::AllowSimultaneousExecutionWithAllGestures()
+extern void GestureRecognizer_AllowSimultaneousExecutionWithAllGestures_m911873661DA4B13F70B56865286D303E33C32394 (void);
+// 0x00000113 System.Void DigitalRubyShared.GestureRecognizer::DisallowSimultaneousExecution(DigitalRubyShared.GestureRecognizer)
+extern void GestureRecognizer_DisallowSimultaneousExecution_mB058F48B9E2FCF49442F743E3B5AB3BAA9E12F67 (void);
+// 0x00000114 System.Void DigitalRubyShared.GestureRecognizer::DisallowSimultaneousExecutionWithAllGestures()
+extern void GestureRecognizer_DisallowSimultaneousExecutionWithAllGestures_m1729CF5FCB35AA6BFE73CCCD2426B20B22EBAA28 (void);
+// 0x00000115 System.Void DigitalRubyShared.GestureRecognizer::AddRequiredGestureRecognizerToFail(DigitalRubyShared.GestureRecognizer)
+extern void GestureRecognizer_AddRequiredGestureRecognizerToFail_m7451E1EE45BC50B6D0A6246D57DC5062050CFE84 (void);
+// 0x00000116 System.Void DigitalRubyShared.GestureRecognizer::RemoveRequiredGestureRecognizerToFail(DigitalRubyShared.GestureRecognizer)
+extern void GestureRecognizer_RemoveRequiredGestureRecognizerToFail_mFC19959B2C2C064C94CB7EF1945579663DC4E683 (void);
+// 0x00000117 System.Void DigitalRubyShared.GestureRecognizer::RunActionAfterDelay(System.Single,System.Action)
+extern void GestureRecognizer_RunActionAfterDelay_m8381202D7E27EAB7D55DC09C53AD6CBD71B93205 (void);
+// 0x00000118 System.Int32 DigitalRubyShared.GestureRecognizer::NumberOfGesturesInProgress()
+extern void GestureRecognizer_NumberOfGesturesInProgress_m495A355A56318D3AA112332FA28F32F505D13534 (void);
+// 0x00000119 System.Boolean DigitalRubyShared.GestureRecognizer::get_Enabled()
+extern void GestureRecognizer_get_Enabled_m7CE4CAA96E2816B88C5F158AE492E8C68BA1D2EC (void);
+// 0x0000011A System.Void DigitalRubyShared.GestureRecognizer::set_Enabled(System.Boolean)
+extern void GestureRecognizer_set_Enabled_mD4832BF37E1F901056ED85CE5E06BE94F820ECAD (void);
+// 0x0000011B DigitalRubyShared.GestureRecognizerState DigitalRubyShared.GestureRecognizer::get_State()
+extern void GestureRecognizer_get_State_m3C7ECFA41A902384D61B64F156108586E62417F3 (void);
+// 0x0000011C System.Void DigitalRubyShared.GestureRecognizer::add_Updated(DigitalRubyShared.GestureRecognizerUpdated)
+extern void GestureRecognizer_add_Updated_mD7FBEAC3ECCC85A916D3BEA6A624537E6D27FC34 (void);
+// 0x0000011D System.Void DigitalRubyShared.GestureRecognizer::remove_Updated(DigitalRubyShared.GestureRecognizerUpdated)
+extern void GestureRecognizer_remove_Updated_m1A6205ADEE99AEAFD4B47891351F67A1E66163B4 (void);
+// 0x0000011E System.Void DigitalRubyShared.GestureRecognizer::add_StateUpdated(DigitalRubyShared.GestureRecognizerStateUpdatedDelegate)
+extern void GestureRecognizer_add_StateUpdated_m41F5402A953C6EC678BE43BC5F2D3581423BCD4A (void);
+// 0x0000011F System.Void DigitalRubyShared.GestureRecognizer::remove_StateUpdated(DigitalRubyShared.GestureRecognizerStateUpdatedDelegate)
+extern void GestureRecognizer_remove_StateUpdated_m19330AE57893A061800A0C5EBD965C9652FF6568 (void);
+// 0x00000120 System.Collections.ObjectModel.ReadOnlyCollection`1<DigitalRubyShared.GestureTouch> DigitalRubyShared.GestureRecognizer::get_CurrentTrackedTouches()
+extern void GestureRecognizer_get_CurrentTrackedTouches_m78F1F044496E47CDB223DEEC610D27118496F166 (void);
+// 0x00000121 System.Single DigitalRubyShared.GestureRecognizer::get_FocusX()
+extern void GestureRecognizer_get_FocusX_m7649E10C511D4DA092F7AF06C12F14EE375DFC8C (void);
+// 0x00000122 System.Void DigitalRubyShared.GestureRecognizer::set_FocusX(System.Single)
+extern void GestureRecognizer_set_FocusX_mD687B83A83CD963E2E0A62F076964D22DD8D65E8 (void);
+// 0x00000123 System.Single DigitalRubyShared.GestureRecognizer::get_FocusY()
+extern void GestureRecognizer_get_FocusY_m4A3CDA722D6BE7B187A23E7E33BE175FADD3396E (void);
+// 0x00000124 System.Void DigitalRubyShared.GestureRecognizer::set_FocusY(System.Single)
+extern void GestureRecognizer_set_FocusY_mA4AB413A21E5BB4289383E1FCCA4062CB8AB02F0 (void);
+// 0x00000125 System.Single DigitalRubyShared.GestureRecognizer::get_StartFocusX()
+extern void GestureRecognizer_get_StartFocusX_mF07C5185FEB1630605F305A4BA47B9E40C37ED29 (void);
+// 0x00000126 System.Void DigitalRubyShared.GestureRecognizer::set_StartFocusX(System.Single)
+extern void GestureRecognizer_set_StartFocusX_m3C851946DD32E35C7922CFE6A3FD4A3FC738D351 (void);
+// 0x00000127 System.Single DigitalRubyShared.GestureRecognizer::get_StartFocusY()
+extern void GestureRecognizer_get_StartFocusY_mEF7EEDB9A91279B72172B2A96A9FB0A7A878DB1B (void);
+// 0x00000128 System.Void DigitalRubyShared.GestureRecognizer::set_StartFocusY(System.Single)
+extern void GestureRecognizer_set_StartFocusY_mCFE5C69028134AEB8F0D127780A42A4B9BAF3AD9 (void);
+// 0x00000129 System.Single DigitalRubyShared.GestureRecognizer::get_DeltaX()
+extern void GestureRecognizer_get_DeltaX_m41145FC19E9A67DB290BA50219D516693F5B9E95 (void);
+// 0x0000012A System.Void DigitalRubyShared.GestureRecognizer::set_DeltaX(System.Single)
+extern void GestureRecognizer_set_DeltaX_m20261DAFE378C8903C01211DC438846DCD50D067 (void);
+// 0x0000012B System.Single DigitalRubyShared.GestureRecognizer::get_DeltaY()
+extern void GestureRecognizer_get_DeltaY_m01A29D425346D9CE02933BCE5FD85CCEB8EC3317 (void);
+// 0x0000012C System.Void DigitalRubyShared.GestureRecognizer::set_DeltaY(System.Single)
+extern void GestureRecognizer_set_DeltaY_mFD57D36A0471C0E6D8FCC2050985316039D0C65B (void);
+// 0x0000012D System.Single DigitalRubyShared.GestureRecognizer::get_DistanceX()
+extern void GestureRecognizer_get_DistanceX_m576B7DA7405922456F9BA089F737ED1B7D203A94 (void);
+// 0x0000012E System.Void DigitalRubyShared.GestureRecognizer::set_DistanceX(System.Single)
+extern void GestureRecognizer_set_DistanceX_m186D70ECA415C7587CCECDBA067591253916C0AC (void);
+// 0x0000012F System.Single DigitalRubyShared.GestureRecognizer::get_DistanceY()
+extern void GestureRecognizer_get_DistanceY_mB204053518A79FBF8F6DCAFCDB284A9E67FA5D6B (void);
+// 0x00000130 System.Void DigitalRubyShared.GestureRecognizer::set_DistanceY(System.Single)
+extern void GestureRecognizer_set_DistanceY_m7733E622725BF4651EC66D68C20710D61DFCFA34 (void);
+// 0x00000131 System.Single DigitalRubyShared.GestureRecognizer::get_VelocityX()
+extern void GestureRecognizer_get_VelocityX_m8063A2334F3617F0FE870193DEE24AD3D25951D0 (void);
+// 0x00000132 System.Single DigitalRubyShared.GestureRecognizer::get_VelocityY()
+extern void GestureRecognizer_get_VelocityY_mE1135BD323067F42F712BB71B610398298F591B4 (void);
+// 0x00000133 System.Single DigitalRubyShared.GestureRecognizer::get_Speed()
+extern void GestureRecognizer_get_Speed_mBE43051CB5A65DF7B66926D47A9C65592007BAB3 (void);
+// 0x00000134 System.Single DigitalRubyShared.GestureRecognizer::get_Pressure()
+extern void GestureRecognizer_get_Pressure_m6A2670CF88EDF2484A18A59A7BA5705DD7FADF26 (void);
+// 0x00000135 System.Void DigitalRubyShared.GestureRecognizer::set_Pressure(System.Single)
+extern void GestureRecognizer_set_Pressure_m3453F5DE609F4F94626AF01B34F41D462CCF55E2 (void);
+// 0x00000136 System.Object DigitalRubyShared.GestureRecognizer::get_PlatformSpecificView()
+extern void GestureRecognizer_get_PlatformSpecificView_m089B2F72258726FB42BE857DDDD3032D683CF7D2 (void);
+// 0x00000137 System.Void DigitalRubyShared.GestureRecognizer::set_PlatformSpecificView(System.Object)
+extern void GestureRecognizer_set_PlatformSpecificView_m64EC8BC874FA3FB29CE64BD03E1559A022A33C62 (void);
+// 0x00000138 System.Single DigitalRubyShared.GestureRecognizer::get_PlatformSpecificViewScale()
+extern void GestureRecognizer_get_PlatformSpecificViewScale_m36D66F79BEE59AEBC8EC95C346CACA5134AABE20 (void);
+// 0x00000139 System.Void DigitalRubyShared.GestureRecognizer::set_PlatformSpecificViewScale(System.Single)
+extern void GestureRecognizer_set_PlatformSpecificViewScale_m0C7B8BA030F368FB3890E1679A72AC61C0D793B8 (void);
+// 0x0000013A System.Object DigitalRubyShared.GestureRecognizer::get_CustomData()
+extern void GestureRecognizer_get_CustomData_m12DB7041F3FB3E0521FDD3D88B0EFB769C17315E (void);
+// 0x0000013B System.Void DigitalRubyShared.GestureRecognizer::set_CustomData(System.Object)
+extern void GestureRecognizer_set_CustomData_m7383275EEE106EBFA90581E98F75A88CAA92A89E (void);
+// 0x0000013C DigitalRubyShared.GestureRecognizer DigitalRubyShared.GestureRecognizer::get_RequireGestureRecognizerToFail()
+extern void GestureRecognizer_get_RequireGestureRecognizerToFail_mB7562DC16FED477A8E6DE14D1589B76CB202587D (void);
+// 0x0000013D System.Void DigitalRubyShared.GestureRecognizer::set_RequireGestureRecognizerToFail(DigitalRubyShared.GestureRecognizer)
+extern void GestureRecognizer_set_RequireGestureRecognizerToFail_mEDEBA2190887BAAEDC54C74D8A5B2E33A28B02B1 (void);
+// 0x0000013E System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureRecognizer> DigitalRubyShared.GestureRecognizer::get_RequireGestureRecognizersToFail()
+extern void GestureRecognizer_get_RequireGestureRecognizersToFail_mB536489FAB9CFCE2DA4E8C39962C22E47AAC6CD5 (void);
+// 0x0000013F System.Int32 DigitalRubyShared.GestureRecognizer::get_MinimumNumberOfTouchesToTrack()
+extern void GestureRecognizer_get_MinimumNumberOfTouchesToTrack_m12BDA015803BE336A2379951DBC383CC26C38A25 (void);
+// 0x00000140 System.Void DigitalRubyShared.GestureRecognizer::set_MinimumNumberOfTouchesToTrack(System.Int32)
+extern void GestureRecognizer_set_MinimumNumberOfTouchesToTrack_m7E81DFBF8D33A9B14F0CA4A959D7B3559EAC1139 (void);
+// 0x00000141 System.Int32 DigitalRubyShared.GestureRecognizer::get_MaximumNumberOfTouchesToTrack()
+extern void GestureRecognizer_get_MaximumNumberOfTouchesToTrack_mCD8555464FD0D02ED1DE7F4BBF5075C561DA7182 (void);
+// 0x00000142 System.Void DigitalRubyShared.GestureRecognizer::set_MaximumNumberOfTouchesToTrack(System.Int32)
+extern void GestureRecognizer_set_MaximumNumberOfTouchesToTrack_m9480449BAE019E488E202F4B31743E37E6253B2A (void);
+// 0x00000143 System.Boolean DigitalRubyShared.GestureRecognizer::get_TrackedTouchCountIsWithinRange()
+extern void GestureRecognizer_get_TrackedTouchCountIsWithinRange_m46F2E3F65F07455E49B45D9F11F3566AFFAC9892 (void);
+// 0x00000144 System.Boolean DigitalRubyShared.GestureRecognizer::get_ClearTrackedTouchesOnEndOrFail()
+extern void GestureRecognizer_get_ClearTrackedTouchesOnEndOrFail_mED51BD173236BC0C8190B35BD1FDB85304EB38A6 (void);
+// 0x00000145 System.Void DigitalRubyShared.GestureRecognizer::set_ClearTrackedTouchesOnEndOrFail(System.Boolean)
+extern void GestureRecognizer_set_ClearTrackedTouchesOnEndOrFail_mB5ABB9BD9BB82E745F94AC419B593AE7BA2D91A8 (void);
+// 0x00000146 System.Boolean DigitalRubyShared.GestureRecognizer::get_AllowSimultaneousExecutionIfPlatformSpecificViewsAreDifferent()
+extern void GestureRecognizer_get_AllowSimultaneousExecutionIfPlatformSpecificViewsAreDifferent_m4B33E3787B14D9D2B462A6EEBF438219F0378136 (void);
+// 0x00000147 System.Void DigitalRubyShared.GestureRecognizer::set_AllowSimultaneousExecutionIfPlatformSpecificViewsAreDifferent(System.Boolean)
+extern void GestureRecognizer_set_AllowSimultaneousExecutionIfPlatformSpecificViewsAreDifferent_mBE1AF2EDD1F4F046A114BA423173C68E1AAECF33 (void);
+// 0x00000148 System.Boolean DigitalRubyShared.GestureRecognizer::get_ResetOnEnd()
+extern void GestureRecognizer_get_ResetOnEnd_mE8E176AE6A5B8B81E1C673E8CEED3E56F5E2BAC6 (void);
+// 0x00000149 System.Boolean DigitalRubyShared.GestureRecognizer::get_IsRestarting()
+extern void GestureRecognizer_get_IsRestarting_m97D2B29629A45A6163DA2A9832FCF0E17444D55E (void);
+// 0x0000014A System.Boolean DigitalRubyShared.GestureRecognizer::get_ReceivedAdditionalTouches()
+extern void GestureRecognizer_get_ReceivedAdditionalTouches_m84FCF8338EA4E7D9D229235D4A9C1599CA3EE9CC (void);
+// 0x0000014B System.Void DigitalRubyShared.GestureRecognizer::set_ReceivedAdditionalTouches(System.Boolean)
+extern void GestureRecognizer_set_ReceivedAdditionalTouches_mABDD105751567176591F8F31913EC30D94EDC4E8 (void);
+// 0x0000014C System.Void DigitalRubyShared.GestureRecognizer::.cctor()
+extern void GestureRecognizer__cctor_m4DE140173F8269C14D83441726C32A0593A0BE20 (void);
+// 0x0000014D System.Void DigitalRubyShared.GestureRecognizer/CallbackMainThreadDelegate::.ctor(System.Object,System.IntPtr)
+extern void CallbackMainThreadDelegate__ctor_mAA7911B644EE6CF3E696FA82D447DB405AC695A6 (void);
+// 0x0000014E System.Void DigitalRubyShared.GestureRecognizer/CallbackMainThreadDelegate::Invoke(System.Single,System.Action)
+extern void CallbackMainThreadDelegate_Invoke_m512FFF3FCE10143EB050D66115514717BE3F23F9 (void);
+// 0x0000014F System.IAsyncResult DigitalRubyShared.GestureRecognizer/CallbackMainThreadDelegate::BeginInvoke(System.Single,System.Action,System.AsyncCallback,System.Object)
+extern void CallbackMainThreadDelegate_BeginInvoke_m97B5B915D951AFCF5ABA05A97C79385B54DAABE6 (void);
+// 0x00000150 System.Void DigitalRubyShared.GestureRecognizer/CallbackMainThreadDelegate::EndInvoke(System.IAsyncResult)
+extern void CallbackMainThreadDelegate_EndInvoke_mF7D153EBBF3D3264D450E9CB43C6403B52BD9AD7 (void);
+// 0x00000151 System.Void DigitalRubyShared.GestureLogger::Log(DigitalRubyShared.GestureRecognizer,System.String,System.Object[])
+extern void GestureLogger_Log_m18374EF30445C7699F845304A7C9811E5A3F4C19 (void);
+// 0x00000152 System.Void DigitalRubyShared.LongPressGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
+extern void LongPressGestureRecognizer_TouchesBegan_m0211586B607BFA74F2EB4350B89A10F12C01D66E (void);
+// 0x00000153 System.Void DigitalRubyShared.LongPressGestureRecognizer::TouchesMoved()
+extern void LongPressGestureRecognizer_TouchesMoved_m9B7F3D5E536D506A8FC429668C4F3072028606BB (void);
+// 0x00000154 System.Void DigitalRubyShared.LongPressGestureRecognizer::TouchesEnded()
+extern void LongPressGestureRecognizer_TouchesEnded_m1D850D3046FE4D299332793F5DCD8FAA91CD0911 (void);
+// 0x00000155 System.Void DigitalRubyShared.LongPressGestureRecognizer::.ctor()
+extern void LongPressGestureRecognizer__ctor_m17E818244566AB831487455375C846FD6E36A9F3 (void);
+// 0x00000156 System.Single DigitalRubyShared.LongPressGestureRecognizer::get_MinimumDurationSeconds()
+extern void LongPressGestureRecognizer_get_MinimumDurationSeconds_m9A641E65715E097F33A3CD28D6F54DA57F2D8093 (void);
+// 0x00000157 System.Void DigitalRubyShared.LongPressGestureRecognizer::set_MinimumDurationSeconds(System.Single)
+extern void LongPressGestureRecognizer_set_MinimumDurationSeconds_mA3F625787651C2A3496D72DD65D5ECB2E972A993 (void);
+// 0x00000158 System.Single DigitalRubyShared.LongPressGestureRecognizer::get_ThresholdUnits()
+extern void LongPressGestureRecognizer_get_ThresholdUnits_mA941918288DD6813196ED9DCD6C624FA545D1C16 (void);
+// 0x00000159 System.Void DigitalRubyShared.LongPressGestureRecognizer::set_ThresholdUnits(System.Single)
+extern void LongPressGestureRecognizer_set_ThresholdUnits_mA4B653283B24C8E84962891DE14B7A800790E23A (void);
+// 0x0000015A System.Single DigitalRubyShared.OneTouchRotateGestureRecognizer::CurrentAngle()
+extern void OneTouchRotateGestureRecognizer_CurrentAngle_m061BF2BD83C98E5942AF2AB4542E827C827CAE8A (void);
+// 0x0000015B System.Void DigitalRubyShared.OneTouchRotateGestureRecognizer::.ctor()
+extern void OneTouchRotateGestureRecognizer__ctor_m04BBBEB40B92CEE7CC14BC73BD4438BEE1264C53 (void);
+// 0x0000015C System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::.ctor()
+extern void OneTouchScaleGestureRecognizer__ctor_m863992B87B0618EBA9D266C35D6B598D481BF2A2 (void);
+// 0x0000015D System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
+extern void OneTouchScaleGestureRecognizer_TouchesBegan_m68104E5DB0996F843C5832BCDA3A84A9CA7072D6 (void);
+// 0x0000015E System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::TouchesMoved()
+extern void OneTouchScaleGestureRecognizer_TouchesMoved_mE7B714F12668DF039BF0F08F4D01A8F831FD5322 (void);
+// 0x0000015F System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::TouchesEnded()
+extern void OneTouchScaleGestureRecognizer_TouchesEnded_m27A4B60B4714B0E754F6891C393F1B0DD31D1687 (void);
+// 0x00000160 System.Single DigitalRubyShared.OneTouchScaleGestureRecognizer::get_ScaleMultiplier()
+extern void OneTouchScaleGestureRecognizer_get_ScaleMultiplier_mB9FEA85C25FA4B47A3760B7244B6D847042D2680 (void);
+// 0x00000161 System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::set_ScaleMultiplier(System.Single)
+extern void OneTouchScaleGestureRecognizer_set_ScaleMultiplier_m684301EAEBF9BDF5B4D15C73B6679230EFAB9C54 (void);
+// 0x00000162 System.Single DigitalRubyShared.OneTouchScaleGestureRecognizer::get_ScaleMultiplierX()
+extern void OneTouchScaleGestureRecognizer_get_ScaleMultiplierX_mEE9D16A0D78E8A3D76893BC267F6EB3A27DCCDC8 (void);
+// 0x00000163 System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::set_ScaleMultiplierX(System.Single)
+extern void OneTouchScaleGestureRecognizer_set_ScaleMultiplierX_m7755459FAF55151BDED60E1BDF09C5EE2BC89EFC (void);
+// 0x00000164 System.Single DigitalRubyShared.OneTouchScaleGestureRecognizer::get_ScaleMultiplierY()
+extern void OneTouchScaleGestureRecognizer_get_ScaleMultiplierY_m049626B132547D1698337F06973516719E83FC70 (void);
+// 0x00000165 System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::set_ScaleMultiplierY(System.Single)
+extern void OneTouchScaleGestureRecognizer_set_ScaleMultiplierY_mA98B67EECF8D678979AA73EC448FE0292C57C8C8 (void);
+// 0x00000166 System.Single DigitalRubyShared.OneTouchScaleGestureRecognizer::get_ZoomSpeed()
+extern void OneTouchScaleGestureRecognizer_get_ZoomSpeed_mA1796290CE59F906E415DDF7A0A35532ABE63AB6 (void);
+// 0x00000167 System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::set_ZoomSpeed(System.Single)
+extern void OneTouchScaleGestureRecognizer_set_ZoomSpeed_m72A4C3A4EFF22E7F7559E592DD00DCDAF987518F (void);
+// 0x00000168 System.Single DigitalRubyShared.OneTouchScaleGestureRecognizer::get_ThresholdUnits()
+extern void OneTouchScaleGestureRecognizer_get_ThresholdUnits_m04FF2F35D34877BE3E4AB993B6B8CF0FB5377E2E (void);
+// 0x00000169 System.Void DigitalRubyShared.OneTouchScaleGestureRecognizer::set_ThresholdUnits(System.Single)
+extern void OneTouchScaleGestureRecognizer_set_ThresholdUnits_m10A023392251FD26A2AFFDCE8C900AC593606529 (void);
+// 0x0000016A System.Void DigitalRubyShared.PanGestureRecognizer::ProcessTouches(System.Boolean)
+extern void PanGestureRecognizer_ProcessTouches_mEE6A766E38623E596CC503D0B9D98A0C0073AA04 (void);
+// 0x0000016B System.Void DigitalRubyShared.PanGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
+extern void PanGestureRecognizer_TouchesBegan_m8E3EF4CAB94188372F275692EAE02FDE8CF82276 (void);
+// 0x0000016C System.Void DigitalRubyShared.PanGestureRecognizer::TouchesMoved()
+extern void PanGestureRecognizer_TouchesMoved_m792889C51A0F92E8CBBC72CCABE608C0A0E02AD6 (void);
+// 0x0000016D System.Void DigitalRubyShared.PanGestureRecognizer::TouchesEnded()
+extern void PanGestureRecognizer_TouchesEnded_m167ADBF75C14FF80F2DB20A7E0DE8BBD3DACC83D (void);
+// 0x0000016E System.Void DigitalRubyShared.PanGestureRecognizer::.ctor()
+extern void PanGestureRecognizer__ctor_m935DF90EA6B3E45F0D3DE71DBA64E01CDE2BBBAC (void);
+// 0x0000016F System.Single DigitalRubyShared.PanGestureRecognizer::get_ThresholdUnits()
+extern void PanGestureRecognizer_get_ThresholdUnits_m47C7863960BC50131F90EA3FDEFCA917C534C69D (void);
+// 0x00000170 System.Void DigitalRubyShared.PanGestureRecognizer::set_ThresholdUnits(System.Single)
+extern void PanGestureRecognizer_set_ThresholdUnits_mC540465C91F3CEA5F9155F34CCF4945A9292DFEA (void);
+// 0x00000171 System.Single DigitalRubyShared.RotateGestureRecognizer::DifferenceBetweenAngles(System.Single,System.Single)
+extern void RotateGestureRecognizer_DifferenceBetweenAngles_m31EF6E944ADFFBDB8DC7C510B342CFD13F0E80C6 (void);
+// 0x00000172 System.Void DigitalRubyShared.RotateGestureRecognizer::UpdateAngle()
+extern void RotateGestureRecognizer_UpdateAngle_mB4799D19945B8D85EE43132171835B0EFEE0C96B (void);
+// 0x00000173 System.Void DigitalRubyShared.RotateGestureRecognizer::CheckForStart()
+extern void RotateGestureRecognizer_CheckForStart_mB83B55A927B458F5B299037FCF9919052F462069 (void);
+// 0x00000174 System.Void DigitalRubyShared.RotateGestureRecognizer::StateChanged()
+extern void RotateGestureRecognizer_StateChanged_mF724728EAC56A1B3DEFF74ACE395179792B74250 (void);
+// 0x00000175 System.Void DigitalRubyShared.RotateGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
+extern void RotateGestureRecognizer_TouchesBegan_m55C11A84A87586A75852AA2D7FB77427F5056DA1 (void);
+// 0x00000176 System.Void DigitalRubyShared.RotateGestureRecognizer::TouchesMoved()
+extern void RotateGestureRecognizer_TouchesMoved_mBD0708D089BCB22AD761C10F8787D6445DE9F49B (void);
+// 0x00000177 System.Void DigitalRubyShared.RotateGestureRecognizer::TouchesEnded()
+extern void RotateGestureRecognizer_TouchesEnded_m32D60A7B1F2899455AA779F6CD45553C8A570023 (void);
+// 0x00000178 System.Single DigitalRubyShared.RotateGestureRecognizer::CurrentAngle()
+extern void RotateGestureRecognizer_CurrentAngle_m341A1B4F63239D394C8BEDF5D0BEA42BC5C482CA (void);
+// 0x00000179 System.Void DigitalRubyShared.RotateGestureRecognizer::.ctor()
+extern void RotateGestureRecognizer__ctor_mD533FD1DBCF94BA30756E322DEDE93E5A3F899DB (void);
+// 0x0000017A System.Single DigitalRubyShared.RotateGestureRecognizer::get_AngleThreshold()
+extern void RotateGestureRecognizer_get_AngleThreshold_m4FC1BB13B5BC3419C62EAFD8A4320014B6465E58 (void);
+// 0x0000017B System.Void DigitalRubyShared.RotateGestureRecognizer::set_AngleThreshold(System.Single)
+extern void RotateGestureRecognizer_set_AngleThreshold_m8162C1FEAD5B5083D588771BA28CF120DC8D614B (void);
+// 0x0000017C System.Single DigitalRubyShared.RotateGestureRecognizer::get_ThresholdUnits()
+extern void RotateGestureRecognizer_get_ThresholdUnits_m8896808C81EB419A5126AC4615F76A7AE429A6D8 (void);
+// 0x0000017D System.Void DigitalRubyShared.RotateGestureRecognizer::set_ThresholdUnits(System.Single)
+extern void RotateGestureRecognizer_set_ThresholdUnits_m80589DADF25A289081E301017841810351658848 (void);
+// 0x0000017E System.Single DigitalRubyShared.RotateGestureRecognizer::get_RotationRadians()
+extern void RotateGestureRecognizer_get_RotationRadians_m0533A96DB47AFB5131DC0CE39E513BC6938A6623 (void);
+// 0x0000017F System.Void DigitalRubyShared.RotateGestureRecognizer::set_RotationRadians(System.Single)
+extern void RotateGestureRecognizer_set_RotationRadians_m3B0B0BB95493764D96F172B49147666E4B27B68C (void);
+// 0x00000180 System.Single DigitalRubyShared.RotateGestureRecognizer::get_RotationRadiansDelta()
+extern void RotateGestureRecognizer_get_RotationRadiansDelta_m8F2CD854B7C6A406D6D6D1146EB0038D3E0D38AE (void);
+// 0x00000181 System.Void DigitalRubyShared.RotateGestureRecognizer::set_RotationRadiansDelta(System.Single)
+extern void RotateGestureRecognizer_set_RotationRadiansDelta_mC2622FAA9E4ABFCAED8EC1B1C314EECEE18BE2DE (void);
+// 0x00000182 System.Single DigitalRubyShared.RotateGestureRecognizer::get_RotationDegrees()
+extern void RotateGestureRecognizer_get_RotationDegrees_mD13A2BB25087E07E6C200F2BA9FD5D47DED4BC02 (void);
+// 0x00000183 System.Single DigitalRubyShared.RotateGestureRecognizer::get_RotationDegreesDelta()
+extern void RotateGestureRecognizer_get_RotationDegreesDelta_mB604010304A579F84A185BE87EBF1EAFA7F0C2BF (void);
+// 0x00000184 System.Void DigitalRubyShared.ScaleGestureRecognizer::.ctor()
+extern void ScaleGestureRecognizer__ctor_m7D3328E98F45C167962A0496A18C173136F75426 (void);
+// 0x00000185 System.Void DigitalRubyShared.ScaleGestureRecognizer::SetPreviousDistance(System.Single,System.Single,System.Single)
+extern void ScaleGestureRecognizer_SetPreviousDistance_m23158B3BFE493185F11A47FDAB8E9BA039C8AE2A (void);
+// 0x00000186 System.Single DigitalRubyShared.ScaleGestureRecognizer::ClampScale(System.Single)
+extern void ScaleGestureRecognizer_ClampScale_mF045065383D189998B673BA0279A0EE02D67B408 (void);
+// 0x00000187 System.Single DigitalRubyShared.ScaleGestureRecognizer::GetScale(System.Single)
+extern void ScaleGestureRecognizer_GetScale_m3F90B3581499DE6E0F70F53F2C92431D0168BD48 (void);
+// 0x00000188 System.Void DigitalRubyShared.ScaleGestureRecognizer::ProcessTouches()
+extern void ScaleGestureRecognizer_ProcessTouches_m0992155A14068C953A7D3EF332F6E0C845A27F53 (void);
+// 0x00000189 System.Void DigitalRubyShared.ScaleGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
+extern void ScaleGestureRecognizer_TouchesBegan_m9B94E85BF57B33BB73D56D446A593A42E468DCC3 (void);
+// 0x0000018A System.Void DigitalRubyShared.ScaleGestureRecognizer::TouchesMoved()
+extern void ScaleGestureRecognizer_TouchesMoved_m156EFCAF8BBE6E71BD282447DA35A2C9C5A237F0 (void);
+// 0x0000018B System.Void DigitalRubyShared.ScaleGestureRecognizer::TouchesEnded()
+extern void ScaleGestureRecognizer_TouchesEnded_mDBC6B3E1D95D6DFB0F5F7D5C0E367FF0127DDE62 (void);
+// 0x0000018C System.Single DigitalRubyShared.ScaleGestureRecognizer::get_ScaleMultiplier()
+extern void ScaleGestureRecognizer_get_ScaleMultiplier_m87B2E59280C31B14242B137E950EDFEE25D9706B (void);
+// 0x0000018D System.Void DigitalRubyShared.ScaleGestureRecognizer::set_ScaleMultiplier(System.Single)
+extern void ScaleGestureRecognizer_set_ScaleMultiplier_mBE856A63C684D6B28836063C38EE0A7236F12B90 (void);
+// 0x0000018E System.Single DigitalRubyShared.ScaleGestureRecognizer::get_ScaleMultiplierX()
+extern void ScaleGestureRecognizer_get_ScaleMultiplierX_mA820EE675B4D1E6C64B574F5B38E33A271FF1F8D (void);
+// 0x0000018F System.Void DigitalRubyShared.ScaleGestureRecognizer::set_ScaleMultiplierX(System.Single)
+extern void ScaleGestureRecognizer_set_ScaleMultiplierX_mB797822139F321FB1918DAFAA3386111635DD43F (void);
+// 0x00000190 System.Single DigitalRubyShared.ScaleGestureRecognizer::get_ScaleMultiplierY()
+extern void ScaleGestureRecognizer_get_ScaleMultiplierY_m7230FC2FA8352B563912DB55580D6E7104339F89 (void);
+// 0x00000191 System.Void DigitalRubyShared.ScaleGestureRecognizer::set_ScaleMultiplierY(System.Single)
+extern void ScaleGestureRecognizer_set_ScaleMultiplierY_m6641F74E7A92E01EFAEA8DDCCDEC634A1D2E8504 (void);
+// 0x00000192 System.Single DigitalRubyShared.ScaleGestureRecognizer::get_ZoomSpeed()
+extern void ScaleGestureRecognizer_get_ZoomSpeed_m58FB31E57480A536DD8BD7B44E12BAD6A148BFEF (void);
+// 0x00000193 System.Void DigitalRubyShared.ScaleGestureRecognizer::set_ZoomSpeed(System.Single)
+extern void ScaleGestureRecognizer_set_ZoomSpeed_m9F2E851E0AAEB90B61C68CE9277B18E25CC98F73 (void);
+// 0x00000194 System.Single DigitalRubyShared.ScaleGestureRecognizer::get_ThresholdUnits()
+extern void ScaleGestureRecognizer_get_ThresholdUnits_mA2C9D860F6DEE67F52B8DF53DA60466DDDC207E5 (void);
+// 0x00000195 System.Void DigitalRubyShared.ScaleGestureRecognizer::set_ThresholdUnits(System.Single)
+extern void ScaleGestureRecognizer_set_ThresholdUnits_mF72B2FACB1505293CE24B0CB96EA0542AACFE45B (void);
+// 0x00000196 System.Boolean DigitalRubyShared.SwipeGestureRecognizer::CalculateEndDirection(System.Single,System.Single)
+extern void SwipeGestureRecognizer_CalculateEndDirection_m1C673D13845331BC8638E81ACBA878E069809EF2 (void);
+// 0x00000197 System.Void DigitalRubyShared.SwipeGestureRecognizer::CheckForSwipeCompletion(System.Boolean)
+extern void SwipeGestureRecognizer_CheckForSwipeCompletion_m6360ECED7149A58C72A48814CFF7C553CC9657A2 (void);
+// 0x00000198 System.Void DigitalRubyShared.SwipeGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
+extern void SwipeGestureRecognizer_TouchesBegan_m7A1702D18C600D53BB224E0F2493F5C785F7FF9C (void);
+// 0x00000199 System.Void DigitalRubyShared.SwipeGestureRecognizer::TouchesMoved()
+extern void SwipeGestureRecognizer_TouchesMoved_m69E6C16243E7AEA4C57FADA32788001D6FF15B47 (void);
+// 0x0000019A System.Void DigitalRubyShared.SwipeGestureRecognizer::TouchesEnded()
+extern void SwipeGestureRecognizer_TouchesEnded_mD973B928F678894273A8FF2BAD538E23E4415D79 (void);
+// 0x0000019B System.Void DigitalRubyShared.SwipeGestureRecognizer::.ctor()
+extern void SwipeGestureRecognizer__ctor_m4529471B8AD39C8556A805C1846A1CE2D2AB187A (void);
+// 0x0000019C System.Void DigitalRubyShared.SwipeGestureRecognizer::Reset()
+extern void SwipeGestureRecognizer_Reset_m2768BD516561E095AF05F249D68335F8368103BE (void);
+// 0x0000019D DigitalRubyShared.SwipeGestureRecognizerDirection DigitalRubyShared.SwipeGestureRecognizer::get_Direction()
+extern void SwipeGestureRecognizer_get_Direction_m8A9B9E4098AFBDE46CC00D4F37E7395C2FFF4934 (void);
+// 0x0000019E System.Void DigitalRubyShared.SwipeGestureRecognizer::set_Direction(DigitalRubyShared.SwipeGestureRecognizerDirection)
+extern void SwipeGestureRecognizer_set_Direction_mA5DCD2692DD8C2748A4C9C887A1D7A4D9AC75287 (void);
+// 0x0000019F System.Single DigitalRubyShared.SwipeGestureRecognizer::get_MinimumDistanceUnits()
+extern void SwipeGestureRecognizer_get_MinimumDistanceUnits_mBCF79C40C441B18EBABC2852215459F931877583 (void);
+// 0x000001A0 System.Void DigitalRubyShared.SwipeGestureRecognizer::set_MinimumDistanceUnits(System.Single)
+extern void SwipeGestureRecognizer_set_MinimumDistanceUnits_m744EE421817E21B6847760590C4BB9F1A0BBFFDA (void);
+// 0x000001A1 System.Single DigitalRubyShared.SwipeGestureRecognizer::get_MinimumSpeedUnits()
+extern void SwipeGestureRecognizer_get_MinimumSpeedUnits_mC77437611A0262CD39CBE6083C37329A6177BEC2 (void);
+// 0x000001A2 System.Void DigitalRubyShared.SwipeGestureRecognizer::set_MinimumSpeedUnits(System.Single)
+extern void SwipeGestureRecognizer_set_MinimumSpeedUnits_m71386A26CC9DF43E8DC3DBF0FA140570F5B42B1F (void);
+// 0x000001A3 System.Single DigitalRubyShared.SwipeGestureRecognizer::get_DirectionThreshold()
+extern void SwipeGestureRecognizer_get_DirectionThreshold_m44CBA5846F99EF9AAB616C8800DD1BED7192EB67 (void);
+// 0x000001A4 System.Void DigitalRubyShared.SwipeGestureRecognizer::set_DirectionThreshold(System.Single)
+extern void SwipeGestureRecognizer_set_DirectionThreshold_mFB932802EC233A47B48C5BD83C5D1D946C2E4EF5 (void);
+// 0x000001A5 DigitalRubyShared.SwipeGestureRecognizerEndMode DigitalRubyShared.SwipeGestureRecognizer::get_EndMode()
+extern void SwipeGestureRecognizer_get_EndMode_m21368121A529279CC2BBC8C612A682F7F23518DA (void);
+// 0x000001A6 System.Void DigitalRubyShared.SwipeGestureRecognizer::set_EndMode(DigitalRubyShared.SwipeGestureRecognizerEndMode)
+extern void SwipeGestureRecognizer_set_EndMode_m7EBEB77FD8BD08C85F14BA12D3B4E25147888872 (void);
+// 0x000001A7 System.Boolean DigitalRubyShared.SwipeGestureRecognizer::get_FailOnDirectionChange()
+extern void SwipeGestureRecognizer_get_FailOnDirectionChange_m9271706319FEC94ED857CD3DE3D3E1FAF6A02AAF (void);
+// 0x000001A8 System.Void DigitalRubyShared.SwipeGestureRecognizer::set_FailOnDirectionChange(System.Boolean)
+extern void SwipeGestureRecognizer_set_FailOnDirectionChange_m94D3277BE0B895DAF4FB8014BEB44AAF0799B2F0 (void);
+// 0x000001A9 DigitalRubyShared.SwipeGestureRecognizerDirection DigitalRubyShared.SwipeGestureRecognizer::get_EndDirection()
+extern void SwipeGestureRecognizer_get_EndDirection_mCE4C5771098D3D908C2068D9A7B89AF295A75D5D (void);
+// 0x000001AA System.Void DigitalRubyShared.SwipeGestureRecognizer::set_EndDirection(DigitalRubyShared.SwipeGestureRecognizerDirection)
+extern void SwipeGestureRecognizer_set_EndDirection_mF6CE05443F6B4888E58407827B299C8D95B75283 (void);
+// 0x000001AB System.Boolean DigitalRubyShared.SwipeGestureRecognizer::get_SendBeginExecutingStates()
+extern void SwipeGestureRecognizer_get_SendBeginExecutingStates_mDB2F9C365F545956A9120C3D2470D4978A399786 (void);
+// 0x000001AC System.Void DigitalRubyShared.SwipeGestureRecognizer::set_SendBeginExecutingStates(System.Boolean)
+extern void SwipeGestureRecognizer_set_SendBeginExecutingStates_mC20A91A4F437B09D31BA56FDCEC811EA23723A51 (void);
+// 0x000001AD System.Void DigitalRubyShared.TapGestureRecognizer::VerifyFailGestureAfterDelay()
+extern void TapGestureRecognizer_VerifyFailGestureAfterDelay_m8AE8A8FE3C3B416772A09D5FDBC6AE704266EB4E (void);
+// 0x000001AE System.Void DigitalRubyShared.TapGestureRecognizer::FailGestureAfterDelayIfNoTap()
+extern void TapGestureRecognizer_FailGestureAfterDelayIfNoTap_mF3286CD6A7932A354C50CD530CA1660A5585DE1F (void);
+// 0x000001AF System.Void DigitalRubyShared.TapGestureRecognizer::StateChanged()
+extern void TapGestureRecognizer_StateChanged_m02B811D7961EFC3DC4A08C04DCFC767ADFF1CC9E (void);
+// 0x000001B0 System.Void DigitalRubyShared.TapGestureRecognizer::TouchesBegan(System.Collections.Generic.IEnumerable`1<DigitalRubyShared.GestureTouch>)
+extern void TapGestureRecognizer_TouchesBegan_mAB8E99946724D8D4F0B74E32C416B58BE1E5FFB2 (void);
+// 0x000001B1 System.Void DigitalRubyShared.TapGestureRecognizer::TouchesMoved()
+extern void TapGestureRecognizer_TouchesMoved_m644BEBEF40ABA8017BC028D4DA4FFEC70661CA34 (void);
+// 0x000001B2 System.Void DigitalRubyShared.TapGestureRecognizer::TouchesEnded()
+extern void TapGestureRecognizer_TouchesEnded_mD300F36883A2D34FDA2523A999D3F26964A5C914 (void);
+// 0x000001B3 System.Void DigitalRubyShared.TapGestureRecognizer::.ctor()
+extern void TapGestureRecognizer__ctor_m5632A6305425DFD16B3E5D3AF7297326D2638626 (void);
+// 0x000001B4 System.String DigitalRubyShared.TapGestureRecognizer::ToString()
+extern void TapGestureRecognizer_ToString_mD2DA08F9C43D7E03C983F1D68A213CFF54DDA164 (void);
+// 0x000001B5 System.Int32 DigitalRubyShared.TapGestureRecognizer::get_NumberOfTapsRequired()
+extern void TapGestureRecognizer_get_NumberOfTapsRequired_m2E2F495498C2BFDAB7176D0EE56AE33016571C1A (void);
+// 0x000001B6 System.Void DigitalRubyShared.TapGestureRecognizer::set_NumberOfTapsRequired(System.Int32)
+extern void TapGestureRecognizer_set_NumberOfTapsRequired_m21D5FF54B8DE060C9A926DABF2A3BE507CA64A92 (void);
+// 0x000001B7 System.Single DigitalRubyShared.TapGestureRecognizer::get_ThresholdSeconds()
+extern void TapGestureRecognizer_get_ThresholdSeconds_m14CE4C368183AB64D0EB1C7FC93372F494122E54 (void);
+// 0x000001B8 System.Void DigitalRubyShared.TapGestureRecognizer::set_ThresholdSeconds(System.Single)
+extern void TapGestureRecognizer_set_ThresholdSeconds_m66BAFB66713358A268CC790465214505E828DAC0 (void);
+// 0x000001B9 System.Single DigitalRubyShared.TapGestureRecognizer::get_ThresholdUnits()
+extern void TapGestureRecognizer_get_ThresholdUnits_mFC31BD93E4DFFDFA293FE8A6773A8194E11DF016 (void);
+// 0x000001BA System.Void DigitalRubyShared.TapGestureRecognizer::set_ThresholdUnits(System.Single)
+extern void TapGestureRecognizer_set_ThresholdUnits_m2F0C04C5A005086912038BAB5EAF1F4F18B9A945 (void);
+// 0x000001BB System.Boolean DigitalRubyShared.TapGestureRecognizer::get_SendBeginState()
+extern void TapGestureRecognizer_get_SendBeginState_m0605AA5B5E502A33979F02F54C2B0828CFD77B9A (void);
+// 0x000001BC System.Void DigitalRubyShared.TapGestureRecognizer::set_SendBeginState(System.Boolean)
+extern void TapGestureRecognizer_set_SendBeginState_m012776E25F6FC5CA1BC10C5B7216F67459E6C05E (void);
+// 0x000001BD System.Collections.ObjectModel.ReadOnlyCollection`1<DigitalRubyShared.GestureTouch> DigitalRubyShared.TapGestureRecognizer::get_TapTouches()
+extern void TapGestureRecognizer_get_TapTouches_m295D3CAB60877464695734123A87C6B173374FA0 (void);
+// 0x000001BE System.Void DigitalRubyShared.TapGestureRecognizer::set_TapTouches(System.Collections.ObjectModel.ReadOnlyCollection`1<DigitalRubyShared.GestureTouch>)
+extern void TapGestureRecognizer_set_TapTouches_mC5C6938745C5F72B8DB919AD517C95A0029867E4 (void);
 static Il2CppMethodPointer s_methodPointers[446] = 
 {
-	Building__ctor_mEBB4D311B20B52E8A707C09135B186AAD65243E3,
-	CameraController_Start_mB6CB2C21A2848E4C149B512DBC2126404E75EB4B,
-	CameraController_Update_m63BEE9F8EAB23C1D75FA27F7446068BA984B1A6A,
-	CameraController_SetupGesture_m8365F6AB4834444827CC46BEB63D0E08E7461B07,
-	CameraController_PanGestureCallback_m0781679B829D0237E2B0C61010D1A71C924966FC,
-	CameraController_ScreenTapped_mB33AC40E46972497AC56CC3A1ACF8505DADBC19D,
-	CameraController_Zoom_m72884FBE0FB1DCB80B3CB186B3BAE5C6D7C31AD4,
-	CameraController_Rotate_m13DDAE72C1A318E0426DEAAAD4FAA3ADFD062028,
-	CameraController__ctor_m3E87BE2198B66EDA7ECA07CF01545ABD1B4761DE,
-	CameraFollow__ctor_m27AF37B0C19243374F9376EBB2C40A2F605DB16E,
-	GameController_Start_m229BE9A914ADF299ACFF1EFD5F15F27FF146D3C0,
-	GameController_ConstructWorld_mC34CC97B9CC7B9DCBFD7940DC52549F9610F871E,
-	GameController_Update_m7D73FA9AB337123D2EB1CB806C756731D1B9B6F3,
-	GameController_PlantTrees_mDE5CC048805B3B84097AB0117A344EB5649C59A9,
-	GameController_PlantTree_m1B37ECDF9487EC10F431AB00B953249A7A9E9024,
-	GameController_SpawnPopulation_mE235D6C0733CBBE285E38ABE561FF048DDDDDB8D,
-	GameController_createPerson_mA35CEA9A6F9385A6EA572AA046CE41519EC7CDCB,
-	GameController__ctor_m839A9CFB9635B009C1DA139BEAD0E38467E57464,
-	House_Reset_mB460CE759902E6426C63A14D75B79BF46B1A548A,
-	House_AddResouce_mBCF173E4476D260E53A24595E7B3F94C03B165D0,
-	House_GetPrefab_mCFB29B24E0FB0E64D292B55A64974E37CB03B450,
-	House_Start_m8AE0CA09C093114058F1CEB5C78161FEFCC377D0,
-	House_UpdatePrefab_m313245B16586EEDECAFFA2565F538B7DEE6C20D2,
-	House__ctor_m275306BCBE13364D35103066C82CB966AA2BB09E,
-	Island_Start_mA74E42D67B414B9B441467016E32C9EA0BE2BBDE,
-	Island_GenerateIsland_mC9E2A7DD54C70CDDA71F624471CED192F85EB4F4,
-	Island_GenerateMesh_m97E003982F7FBC4BFC20B2EEC1D59C7B7B0A122A,
-	Island_UpdateMesh_m36661C1C0722FAA7D6E9644E32B49D423D97CAA3,
-	Island__ctor_m4F40F9FFF2385F8B1E09F0F74DBC27A9AD8A03A3,
-	LocalNavMeshBuilder_Start_m23CD1C18CECB346A446F74591EF6005799ED713C,
-	LocalNavMeshBuilder_OnEnable_m1B159E81555D69AB95904A007B6A414FB793C92C,
-	LocalNavMeshBuilder_OnDisable_m819DB8403CF7AA0D4BEDF4A2404C6FD34141766B,
-	LocalNavMeshBuilder_UpdateNavMesh_mD6557EBC579DD85B3721A2FADE3B6730DF0B5101,
-	LocalNavMeshBuilder_Quantize_m157FCCF68EB16A8D2D0308EF61BDE80BFD567583,
-	LocalNavMeshBuilder_QuantizedBounds_m1E0716E365C5E2546484B464EAF389CBC4CC9EF3,
-	LocalNavMeshBuilder_OnDrawGizmosSelected_m717B4BF7E5BD487F243304532168DA26963446B4,
-	LocalNavMeshBuilder__ctor_mB9B086205B8C8665B2853233536C29EA816CB7CC,
-	MapDisplay_DrawTexture_m9AA71A59E80BCDEAA348D33CC0274AB0262F17E4,
-	MapDisplay_DrawMesh_m10801956EF9A02C242E6783FFEE6FDD162CBF8F1,
-	MapDisplay__ctor_mA278AA99450F146777D33513A4024D81F853F369,
-	MapGenerator_GenerateMap_m45C96FE76B42123C8A6905E4DD1A6423BDF81785,
-	MapGenerator_OnValidate_mFFF8F731A805B9BCACAF717DA2D4F0BFED9237D3,
-	MapGenerator__ctor_m73A70E0A98CA25E3A8319F5DC52E783D13D5702B,
-	MeshGenerator_GenerateMesh_m9623F22E9EFF1FF40A9DB10A5D38CFDC48251FF3,
-	MeshGenerator__ctor_m61B3CCF641176DC3019842377ED531911B1A2D7E,
-	MeshData__ctor_m9BBB670A0953F228B0779876651C9EEA041AAC9C,
-	MeshData_AddTriangle_m498235099D40E339B85F5FC6D1A0CD952031F197,
-	MeshData_CreateMesh_m1CDC0E49C8AAA4CEB70D346F97430402EDDB9CF8,
-	NavMeshSourceTag_OnEnable_m45A810204EB7C3DE84C71022F657E708987A297F,
-	NavMeshSourceTag_OnDisable_m767004196F477CBD91714751CCD168124770A8E6,
-	NavMeshSourceTag_Collect_m0A1546338D46421F6290EB7219C5945B8C3268DC,
-	NavMeshSourceTag__ctor_m42ED6C6EFCAF1A72278ECBA6E768157AAF192E71,
-	NavMeshSourceTag__cctor_mD2F823B40361B3AD6088AF854036C42D2C122835,
-	Noise_Generate_m0D41F702D002D331B9FE68A2C13CC28904C693A8,
-	BaseState__ctor_m4D15CF53FACC4B7CFD3F7BB4D4E3099B2FD3F40E,
+	Building__ctor_mB1BAA261A5F238A037725FDDD528390DCA177239,
+	CameraController_Start_mBDE87C2FCF352957C2B86B67610667663422FBE6,
+	CameraController_Update_m3C257AC762117CFDDAD03C9C4FBBFDE51C61D534,
+	CameraController_SetupGesture_mF32C075D294F44E479F369E680ACEB2481E1BBC5,
+	CameraController_PanGestureCallback_m0727407887D69F00CF8C28128B145AA108FB2EE5,
+	CameraController_ScreenTapped_m48052DDE9E6B14CD800E0EFFA40E53ADCDBBA45C,
+	CameraController_Zoom_m6448689CA102F0AF803DFFB15DFDAE1684301D79,
+	CameraController_Rotate_m85473EB01129236782FAFE38F452046100066000,
+	CameraController__ctor_m07EC5A8C82742876097619BE7DD9043F47327DAE,
+	CameraFollow__ctor_m29F88CCFD2ED12A7BCC75A9BBA892CEF179C83DE,
+	GameController_Start_mCC3F0292799528323E2217A12DB08D98CDD492AE,
+	GameController_ConstructWorld_m111C3B61C389873033F43E4C54A4F84C22185265,
+	GameController_Update_mA76A2CE1F2AC1AACCDBF913CA6E1EA73DC621CD0,
+	GameController_PlantTrees_mC9EE4163E3EEC29EF491A9BF00CC76D14C6EC42A,
+	GameController_PlantTree_m96A08AF8915C1172DFF0479EE5AE518A8DAD560D,
+	GameController_SpawnPopulation_m12F5D4E4ACFCB7D75B79C2E4C7862541C25E2732,
+	GameController_createPerson_m04E2AA1F91410BC0B8ECE020EED9D551DA865BFA,
+	GameController__ctor_m9D952052C0A7234373FA5531292FCA8855BE2643,
+	U3CConstructWorldU3Ed__9__ctor_m2C569A58D3FB0B5515B20B3C6FD8EAB13F9E5644,
+	U3CConstructWorldU3Ed__9_System_IDisposable_Dispose_m64B000E4183BB4032C905391085ACDA95CEE5379,
+	U3CConstructWorldU3Ed__9_MoveNext_m3D0F3012B20941ABD34FE1E407824815CF117A04,
+	U3CConstructWorldU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0C7256EB396B35212C9BE06860DFFFF470721C9D,
+	U3CConstructWorldU3Ed__9_System_Collections_IEnumerator_Reset_mE31232B6C622F8DCE1D99959E8CACB1422D42241,
+	U3CConstructWorldU3Ed__9_System_Collections_IEnumerator_get_Current_mA93E4021F1C8D4D2B9F5ECB9E90D79A8B50C5976,
+	House_Reset_m0378D14694C06DD3FB02AE15118CF608D632D3E7,
+	House_AddResouce_m427705246A08AA86C0140D21AAE17B234231B6BC,
+	House_GetPrefab_mA64ABD5785F4A5685622E12E0FD965311691D6A7,
+	House_Start_mD60972956A537B1C085ABE1239055DC3519FAF4B,
+	House_UpdatePrefab_m506D20E514E674A32DA177A2BB8EFACFC6BCFDFC,
+	House__ctor_mF94E70B43AC3CEACA96B63C580B66FF2D7940F17,
+	Island_Start_m262192A8C64C40EC6C720242B3A0B83657FCA22B,
+	Island_GenerateIsland_m2CFF5625B4F8F5030ECFDD89E7B6AC7903336307,
+	Island_GenerateMesh_m105A7283D10A721802187A239FB1A7554CD250F2,
+	Island_UpdateMesh_m1E9C8E22910106495A83A08C9F14938430A0C7E4,
+	Island__ctor_m58F23245850CFA6A709DF7A2DEB07E1CACED7835,
+	LocalNavMeshBuilder_Start_m7FA46DC8242DB71A2510164A3516D9E2A710D314,
+	LocalNavMeshBuilder_OnEnable_m190491EBE95E75874D9A18CD34D84317446099D6,
+	LocalNavMeshBuilder_OnDisable_mF616B96763BA6A0271D4FCF19F05F13D67815E9E,
+	LocalNavMeshBuilder_UpdateNavMesh_mB90AE6CC7AA0A2A49356D6171662E0E759B08FCA,
+	LocalNavMeshBuilder_Quantize_m79A8ECA4BB85A7F6CDB960FDFFF34B24B2AB9E9E,
+	LocalNavMeshBuilder_QuantizedBounds_m26E892B01C125AEC5F94472B768A3F97B37EDBDD,
+	LocalNavMeshBuilder_OnDrawGizmosSelected_mEBC05C7EE683B1DDAAB54EF66CF5132B2F5FDAB9,
+	LocalNavMeshBuilder__ctor_m3E29904B11F6E685949BFBAB2047052715508995,
+	U3CStartU3Ed__6__ctor_m0DF65A7E28392D1D0282BF943DCBF0F0CC488468,
+	U3CStartU3Ed__6_System_IDisposable_Dispose_m5FFB4E6FDFE26317953F38C753182672E6DBAB88,
+	U3CStartU3Ed__6_MoveNext_mA581EB88514744742A0097FE817D6C9F1C278B11,
+	U3CStartU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1641461B31F694382536E25317321C5F4629C0BA,
+	U3CStartU3Ed__6_System_Collections_IEnumerator_Reset_m90BFF07997E497BB77BABF59E0078C484EBC09BC,
+	U3CStartU3Ed__6_System_Collections_IEnumerator_get_Current_m0DEF89B61B5FD9CAA83C68DB146E7D38CA23A877,
+	MapDisplay_DrawTexture_mB809BD3617D5CA0B3AC966C629069115DA7403BB,
+	MapDisplay_DrawMesh_mEE7652E36B5E0CFBBCAD2FBDAAA827D31360E96B,
+	MapDisplay__ctor_mDDEFBCF283196F1A54129850CA2A80A556D57284,
+	MapGenerator_GenerateMap_m85DABD0CD77DD43061742D337D720743452A4A5A,
+	MapGenerator_OnValidate_m1A6487148CD0C46BCCA37FB67BE84469AF8F5812,
+	MapGenerator__ctor_mB9C58913280E7537C3EB6A1DACEDE418B41DFE01,
+	MeshGenerator_GenerateMesh_mA5F657FB9F096B527EFF102D56BF4D79089C49C2,
+	MeshGenerator__ctor_m5BF7E1EC4EB0D215F8CE283E51A5A4EC46816AFE,
+	MeshData__ctor_m2477F416C544B2B3483F6B510B2FC2E30EB83321,
+	MeshData_AddTriangle_m6AB5E2419BFC2852AA5D667331C43B3631DB2BAF,
+	MeshData_CreateMesh_m4CDFB5B734BEE868159C69519355601016CD5732,
+	NavMeshSourceTag_OnEnable_m364012B996FF08FE3A41ACF872F0E0AA13E29D8C,
+	NavMeshSourceTag_OnDisable_mC610EAC1D0C9C2D22F634C0EA8DB1DC76DBC2F0A,
+	NavMeshSourceTag_Collect_mBFC49240DBAFFF18B3847C14D0010D8BBED35944,
+	NavMeshSourceTag__ctor_m8A691B03F1065C853A34221093A18113E7D1DFE1,
+	NavMeshSourceTag__cctor_m6912F578B46103E39AB2B70FFF1A4828D7F8EA73,
+	Noise_Generate_m14B9D1EE6E5BFE755F3DD5D71EE9312ECC8F400D,
+	BaseState__ctor_m748434FB3752FFCA1244E6BA84D9995764740A6D,
 	NULL,
-	BuildingState__ctor_mC48EDAD7CE3AF6E856543DD1C19A449393D31A59,
-	BuildingState_Tick_m943D99D63FDDA81F862B1568EB7182A267813125,
-	ChoppingState__ctor_m754CBFD07FC7CF8CBF8A6775F0F93AA6B8B060F3,
-	ChoppingState_Tick_mE3C966E0613FF0B6815144D65F15548A56C4228D,
-	GatherState__ctor_m2F59FB51085CCAE09650AFD83F7CC45B05AF2546,
-	GatherState_Tick_mC16C51490E8223D0B69B0037F0B830D348E6564D,
-	IdleState__ctor_mE9042C368BDE2AFB367CD2092B6EE934E65148FD,
-	IdleState_Tick_m62EEE4CF1633BAAE3F7F460AC27B9C225D3BD107,
-	Person_Awake_mF40DE8CB7C00E41B3231C9D9B5124BAC1E9BD7BE,
-	Person_Start_m61977F677DCEDFE18F47C652E7F912BA41194880,
-	Person_Update_m82EF73FF5A7E2DF12A908C69ED7B6014C506CF06,
-	Person_SetAnimation_mD2DE29A41E027D158D9F23CC21E0B3EDCB5A87DD,
-	Person_StartAction_m706A1843A4C347717E0D9A1D21FFD730FAAB1117,
-	Person_isActionDone_mE850380B61FF46EF4A938B10B4975C1C21C88116,
-	Person_Pickup_mB7622381404D2EEC965E76322E9271857DAA9983,
-	Person_Drop_m1B4B34E39E7B5A4D375A699A021497CFBE603C05,
-	Person_SetupStateMachine_m377B774652A9445442B405BA3A6B1EBD48489578,
-	Person_GotoNearestResource_m40F8CE18760A037E6FE39A15363AFDCE9E3CE981,
-	Person_GoHome_m0DD6E5BF1A58DF94FEB6C59088847D78EC163781,
-	Person_IsAtDestination_mF651A903B40781AE92485C7DFEB4FD969A21948E,
-	Person_IsInvertoryFull_m49B3C56C20BA6437FDF5FC9F89DEB52EEC841215,
-	Person__ctor_m5006AA1AAFA45A11827F5B2D3FFFF1B6128143FB,
-	PersonStateMachine_get_currentState_m6D5057F255D7129B999D6E9B1137D334A72CE9B6,
-	PersonStateMachine_set_currentState_mDF3559D80FEE0FF850018342432BF589DB0293C8,
-	PersonStateMachine_SetStates_m0B5F44755DC882F6FB1545B15464D1C19B70F86C,
-	PersonStateMachine_Update_mFB0AD24D66BB14A7AC2127275A2422B9E2FCF1C8,
-	PersonStateMachine_SwitchToNextState_mAB7815604EC6ADDC1ADF801C2AA0890B2BE19E19,
-	PersonStateMachine__ctor_m32B04A5CE5A9805FF4C4A4131057D2F3178D6F29,
-	WalkingState__ctor_m3EF002B834FADCA6424F2253229E2EDB5954EF1D,
-	WalkingState_Tick_m77E5FA6F1EDF5767D16904FC0034F8C39CF1BEE3,
-	WanderState_Start_m2A49A935B5AB5AC71C0C33EFCBF393863181D632,
-	WanderState_Update_mB3C88C2A7F01473977DC80F191AD21B7590E3426,
-	WanderState__ctor_m6B0BE7EF98A0C35B9BA832A4AB9F032C66C09551,
-	Plantable__ctor_mBC585B09D02A9C7B89F4DAF955AB8157E9BE0B27,
-	SelectableObject__ctor_m421B7CFC3676B31505EBBB3C54D74A223B553A09,
-	Storage_GetTransform_mA955152E2EE9B235E844290F61A661A408BD7CC0,
-	Storage__ctor_mEAB8488BB5358EA6C821CE6D19F8AFC4256D3E29,
-	TextureGenertor_TextureFromColorMap_mAB2E67FE16C84F2896DCF221700140145F2CEF00,
-	TextureGenertor_TextureFromHeightMap_m6C538D675C6380BA2FEB46DC61389C3E0833DD68,
-	DemoAsteroidScript_Start_mD7F7B0423EC9C3DAEB119FBE25902042EB393DF6,
-	DemoAsteroidScript_Update_m28E346B911C7196524DD9EB11EF77CA35E9648C1,
-	DemoAsteroidScript_OnBecameInvisible_mFC6508995BACE4224870F71DA3A7DEC957864628,
-	DemoAsteroidScript__ctor_mE442B327D762609A2E5E076AC7E3A5BC6D50776F,
-	DemoScript_DebugText_mB16EFDC1D084ABF277C7FA45E05A8C0DB7634AFC,
-	DemoScript_CreateAsteroid_mEF532C2EB156AC6F111EDDE7A9A2FDA44AAD2CDF,
-	DemoScript_RemoveAsteroids_m8CF8FE4EC4C3B1ED5AFF7DD17C4914A356C2484D,
-	DemoScript_BeginDrag_mA3244374B856C7971EED72F3DBC58AA75676AFB1,
-	DemoScript_DragTo_m1D44992D5D31342021C37334C2763D534984268D,
-	DemoScript_EndDrag_mFF99E75EBB72BC704B39B8458B37D79A68999CC3,
-	DemoScript_HandleSwipe_m379C3F162A1EFE43110392B76B7B8EC0FC06D88D,
-	DemoScript_TapGestureCallback_mEC64518A6B0DCE9BF617F4B35AC4FB4EE693D3FE,
-	DemoScript_CreateTapGesture_mB02666A47EE0808BDA992862848253B2844E5EF2,
-	DemoScript_DoubleTapGestureCallback_mE7D6DE22B47EA1688087612EA047F3C1E52C4D5C,
-	DemoScript_CreateDoubleTapGesture_m87495B7555BDB3520EDD1DC2B2839180FC69F6F4,
-	DemoScript_SwipeGestureCallback_m6A98B35E38D4032AEEFA8D3DA12E770A6470381E,
-	DemoScript_CreateSwipeGesture_m88703CD13F71058D2CBA5BBD1EA52778B1F05690,
-	DemoScript_PanGestureCallback_m7E20E0A818B226965B446599F6719C772E136D37,
-	DemoScript_CreatePanGesture_mE7E4B29A08BE3BE077E6344ACC4CC71EC5A08BA1,
-	DemoScript_ScaleGestureCallback_m39B7FDC38F2A7CDD9BCF4EC322255304A4B51841,
-	DemoScript_CreateScaleGesture_mE30ADC28AD470590C2B05F816E27203B71EBFDED,
-	DemoScript_RotateGestureCallback_mE9F0CB7B15D61022B3234FD96C7BB888C4ED7D02,
-	DemoScript_CreateRotateGesture_m0594F9970D8768B7806962D59AB4C1DAC1A1D30B,
-	DemoScript_LongPressGestureCallback_m6B427CCE7CD6334B888D543675DC012D5275B954,
-	DemoScript_CreateLongPressGesture_m18E4016BE13DA9554DB89A35BFAC9489606622B8,
-	DemoScript_PlatformSpecificViewTapUpdated_mFEA972D81E2A66952FB2F4EC3D64A9A5A74F3509,
-	DemoScript_CreatePlatformSpecificViewTripleTapGesture_m7D1EC0D6C974A4533BF72B11753C5CAFC0ABA5B5,
-	DemoScript_CaptureGestureHandler_mEFBC571981C6E6DD6A0D5397AFB7FEEE5F1FDD94,
-	DemoScript_Start_m95146C5BA1FB7CE7CF9D2F723DDD846F20A1D541,
-	DemoScript_Update_m6370A3246DAF0BC37C5198F6FB9278B69B955612,
-	DemoScript_LateUpdate_mAA4D2A142D192AD9E0B91559068E7E7970EB9A83,
-	DemoScript_OnRenderObject_m9656AA5C8E4A66610059DE2F5AC172B844256D43,
-	DemoScript_ReloadDemoScene_m25A659AB89F29865EE21FBE6F6729F1604CAC708,
-	DemoScript__ctor_mEB207EFAA2366844A14EA7C8CF3D4787CCCBDDD9,
-	FingersScript_MainThreadCallback_m8055434989ECB50BBBF4775ED419CDE22759E285,
-	FingersScript_ShouldCaptureGesture_m6966CCB8EFAC3E193DA8F48F8A43D31A67A29E78,
-	FingersScript_PopulateGameObjectsForTouch_m6AB80447D68D5B85D5AD5A15C3FAEA86B027FC8E,
-	FingersScript_GestureTouchFromTouch_m07FC261CC6AF8F5D57E7EA916D486A27CFD6CF9C,
-	FingersScript_FingersBeginTouch_m882CAE44C7AACF9D40847BD9D965A287EF748C50,
-	FingersScript_FingersContinueTouch_mDFDE3193FE1988428113293855A602712750D4DD,
-	FingersScript_FingersEndTouch_m025FBC9AE339F303742652B9D8358D03D1954278,
-	FingersScript_FingersProcessTouch_m4057DA61E2B0CE68EED0E365BB0A6DCF24E39B59,
-	FingersScript_AddMouseTouch_m603C702382B886D125D11F6992FFF4F3D8394A8C,
-	FingersScript_ProcessTouches_m8436874D15F8CE5838ADB681447F3038768288A5,
-	FingersScript_RotateAroundPoint_m671DC6E8C846EB0941AA6B141C9D398AA4616921,
-	FingersScript_ProcessMouseButtons_m7B6DFEBE0563346EEA4A120883C0755526CC748A,
-	FingersScript_ProcessMouseWheel_m6941EDDF3D5B1AB64C276941FC9FA74896284333,
-	FingersScript_ProcessLostTouches_m015B09D265EE6CB0091D4DDB363B846832ADE0AF,
-	FingersScript_GameObjectMatchesPlatformSpecificView_m77A2472DA667A1D45737E9356E5AC612BE9D076D,
-	FingersScript_FilterTouchesBegan_m8C0B0D9E9688F5E33AFEB3570514460070896D8D,
-	FingersScript_CleanupPassThroughObjects_m027DEC3772B43539366BB445132B45BCD4B12A3A,
-	FingersScript_SetupDefaultPassThroughComponents_m14D86B416AA02497E72502D614AC1DD60559002A,
-	FingersScript_SceneManagerSceneUnloaded_mB4050A147FE967C326D2A837E6D949BB0BD1AD96,
-	FingersScript_Awake_m17F5ACA093E74E88A5D25D78A70EB50672AB04F7,
-	FingersScript_Update_mA22F99BED9E0EDA2B3DBE9FE7524F8F23EBB6D07,
-	FingersScript_OnDestroy_mA366651387B56CCFEC2D701C7418F521F7C5681D,
-	FingersScript_AddGesture_mFB11DEF382EC5FCAD78FE5C91B6C6F264DE5A50B,
-	FingersScript_RemoveGesture_m2FE3EEB2EA9B1D0B7BC029AC9EDED60920F54CC6,
-	FingersScript_ResetState_m008AFF57604F2C0439884E0514E1A662C8978B8A,
-	FingersScript_RectTransformToScreenSpace_m61BE8DC71EF5C6B7A095D11990926AF3225AA6DF,
-	FingersScript_get_Touches_m2023AE631A6D150814D47AE453C8C71E70BBA141,
-	FingersScript_get_ComponentTypesToDenyPassThrough_mCDE0F7555A5965D36C4381AB7357425485D8169A,
-	FingersScript_get_ComponentTypesToIgnorePassThrough_mE1EB553CDFA4F17F31D375EBF48C193C08F49BE1,
-	FingersScript_get_CurrentTouches_m4F5B9C21F9BAA226F38BFB33A7DA871EB9F14CC7,
-	FingersScript_get_Gestures_m58C7E67E5A989E0C5D07B9668C88874202004ABF,
-	FingersScript_get_Instance_mF33044E7D615F376A929E1E351D1060C05BE73F5,
-	FingersScript_get_HasInstance_m2C3589D33F5F08FEAE586CC9A38B4CFA5E85FA88,
-	FingersScript__ctor_m368D1EE90D52DF57FB33869D3ADE40653BB5F603,
-	FingersScript_U3CAwakeU3Eb__53_0_m196C2CCDBFAD0C9575F9F2FA2F5AD8FEF78B9B60,
-	DeviceInfo_CentimetersToInches_m66C6D87BE17579B5DB0099D5BBD75EA2C7CD8CEF,
-	DeviceInfo_InchesToCentimeters_m7399473FAED623BC7C92418655670674EFC8728A,
-	DeviceInfo_PixelsToUnits_mDCB7E2E0D153E1A4E0A11F556339B1E1FB6ED161,
-	DeviceInfo_UnitsToPixels_mF754A66D0D7F3D4B027BA61F6B615D5AFAC84DC2,
-	DeviceInfo_get_PixelsPerInch_mE784E5EF6B3481CB0362C4F3B940D5E31E7C2EEA,
-	DeviceInfo_set_PixelsPerInch_mC8DE3098D1531313ED07AE14DCEBD0B0F807869C,
-	DeviceInfo_get_UnitMultiplier_m46190E08ACFC874955C656AEEC7038CE7511C5C1,
-	DeviceInfo_set_UnitMultiplier_m8654B27F008E80164634CE444A1087DD15D123EB,
-	GestureTouch__ctor_m3DD78BE40CB0489A5F5E42877F9EB061DA497FB0_AdjustorThunk,
-	GestureTouch_CompareTo_m36B9A638B6659AB9ED4BA406CD02C5EE5F736CE5_AdjustorThunk,
-	GestureTouch_GetHashCode_mB814ED3E5AD2E477860B3BC42EDACD02AE605876_AdjustorThunk,
-	GestureTouch_Equals_mF4334E989D20F01EF2A91072F883D6A7888C0204_AdjustorThunk,
-	GestureTouch_get_Id_mA4F629D6AC89791AABEEE40B4DB30A5A1D58E457_AdjustorThunk,
-	GestureTouch_get_ScreenX_m2BAD6521795FECF086192278967D8CD1F672FF7F_AdjustorThunk,
-	GestureTouch_get_X_m6439F407FB74121410E68BCDB23162677D3EA199_AdjustorThunk,
-	GestureTouch_get_ScreenY_m638BD1DCA995A758050EFF170212D9D9A9F38F5E_AdjustorThunk,
-	GestureTouch_get_Y_m472A26A18D8B2FF3EF2B2F932C50BF2540FDA4F9_AdjustorThunk,
-	GestureTouch_get_PreviousX_mC8793952AA0BB2F22D5E6312890C30E6DEE717F8_AdjustorThunk,
-	GestureTouch_get_PreviousY_m1B608287D6B50E471BC1E5EA125F509A68022737_AdjustorThunk,
-	GestureTouch_get_Pressure_m9C1E7F37ED4C2007BBE32C56EC2F6EA67EEE9394_AdjustorThunk,
-	GestureTouch_get_DeltaX_m20ABF4593AFC78A289F6A5274BAF5880C14866F3_AdjustorThunk,
-	GestureTouch_get_DeltaY_m149DC1AC3723A1D4972FFB9D5AC6B54B308AAB4B_AdjustorThunk,
-	GestureTouch_get_PlatformSpecificTouch_m9BA7FBF1E670CBB8D8B448C28F430A61AD9699A0_AdjustorThunk,
-	GestureTouch_get_TouchPhase_m7461DF9511C127080F61DAE5259F5E3AACAA3EB4_AdjustorThunk,
-	GestureRecognizerStateUpdatedDelegate__ctor_m5F97A130CC6C152218D0FA2089EF55893520FF35,
-	GestureRecognizerStateUpdatedDelegate_Invoke_m8847B2C469EE94DFFDE1A3CF77B95AD490D7EB87,
-	GestureRecognizerStateUpdatedDelegate_BeginInvoke_m77E0E8CF2BCAC5ECF5F82D60D5D8577D142310E4,
-	GestureRecognizerStateUpdatedDelegate_EndInvoke_mEFCD99D9F56CD989089CC638AD7877903846C225,
-	GestureRecognizerUpdated__ctor_mD856B5C8C71DF98895374A22C85739CBFD4539FB,
-	GestureRecognizerUpdated_Invoke_m1F7B00ADCE84BE7A6EEA9A40A6690633661803CB,
-	GestureRecognizerUpdated_BeginInvoke_m497C5DA3BB3F53743576F69CF16894D913AC9B7E,
-	GestureRecognizerUpdated_EndInvoke_m81D949B5B6E4AB95A2D38B023BC3478F1478A15D,
-	GestureVelocityTracker_AddItem_m296A9412A845069D417D5AB021E93C15CE4D4453,
-	GestureVelocityTracker_Reset_m665A28E2B8AAD42D69AA5993D59CB1B857E8699F,
-	GestureVelocityTracker_Restart_mCD87FF1C8A265528A5153E7BC19B5AD7ECFECA04,
-	GestureVelocityTracker_Restart_m35909EE111CFE5796174B5A276A723EE15E4A631,
-	GestureVelocityTracker_Update_mCEE032C80C1096A50B9CB2907422E20C17FDEE63,
-	GestureVelocityTracker_get_ElapsedSeconds_mB5956C67CD612B8C998E346416CEE0E9036C4496,
-	GestureVelocityTracker_get_VelocityX_mC98B97D13C4126330F9C91291A574F50A3745E38,
-	GestureVelocityTracker_set_VelocityX_mC4B01A570015A83FD04F499DF1CEDF43E9FB6888,
-	GestureVelocityTracker_get_VelocityY_m6C3599FC78FECF82FB057837F2C82F59CE907801,
-	GestureVelocityTracker_set_VelocityY_mF1293EB1696EF06437FE891871FF1A8467E9B8EE,
-	GestureVelocityTracker_get_Speed_mC049B0E1B8DEB82BCBE461FD401B855741A26A8C,
-	GestureVelocityTracker__ctor_mB6D8D53EE76E426A85C1390A6C24058B4EC5D84B,
-	GestureRecognizer_get_PrevFocusX_m5DC2D3699DB238782BE4EFF260ACA3AC0433C372,
-	GestureRecognizer_set_PrevFocusX_m60FABF374AEFEC9C12351C53527614D9F2E9ED4C,
-	GestureRecognizer_get_PrevFocusY_m5C1B534D858D9558328ABB6B1EB7A27C3C68B96D,
-	GestureRecognizer_set_PrevFocusY_m251DFA0FC1EAB0DF1487DDBFF72BDADCC25A808B,
-	GestureRecognizer_UpdateTouchState_m7EA481B6482105BB4247FF2C8EE61654F158D293,
-	GestureRecognizer_EndGesture_mE0B7139ADBA09D0BD2CE1CA17D8A507AA0683DA9,
-	GestureRecognizer_RemoveFromActiveGestures_mDFD30A7ED015B896026C64F9BEC89C0A959C0F4F,
-	GestureRecognizer_CanExecuteGestureWithOtherGesturesOrFail_m370E95B2486CD240A8B0C9E29BF2F1C886EC6F92,
-	GestureRecognizer_FailGestureNow_m9C8D73E0998224FAE1CED0880B3D20F094868FDD,
-	GestureRecognizer_TouchesIntersect_m625E4A85D37AF70BC3F357F86D3E1274CFC2C0FE,
-	GestureRecognizer_UpdateTrackedTouches_m36904203F5612EEF6570E44A9658382B404E296B,
-	GestureRecognizer_TrackTouchesInternal_m4E2AE0759694AB19ED277EE6A0FA5FBCDE06B5B9,
-	GestureRecognizer_StopTrackingTouches_mB529D17D59D4BFCC7BC111D625A9CC14ECC361F7,
-	GestureRecognizer_ResetInternal_m49DDB4CDA7C279EFFB49AA2F6DFFB1EFF538495F,
-	GestureRecognizer_RunActionAfterDelayInternal_m234C2E17B70A2C03FCDB80D17E2E6DF0132C58F7,
-	GestureRecognizer_IgnoreTouch_mDEFADB4AA4E29819378E99E9B58C452BBDFC74F6,
-	GestureRecognizer_TrackCurrentTrackedTouchesStartLocations_m6F3D0D47D411632EAB5BDD1890F97A22A4557527,
-	GestureRecognizer_AreTrackedTouchesWithinDistance_m42B33D64C43E8C82C48C02BE433A0823E95BC369,
-	GestureRecognizer_CalculateFocus_m4C547C703D487D9977DABD49DFE67E13950A15FF,
-	GestureRecognizer_CalculateFocus_mD50FA06A1A9E6BF716679F07514F6E2F9F2DC862,
-	GestureRecognizer_StateChanged_mF1D1C537A8450C921929A8456E55AE8572F0C11B,
-	GestureRecognizer_SetState_m15CAAA1B09DB1C2E4AA8BC5B54B884E92E6906CE,
-	GestureRecognizer_RequiredGesturesToFailAllowsEndPending_m2D3A66AC729ED65E6BA8EA716F088E50DB13369E,
-	GestureRecognizer_HasAllRequiredFailGesturesToEndFromEndPending_m3B5659BCFA5EC8AAE7DEEEAE4D3AFED3B7468D1B,
-	GestureRecognizer_TouchesBegan_m4E93092F77B8262033DEE3AE2380454C25C12663,
-	GestureRecognizer_TouchesMoved_mAAA9971F2AF9D5D88449E77301B0E8146E1AAC8E,
-	GestureRecognizer_TouchesEnded_m12D5F2085B5C2D3B7D2F461AA119530339E7808A,
-	GestureRecognizer_TrackTouches_m178412789718BA913B3AAA577D76F0B4C02917B8,
-	GestureRecognizer__ctor_m5E0CEF43C0FD219A3CAA0BCFAC76EDD4F95DD8A5,
-	GestureRecognizer_Simulate_m21B17406F366FE29FE5CA50A3A4515FC4987F871,
-	GestureRecognizer_Finalize_m65174B76DC8E0F807062A8822E4EE52ECA00EAA9,
-	GestureRecognizer_ToString_m36E9F69DB2A7061766C46271CF6E1E95451235DD,
-	GestureRecognizer_Reset_m27DAD936F4E3B3BF03AB09B0B098F6941932B759,
-	GestureRecognizer_BeginGestureRestart_m93E8033BA3534A310609A140891E85B225D7CB0A,
-	GestureRecognizer_EndGestureRestart_m605980ACF8F5AEDA1DE2AABC300E0F51572DC9B7,
-	GestureRecognizer_ProcessTouchesBegan_m7FD12728B9AF44677066DBE73E22EAB4199BB6D0,
-	GestureRecognizer_ProcessTouchesMoved_mD5FA3BE149EA9900179C75F2BCAFE9670ECD3CB8,
-	GestureRecognizer_ProcessTouchesEnded_m533BF1411095868E0C96EFDD036DAD3DB70D6C03,
-	GestureRecognizer_ProcessTouchesCancelled_mFE45958BCD09EF38D18CFCD8A24FADF27B2271F7,
-	GestureRecognizer_PointsAreWithinDistance_mED87F1FC05E4AAFBE08D90A78347D106DD8C7CD0,
-	GestureRecognizer_DistanceBetweenPoints_mC398620A532F6FC39391D207EC5AB0727598A42C,
-	GestureRecognizer_Distance_m184981591FA7B4F2A44E9871D5E10FAEEC4D5D0D,
-	GestureRecognizer_Distance_m29BDA371805CE43489A2AF37EC158B2A4E483562,
-	GestureRecognizer_Dispose_mC08ADF559DDAE809ABFC6D13907B28760DB3030F,
-	GestureRecognizer_AllowSimultaneousExecution_mF28B94548CB69A2A41A0ECD5962817C79B9EF424,
-	GestureRecognizer_AllowSimultaneousExecutionWithAllGestures_mE0A6AE66D3FABD633C1E2B4D6E4E6576DD4AA197,
-	GestureRecognizer_DisallowSimultaneousExecution_m86496DEEBEBC6F482637DB9A9741E08DF70B62F3,
-	GestureRecognizer_DisallowSimultaneousExecutionWithAllGestures_mCFC6411D93EB4D23CF2B906A29A926F43A30C079,
-	GestureRecognizer_AddRequiredGestureRecognizerToFail_mE439393992292CE36B49165EE93615BD08EBD858,
-	GestureRecognizer_RemoveRequiredGestureRecognizerToFail_mC0C79A07407F9A55E8ECAB7C14D3F1D6A1D86D8D,
-	GestureRecognizer_RunActionAfterDelay_mE8C0E4E7199435445255E0E3FAA8E95AC7E5E041,
-	GestureRecognizer_NumberOfGesturesInProgress_m1458E712AB9A9AD59CA76A92D757105A61705C0F,
-	GestureRecognizer_get_Enabled_m6A9E5FF183C36B74A96C4F99458F0DCEC9995E3D,
-	GestureRecognizer_set_Enabled_m6EFB210A1BE7F1C2FC7584DFAA78745D9FECB31E,
-	GestureRecognizer_get_State_m47B7DD332816CAA727D009C7CDDD29BD8C5E14A3,
-	GestureRecognizer_add_Updated_m5EDA17E6B141514E7EA54D42D63DD519407ED6D1,
-	GestureRecognizer_remove_Updated_m1F877E41A86DB72A5753BE963F928B162C31B69E,
-	GestureRecognizer_add_StateUpdated_mB65CA9E927D967DEB7057BE825CF32E3EA284EF4,
-	GestureRecognizer_remove_StateUpdated_m9920AF25B394A6864593E6EBF1B95A77D279916A,
-	GestureRecognizer_get_CurrentTrackedTouches_m971595A998439D1E70E72426DF0F7E8F22E20DC1,
-	GestureRecognizer_get_FocusX_mCFDD83704B116EF9E8178600AE00476F717CD65A,
-	GestureRecognizer_set_FocusX_m4163EE003777BD2B03AED88B430DE2F3EE0B3100,
-	GestureRecognizer_get_FocusY_mF3C4E8E5C815185A9F29CD67BD21AF1AB5E13512,
-	GestureRecognizer_set_FocusY_m04E226397FD086156D189D99A8AAD4002963FFDE,
-	GestureRecognizer_get_StartFocusX_m40147F75FCF47634C1D4BBA17744BEA400CB6E00,
-	GestureRecognizer_set_StartFocusX_mF57CA7EE8B992488E9ED135B79C44DE58BA356B1,
-	GestureRecognizer_get_StartFocusY_mC385D01A716258FD902DAB86F8B687DEBED12B21,
-	GestureRecognizer_set_StartFocusY_mD11869B44C1F0C8AA7493EE60A0376F18A33CD00,
-	GestureRecognizer_get_DeltaX_m2CD9BCC0C365CE41D851AECFE9A4915B839E8387,
-	GestureRecognizer_set_DeltaX_m154746A085892AF04A6A030BD68AAB335F7C6CA3,
-	GestureRecognizer_get_DeltaY_mB2000F59EC56D07B6C904E848C9598371A8EFA9A,
-	GestureRecognizer_set_DeltaY_m217D5A5CE94DF1F1B026E6286EF702DD8FF29941,
-	GestureRecognizer_get_DistanceX_m17008F3FF4DB0DFB5126F1D5FE93569DB4603043,
-	GestureRecognizer_set_DistanceX_m22C3A34045EBCE729087620329D146C6FECF8523,
-	GestureRecognizer_get_DistanceY_m9C44F5FB1300B069014AE79D094973EF8451CD58,
-	GestureRecognizer_set_DistanceY_m451F3A185BC5B31376ABA1014FA34EE904BF9A68,
-	GestureRecognizer_get_VelocityX_mBA1589303FC4CE50D51581FF150CC045725A75D2,
-	GestureRecognizer_get_VelocityY_mBD87883AAA6A132E5AA81DD024A89002E4877C0A,
-	GestureRecognizer_get_Speed_mC86A9587E4F3C38ABF3E65CF9CB2EC9054209038,
-	GestureRecognizer_get_Pressure_m392D5DCA758503048C8CCB39415D1250D3F93D60,
-	GestureRecognizer_set_Pressure_mF95FC73E33FD46A3F67746929F2A89EFA934069E,
-	GestureRecognizer_get_PlatformSpecificView_m9A642C836FB6B97A1C55F0C7934A8FB9BFEFC41F,
-	GestureRecognizer_set_PlatformSpecificView_mBB00094733738EDB50BBCFFE7101BEF4C2FB5F17,
-	GestureRecognizer_get_PlatformSpecificViewScale_m611CD28CC48780573BE66E5F570CA16281E46566,
-	GestureRecognizer_set_PlatformSpecificViewScale_mEF1DD5109BA0811B8D360D20142AE3050895EF66,
-	GestureRecognizer_get_CustomData_m0286F0816CE227C14D2A52F1C82317BC99D1E544,
-	GestureRecognizer_set_CustomData_m3C95D828B776D5CDEB49B0373B73D9C75E20F6F2,
-	GestureRecognizer_get_RequireGestureRecognizerToFail_m3324AC93C76FDA6A904723E82B3340CE54F408C5,
-	GestureRecognizer_set_RequireGestureRecognizerToFail_mA78D78A5730A54799D95E8A0CEADF145BA0CD66E,
-	GestureRecognizer_get_RequireGestureRecognizersToFail_m6278282907C7B7E95E747DAE4B9F2E9FAF5748F8,
-	GestureRecognizer_get_MinimumNumberOfTouchesToTrack_m23E751C9A9334632807D3E4B559076900F83A16F,
-	GestureRecognizer_set_MinimumNumberOfTouchesToTrack_m36E4D236C65A970AAC9B511B6FBBDC0B3BEE8E92,
-	GestureRecognizer_get_MaximumNumberOfTouchesToTrack_m976F977FAAD0B411A1E80014761CC1B2C1DFB3D8,
-	GestureRecognizer_set_MaximumNumberOfTouchesToTrack_m00AA69945255ADA17ECA19F5ACC33AE1CFCDCEAB,
-	GestureRecognizer_get_TrackedTouchCountIsWithinRange_mF2FAD7849F56F14B959731F891D2AC078619CE68,
-	GestureRecognizer_get_ClearTrackedTouchesOnEndOrFail_mC96CA1BE90017091208855336CE377FB05CFCE86,
-	GestureRecognizer_set_ClearTrackedTouchesOnEndOrFail_mF0C644DB623A35A47B6D008FD1D19B1B7F9D8F66,
-	GestureRecognizer_get_AllowSimultaneousExecutionIfPlatformSpecificViewsAreDifferent_m60976EE02743F4C98E98EF19DFAFD5D95A5C1BB6,
-	GestureRecognizer_set_AllowSimultaneousExecutionIfPlatformSpecificViewsAreDifferent_m06888247812BEB3B9A7D7FCA7EE8CE256EA63C67,
-	GestureRecognizer_get_ResetOnEnd_mA7F961ED0B399C4633403FB8BCD714FC8122AE2A,
-	GestureRecognizer_get_IsRestarting_m8264604331D236672642CA87FA6E0D05C5FE03BB,
-	GestureRecognizer_get_ReceivedAdditionalTouches_m4F17265FB846607E6E4C9C0FDF2A947D59C93695,
-	GestureRecognizer_set_ReceivedAdditionalTouches_m5D525EAFB913C25A35F78EB5B4B3559F8FDDBE45,
-	GestureRecognizer__cctor_m1CD52851A88E0E83031BB2B0EA490E34617F9FFB,
-	GestureLogger_Log_mCBF4C95FC6CF234B61EB3D6B7A7B84A512126618,
-	LongPressGestureRecognizer_TouchesBegan_mAFF9C39BCEEF1E08AC5B0C0A58944FF7D48CC3E7,
-	LongPressGestureRecognizer_TouchesMoved_m057B1640C5427316440A22938DCCC6D9B950A858,
-	LongPressGestureRecognizer_TouchesEnded_mEBFB96EE9B1AC4AEF32614BFBF87657C9A4A659B,
-	LongPressGestureRecognizer__ctor_m0BE567709291925E2BE95045A34204CD8B674436,
-	LongPressGestureRecognizer_get_MinimumDurationSeconds_m6A831B22F0BAAD8458CF733D668B3BE11398DF75,
-	LongPressGestureRecognizer_set_MinimumDurationSeconds_mE8F06919A6AD9357CCB14073BE1ACE22533B10FB,
-	LongPressGestureRecognizer_get_ThresholdUnits_m4E1C4C84B95DBB429E0A71E40EF3EFF94D6DE1E0,
-	LongPressGestureRecognizer_set_ThresholdUnits_mB9BDF613BD3606FE173524332192A91C06971139,
-	OneTouchRotateGestureRecognizer_CurrentAngle_m70AB48AB7A4BE978D117AD7EE8D8F0627BD699FF,
-	OneTouchRotateGestureRecognizer__ctor_m176983A394C8DE06A462026539D17C2EA91C2A1B,
-	OneTouchScaleGestureRecognizer__ctor_mA026673CD6C9B3E390EED18D77CB725CF4084401,
-	OneTouchScaleGestureRecognizer_TouchesBegan_m44DB52390794941C119BF0B683977CAA1CD791B8,
-	OneTouchScaleGestureRecognizer_TouchesMoved_mD02AAAB4AD0E4E002B0E2BFA3FAFEDDA25C0A550,
-	OneTouchScaleGestureRecognizer_TouchesEnded_mDEF7C2C1563EF89F6FC05304790E69CEB6CD6E14,
-	OneTouchScaleGestureRecognizer_get_ScaleMultiplier_mE503E488FD4D6F22AFB568279A335C6491A41C04,
-	OneTouchScaleGestureRecognizer_set_ScaleMultiplier_mE3075DF237AC79F1DCFF7654040C766238C8BC0C,
-	OneTouchScaleGestureRecognizer_get_ScaleMultiplierX_m8F406A3A2BA174E92C70BB99D372F113D6495705,
-	OneTouchScaleGestureRecognizer_set_ScaleMultiplierX_m8E09F98CD912E8EB95BB37AE5BA71637A60D4F09,
-	OneTouchScaleGestureRecognizer_get_ScaleMultiplierY_m08BC131B67F368307F46A01014EC90CF8306397C,
-	OneTouchScaleGestureRecognizer_set_ScaleMultiplierY_m1009E0E63F7FC689A5D51C0EC50BB6950A78B3A3,
-	OneTouchScaleGestureRecognizer_get_ZoomSpeed_m7FAA6269365AE08EC6BC53687E8EB876C011714E,
-	OneTouchScaleGestureRecognizer_set_ZoomSpeed_mB8B05F9C7D834A32FD4A37BA39068761AA19BF82,
-	OneTouchScaleGestureRecognizer_get_ThresholdUnits_m61791E94ED104F24D12F36369C91D5A0786095D5,
-	OneTouchScaleGestureRecognizer_set_ThresholdUnits_mA8CF36119B3C180695098A59A1E37A35D63BC4BC,
-	PanGestureRecognizer_ProcessTouches_m0DD3FEF714F74798A0A7B60E89B383A6D2412109,
-	PanGestureRecognizer_TouchesBegan_m939FEF4FF981273E06EE8E963CF72156CF668380,
-	PanGestureRecognizer_TouchesMoved_m44691ADDC3049499BE66C4489F5C97018B4BFAD5,
-	PanGestureRecognizer_TouchesEnded_m915E4FED8857CB20BD1B5C4585846E8500F55990,
-	PanGestureRecognizer__ctor_mBAC433A713D672ED8F298C68618DAE9AF5CBC420,
-	PanGestureRecognizer_get_ThresholdUnits_mA638CFF822F7A12100B695C75DF94DFB60FBECC9,
-	PanGestureRecognizer_set_ThresholdUnits_m60587687ECE0736AAFB61A4119703BB127D530EF,
-	RotateGestureRecognizer_DifferenceBetweenAngles_m90EC23FEEEE81FF7C9A42D1448CB47C5A0A0CB17,
-	RotateGestureRecognizer_UpdateAngle_m36BF8D2F47BEDA0BA5C292B5EC3B0EB037175375,
-	RotateGestureRecognizer_CheckForStart_mF5CC0E6E85F2BDD1910D36314FE932E74465ABB9,
-	RotateGestureRecognizer_StateChanged_m38ED4C0BBF6AD1A28C281698A09FAF92FBEF098B,
-	RotateGestureRecognizer_TouchesBegan_m84F58E1A7492FD6C6A199C1C6279945E0E61D3F8,
-	RotateGestureRecognizer_TouchesMoved_mE43F441492864A05B46146A3747F21B656A00A74,
-	RotateGestureRecognizer_TouchesEnded_mB1AE2D36AC698CE41DE65D8C843780C525D214CD,
-	RotateGestureRecognizer_CurrentAngle_m792E9708D044B5535E78620CF3C0FE79F5461C76,
-	RotateGestureRecognizer__ctor_m7517536B9CA2A949BA02EA8B105742CD72F780BB,
-	RotateGestureRecognizer_get_AngleThreshold_m0FACDDAA2A722DAFD2178140C15D7858E2B68062,
-	RotateGestureRecognizer_set_AngleThreshold_mCC6230271EC9DC9C2781CFF7C2B9C9531A7C434F,
-	RotateGestureRecognizer_get_ThresholdUnits_m50A5363287AC7E95E73BEF38C67209CCB0038837,
-	RotateGestureRecognizer_set_ThresholdUnits_mFA1A89967E662AF774DD79978196AB7B894342DE,
-	RotateGestureRecognizer_get_RotationRadians_mA6F9D3B64B8AFD9D4D02BDBDF4B252E0CA8F0D74,
-	RotateGestureRecognizer_set_RotationRadians_m635B7D435EB729E7A972D4E2BDB2577059BE6A43,
-	RotateGestureRecognizer_get_RotationRadiansDelta_m401EDED9A15BB8B51A665BF8A8C0EC2BD56E6E64,
-	RotateGestureRecognizer_set_RotationRadiansDelta_m25436AA2B0244ECC89E02E34E78496EB59DC538D,
-	RotateGestureRecognizer_get_RotationDegrees_mA6FA8E6C25676B44A8F46FBF7E19DCB8ADCDB507,
-	RotateGestureRecognizer_get_RotationDegreesDelta_m7DC983A6170C06E8E5314EB1910244A294A98579,
-	ScaleGestureRecognizer__ctor_mA80BE72D3D940D31860240166906345A5FDD4E47,
-	ScaleGestureRecognizer_SetPreviousDistance_mE4E8DDB406B396A8B7932F8E8B42126844BE5B9D,
-	ScaleGestureRecognizer_ClampScale_mE7F91E88B1D97F9CC8A45D1C27E305716B58DABC,
-	ScaleGestureRecognizer_GetScale_m9A8FCAFD15CDA75CC41710B7E8664401429DA0DA,
-	ScaleGestureRecognizer_ProcessTouches_mA728A68FFB571ACF04CBBDF7E1F209FFA0B64CE0,
-	ScaleGestureRecognizer_TouchesBegan_m2B819AB6861E9D98F4C548A1DF99B2F130868A0A,
-	ScaleGestureRecognizer_TouchesMoved_m9EE4D3C4C8ECE37522D01D707F69AC179F3ADAF3,
-	ScaleGestureRecognizer_TouchesEnded_m664DF0E6BCD4FEEC70758585872578C8297DAC33,
-	ScaleGestureRecognizer_get_ScaleMultiplier_m31E9425A4E62692ADB6A9212ACDE5C476FE9C72D,
-	ScaleGestureRecognizer_set_ScaleMultiplier_mFE1C9A6333F79BFC6277771ABBC2B07CBED966F0,
-	ScaleGestureRecognizer_get_ScaleMultiplierX_mCF634FE7761BE6AE323BEFC5343512E978B8DF16,
-	ScaleGestureRecognizer_set_ScaleMultiplierX_mB7674A0F63AE8D8163B5FF1F60DE571D4477C12F,
-	ScaleGestureRecognizer_get_ScaleMultiplierY_m13DC28418D21E54083D1B6A3263FBA7151244CF7,
-	ScaleGestureRecognizer_set_ScaleMultiplierY_mF9FAD185138C6045D49B4AFBEDF5D366A7205B7E,
-	ScaleGestureRecognizer_get_ZoomSpeed_m12DB6A0500B477132DB5F4CDC45D62E38E0A6E55,
-	ScaleGestureRecognizer_set_ZoomSpeed_mD0E200521842A28826D1D5A41FB01ABB037045E3,
-	ScaleGestureRecognizer_get_ThresholdUnits_m8CACFDF646DF0B3970C80229EBCF6DBE257A3148,
-	ScaleGestureRecognizer_set_ThresholdUnits_m3195C7F68293E567249E8F1065239F6F20ADFC16,
-	SwipeGestureRecognizer_CalculateEndDirection_m248BAAB9270702B99B6A1CBA41A1B0B650E86AE4,
-	SwipeGestureRecognizer_CheckForSwipeCompletion_m4F207CC742FFD0F6DEC5DB918BD3AD91167717A9,
-	SwipeGestureRecognizer_TouchesBegan_mFC1B8374323A0FCD61F1695AAE6CF837BABBB9F3,
-	SwipeGestureRecognizer_TouchesMoved_m4E6D756B1D9D54525D01229B9945B8F845195454,
-	SwipeGestureRecognizer_TouchesEnded_mBD8975D43388C815FC922A5D84858127082D6A73,
-	SwipeGestureRecognizer__ctor_m73E3B0DE450AD7F6DF85E3DF272E418F6F9733D5,
-	SwipeGestureRecognizer_Reset_mE8E859E84EA88693E961159B18CCABAFD71AB32D,
-	SwipeGestureRecognizer_get_Direction_m70A32B27BAC9CBA7D7E310B865A48C34BA016CCE,
-	SwipeGestureRecognizer_set_Direction_mA29C433B759D11FB8E21B2393C2FA3496E3CA81C,
-	SwipeGestureRecognizer_get_MinimumDistanceUnits_m17FB5A01EFB7C5B28F8BEAE5362E1F687846C7FC,
-	SwipeGestureRecognizer_set_MinimumDistanceUnits_m5A64D3374E9E97B6E656F53B9FC042E2B94B1A24,
-	SwipeGestureRecognizer_get_MinimumSpeedUnits_mFFE58EB5EF473EFB69104476A00F71D49E3AEAF8,
-	SwipeGestureRecognizer_set_MinimumSpeedUnits_m2935757EE568869B0EFA11A5E38C06C74E6D7E34,
-	SwipeGestureRecognizer_get_DirectionThreshold_mF6DB21B149E68688F61C2D352B9EF84BCD0F0454,
-	SwipeGestureRecognizer_set_DirectionThreshold_m6B7AE5355B9C8E7433C5993C7E213C53C244BA46,
-	SwipeGestureRecognizer_get_EndMode_m25703BC82F5214BC9561F5F4CAB8C3E469951FCB,
-	SwipeGestureRecognizer_set_EndMode_mB16C668963B248713D995CBE686AA8CDB0B06171,
-	SwipeGestureRecognizer_get_FailOnDirectionChange_m1EC59756CC461E13C73A2F84B629EE52449F3717,
-	SwipeGestureRecognizer_set_FailOnDirectionChange_m7F1A249D0074410B3ABB968E4B820E412DA52F70,
-	SwipeGestureRecognizer_get_EndDirection_m12E48C361592619DE728C6C9D47A96C47D1079C5,
-	SwipeGestureRecognizer_set_EndDirection_m9F467468634F54A9AE498E63D74351D7BD9A9CE1,
-	SwipeGestureRecognizer_get_SendBeginExecutingStates_mA38C52DF91F21397AC2DFEC6AD134D88A738EED0,
-	SwipeGestureRecognizer_set_SendBeginExecutingStates_mF6F8CEC22C7CC612E59EB605DEDA7C21CB70F7D8,
-	TapGestureRecognizer_VerifyFailGestureAfterDelay_m56CC80821B7322E0775EE0DB586003C55CFF7225,
-	TapGestureRecognizer_FailGestureAfterDelayIfNoTap_m6CADBD64668CDC75B7436992B79BFC20D95E291D,
-	TapGestureRecognizer_StateChanged_mEE7B1B627635C13A3C493BA7EA09276BFF00FA8B,
-	TapGestureRecognizer_TouchesBegan_m4BEA03D52B63A049BEBF4D52FB93A433D3630BA9,
-	TapGestureRecognizer_TouchesMoved_m25780A552565BF55973699136A08C4F497FD4A7B,
-	TapGestureRecognizer_TouchesEnded_m34CC5A90B6CB4A1C1FF8AA8F150FB4C55BA1C56D,
-	TapGestureRecognizer__ctor_mE23A029971A702A7F7D5B547A261BBF0614845B7,
-	TapGestureRecognizer_ToString_m1443707E9F472BB1F757F00872AB4270600EE677,
-	TapGestureRecognizer_get_NumberOfTapsRequired_mD89D406E702F84976CDACCEDCCA6E95B65E27167,
-	TapGestureRecognizer_set_NumberOfTapsRequired_mC8A3693EE8CC9A699E5FD21C10760986BF6BBD4F,
-	TapGestureRecognizer_get_ThresholdSeconds_m9395B120C9D91CEABF7B31E1D2D5F4D0C41B14FE,
-	TapGestureRecognizer_set_ThresholdSeconds_mC62F62C05A4F27DFA4D7DA4E7EA844F6C38808D1,
-	TapGestureRecognizer_get_ThresholdUnits_m12EDD1B72DB681687179C9C942F4A73B0FBE624D,
-	TapGestureRecognizer_set_ThresholdUnits_mBA130371EF7E2CC3AA1A4C0FB63CEE2E6F39954F,
-	TapGestureRecognizer_get_SendBeginState_mBED37F738376AB0C246A098D5C0AAC92D4F9D215,
-	TapGestureRecognizer_set_SendBeginState_m83A9A0DCFF8142B05ACE50E1638A13B788CC12EC,
-	TapGestureRecognizer_get_TapTouches_mE29E1590367AF2B9D7C4D161358CE577E3B85B00,
-	TapGestureRecognizer_set_TapTouches_m3163E432B9D2C3B92C35050780F16DEEEFF787DB,
-	U3CConstructWorldU3Ed__9__ctor_m165D28A32828E501D0914F120521524EDF14DAFF,
-	U3CConstructWorldU3Ed__9_System_IDisposable_Dispose_m4736E01FA3D7F572317673DCAD5130316B78186E,
-	U3CConstructWorldU3Ed__9_MoveNext_m7EA72E1D79B116FC9BEF149C4AA7D4484BA4202A,
-	U3CConstructWorldU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4DF7843FAD38A02B3022D1420191252196FB7EF0,
-	U3CConstructWorldU3Ed__9_System_Collections_IEnumerator_Reset_m6A21F608C9D49212C54A98BC1A09A4018B26DC16,
-	U3CConstructWorldU3Ed__9_System_Collections_IEnumerator_get_Current_mDBECE2D7FCB1D9ADE3983E35412E8799223ACC94,
-	U3CStartU3Ed__6__ctor_mCDA6C0AB89CAC7EB038FCA3C07BAB6F668AE61EB,
-	U3CStartU3Ed__6_System_IDisposable_Dispose_mA3439B1E0E1E671988E2F50CC959B062951F563A,
-	U3CStartU3Ed__6_MoveNext_m36474F18CDA1FB6231DA6EB551739489028D0DA7,
-	U3CStartU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4DECEAA7159701E49888AC489CB55361B59C4BBA,
-	U3CStartU3Ed__6_System_Collections_IEnumerator_Reset_mFA7F93206D2D7DB34770DB0E28748AA5A66FA60E,
-	U3CStartU3Ed__6_System_Collections_IEnumerator_get_Current_m3C20E4432E8A4BC367C476C7D41E9AA814085A73,
-	U3CMainThreadCallbackU3Ed__34__ctor_m7E5A053DE6D871457345CF84E54E6E6143E79DD9,
-	U3CMainThreadCallbackU3Ed__34_System_IDisposable_Dispose_m02985D2EB9FC866441C1C728C1F843261D2314BC,
-	U3CMainThreadCallbackU3Ed__34_MoveNext_mA987BC3D2F0A1B15F19A06D1F2A62164E57D3F72,
-	U3CMainThreadCallbackU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0245BDAD224E3CF125ABF6F79381C4B8A851738A,
-	U3CMainThreadCallbackU3Ed__34_System_Collections_IEnumerator_Reset_m68B33C4FAF39CB7B840212BE94A28DB642A16277,
-	U3CMainThreadCallbackU3Ed__34_System_Collections_IEnumerator_get_Current_m2710DECBE7335C9AFC35A3BCAE2DF17232D78DCF,
-	U3CU3Ec__DisplayClass36_0__ctor_m0E3133BD66387DF081067EECEA9AEED9B8522623,
-	U3CU3Ec__DisplayClass36_0_U3CPopulateGameObjectsForTouchU3Eb__0_m88D36CE52CED30ADB9E2BAC58B2CE65935BA9DFE,
-	CallbackMainThreadDelegate__ctor_mF05122B6B24D6675B327E9E0393BD943035F34FD,
-	CallbackMainThreadDelegate_Invoke_mB51CAFF41E944CF355FAB16ED4DA42F0CD5A7FD1,
-	CallbackMainThreadDelegate_BeginInvoke_m8B9CA318BA4426E6BA4E2D40F831F0DB148E4421,
-	CallbackMainThreadDelegate_EndInvoke_mA86BBFA6237B69B1392EEDF8698E9DB7D1C97ABB,
+	BuildingState__ctor_m84645FD8CB01B6115D44B7A570EC0D0D5B0C0D5E,
+	BuildingState_Tick_mB80FB7DDE56B69D78CD8CE20DD79FEF08D09462F,
+	ChoppingState__ctor_m82C14C4D44F580F85258B34C6C00558B5693CED3,
+	ChoppingState_Tick_m68E0263B6C394506617C67297336E4C6470D8194,
+	GatherState__ctor_m19F493FBB513E47CA5CBBFA90DCC6B9188F04102,
+	GatherState_Tick_mB33BD41EAB8DB2A1357FCA98426FD2BBD6559026,
+	IdleState__ctor_m087BAFEA2892F4B667FD5F02A8599A05A2C15CD7,
+	IdleState_Tick_mD6E1B3455BBFDCF5032E9019A80BD67B75DC1F2A,
+	Person_Awake_m1B8F5FE5E298445EAB3CA2B3177977C038629A83,
+	Person_Start_mB99F9349069059CA2F9BC6C499F38FA61D66E4AB,
+	Person_Update_m3C858F5D5CC27C0BF7EE9F9F5AFC17EDD33300E0,
+	Person_SetAnimation_mE6E03A016EA045E22E91342B5DDC3ECC2D0F7EAF,
+	Person_StartAction_m1CC3EE20C76F3CE24A7662BB79E52E137904B1FE,
+	Person_isActionDone_mB8B6CEF395AE96666BD7A3F4DCE5BEFFCC656C20,
+	Person_Pickup_m12D07C4A80DEFAA57817DE0B2796724A6206FA5C,
+	Person_Drop_m83058AD8A2793894BF38A4FC8854B3A434F4565C,
+	Person_SetupStateMachine_m9641E68F87E0E4CF9367187C993DE82D24FFAD4D,
+	Person_GotoNearestResource_m3FFD3469A912E31DB2D0BE90B6049C238B3EF56F,
+	Person_GoHome_mD1AB26E94FC841FB3A5E03EFA3A1ABBE5A18F7F2,
+	Person_IsAtDestination_m84723448D4D39469CCC1F4BCD679A84D4401CDB5,
+	Person_IsInvertoryFull_m6FC3D5FCF14170E750691D5E2C3E14ADD35E8E36,
+	Person__ctor_m76DBE4061E92220A470EAAA3CA51C8882C2553B6,
+	PersonStateMachine_get_currentState_m0EA73EE34507E51048864E20BC54E34F04368479,
+	PersonStateMachine_set_currentState_m6AD2BB82CECCC94056B6746E65D0B361CDF5B7E6,
+	PersonStateMachine_SetStates_m5565B33A5468C6BB0892ECCB2EFDF9065F1F757A,
+	PersonStateMachine_Update_m1609194E29570119A78E2154EB4AD7EE49018229,
+	PersonStateMachine_SwitchToNextState_m44FBAAE104B6749A071F507661042DFAB09A68A5,
+	PersonStateMachine__ctor_mAF79419B1B824E4ADD55D6ECCEB562E93BB24889,
+	WalkingState__ctor_m2B7444DE921CD3D2FE3162BCBDEC878740F7018B,
+	WalkingState_Tick_mE33C49681A495872438484352D1114F9A393299F,
+	WanderState_Start_mD64064A8DC82716FC1F44741F9FF2F806036C177,
+	WanderState_Update_mE52DC541F14C29A98F31DEB7C6F65F9CD9F0F138,
+	WanderState__ctor_m99B4D6B48785DF06D8DEAEEFFBE0757C503D38DB,
+	Plantable__ctor_m4881BDDCC3CBDEEA46ABFB31AF7D756456D0EBAE,
+	SelectableObject__ctor_mAE4CEBC06FC3E8B5EAD296436CF2B948D2CB36C5,
+	Storage_GetTransform_m09A63BD5029539FAECBDDD8E5506A820C15BA4E8,
+	Storage__ctor_mBD5228C8A06A2CD7421E8249D7E413CD5A84A14A,
+	TextureGenertor_TextureFromColorMap_m859F839F19B9F04EECAD3F1CE8A665964803A553,
+	TextureGenertor_TextureFromHeightMap_mCD160F1FD0C905D85F39579C80272435F91A62DA,
+	DemoAsteroidScript_Start_m06DFAE7C2052536A9BD880E07873A2515986CCCE,
+	DemoAsteroidScript_Update_m0B95CE9FDAE1F466E1D74E94AFF51AC0A98AB762,
+	DemoAsteroidScript_OnBecameInvisible_m8C97BB846D009A07908D1398ACA226C48A99EA1F,
+	DemoAsteroidScript__ctor_mDEBA207F4885102CF7EF7B7E3C5AED829E9B37BD,
+	DemoScript_DebugText_mC742B492D0CFE15BAB0A3E42FCCE86FF51A1074F,
+	DemoScript_CreateAsteroid_mF028F930FBAC7469E019DC3716134AA9723C5F0B,
+	DemoScript_RemoveAsteroids_mF83BECB074B01B52EDD14C080A94B3A9FFF97B74,
+	DemoScript_BeginDrag_m6024269E8A1FD7CCD980DE019EAD906F9FA67A64,
+	DemoScript_DragTo_mC88E89A16273774465B1DEE14568A0B2940627AE,
+	DemoScript_EndDrag_m0BCDFDC2EA33B060D6048CC0E94710830CE41F86,
+	DemoScript_HandleSwipe_mBF67ECAA35F0FE9906F6ECF9C1D35CE82B2AEA4A,
+	DemoScript_TapGestureCallback_m64D16F9C216B04845AD23DA83BE21B9DA67032F4,
+	DemoScript_CreateTapGesture_m5ADB8C5A5A723E1501C0717A082433B43967D252,
+	DemoScript_DoubleTapGestureCallback_mC5C831B01A7531FDCE53FA1FCA948C6224A601A5,
+	DemoScript_CreateDoubleTapGesture_m8A5BC6419A0DB77A80CB0493333BCE233C6C2684,
+	DemoScript_SwipeGestureCallback_m1332C1B12E1CD1714D1B8C5E74E132D3D873FAA3,
+	DemoScript_CreateSwipeGesture_m2C481536A59B11E78A0F385F30D243A529B137FA,
+	DemoScript_PanGestureCallback_m3DEDA9D36011AAD7BD26E007B9FE08BFCA4E3D08,
+	DemoScript_CreatePanGesture_m4E9E8B6FF5655865972034035085AC8DFDBED6B7,
+	DemoScript_ScaleGestureCallback_m53C07E62B7A81FF1A60A012E9FBCBD2809932E80,
+	DemoScript_CreateScaleGesture_m6DE8053D2575A7E4F18EA6C839C7D35D4E5CB88D,
+	DemoScript_RotateGestureCallback_mE21470793A69D28A5833416F99CE2FE8D3A113DA,
+	DemoScript_CreateRotateGesture_m7853D5611772BF24499B9F5520F32A47BB4987AD,
+	DemoScript_LongPressGestureCallback_m4A6C38E6D60F7539FFA7B5FDD487CD5FE8100351,
+	DemoScript_CreateLongPressGesture_mC29ACFB7770B7533D955A0BE21FBDA5FD5E477D2,
+	DemoScript_PlatformSpecificViewTapUpdated_m1E1851705A9158E372AA5C672A2F5DD404E74A0D,
+	DemoScript_CreatePlatformSpecificViewTripleTapGesture_m46A095790DCA2055944C6A404D886FBEF8F92FBE,
+	DemoScript_CaptureGestureHandler_mA0BA06C5E2896D413AE8079CEA270F13519527E3,
+	DemoScript_Start_m6699D44EFABE6847B61A0A3238355D55BCD38CD4,
+	DemoScript_Update_m03942B42FF78656449706B6A882E55A0A4E96D51,
+	DemoScript_LateUpdate_m0F62F47A25FEAC1DDB3FC4528094167A0F36549B,
+	DemoScript_OnRenderObject_m85604DE9150221D57F7FEB6B77AB287E36FBD304,
+	DemoScript_ReloadDemoScene_m88D1A7196AEB5DD8C830B18B0EA10632837F88BD,
+	DemoScript__ctor_mD304A9C2ECD8432EBE0D8306BA6253E268BE84BB,
+	FingersScript_MainThreadCallback_m7B8606AACB2DAC081D5F393B01AC4D18745D753E,
+	FingersScript_ShouldCaptureGesture_mFDFCEEC81C423D81A79E72ABB2500B949C8950A6,
+	FingersScript_PopulateGameObjectsForTouch_m29B73D90EA2629A6659E3886F7CE05EC51EAEB6E,
+	FingersScript_GestureTouchFromTouch_mB92F790BE589C734662D047D1EAF0F4F46B65A7A,
+	FingersScript_FingersBeginTouch_mCC63406516DF6510E67110663FD31EEE0B82677F,
+	FingersScript_FingersContinueTouch_mC873BA914BBB603A1514E0FC166238E41340C587,
+	FingersScript_FingersEndTouch_mC7D823C07C531ED490A8DBA5E2227FAC37DAA150,
+	FingersScript_FingersProcessTouch_mD2D7B64711D69F8108E0B0CCCE0A88E6EBA01CB5,
+	FingersScript_AddMouseTouch_mDDB3F7E1A1E632BF61532DB7243E1D84AC782A96,
+	FingersScript_ProcessTouches_m3CD6400E709D441262050E7DB469C18CC7D20492,
+	FingersScript_RotateAroundPoint_m04F3FF9DB366C9004CAC4F6D0FAD6164C0C8F175,
+	FingersScript_ProcessMouseButtons_m00C75F8879FA407144A045D9243EBEEDF62CA77B,
+	FingersScript_ProcessMouseWheel_m94AE83D4F280C29CCF191D0C181EB115290BC2B5,
+	FingersScript_ProcessLostTouches_mEB6BE5FAE59DAE0832184B5872B1C059A403C204,
+	FingersScript_GameObjectMatchesPlatformSpecificView_m2CD60BF76402C34C73248061ABF600912B5C0F77,
+	FingersScript_FilterTouchesBegan_m1C9CDBE752304AC17CB5D9E55CB5142FE62DCFE2,
+	FingersScript_CleanupPassThroughObjects_mD5C9A88A233B646F2D6E16BC66CF40B59328558C,
+	FingersScript_SetupDefaultPassThroughComponents_mE4498C151FACD10A40E36D1778A83B31423040AF,
+	FingersScript_SceneManagerSceneUnloaded_m41B9B86B9B7A4659CE3C0961852BC99021B21266,
+	FingersScript_Awake_m6A40BB84601BB63C2B5C9260B4992A0F7C0002A0,
+	FingersScript_Update_m4CB81E9636F87673C32BA1F2DEF9C060F23727C9,
+	FingersScript_OnDestroy_m00E45CF5C1DBC7E4A951FA37F752F240E423F20A,
+	FingersScript_AddGesture_mC336CF24D56C632A35EACFF2F9E58FC3517F04C6,
+	FingersScript_RemoveGesture_m5748B651726F0C737841B82C5220F824CDF07B8A,
+	FingersScript_ResetState_m42D25809B4DF5F1546F5B8BBF70B748C28E933B5,
+	FingersScript_RectTransformToScreenSpace_m2F2FF40DD8001B0017472966A803C72E3DA118CB,
+	FingersScript_get_Touches_m9E5EA3C6BF16B694E7F133565D9C7B14D2EFCA73,
+	FingersScript_get_ComponentTypesToDenyPassThrough_m0D1ED1973AD01A2CCF4185BEDB8D75B2D5E18224,
+	FingersScript_get_ComponentTypesToIgnorePassThrough_mEB31916F65E8378B9CB28C90FE0A41F070ADADFD,
+	FingersScript_get_CurrentTouches_m7B3C41D67216E36116EB4AA6389544B72651AF85,
+	FingersScript_get_Gestures_m7B91D8401A69FD17BE5B3D1403090FAD66F72A57,
+	FingersScript_get_Instance_m5FC1E63248543CC01F6D7F06B1B74747E58D9AF0,
+	FingersScript_get_HasInstance_mC73D814855A7D162A1656A2BAD19AC611C2BB086,
+	FingersScript__ctor_m0A09E95DC9551885F0C984DB9AA218BBD17D09B9,
+	FingersScript_U3CAwakeU3Eb__53_0_m7D0C37FD22057638BC5D0C0DFEE381E4B0E119A5,
+	U3CMainThreadCallbackU3Ed__34__ctor_m460E14456A4B57BACC05D4C047B2CEFC4A265B15,
+	U3CMainThreadCallbackU3Ed__34_System_IDisposable_Dispose_mB08C57DD2A98463C04A470953C3D0AD4C0BF932B,
+	U3CMainThreadCallbackU3Ed__34_MoveNext_m7544DCEF1713AB48B8F06B6EA0729261D8C0D8C4,
+	U3CMainThreadCallbackU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m15E4CE56F9DA7FEB24576C1A39A9C0EA48910C7B,
+	U3CMainThreadCallbackU3Ed__34_System_Collections_IEnumerator_Reset_m8CA52E80C71E458ABE0D64448E3AB3DFD3D817C9,
+	U3CMainThreadCallbackU3Ed__34_System_Collections_IEnumerator_get_Current_m6EA4E8A45C52684188610F16F7A0D11FBAB6EF63,
+	U3CU3Ec__DisplayClass36_0__ctor_m38140C1DA654053337889DE50DEF0A1F0540225C,
+	U3CU3Ec__DisplayClass36_0_U3CPopulateGameObjectsForTouchU3Eb__0_mE5565C57DAE9E45DE3604B58021148F4F8D505AD,
+	DeviceInfo_CentimetersToInches_m0BDE574A41B1B6098507C2758AEBA32C2CD53C04,
+	DeviceInfo_InchesToCentimeters_m1AEFC3A43E8B91DBAACEDE5515F3C6A1D00F7496,
+	DeviceInfo_PixelsToUnits_mBCADCEF1B134011B9EA8AA0502670DBB37B6EFD2,
+	DeviceInfo_UnitsToPixels_m4FF7403D9986C808FAFA120DE5C63D5A4C027E70,
+	DeviceInfo_get_PixelsPerInch_mAD6BBCC15894404194002703FFE74981CE1D25DB,
+	DeviceInfo_set_PixelsPerInch_mEB7203D9205BE7CE15B9860094146F1CF86569DE,
+	DeviceInfo_get_UnitMultiplier_m85C9A6EBA5E7427B035A37FDD0F86F0D12771B69,
+	DeviceInfo_set_UnitMultiplier_m0E0F7C4C704F3D6FB54779A0C225AD14AEDA750E,
+	GestureTouch__ctor_m6424F3021923C3B8CC56D7D2D6EF465E19A4C680,
+	GestureTouch_CompareTo_m313C82F0C842640E27645FCED3215FAE3A032122,
+	GestureTouch_GetHashCode_mC07DA9AB409BC55B71AAC39C9A953E5CEDA867BD,
+	GestureTouch_Equals_m4C65BA4738A413584C2AE5B4E41CE22FBD63DC17,
+	GestureTouch_get_Id_m83FF759DFFEBA79DCCE618A63DB15521B492726A,
+	GestureTouch_get_ScreenX_m15BC1C09F57F915BF4CC49998F207A15E226A100,
+	GestureTouch_get_X_mA2469FBADC9E3ED26981589B8A3210279D55BEB0,
+	GestureTouch_get_ScreenY_m06AF90565D8A5DBB32DB9A657B045E6B76301770,
+	GestureTouch_get_Y_m4DDC020CDA3D39A25CA726846894A7F28163E85A,
+	GestureTouch_get_PreviousX_mB6A761E8457BEB3172288924FDA63903B0539DD9,
+	GestureTouch_get_PreviousY_mFE01066E59B77DBAF1DF5E6E8A4C82A687184F63,
+	GestureTouch_get_Pressure_m72899A5AB79F4BDD9470C5147ABD5B6E1228A638,
+	GestureTouch_get_DeltaX_mF0C508A993779B83C15007F3A809DF158ABFCB46,
+	GestureTouch_get_DeltaY_m753255CCEDAD7F225AD3B4C932181E5B25825E4D,
+	GestureTouch_get_PlatformSpecificTouch_m040D56C648F8D700A7D7A21D257E3306D626F9BC,
+	GestureTouch_get_TouchPhase_mC71EED97E1DBCD4247D8C129A0145CA6F08787F7,
+	GestureRecognizerStateUpdatedDelegate__ctor_mD59D7AE70C816B91B6944CCEB3E3EDAA04C13CFD,
+	GestureRecognizerStateUpdatedDelegate_Invoke_mFFABAD54A4FF1D610377C29E2A699608A7217752,
+	GestureRecognizerStateUpdatedDelegate_BeginInvoke_mF31A39CBE69282BC3CF4899C46509F28E543DE4E,
+	GestureRecognizerStateUpdatedDelegate_EndInvoke_mBCF9FD2D2308ED2BF9D3B2BBABC10C12AB88B9F7,
+	GestureRecognizerUpdated__ctor_m5C971396A4BE99F758669F96B7BB64BA152858C0,
+	GestureRecognizerUpdated_Invoke_m366508E84FB717EB346F9FFFBC5AAF25F82ABB17,
+	GestureRecognizerUpdated_BeginInvoke_m345A8CD4842A6FFE31D2E6B2F18796398A601DE8,
+	GestureRecognizerUpdated_EndInvoke_m5705C4BF9F2AD23EEA25B64D486D488D08D14E15,
+	GestureVelocityTracker_AddItem_mB6D681FA866FC99300EFAB25C38E9D66D7D62A5E,
+	GestureVelocityTracker_Reset_m8167072983F867728F939219D9842862DAF3DD53,
+	GestureVelocityTracker_Restart_m92F0AE865E3347E604A2BC9D040CE4EF48DE5320,
+	GestureVelocityTracker_Restart_m2180185183B3672F2B3C5A08FC02389676E20BB8,
+	GestureVelocityTracker_Update_m12C6C2659854013BFB6E539DBC4BD96C6F7BD0B6,
+	GestureVelocityTracker_get_ElapsedSeconds_mA08A6DC3B470FE652E9FDEF1672413A185BD1DBC,
+	GestureVelocityTracker_get_VelocityX_mEEBC360B1B2BABDDD921D98CB94313ADCB0205D6,
+	GestureVelocityTracker_set_VelocityX_mD17CE6C49B49A4A53E4AC0796DE1D8E19F3E6678,
+	GestureVelocityTracker_get_VelocityY_mB783BD3ADE8AD4A8671555EBD035D5569B280290,
+	GestureVelocityTracker_set_VelocityY_m8EA56AACBB3CBC2B98BD2015F279989C672FEECD,
+	GestureVelocityTracker_get_Speed_m10376E343EE74DC6DBD1CD78ED5C8C6662D287C1,
+	GestureVelocityTracker__ctor_mA81898F475B2CCAE259EF5F69BB503A16EA69B00,
+	GestureRecognizer_get_PrevFocusX_m816EB68DA8612182CE2C98A5F5F96CF6A6878A62,
+	GestureRecognizer_set_PrevFocusX_mEB8F73F6CFB16083B444FAA66E65D23D5DC84E34,
+	GestureRecognizer_get_PrevFocusY_m0154AA05822A05DBC984E8652C4A653995AA535B,
+	GestureRecognizer_set_PrevFocusY_m832C2B1A4B10B05279C8939BF7F3F65A0CF7B001,
+	GestureRecognizer_UpdateTouchState_m6218C5C4D92AE1A1784863A14CF0EBC62FB742CB,
+	GestureRecognizer_EndGesture_m92FECB688A6378D8C12FE35111BAC718E6FF5BCC,
+	GestureRecognizer_RemoveFromActiveGestures_m6DC265D675C64FB54D30F0CBC448EBE207EF4342,
+	GestureRecognizer_CanExecuteGestureWithOtherGesturesOrFail_m0D284CE35AD9C7ECA505F2EA36C7C20C3C7BAC6C,
+	GestureRecognizer_FailGestureNow_mCEE52528FDCE97E4FD865A7F65D0A0792643A495,
+	GestureRecognizer_TouchesIntersect_mDFB81737169D5CE73963A65235B01ED7FC0C2667,
+	GestureRecognizer_UpdateTrackedTouches_mC067F832E5BF758DA0A373DEBEABD68E8E461FE0,
+	GestureRecognizer_TrackTouchesInternal_m6FE373E8A4B9163F2009BC0F5F6AC39BB2B04AA4,
+	GestureRecognizer_StopTrackingTouches_m29035CE9CA89C1D25ACF240044BCDB3E12D58D04,
+	GestureRecognizer_ResetInternal_mD8941B8F075FB1DB2CA1D03587FAFD9246CAA24C,
+	GestureRecognizer_RunActionAfterDelayInternal_m6F30ACDD87AFFFD3860806B7BE82F598C8FA8925,
+	GestureRecognizer_IgnoreTouch_m99A49FD53CF655B30118EB52E33C0CB69A13354D,
+	GestureRecognizer_TrackCurrentTrackedTouchesStartLocations_m61684292414F1B2CDD5E9B343C7076A5A92B85CA,
+	GestureRecognizer_AreTrackedTouchesWithinDistance_m5BCB5ECE6EFEA3EAFC4288840F7C13DAE0D490C4,
+	GestureRecognizer_CalculateFocus_m50EBCE4601BE3E946362542E25054A2FCE9B5E0F,
+	GestureRecognizer_CalculateFocus_m12E91D86B57CF1607FC0771346A77195878868FE,
+	GestureRecognizer_StateChanged_mD84FFDD880240C78E5693FA1FBD571190D1631CE,
+	GestureRecognizer_SetState_m60946AC28D102DFE0B524055F78733BF5E843956,
+	GestureRecognizer_RequiredGesturesToFailAllowsEndPending_mDCE234AC4DB42CE9B0F44694B5EE36F68B6C4982,
+	GestureRecognizer_HasAllRequiredFailGesturesToEndFromEndPending_m00F855625A76D58C0FEB309720FCCFA5E030752C,
+	GestureRecognizer_TouchesBegan_mA053495FCB31C6BEC59B71540D5C9111BB0861BF,
+	GestureRecognizer_TouchesMoved_m952E60993D42502DACB5DF2511539A6F9B45D066,
+	GestureRecognizer_TouchesEnded_m22C69D1D4298363709FE20CDFE2357AE929BF0C7,
+	GestureRecognizer_TrackTouches_m893EC3A78E94E6275C91C3563870EDAC9D91EAB5,
+	GestureRecognizer__ctor_mD9B8590B233D5B9881C54B790AE8E546B3C9844C,
+	GestureRecognizer_Simulate_m9886B44A56CC90717A648E7FCB607FF304F95C6A,
+	GestureRecognizer_Finalize_m6545BD3BC69A66C3E9E2FDEF7AA8AC479C402340,
+	GestureRecognizer_ToString_mFDF94B927E362D8080D8EDF2089C21B5CD84E911,
+	GestureRecognizer_Reset_m17C3CA842EA2CD6C97FDF1B5A9C47E0FA16BFF16,
+	GestureRecognizer_BeginGestureRestart_m0534969AD4CB3EFD471658F1DD7500336C26EFAE,
+	GestureRecognizer_EndGestureRestart_m2EC153C02AD7EC241C4D067BC62DDA8E7E85CA3B,
+	GestureRecognizer_ProcessTouchesBegan_m06A1C9BDCC1A8CC1405CC7FE012BE83AEA7CAEF9,
+	GestureRecognizer_ProcessTouchesMoved_m33F1C93BA761DE84551F0ADE26DA92CB901641A5,
+	GestureRecognizer_ProcessTouchesEnded_mF0C5B233A8CCAB628AEE8DFEB9DA049EA6BDBACE,
+	GestureRecognizer_ProcessTouchesCancelled_m4E4CE336D8230FB29EA8023EE3537B0976F716A1,
+	GestureRecognizer_PointsAreWithinDistance_m7F95DA40B1ECCD3505B57D203863361C65E50F42,
+	GestureRecognizer_DistanceBetweenPoints_mB4DCF75A0128ECD0B4AD47DA16C9A594AF7928B7,
+	GestureRecognizer_Distance_m0A20D7EF273504472117966B31D73B8508606544,
+	GestureRecognizer_Distance_m176A495C4E680A2D4A9B68FE5EE71E0A6308B1CF,
+	GestureRecognizer_Dispose_mAFBB49A079A7B19E63E68E7E65FE3C718372E99A,
+	GestureRecognizer_AllowSimultaneousExecution_m1D93D898E38404FC9BCC967A2DDC4AA342343F00,
+	GestureRecognizer_AllowSimultaneousExecutionWithAllGestures_m911873661DA4B13F70B56865286D303E33C32394,
+	GestureRecognizer_DisallowSimultaneousExecution_mB058F48B9E2FCF49442F743E3B5AB3BAA9E12F67,
+	GestureRecognizer_DisallowSimultaneousExecutionWithAllGestures_m1729CF5FCB35AA6BFE73CCCD2426B20B22EBAA28,
+	GestureRecognizer_AddRequiredGestureRecognizerToFail_m7451E1EE45BC50B6D0A6246D57DC5062050CFE84,
+	GestureRecognizer_RemoveRequiredGestureRecognizerToFail_mFC19959B2C2C064C94CB7EF1945579663DC4E683,
+	GestureRecognizer_RunActionAfterDelay_m8381202D7E27EAB7D55DC09C53AD6CBD71B93205,
+	GestureRecognizer_NumberOfGesturesInProgress_m495A355A56318D3AA112332FA28F32F505D13534,
+	GestureRecognizer_get_Enabled_m7CE4CAA96E2816B88C5F158AE492E8C68BA1D2EC,
+	GestureRecognizer_set_Enabled_mD4832BF37E1F901056ED85CE5E06BE94F820ECAD,
+	GestureRecognizer_get_State_m3C7ECFA41A902384D61B64F156108586E62417F3,
+	GestureRecognizer_add_Updated_mD7FBEAC3ECCC85A916D3BEA6A624537E6D27FC34,
+	GestureRecognizer_remove_Updated_m1A6205ADEE99AEAFD4B47891351F67A1E66163B4,
+	GestureRecognizer_add_StateUpdated_m41F5402A953C6EC678BE43BC5F2D3581423BCD4A,
+	GestureRecognizer_remove_StateUpdated_m19330AE57893A061800A0C5EBD965C9652FF6568,
+	GestureRecognizer_get_CurrentTrackedTouches_m78F1F044496E47CDB223DEEC610D27118496F166,
+	GestureRecognizer_get_FocusX_m7649E10C511D4DA092F7AF06C12F14EE375DFC8C,
+	GestureRecognizer_set_FocusX_mD687B83A83CD963E2E0A62F076964D22DD8D65E8,
+	GestureRecognizer_get_FocusY_m4A3CDA722D6BE7B187A23E7E33BE175FADD3396E,
+	GestureRecognizer_set_FocusY_mA4AB413A21E5BB4289383E1FCCA4062CB8AB02F0,
+	GestureRecognizer_get_StartFocusX_mF07C5185FEB1630605F305A4BA47B9E40C37ED29,
+	GestureRecognizer_set_StartFocusX_m3C851946DD32E35C7922CFE6A3FD4A3FC738D351,
+	GestureRecognizer_get_StartFocusY_mEF7EEDB9A91279B72172B2A96A9FB0A7A878DB1B,
+	GestureRecognizer_set_StartFocusY_mCFE5C69028134AEB8F0D127780A42A4B9BAF3AD9,
+	GestureRecognizer_get_DeltaX_m41145FC19E9A67DB290BA50219D516693F5B9E95,
+	GestureRecognizer_set_DeltaX_m20261DAFE378C8903C01211DC438846DCD50D067,
+	GestureRecognizer_get_DeltaY_m01A29D425346D9CE02933BCE5FD85CCEB8EC3317,
+	GestureRecognizer_set_DeltaY_mFD57D36A0471C0E6D8FCC2050985316039D0C65B,
+	GestureRecognizer_get_DistanceX_m576B7DA7405922456F9BA089F737ED1B7D203A94,
+	GestureRecognizer_set_DistanceX_m186D70ECA415C7587CCECDBA067591253916C0AC,
+	GestureRecognizer_get_DistanceY_mB204053518A79FBF8F6DCAFCDB284A9E67FA5D6B,
+	GestureRecognizer_set_DistanceY_m7733E622725BF4651EC66D68C20710D61DFCFA34,
+	GestureRecognizer_get_VelocityX_m8063A2334F3617F0FE870193DEE24AD3D25951D0,
+	GestureRecognizer_get_VelocityY_mE1135BD323067F42F712BB71B610398298F591B4,
+	GestureRecognizer_get_Speed_mBE43051CB5A65DF7B66926D47A9C65592007BAB3,
+	GestureRecognizer_get_Pressure_m6A2670CF88EDF2484A18A59A7BA5705DD7FADF26,
+	GestureRecognizer_set_Pressure_m3453F5DE609F4F94626AF01B34F41D462CCF55E2,
+	GestureRecognizer_get_PlatformSpecificView_m089B2F72258726FB42BE857DDDD3032D683CF7D2,
+	GestureRecognizer_set_PlatformSpecificView_m64EC8BC874FA3FB29CE64BD03E1559A022A33C62,
+	GestureRecognizer_get_PlatformSpecificViewScale_m36D66F79BEE59AEBC8EC95C346CACA5134AABE20,
+	GestureRecognizer_set_PlatformSpecificViewScale_m0C7B8BA030F368FB3890E1679A72AC61C0D793B8,
+	GestureRecognizer_get_CustomData_m12DB7041F3FB3E0521FDD3D88B0EFB769C17315E,
+	GestureRecognizer_set_CustomData_m7383275EEE106EBFA90581E98F75A88CAA92A89E,
+	GestureRecognizer_get_RequireGestureRecognizerToFail_mB7562DC16FED477A8E6DE14D1589B76CB202587D,
+	GestureRecognizer_set_RequireGestureRecognizerToFail_mEDEBA2190887BAAEDC54C74D8A5B2E33A28B02B1,
+	GestureRecognizer_get_RequireGestureRecognizersToFail_mB536489FAB9CFCE2DA4E8C39962C22E47AAC6CD5,
+	GestureRecognizer_get_MinimumNumberOfTouchesToTrack_m12BDA015803BE336A2379951DBC383CC26C38A25,
+	GestureRecognizer_set_MinimumNumberOfTouchesToTrack_m7E81DFBF8D33A9B14F0CA4A959D7B3559EAC1139,
+	GestureRecognizer_get_MaximumNumberOfTouchesToTrack_mCD8555464FD0D02ED1DE7F4BBF5075C561DA7182,
+	GestureRecognizer_set_MaximumNumberOfTouchesToTrack_m9480449BAE019E488E202F4B31743E37E6253B2A,
+	GestureRecognizer_get_TrackedTouchCountIsWithinRange_m46F2E3F65F07455E49B45D9F11F3566AFFAC9892,
+	GestureRecognizer_get_ClearTrackedTouchesOnEndOrFail_mED51BD173236BC0C8190B35BD1FDB85304EB38A6,
+	GestureRecognizer_set_ClearTrackedTouchesOnEndOrFail_mB5ABB9BD9BB82E745F94AC419B593AE7BA2D91A8,
+	GestureRecognizer_get_AllowSimultaneousExecutionIfPlatformSpecificViewsAreDifferent_m4B33E3787B14D9D2B462A6EEBF438219F0378136,
+	GestureRecognizer_set_AllowSimultaneousExecutionIfPlatformSpecificViewsAreDifferent_mBE1AF2EDD1F4F046A114BA423173C68E1AAECF33,
+	GestureRecognizer_get_ResetOnEnd_mE8E176AE6A5B8B81E1C673E8CEED3E56F5E2BAC6,
+	GestureRecognizer_get_IsRestarting_m97D2B29629A45A6163DA2A9832FCF0E17444D55E,
+	GestureRecognizer_get_ReceivedAdditionalTouches_m84FCF8338EA4E7D9D229235D4A9C1599CA3EE9CC,
+	GestureRecognizer_set_ReceivedAdditionalTouches_mABDD105751567176591F8F31913EC30D94EDC4E8,
+	GestureRecognizer__cctor_m4DE140173F8269C14D83441726C32A0593A0BE20,
+	CallbackMainThreadDelegate__ctor_mAA7911B644EE6CF3E696FA82D447DB405AC695A6,
+	CallbackMainThreadDelegate_Invoke_m512FFF3FCE10143EB050D66115514717BE3F23F9,
+	CallbackMainThreadDelegate_BeginInvoke_m97B5B915D951AFCF5ABA05A97C79385B54DAABE6,
+	CallbackMainThreadDelegate_EndInvoke_mF7D153EBBF3D3264D450E9CB43C6403B52BD9AD7,
+	GestureLogger_Log_m18374EF30445C7699F845304A7C9811E5A3F4C19,
+	LongPressGestureRecognizer_TouchesBegan_m0211586B607BFA74F2EB4350B89A10F12C01D66E,
+	LongPressGestureRecognizer_TouchesMoved_m9B7F3D5E536D506A8FC429668C4F3072028606BB,
+	LongPressGestureRecognizer_TouchesEnded_m1D850D3046FE4D299332793F5DCD8FAA91CD0911,
+	LongPressGestureRecognizer__ctor_m17E818244566AB831487455375C846FD6E36A9F3,
+	LongPressGestureRecognizer_get_MinimumDurationSeconds_m9A641E65715E097F33A3CD28D6F54DA57F2D8093,
+	LongPressGestureRecognizer_set_MinimumDurationSeconds_mA3F625787651C2A3496D72DD65D5ECB2E972A993,
+	LongPressGestureRecognizer_get_ThresholdUnits_mA941918288DD6813196ED9DCD6C624FA545D1C16,
+	LongPressGestureRecognizer_set_ThresholdUnits_mA4B653283B24C8E84962891DE14B7A800790E23A,
+	OneTouchRotateGestureRecognizer_CurrentAngle_m061BF2BD83C98E5942AF2AB4542E827C827CAE8A,
+	OneTouchRotateGestureRecognizer__ctor_m04BBBEB40B92CEE7CC14BC73BD4438BEE1264C53,
+	OneTouchScaleGestureRecognizer__ctor_m863992B87B0618EBA9D266C35D6B598D481BF2A2,
+	OneTouchScaleGestureRecognizer_TouchesBegan_m68104E5DB0996F843C5832BCDA3A84A9CA7072D6,
+	OneTouchScaleGestureRecognizer_TouchesMoved_mE7B714F12668DF039BF0F08F4D01A8F831FD5322,
+	OneTouchScaleGestureRecognizer_TouchesEnded_m27A4B60B4714B0E754F6891C393F1B0DD31D1687,
+	OneTouchScaleGestureRecognizer_get_ScaleMultiplier_mB9FEA85C25FA4B47A3760B7244B6D847042D2680,
+	OneTouchScaleGestureRecognizer_set_ScaleMultiplier_m684301EAEBF9BDF5B4D15C73B6679230EFAB9C54,
+	OneTouchScaleGestureRecognizer_get_ScaleMultiplierX_mEE9D16A0D78E8A3D76893BC267F6EB3A27DCCDC8,
+	OneTouchScaleGestureRecognizer_set_ScaleMultiplierX_m7755459FAF55151BDED60E1BDF09C5EE2BC89EFC,
+	OneTouchScaleGestureRecognizer_get_ScaleMultiplierY_m049626B132547D1698337F06973516719E83FC70,
+	OneTouchScaleGestureRecognizer_set_ScaleMultiplierY_mA98B67EECF8D678979AA73EC448FE0292C57C8C8,
+	OneTouchScaleGestureRecognizer_get_ZoomSpeed_mA1796290CE59F906E415DDF7A0A35532ABE63AB6,
+	OneTouchScaleGestureRecognizer_set_ZoomSpeed_m72A4C3A4EFF22E7F7559E592DD00DCDAF987518F,
+	OneTouchScaleGestureRecognizer_get_ThresholdUnits_m04FF2F35D34877BE3E4AB993B6B8CF0FB5377E2E,
+	OneTouchScaleGestureRecognizer_set_ThresholdUnits_m10A023392251FD26A2AFFDCE8C900AC593606529,
+	PanGestureRecognizer_ProcessTouches_mEE6A766E38623E596CC503D0B9D98A0C0073AA04,
+	PanGestureRecognizer_TouchesBegan_m8E3EF4CAB94188372F275692EAE02FDE8CF82276,
+	PanGestureRecognizer_TouchesMoved_m792889C51A0F92E8CBBC72CCABE608C0A0E02AD6,
+	PanGestureRecognizer_TouchesEnded_m167ADBF75C14FF80F2DB20A7E0DE8BBD3DACC83D,
+	PanGestureRecognizer__ctor_m935DF90EA6B3E45F0D3DE71DBA64E01CDE2BBBAC,
+	PanGestureRecognizer_get_ThresholdUnits_m47C7863960BC50131F90EA3FDEFCA917C534C69D,
+	PanGestureRecognizer_set_ThresholdUnits_mC540465C91F3CEA5F9155F34CCF4945A9292DFEA,
+	RotateGestureRecognizer_DifferenceBetweenAngles_m31EF6E944ADFFBDB8DC7C510B342CFD13F0E80C6,
+	RotateGestureRecognizer_UpdateAngle_mB4799D19945B8D85EE43132171835B0EFEE0C96B,
+	RotateGestureRecognizer_CheckForStart_mB83B55A927B458F5B299037FCF9919052F462069,
+	RotateGestureRecognizer_StateChanged_mF724728EAC56A1B3DEFF74ACE395179792B74250,
+	RotateGestureRecognizer_TouchesBegan_m55C11A84A87586A75852AA2D7FB77427F5056DA1,
+	RotateGestureRecognizer_TouchesMoved_mBD0708D089BCB22AD761C10F8787D6445DE9F49B,
+	RotateGestureRecognizer_TouchesEnded_m32D60A7B1F2899455AA779F6CD45553C8A570023,
+	RotateGestureRecognizer_CurrentAngle_m341A1B4F63239D394C8BEDF5D0BEA42BC5C482CA,
+	RotateGestureRecognizer__ctor_mD533FD1DBCF94BA30756E322DEDE93E5A3F899DB,
+	RotateGestureRecognizer_get_AngleThreshold_m4FC1BB13B5BC3419C62EAFD8A4320014B6465E58,
+	RotateGestureRecognizer_set_AngleThreshold_m8162C1FEAD5B5083D588771BA28CF120DC8D614B,
+	RotateGestureRecognizer_get_ThresholdUnits_m8896808C81EB419A5126AC4615F76A7AE429A6D8,
+	RotateGestureRecognizer_set_ThresholdUnits_m80589DADF25A289081E301017841810351658848,
+	RotateGestureRecognizer_get_RotationRadians_m0533A96DB47AFB5131DC0CE39E513BC6938A6623,
+	RotateGestureRecognizer_set_RotationRadians_m3B0B0BB95493764D96F172B49147666E4B27B68C,
+	RotateGestureRecognizer_get_RotationRadiansDelta_m8F2CD854B7C6A406D6D6D1146EB0038D3E0D38AE,
+	RotateGestureRecognizer_set_RotationRadiansDelta_mC2622FAA9E4ABFCAED8EC1B1C314EECEE18BE2DE,
+	RotateGestureRecognizer_get_RotationDegrees_mD13A2BB25087E07E6C200F2BA9FD5D47DED4BC02,
+	RotateGestureRecognizer_get_RotationDegreesDelta_mB604010304A579F84A185BE87EBF1EAFA7F0C2BF,
+	ScaleGestureRecognizer__ctor_m7D3328E98F45C167962A0496A18C173136F75426,
+	ScaleGestureRecognizer_SetPreviousDistance_m23158B3BFE493185F11A47FDAB8E9BA039C8AE2A,
+	ScaleGestureRecognizer_ClampScale_mF045065383D189998B673BA0279A0EE02D67B408,
+	ScaleGestureRecognizer_GetScale_m3F90B3581499DE6E0F70F53F2C92431D0168BD48,
+	ScaleGestureRecognizer_ProcessTouches_m0992155A14068C953A7D3EF332F6E0C845A27F53,
+	ScaleGestureRecognizer_TouchesBegan_m9B94E85BF57B33BB73D56D446A593A42E468DCC3,
+	ScaleGestureRecognizer_TouchesMoved_m156EFCAF8BBE6E71BD282447DA35A2C9C5A237F0,
+	ScaleGestureRecognizer_TouchesEnded_mDBC6B3E1D95D6DFB0F5F7D5C0E367FF0127DDE62,
+	ScaleGestureRecognizer_get_ScaleMultiplier_m87B2E59280C31B14242B137E950EDFEE25D9706B,
+	ScaleGestureRecognizer_set_ScaleMultiplier_mBE856A63C684D6B28836063C38EE0A7236F12B90,
+	ScaleGestureRecognizer_get_ScaleMultiplierX_mA820EE675B4D1E6C64B574F5B38E33A271FF1F8D,
+	ScaleGestureRecognizer_set_ScaleMultiplierX_mB797822139F321FB1918DAFAA3386111635DD43F,
+	ScaleGestureRecognizer_get_ScaleMultiplierY_m7230FC2FA8352B563912DB55580D6E7104339F89,
+	ScaleGestureRecognizer_set_ScaleMultiplierY_m6641F74E7A92E01EFAEA8DDCCDEC634A1D2E8504,
+	ScaleGestureRecognizer_get_ZoomSpeed_m58FB31E57480A536DD8BD7B44E12BAD6A148BFEF,
+	ScaleGestureRecognizer_set_ZoomSpeed_m9F2E851E0AAEB90B61C68CE9277B18E25CC98F73,
+	ScaleGestureRecognizer_get_ThresholdUnits_mA2C9D860F6DEE67F52B8DF53DA60466DDDC207E5,
+	ScaleGestureRecognizer_set_ThresholdUnits_mF72B2FACB1505293CE24B0CB96EA0542AACFE45B,
+	SwipeGestureRecognizer_CalculateEndDirection_m1C673D13845331BC8638E81ACBA878E069809EF2,
+	SwipeGestureRecognizer_CheckForSwipeCompletion_m6360ECED7149A58C72A48814CFF7C553CC9657A2,
+	SwipeGestureRecognizer_TouchesBegan_m7A1702D18C600D53BB224E0F2493F5C785F7FF9C,
+	SwipeGestureRecognizer_TouchesMoved_m69E6C16243E7AEA4C57FADA32788001D6FF15B47,
+	SwipeGestureRecognizer_TouchesEnded_mD973B928F678894273A8FF2BAD538E23E4415D79,
+	SwipeGestureRecognizer__ctor_m4529471B8AD39C8556A805C1846A1CE2D2AB187A,
+	SwipeGestureRecognizer_Reset_m2768BD516561E095AF05F249D68335F8368103BE,
+	SwipeGestureRecognizer_get_Direction_m8A9B9E4098AFBDE46CC00D4F37E7395C2FFF4934,
+	SwipeGestureRecognizer_set_Direction_mA5DCD2692DD8C2748A4C9C887A1D7A4D9AC75287,
+	SwipeGestureRecognizer_get_MinimumDistanceUnits_mBCF79C40C441B18EBABC2852215459F931877583,
+	SwipeGestureRecognizer_set_MinimumDistanceUnits_m744EE421817E21B6847760590C4BB9F1A0BBFFDA,
+	SwipeGestureRecognizer_get_MinimumSpeedUnits_mC77437611A0262CD39CBE6083C37329A6177BEC2,
+	SwipeGestureRecognizer_set_MinimumSpeedUnits_m71386A26CC9DF43E8DC3DBF0FA140570F5B42B1F,
+	SwipeGestureRecognizer_get_DirectionThreshold_m44CBA5846F99EF9AAB616C8800DD1BED7192EB67,
+	SwipeGestureRecognizer_set_DirectionThreshold_mFB932802EC233A47B48C5BD83C5D1D946C2E4EF5,
+	SwipeGestureRecognizer_get_EndMode_m21368121A529279CC2BBC8C612A682F7F23518DA,
+	SwipeGestureRecognizer_set_EndMode_m7EBEB77FD8BD08C85F14BA12D3B4E25147888872,
+	SwipeGestureRecognizer_get_FailOnDirectionChange_m9271706319FEC94ED857CD3DE3D3E1FAF6A02AAF,
+	SwipeGestureRecognizer_set_FailOnDirectionChange_m94D3277BE0B895DAF4FB8014BEB44AAF0799B2F0,
+	SwipeGestureRecognizer_get_EndDirection_mCE4C5771098D3D908C2068D9A7B89AF295A75D5D,
+	SwipeGestureRecognizer_set_EndDirection_mF6CE05443F6B4888E58407827B299C8D95B75283,
+	SwipeGestureRecognizer_get_SendBeginExecutingStates_mDB2F9C365F545956A9120C3D2470D4978A399786,
+	SwipeGestureRecognizer_set_SendBeginExecutingStates_mC20A91A4F437B09D31BA56FDCEC811EA23723A51,
+	TapGestureRecognizer_VerifyFailGestureAfterDelay_m8AE8A8FE3C3B416772A09D5FDBC6AE704266EB4E,
+	TapGestureRecognizer_FailGestureAfterDelayIfNoTap_mF3286CD6A7932A354C50CD530CA1660A5585DE1F,
+	TapGestureRecognizer_StateChanged_m02B811D7961EFC3DC4A08C04DCFC767ADFF1CC9E,
+	TapGestureRecognizer_TouchesBegan_mAB8E99946724D8D4F0B74E32C416B58BE1E5FFB2,
+	TapGestureRecognizer_TouchesMoved_m644BEBEF40ABA8017BC028D4DA4FFEC70661CA34,
+	TapGestureRecognizer_TouchesEnded_mD300F36883A2D34FDA2523A999D3F26964A5C914,
+	TapGestureRecognizer__ctor_m5632A6305425DFD16B3E5D3AF7297326D2638626,
+	TapGestureRecognizer_ToString_mD2DA08F9C43D7E03C983F1D68A213CFF54DDA164,
+	TapGestureRecognizer_get_NumberOfTapsRequired_m2E2F495498C2BFDAB7176D0EE56AE33016571C1A,
+	TapGestureRecognizer_set_NumberOfTapsRequired_m21D5FF54B8DE060C9A926DABF2A3BE507CA64A92,
+	TapGestureRecognizer_get_ThresholdSeconds_m14CE4C368183AB64D0EB1C7FC93372F494122E54,
+	TapGestureRecognizer_set_ThresholdSeconds_m66BAFB66713358A268CC790465214505E828DAC0,
+	TapGestureRecognizer_get_ThresholdUnits_mFC31BD93E4DFFDFA293FE8A6773A8194E11DF016,
+	TapGestureRecognizer_set_ThresholdUnits_m2F0C04C5A005086912038BAB5EAF1F4F18B9A945,
+	TapGestureRecognizer_get_SendBeginState_m0605AA5B5E502A33979F02F54C2B0828CFD77B9A,
+	TapGestureRecognizer_set_SendBeginState_m012776E25F6FC5CA1BC10C5B7216F67459E6C05E,
+	TapGestureRecognizer_get_TapTouches_m295D3CAB60877464695734123A87C6B173374FA0,
+	TapGestureRecognizer_set_TapTouches_mC5C6938745C5F72B8DB919AD517C95A0029867E4,
+};
+extern void GestureTouch__ctor_m6424F3021923C3B8CC56D7D2D6EF465E19A4C680_AdjustorThunk (void);
+extern void GestureTouch_CompareTo_m313C82F0C842640E27645FCED3215FAE3A032122_AdjustorThunk (void);
+extern void GestureTouch_GetHashCode_mC07DA9AB409BC55B71AAC39C9A953E5CEDA867BD_AdjustorThunk (void);
+extern void GestureTouch_Equals_m4C65BA4738A413584C2AE5B4E41CE22FBD63DC17_AdjustorThunk (void);
+extern void GestureTouch_get_Id_m83FF759DFFEBA79DCCE618A63DB15521B492726A_AdjustorThunk (void);
+extern void GestureTouch_get_ScreenX_m15BC1C09F57F915BF4CC49998F207A15E226A100_AdjustorThunk (void);
+extern void GestureTouch_get_X_mA2469FBADC9E3ED26981589B8A3210279D55BEB0_AdjustorThunk (void);
+extern void GestureTouch_get_ScreenY_m06AF90565D8A5DBB32DB9A657B045E6B76301770_AdjustorThunk (void);
+extern void GestureTouch_get_Y_m4DDC020CDA3D39A25CA726846894A7F28163E85A_AdjustorThunk (void);
+extern void GestureTouch_get_PreviousX_mB6A761E8457BEB3172288924FDA63903B0539DD9_AdjustorThunk (void);
+extern void GestureTouch_get_PreviousY_mFE01066E59B77DBAF1DF5E6E8A4C82A687184F63_AdjustorThunk (void);
+extern void GestureTouch_get_Pressure_m72899A5AB79F4BDD9470C5147ABD5B6E1228A638_AdjustorThunk (void);
+extern void GestureTouch_get_DeltaX_mF0C508A993779B83C15007F3A809DF158ABFCB46_AdjustorThunk (void);
+extern void GestureTouch_get_DeltaY_m753255CCEDAD7F225AD3B4C932181E5B25825E4D_AdjustorThunk (void);
+extern void GestureTouch_get_PlatformSpecificTouch_m040D56C648F8D700A7D7A21D257E3306D626F9BC_AdjustorThunk (void);
+extern void GestureTouch_get_TouchPhase_mC71EED97E1DBCD4247D8C129A0145CA6F08787F7_AdjustorThunk (void);
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[16] = 
+{
+	{ 0x060000C1, GestureTouch__ctor_m6424F3021923C3B8CC56D7D2D6EF465E19A4C680_AdjustorThunk },
+	{ 0x060000C2, GestureTouch_CompareTo_m313C82F0C842640E27645FCED3215FAE3A032122_AdjustorThunk },
+	{ 0x060000C3, GestureTouch_GetHashCode_mC07DA9AB409BC55B71AAC39C9A953E5CEDA867BD_AdjustorThunk },
+	{ 0x060000C4, GestureTouch_Equals_m4C65BA4738A413584C2AE5B4E41CE22FBD63DC17_AdjustorThunk },
+	{ 0x060000C5, GestureTouch_get_Id_m83FF759DFFEBA79DCCE618A63DB15521B492726A_AdjustorThunk },
+	{ 0x060000C6, GestureTouch_get_ScreenX_m15BC1C09F57F915BF4CC49998F207A15E226A100_AdjustorThunk },
+	{ 0x060000C7, GestureTouch_get_X_mA2469FBADC9E3ED26981589B8A3210279D55BEB0_AdjustorThunk },
+	{ 0x060000C8, GestureTouch_get_ScreenY_m06AF90565D8A5DBB32DB9A657B045E6B76301770_AdjustorThunk },
+	{ 0x060000C9, GestureTouch_get_Y_m4DDC020CDA3D39A25CA726846894A7F28163E85A_AdjustorThunk },
+	{ 0x060000CA, GestureTouch_get_PreviousX_mB6A761E8457BEB3172288924FDA63903B0539DD9_AdjustorThunk },
+	{ 0x060000CB, GestureTouch_get_PreviousY_mFE01066E59B77DBAF1DF5E6E8A4C82A687184F63_AdjustorThunk },
+	{ 0x060000CC, GestureTouch_get_Pressure_m72899A5AB79F4BDD9470C5147ABD5B6E1228A638_AdjustorThunk },
+	{ 0x060000CD, GestureTouch_get_DeltaX_mF0C508A993779B83C15007F3A809DF158ABFCB46_AdjustorThunk },
+	{ 0x060000CE, GestureTouch_get_DeltaY_m753255CCEDAD7F225AD3B4C932181E5B25825E4D_AdjustorThunk },
+	{ 0x060000CF, GestureTouch_get_PlatformSpecificTouch_m040D56C648F8D700A7D7A21D257E3306D626F9BC_AdjustorThunk },
+	{ 0x060000D0, GestureTouch_get_TouchPhase_mC71EED97E1DBCD4247D8C129A0145CA6F08787F7_AdjustorThunk },
 };
 static const int32_t s_InvokerIndices[446] = 
 {
-	23,
-	23,
-	23,
-	23,
-	26,
-	26,
-	26,
-	26,
-	23,
-	23,
-	23,
-	14,
-	23,
-	23,
-	994,
-	23,
-	1423,
-	23,
-	23,
-	32,
-	14,
-	23,
-	23,
-	23,
-	23,
-	26,
-	26,
-	23,
-	23,
-	14,
-	23,
-	23,
-	31,
-	1072,
-	1023,
-	23,
-	23,
-	26,
-	27,
-	23,
-	14,
-	23,
-	23,
-	539,
-	23,
-	157,
-	38,
-	14,
-	23,
-	23,
-	17,
-	23,
-	3,
-	1464,
-	26,
-	14,
-	26,
-	14,
-	26,
-	14,
-	26,
-	14,
-	26,
-	14,
-	23,
-	23,
-	23,
-	26,
-	275,
-	102,
-	32,
-	23,
-	23,
-	23,
-	23,
-	102,
-	102,
-	23,
-	14,
-	26,
-	27,
-	23,
-	26,
-	23,
-	26,
-	14,
-	23,
-	23,
-	23,
-	23,
-	23,
-	14,
-	23,
-	151,
-	0,
-	23,
-	23,
-	23,
-	23,
-	27,
-	1465,
-	1050,
-	1069,
-	1069,
-	1069,
-	1069,
-	26,
-	23,
-	26,
-	23,
-	26,
-	23,
-	26,
-	23,
-	26,
-	23,
-	26,
-	23,
-	26,
-	23,
-	26,
-	23,
-	1466,
-	23,
-	23,
-	23,
-	23,
-	23,
-	23,
-	543,
-	104,
-	1467,
-	1468,
-	6,
-	6,
-	1469,
-	6,
-	1470,
-	23,
-	1471,
-	23,
-	23,
-	23,
-	103,
-	101,
-	23,
-	23,
-	1472,
-	23,
-	23,
-	23,
-	9,
-	9,
-	31,
-	1473,
-	14,
-	14,
-	14,
-	14,
-	14,
-	4,
-	49,
-	23,
-	1474,
-	366,
-	366,
-	366,
-	366,
-	1014,
-	1476,
-	1014,
-	1476,
-	1477,
-	1478,
-	10,
-	9,
-	10,
-	653,
-	653,
-	653,
-	653,
-	653,
-	653,
-	653,
-	653,
-	653,
-	14,
-	10,
-	163,
-	26,
-	166,
-	26,
-	163,
-	27,
-	202,
-	26,
-	1050,
-	23,
-	23,
-	1069,
-	1069,
-	653,
-	653,
-	275,
-	653,
-	275,
-	653,
-	23,
-	653,
-	275,
-	653,
-	275,
-	31,
-	23,
-	23,
-	30,
-	23,
-	103,
-	26,
-	104,
-	104,
-	31,
-	1479,
-	30,
-	23,
-	414,
-	9,
-	404,
-	23,
-	30,
-	102,
-	102,
-	26,
-	23,
-	23,
-	104,
-	23,
-	9,
-	23,
-	14,
-	23,
-	102,
-	9,
-	26,
-	26,
-	26,
-	26,
-	1480,
-	1481,
-	1482,
-	977,
-	23,
-	26,
-	23,
-	26,
-	23,
-	26,
-	26,
-	1479,
-	513,
-	102,
-	31,
-	10,
-	26,
-	26,
-	26,
-	26,
-	14,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	653,
-	653,
-	653,
-	653,
-	275,
-	14,
-	26,
-	653,
-	275,
-	14,
-	26,
-	14,
-	26,
-	14,
-	10,
-	32,
-	10,
-	32,
-	102,
-	102,
-	31,
-	102,
-	31,
-	102,
-	102,
-	102,
-	31,
-	3,
-	144,
-	26,
-	23,
-	23,
-	23,
-	653,
-	275,
-	653,
-	275,
-	653,
-	23,
-	23,
-	26,
-	23,
-	23,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	31,
-	26,
-	23,
-	23,
-	23,
-	653,
-	275,
-	1482,
-	23,
-	23,
-	23,
-	26,
-	23,
-	23,
-	653,
-	23,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	653,
-	653,
-	23,
-	1050,
-	977,
-	977,
-	23,
-	26,
-	23,
-	23,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	1484,
-	31,
-	26,
-	23,
-	23,
-	23,
-	23,
-	10,
-	32,
-	653,
-	275,
-	653,
-	275,
-	653,
-	275,
-	10,
-	32,
-	102,
-	31,
-	10,
-	32,
-	102,
-	31,
-	23,
-	23,
-	23,
-	26,
-	23,
-	23,
-	23,
-	14,
-	10,
-	32,
-	653,
-	275,
-	653,
-	275,
-	102,
-	31,
-	14,
-	26,
-	32,
-	23,
-	102,
-	14,
-	23,
-	14,
-	32,
-	23,
-	102,
-	14,
-	23,
-	14,
-	32,
-	23,
-	102,
-	14,
-	23,
-	14,
-	23,
-	1475,
-	163,
-	1474,
-	1483,
-	26,
+	1323,
+	1323,
+	1323,
+	1323,
+	1122,
+	1122,
+	1122,
+	1122,
+	1323,
+	1323,
+	1323,
+	1290,
+	1323,
+	1323,
+	1151,
+	1323,
+	904,
+	1323,
+	1110,
+	1323,
+	1310,
+	1290,
+	1323,
+	1290,
+	1323,
+	1110,
+	1290,
+	1323,
+	1323,
+	1323,
+	1323,
+	1122,
+	1122,
+	1323,
+	1323,
+	1290,
+	1323,
+	1323,
+	1139,
+	1971,
+	1255,
+	1323,
+	1323,
+	1110,
+	1323,
+	1310,
+	1290,
+	1323,
+	1290,
+	1122,
+	717,
+	1323,
+	1290,
+	1323,
+	1323,
+	1733,
+	1323,
+	663,
+	427,
+	1290,
+	1323,
+	1323,
+	2142,
+	1323,
+	2186,
+	1352,
+	1122,
+	1290,
+	1122,
+	1290,
+	1122,
+	1290,
+	1122,
+	1290,
+	1122,
+	1290,
+	1323,
+	1323,
+	1323,
+	1122,
+	1141,
+	1310,
+	1110,
+	1323,
+	1323,
+	1323,
+	1323,
+	1310,
+	1310,
+	1323,
+	1290,
+	1122,
+	717,
+	1323,
+	1122,
+	1323,
+	1122,
+	1290,
+	1323,
+	1323,
+	1323,
+	1323,
+	1323,
+	1290,
+	1323,
+	1722,
+	2088,
+	1323,
+	1323,
+	1323,
+	1323,
+	717,
+	547,
+	480,
+	734,
+	734,
+	734,
+	734,
+	1122,
+	1323,
+	1122,
+	1323,
+	1122,
+	1323,
+	1122,
+	1323,
+	1122,
+	1323,
+	1122,
+	1323,
+	1122,
+	1323,
+	1122,
+	1323,
+	2009,
+	1323,
+	1323,
+	1323,
+	1323,
+	1323,
+	1323,
+	546,
+	848,
+	436,
+	796,
+	1082,
+	1082,
+	618,
+	1082,
+	276,
+	1323,
+	133,
+	1323,
+	1323,
+	1323,
+	582,
+	542,
+	1323,
+	1323,
+	1140,
+	1323,
+	1323,
+	1323,
+	991,
+	991,
+	1139,
+	2101,
+	1290,
+	1290,
+	1290,
+	1290,
+	1290,
+	2172,
+	2180,
+	1323,
+	732,
+	1110,
+	1323,
+	1310,
+	1290,
+	1323,
+	1290,
+	1323,
+	1005,
+	2126,
+	2126,
+	2126,
+	2126,
+	2181,
+	2153,
+	2181,
+	2153,
+	28,
+	835,
+	1276,
+	991,
+	1276,
+	1312,
+	1312,
+	1312,
+	1312,
+	1312,
+	1312,
+	1312,
+	1312,
+	1312,
+	1290,
+	1276,
+	716,
+	1122,
+	364,
+	1122,
+	716,
+	717,
+	222,
+	1122,
+	480,
+	1323,
+	1323,
+	734,
+	734,
+	1312,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1323,
+	1312,
+	1141,
+	1312,
+	1141,
+	1139,
+	1323,
+	1323,
+	978,
+	1323,
+	582,
+	1122,
+	848,
+	848,
+	1139,
+	2001,
+	978,
+	1323,
+	1012,
+	991,
+	583,
+	1323,
+	978,
+	1310,
+	1310,
+	1122,
+	1323,
+	1323,
+	848,
+	1323,
+	991,
+	1323,
+	1290,
+	1323,
+	1310,
+	991,
+	1122,
+	1122,
+	1122,
+	1122,
+	131,
+	257,
+	610,
+	1039,
+	1323,
+	1122,
+	1323,
+	1122,
+	1323,
+	1122,
+	1122,
+	2001,
+	2167,
+	1310,
+	1139,
+	1276,
+	1122,
+	1122,
+	1122,
+	1122,
+	1290,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1312,
+	1312,
+	1312,
+	1141,
+	1290,
+	1122,
+	1312,
+	1141,
+	1290,
+	1122,
+	1290,
+	1122,
+	1290,
+	1276,
+	1110,
+	1276,
+	1110,
+	1310,
+	1310,
+	1139,
+	1310,
+	1139,
+	1310,
+	1310,
+	1310,
+	1139,
+	2186,
+	716,
+	732,
+	235,
+	1122,
+	1803,
+	1122,
+	1323,
+	1323,
+	1323,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1323,
+	1323,
+	1122,
+	1323,
+	1323,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1139,
+	1122,
+	1323,
+	1323,
+	1323,
+	1312,
+	1141,
+	610,
+	1323,
+	1323,
+	1323,
+	1122,
+	1323,
+	1323,
+	1312,
+	1323,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1312,
+	1323,
+	480,
+	1039,
+	1039,
+	1323,
+	1122,
+	1323,
+	1323,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	592,
+	1139,
+	1122,
+	1323,
+	1323,
+	1323,
+	1323,
+	1276,
+	1110,
+	1312,
+	1141,
+	1312,
+	1141,
+	1312,
+	1141,
+	1276,
+	1110,
+	1310,
+	1139,
+	1276,
+	1110,
+	1310,
+	1139,
+	1323,
+	1323,
+	1323,
+	1122,
+	1323,
+	1323,
+	1323,
+	1290,
+	1276,
+	1110,
+	1312,
+	1141,
+	1312,
+	1141,
+	1310,
+	1139,
+	1290,
+	1122,
 };
-extern const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule;
-const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
 	446,
 	s_methodPointers,
+	16,
+	s_adjustorThunks,
 	s_InvokerIndices,
 	0,
 	NULL,
 	0,
 	NULL,
 	0,
+	NULL,
+	NULL,
+	g_AssemblyU2DCSharp_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 };

@@ -1,7 +1,8 @@
+#include <sched.h>
+
 const CFIndex streamSize = 1024;
 static NSOperationQueue* webOperationQueue;
 static NSURLSession* unityWebRequestSession;
-
 
 @interface UnityURLRequest : NSMutableURLRequest
 
@@ -84,9 +85,20 @@ static NSLock* currentRequestsLock;
         const UInt8* data = (const UInt8*)UnityWebRequestGetUploadData(udata, &dataSize);
         if (dataSize == 0)
             break;
-        NSInteger transmitted = [outputStream write: data maxLength: dataSize];
-        if (transmitted > 0)
-            UnityWebRequestConsumeUploadData(udata, (unsigned)transmitted);
+
+        if (outputStream.hasSpaceAvailable)
+        {
+            NSInteger transmitted = [outputStream write: data maxLength: dataSize];
+            if (transmitted > 0)
+                UnityWebRequestConsumeUploadData(udata, (unsigned)transmitted);
+            else if (transmitted < 0)
+                break;
+        }
+        else
+        {
+            sched_yield();
+        }
+
         switch (task.state)
         {
             case NSURLSessionTaskStateCanceling:
@@ -98,6 +110,7 @@ static NSLock* currentRequestsLock;
         }
     }
     [outputStream close];
+    UnityWebRequestRelease(udata);
 }
 
 - (id)init:(void*)udata
@@ -194,6 +207,7 @@ static NSLock* currentRequestsLock;
         return;
     urequest.redirecting = true;
     [self handleHTTPResponse: response task: task];
+    UnityWebRequestRelease(urequest.udata);
     completionHandler(nil);
     [task cancel];
 }
@@ -262,6 +276,7 @@ static NSLock* currentRequestsLock;
     if (error != nil)
         UnityReportWebRequestNetworkError(urequest.udata, (int)[error code]);
     UnityReportWebRequestFinishedLoadingData(urequest.udata);
+    UnityWebRequestRelease(urequest.udata);
 }
 
 @end
@@ -277,13 +292,14 @@ extern "C" void* UnityCreateWebRequestBackend(void* udata, const char* methodStr
             {
                 webOperationQueue = [[NSOperationQueue alloc] init];
                 webOperationQueue.name = @"com.unity3d.WebOperationQueue";
+                webOperationQueue.qualityOfService = NSQualityOfServiceUtility;
 
                 currentRequests = [[NSMutableArray<UnityURLRequest*> alloc] init];
                 currentRequestsLock = [[NSLock alloc] init];
 
                 NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
                 UnityWebRequestDelegate* delegate = [[UnityWebRequestDelegate alloc] init];
-                unityWebRequestSession = [NSURLSession sessionWithConfiguration: config delegate: delegate delegateQueue: webOperationQueue];
+                unityWebRequestSession = [NSURLSession sessionWithConfiguration: config delegate: delegate delegateQueue: nil];
             }
         });
 
@@ -301,23 +317,39 @@ extern "C" void UnitySendWebRequest(void* connection, unsigned length, unsigned 
     @autoreleasepool
     {
         UnityURLRequest* request = (__bridge UnityURLRequest*)connection;
-        request.wantCertificateCallback = wantCertificateCallback;
         request.timeoutInterval = timeoutSec;
+        request.wantCertificateCallback = wantCertificateCallback;
 
         NSOutputStream* outputStream = nil;
+        bool useStream = length > 16384;
         if (length > 0)
         {
-            CFReadStreamRef readStream;
-            CFWriteStreamRef writeStream;
-            CFStreamCreateBoundPair(kCFAllocatorDefault, &readStream, &writeStream, streamSize);
-            CFWriteStreamOpen(writeStream);
-            outputStream = (__bridge_transfer NSOutputStream*)writeStream;
-            request.HTTPBodyStream = (__bridge_transfer NSInputStream*)readStream;
+            if (!useStream) // if less then 16K, do not use stream (too much memory pressure)
+            {
+                unsigned dataSize = length;
+                const UInt8* data = (const UInt8*)UnityWebRequestGetUploadData(request.udata, &dataSize);
+                if (dataSize < length) // if data size is less than length we should use stream
+                    useStream = true;
+                else
+                {
+                    UnityWebRequestConsumeUploadData(request.udata, (unsigned)dataSize);
+                    request.HTTPBody = [NSData dataWithBytes: data length: dataSize];
+                }
+            }
+            if (useStream) // use stream if necessary
+            {
+                CFReadStreamRef readStream;
+                CFWriteStreamRef writeStream;
+                CFStreamCreateBoundPair(kCFAllocatorDefault, &readStream, &writeStream, streamSize);
+                CFWriteStreamOpen(writeStream);
+                outputStream = (__bridge_transfer NSOutputStream*)writeStream;
+                request.HTTPBodyStream = (__bridge_transfer NSInputStream*)readStream;
+            }
         }
         NSURLSessionTask* task = [unityWebRequestSession dataTaskWithRequest: request];
         [UnityURLRequest storeRequest: request taskID: task.taskIdentifier];
         [task resume];
-        if (length > 0)
+        if (useStream) // Write the stream if needed
             [webOperationQueue addOperationWithBlock:^{
                 [UnityURLRequest writeBody: outputStream task: task udata: request.udata];
             }];
@@ -356,4 +388,31 @@ extern "C" void UnityCancelWebRequest(void* connection)
                 }
         }];
     }
+}
+
+extern "C" void UnityWebRequestClearCookieCache(const char* domain)
+{
+    NSArray<NSHTTPCookie*>* cookies;
+    NSHTTPCookieStorage* cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    if (domain == NULL)
+        cookies = [cookieStorage cookies];
+    else
+    {
+        NSURL* url = [NSURL URLWithString: [NSString stringWithUTF8String: domain]];
+        if (url.path == nil || [url.path isEqualToString: [NSString string]])
+        {
+            NSMutableArray<NSHTTPCookie*>* hostCookies = [[NSMutableArray<NSHTTPCookie *> alloc] init];
+            cookies = [cookieStorage cookies];
+            NSUInteger cookieCount = [cookies count];
+            for (unsigned i = 0; i < cookieCount; ++i)
+                if ([cookies[i].domain isEqualToString: url.host])
+                    [hostCookies addObject: cookies[i]];
+            cookies = hostCookies;
+        }
+        else
+            cookies = [cookieStorage cookiesForURL: url];
+    }
+    NSUInteger cookieCount = [cookies count];
+    for (int i = 0; i < cookieCount; ++i)
+        [cookieStorage deleteCookie: cookies[i]];
 }

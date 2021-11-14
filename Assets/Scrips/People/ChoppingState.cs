@@ -9,7 +9,7 @@ public class ChoppingState : BaseState
 
     public ChoppingState(Person person) : base(person.gameObject) {
         this.person = person;
-        person.SetAnimation("IsChopping");
+        person.SetAnimation("isChopping");
     }
 
     override public Type Tick() {

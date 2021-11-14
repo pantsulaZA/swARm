@@ -9,7 +9,6 @@ public class WalkingState : BaseState
 
     public WalkingState(Person person) : base(person.gameObject) {
         this.person = person;
-        person.SetAnimation("IsWalking");
     }
 
     override public Type Tick() {

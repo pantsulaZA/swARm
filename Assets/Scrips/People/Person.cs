@@ -11,7 +11,7 @@ public class Person : MonoBehaviour
     private GameObject destination;
     public House house;
     private NavMeshAgent agent;
-    private Animator animator;
+    public Animator animator;
     [SerializeField] private float actionTime = 5.0f;
     [SerializeField] private float currentActionTimeactionTimePassed = 0.0f;
     [SerializeField] private PersonStateMachine fsm;
@@ -39,14 +39,15 @@ public class Person : MonoBehaviour
 
     internal void SetAnimation(string v)
     {
-        animator?.SetBool("isChopping", false);
-        animator?.SetBool("isChopping", false);
-        animator?.SetBool("isUnloading", false);
-        animator?.SetBool(v, true);
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isChopping", false);
+        animator.SetBool("isUnloading", false);
+        animator.SetBool(v, true);
     }
 
     public void StartAction(float time)
     {
+        SetAnimation("isChopping");
         currentActionTimeactionTimePassed = 0;
         actionTime = time;
     }
@@ -99,6 +100,8 @@ public class Person : MonoBehaviour
             {
                 destination = tree;
                 agent.SetDestination(destination.transform.position);
+                        SetAnimation("isWalking");
+
             }
         }
     }
@@ -117,6 +120,8 @@ public class Person : MonoBehaviour
             Debug.Log("Going home");
             destination = house.gameObject;
             agent.SetDestination(destination.transform.position);
+                    SetAnimation("isWalking");
+
         }
     }
     public bool IsAtDestination()

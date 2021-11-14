@@ -9,7 +9,7 @@ public class GatherState : BaseState
 
     public GatherState(Person person) : base(person.gameObject) {
         this.person = person;
-        person.SetAnimation("IsWalking");
+        person.SetAnimation("isWalking");
     }
 
     override public Type Tick() {
@@ -17,6 +17,6 @@ public class GatherState : BaseState
             return typeof(ChoppingState);
         }
         
-        return typeof(ChoppingState);
+        return typeof(GatherState);
     }
 }
